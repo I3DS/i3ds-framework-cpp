@@ -3,9 +3,6 @@ if (BUILD_TESTS OR BUILD_TOOLS)
   find_package (Boost COMPONENTS program_options unit_test_framework log REQUIRED)
 endif (BUILD_TESTS OR BUILD_TOOLS)
 
-file(GLOB ASN1_SRCS ../generated/i3ds/*.c)
-file(GLOB ASN1_HDRS ../generated/i3ds/*.h)
-
 ################################################################################
 # libi3ds
 ################################################################################
@@ -39,6 +36,7 @@ set (LIBS
   pthread
   ${Boost_LIBRARIES}
   ${OpenCV_LIBS}
+  i3ds_asn1
   )
 
 add_library (i3ds SHARED ${SRCS})

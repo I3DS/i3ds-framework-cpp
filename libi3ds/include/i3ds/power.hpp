@@ -11,13 +11,14 @@
 #ifndef __I3DS_POWER_HPP
 #define __I3DS_POWER_HPP
 
-#include <i3ds/Power.h>
+#include <i3ds_asn1/Power.hpp>
 
 #include <i3ds/node.hpp>
 #include <i3ds/server.hpp>
 #include <i3ds/service.hpp>
 #include <i3ds/codec.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

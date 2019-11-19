@@ -11,7 +11,7 @@
 #ifndef __I3DS_LIDAR_HPP
 #define __I3DS_LIDAR_HPP
 
-#include <i3ds/LIDAR.h>
+#include <i3ds_asn1/LIDAR.hpp>
 
 #include <i3ds/sensor.hpp>
 #include <i3ds/service.hpp>
@@ -19,6 +19,7 @@
 #include <i3ds/topic.hpp>
 #include <i3ds/pointcloud.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

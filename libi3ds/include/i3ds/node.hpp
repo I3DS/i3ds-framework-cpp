@@ -13,9 +13,10 @@
 
 #include <memory>
 
-#include <i3ds/Common.h>
+#include <i3ds_asn1/Common.hpp>
 #include <i3ds/server.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

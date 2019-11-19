@@ -13,8 +13,8 @@
 
 #include <memory>
 
-#include <i3ds/Common.h>
-#include <i3ds/Sensor.h>
+#include <i3ds_asn1/Common.hpp>
+#include <i3ds_asn1/Sensor.hpp>
 
 #include <i3ds/node.hpp>
 #include <i3ds/communication.hpp>
@@ -23,6 +23,7 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/exception.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

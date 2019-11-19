@@ -11,7 +11,7 @@
 #ifndef __I3DS_POSE_ESTIMATOR_HPP
 #define __I3DS_POSE_ESTIMATOR_HPP
 
-#include <i3ds/PoseEstimator.h>
+#include <i3ds_asn1/PoseEstimator.hpp>
 #include <i3ds/frame.hpp>
 
 #include <i3ds/sensor.hpp>
@@ -19,6 +19,7 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/topic.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

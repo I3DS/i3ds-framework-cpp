@@ -11,10 +11,11 @@
 #ifndef __I3DS_FRAME_HPP
 #define __I3DS_FRAME_HPP
 
-#include <i3ds/Frame.h>
+#include <i3ds_asn1/Frame.hpp>
 #include <i3ds/codec.hpp>
 #include <vector>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

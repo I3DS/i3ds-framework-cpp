@@ -11,7 +11,7 @@
 #ifndef __I3DS_RADAR_HPP
 #define __I3DS_RADAR_HPP
 
-#include <i3ds/Radar.h>
+#include <i3ds_asn1/Radar.hpp>
 
 #include <i3ds/sensor.hpp>
 #include <i3ds/service.hpp>
@@ -19,6 +19,7 @@
 #include <i3ds/topic.hpp>
 #include <i3ds/depthmap.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

@@ -11,7 +11,7 @@
 #ifndef __I3DS_ANALOG_HPP
 #define __I3DS_ANALOG_HPP
 
-#include <i3ds/Analog.h>
+#include <i3ds_asn1/Analog.hpp>
 
 #include <i3ds/topic.hpp>
 #include <i3ds/sensor.hpp>
@@ -19,6 +19,7 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/analogseries.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

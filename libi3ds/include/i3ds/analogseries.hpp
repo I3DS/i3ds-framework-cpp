@@ -11,12 +11,13 @@
 #ifndef __I3DS_ANALOGSERIES_HPP
 #define __I3DS_ANALOGSERIES_HPP
 
-#include <i3ds/taste-types.h>
+#include <i3ds_asn1/taste-types.hpp>
+#include <i3ds_asn1/Analog.hpp>
 #include <i3ds/codec.hpp>
-#include <i3ds/Analog.h>
 
 #include <vector>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

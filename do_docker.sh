@@ -18,15 +18,16 @@ gen_archive_name()
 # 5) Clean
 usage()
 {
-    echo "Usage: $0 [-a] [-A] [-c] [-C] [-D] [-t] [-T testname]" 1>&2;
+    echo "Usage: $0 [OPTION]" 1>&2;
     cat<<EOF
 Foo
 
   -a   All, compile and run tests
   -A   Create archive of components for local install (assumes successful build)
   -c   Force compile project (includes clean)
-  -f   Run fast-ish (assume CMake is happy)
   -D   Docker: Do *not* create and update docker image, assume image is OK
+  -e   external: libi3ds_asn1 is stored outside normal library path (i.e. *not* in /usr/include/
+  -f   Run fast-ish (assume CMake is happy)
   -t   Run tests only (assumes successful build)
   -T   Run specific test
   -?   Show this help
@@ -37,7 +38,7 @@ EOF
 SPECIFIC_TEST=""
 params=""
 testparams=""
-while getopts "aAcDftT:v?h" o; do
+while getopts "aAcDe:ftT:v?h" o; do
     case "${o}" in
 	a)
 	    params="-C -t all"
@@ -47,6 +48,10 @@ while getopts "aAcDftT:v?h" o; do
 	    ;;
 	c)
 	    params="${params} -c"
+	    ;;
+	e)
+	    params="${params} -e ${OPTARG}"
+	    testparams="${testparams} -e ${OPTARG}"
 	    ;;
 	f)
 	    params="${params} -f"

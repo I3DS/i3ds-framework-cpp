@@ -28,9 +28,11 @@
 /// encode/decode static function wrappers. It is used as template argument.
 /////////////////////////////////////////////////////////////////////////////////
 
+using namespace i3ds_asn1;
+
 #define CODEC(NAME) struct NAME ## Codec { \
     typedef NAME Data; \
-    static const int max_size = NAME ## _REQUIRED_BYTES_FOR_ENCODING; \
+    static const int max_size = i3ds_asn1_ ## NAME ## _REQUIRED_BYTES_FOR_ENCODING; \
     static inline void Initialize(Data& val) { \
       NAME ## _Initialize(&val); \
     } \

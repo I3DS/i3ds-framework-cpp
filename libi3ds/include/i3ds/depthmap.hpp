@@ -11,11 +11,13 @@
 #ifndef __I3DS_DEPTHMAP_HPP
 #define __I3DS_DEPTHMAP_HPP
 
-#include <i3ds/DepthMap.h>
-#include <i3ds/taste-types.h>
+#include <i3ds_asn1/DepthMap.hpp>
+#include <i3ds_asn1/taste-types.hpp>
+
 #include <i3ds/codec.hpp>
 #include <vector>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

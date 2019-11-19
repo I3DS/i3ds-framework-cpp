@@ -16,6 +16,7 @@
 #include <i3ds/communication.hpp>
 #include <i3ds/codec.hpp>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

@@ -12,12 +12,13 @@
 #define __I3DS_POINTCLOUD_HPP
 
 
-#include <i3ds/PointCloud.h>
-#include <i3ds/taste-types.h>
+#include <i3ds_asn1/PointCloud.hpp>
+#include <i3ds_asn1/taste-types.hpp>
 #include <i3ds/codec.hpp>
 
 #include <vector>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 

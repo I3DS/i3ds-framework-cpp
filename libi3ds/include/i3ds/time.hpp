@@ -11,11 +11,12 @@
 #ifndef __I3DS_TIME_HPP
 #define __I3DS_TIME_HPP
 
-#include <i3ds/Common.h>
-#include <i3ds/Sensor.h>
+#include <i3ds_asn1/Common.hpp>
+#include <i3ds_asn1/Sensor.hpp>
 
 #include <chrono>
 
+using namespace i3ds_asn1;
 namespace i3ds
 {
 
