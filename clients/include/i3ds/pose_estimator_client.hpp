@@ -22,12 +22,12 @@ class PoseEstimatorClient : public SensorClient
 public:
 
   typedef std::shared_ptr<PoseEstimatorClient> Ptr;
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<PoseEstimatorClient>(context, id);
   }
 
-  PoseEstimatorClient(Context::Ptr context, NodeID sensor);
+  PoseEstimatorClient(Context::Ptr context, i3ds_asn1::NodeID sensor);
 
   void set_imaging_mode(bool imaging_mode);
   void set_selected_camera(uint8_t camera);

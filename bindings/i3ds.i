@@ -14,6 +14,7 @@
 #include "i3ds/lidar_client.hpp"
 
 using namespace i3ds;
+using namespace i3ds_asn1;
 %}
 
 %include "stdint.i"

@@ -29,25 +29,25 @@ i3ds::Camera::Attach(Server& server)
 void
 i3ds::Camera::handle_auto_exposure(AutoExposureService::Data&)
 {
-  throw CommandError(error_unsupported, "Auto exposure not supported");
+  throw CommandError(i3ds_asn1::error_unsupported, "Auto exposure not supported");
 }
 
 void
 i3ds::Camera::handle_region(RegionService::Data&)
 {
-  throw CommandError(error_unsupported, "Region of interest not supported");
+  throw CommandError(i3ds_asn1::error_unsupported, "Region of interest not supported");
 }
 
 void
 i3ds::Camera::handle_flash(FlashService::Data&)
 {
-  throw CommandError(error_unsupported, "Region of interest not supported");
+  throw CommandError(i3ds_asn1::error_unsupported, "Region of interest not supported");
 }
 
 void
 i3ds::Camera::handle_pattern(PatternService::Data&)
 {
-  throw CommandError(error_unsupported, "Pattern illumination not supported");
+  throw CommandError(i3ds_asn1::error_unsupported, "Pattern illumination not supported");
 }
 
 void
@@ -72,12 +72,12 @@ i3ds::Camera::handle_configuration(ConfigurationService::Data& config)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(error_other, e.what());
+      throw CommandError(i3ds_asn1::error_other, e.what());
     }
   catch (...)
     {
       /// \todo This forces it into failure state, but the first error message give wrong message on client side.
       set_failure();
-      throw CommandError(error_other, "Probably lost connection with camera. Going to failure mode.");
+      throw CommandError(i3ds_asn1::error_other, "Probably lost connection with camera. Going to failure mode.");
     }
 }

@@ -68,7 +68,7 @@ struct MessageRecord
   void store(std::ofstream &output_file);
   void load(std::ifstream &input_file);
 
-  NodeID node()
+  i3ds_asn1::NodeID node()
   {
     return msg->node();
   }
@@ -88,8 +88,8 @@ public:
   {
     return _message_count;
   }
-  std::vector<NodeID> node_ids;
-  EndpointID endpoint_id;
+  std::vector<i3ds_asn1::NodeID> node_ids;
+  i3ds_asn1::EndpointID endpoint_id;
   bool endpoint_id_set = false;
   uint64_t start_time;
   uint64_t end_time;
@@ -113,7 +113,7 @@ public:
   MessageRecord get_message();
   bool has_endpoint_id;
   bool endpoint_id_set;
-  std::vector<NodeID> node_ids;
+  std::vector<i3ds_asn1::NodeID> node_ids;
   bool _header_found;
   uint64_t start_time;
   uint64_t end_time;
@@ -121,7 +121,7 @@ public:
   {
     return _header_found;
   }
-  EndpointID endpoint_id;
+  i3ds_asn1::EndpointID endpoint_id;
 
 private:
   std::ifstream input_file;

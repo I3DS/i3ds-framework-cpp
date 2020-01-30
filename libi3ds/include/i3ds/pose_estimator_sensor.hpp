@@ -19,7 +19,6 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/topic.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -44,7 +43,7 @@ public:
   typedef Topic<129, PoseEstimatorMeasurementCodec> MeasurementTopic;
 
   // Constructor and destructor.
-  PoseEstimator(NodeID node) : Sensor(node) {};
+  PoseEstimator(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~PoseEstimator() = default;
 
   virtual bool imaging_mode() const {return false;}

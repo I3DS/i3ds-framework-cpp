@@ -29,7 +29,7 @@ i3ds::Sampler::~Sampler()
 }
 
 void
-i3ds::Sampler::Start(SamplePeriod period)
+i3ds::Sampler::Start(i3ds_asn1::SamplePeriod period)
 {
   period_ = to_duration(period);
   running_ = true;

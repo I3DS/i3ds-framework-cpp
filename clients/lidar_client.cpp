@@ -10,7 +10,7 @@
 
 #include <i3ds/lidar_client.hpp>
 
-i3ds::LIDARClient::LIDARClient(Context::Ptr context, NodeID sensor)
+i3ds::LIDARClient::LIDARClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : SensorClient(context, sensor)
 {
   LIDAR::ConfigurationService::Initialize(config_);
@@ -24,7 +24,7 @@ i3ds::LIDARClient::load_config()
 }
 
 void
-i3ds::LIDARClient::set_region(bool enable, PolarRegion region)
+i3ds::LIDARClient::set_region(bool enable, i3ds_asn1::PolarRegion region)
 {
   LIDAR::RegionService::Data command;
 

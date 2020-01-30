@@ -22,30 +22,30 @@ class CameraClient : public SensorClient
 public:
 
   typedef std::shared_ptr<CameraClient> Ptr;
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<CameraClient>(context, id);
   }
 
-  CameraClient(Context::Ptr context, NodeID sensor);
+  CameraClient(Context::Ptr context, i3ds_asn1::NodeID sensor);
 
-  void set_exposure(ShutterTime shutter, SensorGain gain);
-  void set_auto_exposure(bool enable, ShutterTime max_shutter, SensorGain max_gain);
-  void set_region(bool enable, PlanarRegion region);
-  void set_flash(bool enable, FlashStrength strength);
-  void set_pattern(bool enable, PatternSequence sequence);
+  void set_exposure(i3ds_asn1::ShutterTime shutter, i3ds_asn1::SensorGain gain);
+  void set_auto_exposure(bool enable, i3ds_asn1::ShutterTime max_shutter, i3ds_asn1::SensorGain max_gain);
+  void set_region(bool enable, i3ds_asn1::PlanarRegion region);
+  void set_flash(bool enable, i3ds_asn1::FlashStrength strength);
+  void set_pattern(bool enable, i3ds_asn1::PatternSequence sequence);
 
-  ShutterTime shutter() const {return config_.response.shutter;}
-  SensorGain gain() const {return config_.response.gain;}
+  i3ds_asn1::ShutterTime shutter() const {return config_.response.shutter;}
+  i3ds_asn1::SensorGain gain() const {return config_.response.gain;}
   bool auto_exposure_enabled() const {return config_.response.auto_exposure_enabled;}
-  ShutterTime max_shutter() const {return config_.response.max_shutter;}
-  SensorGain max_gain() const {return config_.response.max_gain;}
+  i3ds_asn1::ShutterTime max_shutter() const {return config_.response.max_shutter;}
+  i3ds_asn1::SensorGain max_gain() const {return config_.response.max_gain;}
   bool region_enabled() const {return config_.response.region_enabled;}
-  PlanarRegion region() const {return config_.response.region;}
+  i3ds_asn1::PlanarRegion region() const {return config_.response.region;}
   bool flash_enabled() const {return config_.response.flash_enabled;}
-  FlashStrength flash_strength() const {return config_.response.flash_strength;}
+  i3ds_asn1::FlashStrength flash_strength() const {return config_.response.flash_strength;}
   bool pattern_enabled() const {return config_.response.pattern_enabled;}
-  PatternSequence pattern_sequence() const {return config_.response.pattern_sequence;}
+  i3ds_asn1::PatternSequence pattern_sequence() const {return config_.response.pattern_sequence;}
 
   virtual void load_config();
 

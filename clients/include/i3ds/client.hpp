@@ -26,11 +26,11 @@ class Client
 {
 public:
 
-  Client(Context::Ptr context, NodeID node);
+  Client(Context::Ptr context, i3ds_asn1::NodeID node);
   virtual ~Client();
 
   // Get node ID of client.
-  NodeID node() const {return node_;}
+  i3ds_asn1::NodeID node() const {return node_;}
 
   // Send request for client.
   template<typename T>
@@ -81,13 +81,13 @@ private:
   void Reset();
 
   // Send request message for client.
-  void Send(EndpointID endpoint, Message& request);
+  void Send(i3ds_asn1::EndpointID endpoint, Message& request);
 
   // Receive response message for client.
-  void Receive(EndpointID endpoint, Message& response);
+  void Receive(i3ds_asn1::EndpointID endpoint, Message& response);
 
   // Node ID.
-  const NodeID node_;
+  const i3ds_asn1::NodeID node_;
 
   // Context reference.
   Context::Ptr context_;
@@ -104,7 +104,7 @@ private:
 
 // Template specialization for commands to raise CommandError.
 template<>
-void Client::Check<CommandResponse>(CommandResponse& response);
+void Client::Check<i3ds_asn1::CommandResponse>(i3ds_asn1::CommandResponse& response);
 
 } // namespace i3ds
 

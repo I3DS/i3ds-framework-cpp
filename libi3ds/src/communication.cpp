@@ -51,7 +51,7 @@ i3ds::Address::to_string() const
 }
 
 void
-i3ds::Message::append_payload(const byte* data, size_t size, bool copy)
+i3ds::Message::append_payload(const i3ds_asn1::byte* data, size_t size, bool copy)
 {
   if (copy)
     {
@@ -63,16 +63,16 @@ i3ds::Message::append_payload(const byte* data, size_t size, bool copy)
     }
 }
 
-byte*
+i3ds_asn1::byte*
 i3ds::Message::data(int i)
 {
-  return i < payloads() ? payload_[i].data<byte>() : NULL;
+  return i < payloads() ? payload_[i].data<i3ds_asn1::byte>() : NULL;
 }
 
-const byte*
+const i3ds_asn1::byte*
 i3ds::Message::data(int i) const
 {
-  return i < payloads() ? payload_[i].data<byte>() : NULL;
+  return i < payloads() ? payload_[i].data<i3ds_asn1::byte>() : NULL;
 }
 
 size_t
@@ -108,7 +108,7 @@ i3ds::Context::Context(std::string addr_srv_url)
 }
 
 std::string
-i3ds::Context::get_config(NodeID node, int type)
+i3ds::Context::get_config(i3ds_asn1::NodeID node, int type)
 {
   std::lock_guard<std::mutex> lock(mutex_);
   if (!connected_to_addr_srv_)
@@ -186,7 +186,7 @@ i3ds::Socket::~Socket()
 }
 
 void
-i3ds::Socket::Attach(NodeID node)
+i3ds::Socket::Attach(i3ds_asn1::NodeID node)
 {
   if (attached_.count(node) > 0)
     {

@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 {
   i3ds::SensorConfigurator configurator;
   bool enable_region;
-  PlanarRegion region;
+  i3ds_asn1::PlanarRegion region;
   double min_depth, max_depth;
 
   po::options_description desc("Allowed ToF camera control options");

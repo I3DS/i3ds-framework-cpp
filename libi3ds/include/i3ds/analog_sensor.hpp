@@ -19,7 +19,6 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/analogseries.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -34,15 +33,15 @@ public:
   typedef std::shared_ptr<Analog> Ptr;
 
   // Constructor and destructor.
-  Analog(NodeID node, SeriesCount series_count) : Sensor(node), series_count_(series_count) {};
+  Analog(i3ds_asn1::NodeID node, i3ds_asn1::SeriesCount series_count) : Sensor(node), series_count_(series_count) {};
   virtual ~Analog() {};
 
   // Get the number of series per measurement (number of channels)
-  SeriesCount series_count() const {return series_count_;}
+  i3ds_asn1::SeriesCount series_count() const {return series_count_;}
 
 private:
 
-  const SeriesCount series_count_;
+  const i3ds_asn1::SeriesCount series_count_;
 
 };
 

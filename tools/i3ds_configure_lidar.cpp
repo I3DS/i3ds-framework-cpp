@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 {
   i3ds::SensorConfigurator configurator;
   bool enable_region;
-  PolarRegion region;
+  i3ds_asn1::PolarRegion region;
 
   po::options_description desc("Allowed LIDAR control options");
 

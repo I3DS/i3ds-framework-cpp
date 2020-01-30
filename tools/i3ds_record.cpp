@@ -42,8 +42,8 @@ signal_handler(int)
 int
 main(int argc, char *argv[])
 {
-  std::vector<NodeID> node_ids;
-  EndpointID endpoint_id;
+  std::vector<i3ds_asn1::NodeID> node_ids;
+  i3ds_asn1::EndpointID endpoint_id;
   uint32_t n_messages;
   std::string file_name;
 

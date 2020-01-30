@@ -20,18 +20,17 @@
 
 #include <i3ds_asn1/Common.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
 struct Address
 {
   Address(std::string address);
-  Address(NodeID n, EndpointID e) : node(n), endpoint(e) {};
+  Address(i3ds_asn1::NodeID n, i3ds_asn1::EndpointID e) : node(n), endpoint(e) {};
   Address() : node(0), endpoint(0) {};
 
-  NodeID node;
-  EndpointID endpoint;
+  i3ds_asn1::NodeID node;
+  i3ds_asn1::EndpointID endpoint;
 
   std::string to_string() const;
 };
@@ -45,8 +44,8 @@ public:
 
   inline Address address() const {return address_;}
 
-  inline NodeID node() const {return address().node;}
-  inline EndpointID endpoint() const {return address().endpoint;}
+  inline i3ds_asn1::NodeID node() const {return address().node;}
+  inline i3ds_asn1::EndpointID endpoint() const {return address().endpoint;}
 
   // Set address of message.
   void set_address(Address address) {address_ = address;}
@@ -58,10 +57,10 @@ public:
   bool has_payload() const {return payloads() > 0;}
 
   // Get payload i.
-  byte* data(int i = 0);
+  i3ds_asn1::byte* data(int i = 0);
 
   // Get payload i as const.
-  const byte* data(int i = 0) const;
+  const i3ds_asn1::byte* data(int i = 0) const;
 
   // Get size of payload i.
   size_t size(int i = 0) const;
@@ -69,7 +68,7 @@ public:
   // Append payload to message.
   //
   // If copy is false the message will take ownership and free data after use.
-  void append_payload(const byte* data, size_t size, bool copy = true);
+  void append_payload(const i3ds_asn1::byte* data, size_t size, bool copy = true);
 
 private:
 
@@ -97,7 +96,7 @@ public:
   static Ptr Create() {return std::make_shared<Context>();}
   static Ptr Create(std::string addr_srv_url) {return std::make_shared<Context>(addr_srv_url);}
 
-  std::string get_config(NodeID node, int type);
+  std::string get_config(i3ds_asn1::NodeID node, int type);
 
   std::string get_addr_srv_url() const;
 
@@ -128,7 +127,7 @@ public:
   static Socket::Ptr Client(Context::Ptr context) {return CreateSocket(context, ZMQ_REQ);}
   static Socket::Ptr Server(Context::Ptr context) {return CreateSocket(context, ZMQ_REP);}
 
-  void Attach(NodeID node);
+  void Attach(i3ds_asn1::NodeID node);
 
   void Send(Message& message);
   void Receive(Message& message, int timeout_ms = -1);
@@ -146,7 +145,7 @@ private:
   const Context::Ptr context_;
 
   zmq::socket_t socket_;
-  std::unordered_set<NodeID> attached_;
+  std::unordered_set<i3ds_asn1::NodeID> attached_;
 };
 
 

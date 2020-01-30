@@ -16,24 +16,23 @@
 
 #include <chrono>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
 typedef std::chrono::high_resolution_clock clock;
 
-inline Timepoint to_timestamp(clock::time_point t)
+inline i3ds_asn1::Timepoint to_timestamp(clock::time_point t)
 {
   using namespace std::chrono;
-  return (Timepoint) duration_cast<microseconds>(t.time_since_epoch()).count();
+  return (i3ds_asn1::Timepoint) duration_cast<microseconds>(t.time_since_epoch()).count();
 }
 
-inline Timepoint get_timestamp()
+inline i3ds_asn1::Timepoint get_timestamp()
 {
   return to_timestamp(clock::now());
 }
 
-inline clock::duration to_duration(SamplePeriod period)
+inline clock::duration to_duration(i3ds_asn1::SamplePeriod period)
 {
   return std::chrono::microseconds(period);
 }

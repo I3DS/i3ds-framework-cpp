@@ -23,9 +23,9 @@ public:
 
   typedef std::shared_ptr<FlashClient> Ptr;
 
-  FlashClient(Context::Ptr context, NodeID node);
+  FlashClient(Context::Ptr context, i3ds_asn1::NodeID node);
 
-  void set_flash(ShutterTime duration, FlashStrength strength);
+  void set_flash(i3ds_asn1::ShutterTime duration, i3ds_asn1::FlashStrength strength);
 };
 
 } // namespace i3ds

@@ -28,11 +28,11 @@ class Publisher
 {
 public:
 
-  Publisher(Context::Ptr context, NodeID node);
+  Publisher(Context::Ptr context, i3ds_asn1::NodeID node);
   virtual ~Publisher();
 
   // Get node ID of publisher.
-  NodeID node() const {return node_;}
+  i3ds_asn1::NodeID node() const {return node_;}
 
   // Publish the data for the given endpoint ID.
   template<typename T>
@@ -55,7 +55,7 @@ private:
   void Reset();
 
   // Node ID.
-  const NodeID node_;
+  const i3ds_asn1::NodeID node_;
 
   // Context reference.
   Context::Ptr context_;

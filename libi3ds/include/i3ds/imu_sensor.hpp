@@ -18,7 +18,6 @@
 #include <i3ds/service.hpp>
 #include <i3ds/codec.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -34,7 +33,7 @@ public:
   typedef std::shared_ptr<IMU> Ptr;
 
   // Constructor and destructor.
-  IMU(NodeID node) : Sensor(node) {};
+  IMU(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~IMU() {};
 
 };

@@ -67,14 +67,14 @@ i3ds::SensorConfigurator::add_common_options(po::options_description& desc)
 {
   i3ds::Configurator::add_common_options(desc);
   desc.add_options()
-  ("node,n", po::value<NodeID>(&node_id)->required(), "Node ID")
+  ("node,n", po::value<i3ds_asn1::NodeID>(&node_id)->required(), "Node ID")
 
   ("activate",   "Activate the sensor")
   ("start",      "Start the sensor")
   ("stop",       "Stop the sensor")
   ("deactivate", "Deactivate the sensor")
 
-  ("period", po::value<SamplePeriod>(&period), "Sensor period in microseconds")
+  ("period", po::value<i3ds_asn1::SamplePeriod>(&period), "Sensor period in microseconds")
   ;
 }
 
@@ -84,18 +84,18 @@ i3ds::SensorConfigurator::handle_sensor_commands(po::variables_map& vm, i3ds::Se
   if (vm.count("activate"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command ACTIVATE";
-      client.set_state(activate);
+      client.set_state(i3ds_asn1::activate);
     }
   else if (vm.count("stop"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command STOP";
-      client.set_state(stop);
+      client.set_state(i3ds_asn1::stop);
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
     }
   else if (vm.count("deactivate"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command DEACTIVATE";
-      client.set_state(deactivate);
+      client.set_state(i3ds_asn1::deactivate);
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
     }
   else if (vm.count("period"))
@@ -107,7 +107,7 @@ i3ds::SensorConfigurator::handle_sensor_commands(po::variables_map& vm, i3ds::Se
   else if (vm.count("start"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command START";
-      client.set_state(start);
+      client.set_state(i3ds_asn1::start);
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
     }
 }
@@ -121,16 +121,16 @@ i3ds::SensorConfigurator::print_sensor_status(i3ds::SensorClient& client)
   std::string state_string;
   switch (state)
     {
-    case inactive:
+    case i3ds_asn1::inactive:
       state_string = "inactive";
       break;
-    case standby:
+    case i3ds_asn1::standby:
       state_string = "standby";
       break;
-    case operational:
+    case i3ds_asn1::operational:
       state_string = "operational";
       break;
-    case failure:
+    case i3ds_asn1::failure:
       state_string = "failure";
       break;
     default:

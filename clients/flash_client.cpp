@@ -10,13 +10,13 @@
 
 #include <i3ds/flash_client.hpp>
 
-i3ds::FlashClient::FlashClient(Context::Ptr context, NodeID node)
+i3ds::FlashClient::FlashClient(Context::Ptr context, i3ds_asn1::NodeID node)
   : Client(context, node)
 {
 }
 
 void
-i3ds::FlashClient::set_flash(ShutterTime duration, FlashStrength strength)
+i3ds::FlashClient::set_flash(i3ds_asn1::ShutterTime duration, i3ds_asn1::FlashStrength strength)
 {
   Flash::FlashService::Data command;
 

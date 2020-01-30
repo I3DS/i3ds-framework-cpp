@@ -87,7 +87,7 @@ public:
 
   // Attach service handler for endpoint ID.
   template<typename T>
-  void Attach(NodeID node, typename Wrapper<T>::Operation operation)
+  void Attach(i3ds_asn1::NodeID node, typename Wrapper<T>::Operation operation)
   {
     attach_handler(Address(node, T::endpoint), Wrapper<T>::Create(operation));
   }
@@ -112,8 +112,8 @@ private:
   std::unordered_map<Address, Handler::Ptr> handlers_;
 };
 
-void set_response(CommandResponse& response, ResultCode result, std::string message);
-void set_response(CommandResponse& response, const CommandError& e);
+void set_response(i3ds_asn1::CommandResponse& response, i3ds_asn1::ResultCode result, std::string message);
+void set_response(i3ds_asn1::CommandResponse& response, const CommandError& e);
 
 } // namespace i3ds
 

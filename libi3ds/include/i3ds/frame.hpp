@@ -15,7 +15,6 @@
 #include <i3ds/codec.hpp>
 #include <vector>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -23,7 +22,7 @@ CODEC(FrameDescriptor);
 
 struct FrameCodec;
 
-inline size_t image_size(const FrameDescriptor& desc)
+inline size_t image_size(const i3ds_asn1::FrameDescriptor& desc)
 {
   return desc.region.size_x  * desc.region.size_y * desc.pixel_size;
 }
@@ -32,21 +31,21 @@ class Frame
 {
 public:
 
-  FrameDescriptor descriptor;
+  i3ds_asn1::FrameDescriptor descriptor;
 
   inline int images() const {return image_.size();}
 
   inline size_t image_size(int i) const {return image_.at(i).size;}
-  inline const byte* image_data(int i) const {return image_.at(i).data;}
+  inline const i3ds_asn1::byte* image_data(int i) const {return image_.at(i).data;}
 
-  inline void append_image(const byte* data, size_t size) {image_.push_back({data, size});}
+  inline void append_image(const i3ds_asn1::byte* data, size_t size) {image_.push_back({data, size});}
   inline void clear_images() {image_.clear();}
 
 private:
 
   struct Image
   {
-    const byte* data;
+    const i3ds_asn1::byte* data;
     size_t size;
   };
 
@@ -65,12 +64,12 @@ struct FrameCodec
     val.clear_images();
   };
 
-  static inline flag Encode(const Data* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints)
+  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode, i3ds_asn1::flag bCheckConstraints)
   {
     return FrameDescriptorCodec::Encode(&(val->descriptor), pBitStrm, pErrCode, bCheckConstraints);
   }
 
-  static inline flag Decode(Data* pVal, BitStream* pBitStrm, int* pErrCode)
+  static inline i3ds_asn1::flag Decode(Data* pVal, i3ds_asn1::BitStream* pBitStrm, int* pErrCode)
   {
     return FrameDescriptorCodec::Decode(&pVal->descriptor, pBitStrm, pErrCode);
   }

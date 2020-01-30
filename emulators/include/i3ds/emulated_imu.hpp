@@ -25,16 +25,16 @@ public:
 
   typedef std::shared_ptr<EmulatedIMU> Ptr;
 
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<EmulatedIMU>(context, id);
   }
 
-  EmulatedIMU(Context::Ptr context, NodeID id);
+  EmulatedIMU(Context::Ptr context, i3ds_asn1::NodeID id);
   virtual ~EmulatedIMU();
 
   // Supported period.
-  virtual bool is_sampling_supported(SampleCommand sample);
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample);
 
 protected:
 
@@ -51,7 +51,7 @@ private:
   Sampler sampler_;
 
   Publisher publisher_;
-  IMUMeasurement20 frame_;
+  i3ds_asn1::IMUMeasurement20 frame_;
 };
 
 } // namespace i3ds

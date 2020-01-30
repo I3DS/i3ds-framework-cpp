@@ -10,7 +10,7 @@
 
 #include <i3ds/client.hpp>
 
-i3ds::Client::Client(Context::Ptr context, NodeID node)
+i3ds::Client::Client(Context::Ptr context, i3ds_asn1::NodeID node)
   : node_(node),
     context_(context),
     timeout_(-1)
@@ -29,7 +29,7 @@ i3ds::Client::Reset()
 }
 
 void
-i3ds::Client::Send(EndpointID endpoint, Message& request)
+i3ds::Client::Send(i3ds_asn1::EndpointID endpoint, Message& request)
 {
   if (!socket_ || pending_)
     {
@@ -44,7 +44,7 @@ i3ds::Client::Send(EndpointID endpoint, Message& request)
 }
 
 void
-i3ds::Client::Receive(EndpointID endpoint, Message& response)
+i3ds::Client::Receive(i3ds_asn1::EndpointID endpoint, Message& response)
 {
   if (!socket_ || !pending_)
     {
@@ -75,9 +75,9 @@ i3ds::Client::Stop()
 }
 
 template<>
-void i3ds::Client::Check<CommandResponse>(CommandResponse& response)
+void i3ds::Client::Check<i3ds_asn1::CommandResponse>(i3ds_asn1::CommandResponse& response)
 {
-  if (response.result != success)
+  if (response.result != i3ds_asn1::success)
     {
       throw CommandError(response.result, to_string(response.message));
     }

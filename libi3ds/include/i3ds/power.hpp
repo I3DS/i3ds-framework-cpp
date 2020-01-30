@@ -18,7 +18,6 @@
 #include <i3ds/service.hpp>
 #include <i3ds/codec.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -37,7 +36,7 @@ public:
   typedef Command<3, PowerMaskCodec>         ChannelsSetService;
 
   // Constructor for trigger.
-  Power(NodeID node) : Node(node) {};
+  Power(i3ds_asn1::NodeID node) : Node(node) {};
 
   // Destructor for trigger.
   virtual ~Power() {};

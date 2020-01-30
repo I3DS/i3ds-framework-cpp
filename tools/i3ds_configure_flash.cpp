@@ -28,7 +28,7 @@ namespace logging = boost::log;
 int main(int argc, char *argv[])
 {
   //i3ds::SensorConfigurator configurator;
-  NodeID node_id = 0;
+  i3ds_asn1::NodeID node_id = 0;
   int strength;
   int duration;
 

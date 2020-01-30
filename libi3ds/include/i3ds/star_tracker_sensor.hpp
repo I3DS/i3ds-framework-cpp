@@ -18,7 +18,6 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/topic.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -34,7 +33,7 @@ public:
   typedef std::shared_ptr<StarTracker> Ptr;
 
   // Constructor and destructor.
-  StarTracker(NodeID node) : Sensor(node) {};
+  StarTracker(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~StarTracker() {};
 
 };

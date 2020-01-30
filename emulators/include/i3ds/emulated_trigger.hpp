@@ -33,20 +33,20 @@ public:
 
   typedef std::shared_ptr<EmulatedTrigger> Ptr;
 
-  static Ptr Create(NodeID id)
+  static Ptr Create(i3ds_asn1::NodeID id)
   {
     return std::make_shared<EmulatedTrigger>(id);
   }
 
-  EmulatedTrigger(NodeID id);
+  EmulatedTrigger(i3ds_asn1::NodeID id);
   ~EmulatedTrigger();
 
-  TriggerPeriod period(TriggerGenerator generator) const;
-  TriggerGenerator source(TriggerOutput channel) const;
-  TriggerDuration duration(TriggerOutput channel) const;
-  TriggerOffset offset(TriggerOutput channel) const;
-  bool inverted(TriggerOutput channel) const;
-  bool enabled(TriggerOutput channel) const;
+  i3ds_asn1::TriggerPeriod period(i3ds_asn1::TriggerGenerator generator) const;
+  i3ds_asn1::TriggerGenerator source(i3ds_asn1::TriggerOutput channel) const;
+  i3ds_asn1::TriggerDuration duration(i3ds_asn1::TriggerOutput channel) const;
+  i3ds_asn1::TriggerOffset offset(i3ds_asn1::TriggerOutput channel) const;
+  bool inverted(i3ds_asn1::TriggerOutput channel) const;
+  bool enabled(i3ds_asn1::TriggerOutput channel) const;
 
 protected:
 
@@ -67,8 +67,8 @@ protected:
 
 private:
 
-  std::vector<TriggerPeriod> generators_;
-  std::vector<ChannelInternal> channels_;
+  std::vector<i3ds_asn1::TriggerPeriod> generators_;
+  std::vector<i3ds_asn1::ChannelInternal> channels_;
   std::vector<bool> enabled_;
 };
 

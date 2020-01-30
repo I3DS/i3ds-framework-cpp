@@ -23,6 +23,7 @@
 #include <i3ds/sensor_client.hpp>
 
 using namespace i3ds;
+using namespace i3ds_asn1;
 
 class TestSensor : public Sensor
 {

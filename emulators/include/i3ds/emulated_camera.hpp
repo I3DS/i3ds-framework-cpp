@@ -43,12 +43,12 @@ public:
 
   typedef std::shared_ptr<EmulatedCamera> Ptr;
 
-  static Ptr Create(Context::Ptr context, NodeID id, Parameters param)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id, Parameters param)
   {
     return std::make_shared<EmulatedCamera>(context, id, param);
   }
 
-  EmulatedCamera(Context::Ptr context, NodeID id, Parameters param);
+  EmulatedCamera(Context::Ptr context, i3ds_asn1::NodeID id, Parameters param);
   virtual ~EmulatedCamera();
 
 protected:

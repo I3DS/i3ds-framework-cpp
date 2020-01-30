@@ -30,13 +30,13 @@ class Sampler
 public:
 
   // Does sampling operation, returns true if more samples are requested.
-  typedef std::function<bool(Timepoint)> Operation;
+  typedef std::function<bool(i3ds_asn1::Timepoint)> Operation;
 
   Sampler(Operation operation);
   virtual ~Sampler();
 
   // Starts sampler in a separate thread with given period.
-  void Start(SamplePeriod period);
+  void Start(i3ds_asn1::SamplePeriod period);
 
   // Stop the sampler if running.
   void Stop();

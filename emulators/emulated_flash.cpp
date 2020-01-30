@@ -10,7 +10,7 @@
 
 #include <i3ds/emulated_flash.hpp>
 
-i3ds::EmulatedFlash::EmulatedFlash(NodeID node)
+i3ds::EmulatedFlash::EmulatedFlash(i3ds_asn1::NodeID node)
   : Flash(node)
 {
   BOOST_LOG_TRIVIAL(info) << "Create emulated flash with NodeID: " << node;

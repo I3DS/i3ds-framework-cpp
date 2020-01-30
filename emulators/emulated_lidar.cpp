@@ -14,12 +14,12 @@
 #include <i3ds/emulated_lidar.hpp>
 
 i3ds::EmulatedLIDAR::Ptr
-i3ds::EmulatedLIDAR::Create(Context::Ptr context, NodeID node)
+i3ds::EmulatedLIDAR::Create(Context::Ptr context, i3ds_asn1::NodeID node)
 {
   return std::make_shared<EmulatedLIDAR>(context, node);
 }
 
-i3ds::EmulatedLIDAR::EmulatedLIDAR(Context::Ptr context, NodeID node)
+i3ds::EmulatedLIDAR::EmulatedLIDAR(Context::Ptr context, i3ds_asn1::NodeID node)
   : LIDAR(node),
     sampler_(std::bind(&i3ds::EmulatedLIDAR::send_sample, this, std::placeholders::_1)),
     publisher_(context, node)
@@ -71,7 +71,7 @@ i3ds::EmulatedLIDAR::do_deactivate()
 }
 
 bool
-i3ds::EmulatedLIDAR::is_sampling_supported(SampleCommand sample)
+i3ds::EmulatedLIDAR::is_sampling_supported(i3ds_asn1::SampleCommand sample)
 {
   BOOST_LOG_TRIVIAL(info) << "Emulated LIDAR with NodeID: " << node() << " is_period_supported()";
   return sample.batch_size == 1 && (0 < sample.period && sample.period <= 10000000);
@@ -95,7 +95,7 @@ i3ds::EmulatedLIDAR::send_sample(unsigned long timestamp_us)
   BOOST_LOG_TRIVIAL(trace) << "Emulated LIDAR with NodeID: " << node() << " sends sample at " << timestamp_us;
 
   frame_.descriptor.attributes.timestamp = timestamp_us;
-  frame_.descriptor.attributes.validity = sample_valid;
+  frame_.descriptor.attributes.validity = i3ds_asn1::sample_valid;
 
   std::normal_distribution<float> x(100.0, 10.0);
   std::normal_distribution<float> y(0.0, 5.0);

@@ -16,7 +16,6 @@
 
 #include <i3ds_asn1/Common.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -75,15 +74,15 @@ class CommandError : public std::runtime_error
 {
 public:
 
-  CommandError(ResultCode result, std::string message) : std::runtime_error(message), result_(result) {};
-  CommandError(ResultCode result, const char* message) : std::runtime_error(message), result_(result) {};
+  CommandError(i3ds_asn1::ResultCode result, std::string message) : std::runtime_error(message), result_(result) {};
+  CommandError(i3ds_asn1::ResultCode result, const char* message) : std::runtime_error(message), result_(result) {};
   virtual ~CommandError() {};
 
-  inline ResultCode result() const {return result_;}
+  inline i3ds_asn1::ResultCode result() const {return result_;}
 
 private:
 
-  const ResultCode result_;
+  const i3ds_asn1::ResultCode result_;
 };
 
 }

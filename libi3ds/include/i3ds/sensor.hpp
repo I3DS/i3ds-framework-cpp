@@ -23,7 +23,6 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/exception.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -46,7 +45,7 @@ public:
   typedef Query  <4, SensorConfigurationCodec> ConfigurationService;
 
   // Constructor.
-  Sensor(NodeID node);
+  Sensor(i3ds_asn1::NodeID node);
 
   // Virtual destructor.
   virtual ~Sensor();
@@ -67,43 +66,43 @@ public:
   void check_failure() const;
 
   // Returns true if sensor is in inactive state.
-  inline bool is_inactive() const {return state() == inactive;}
+  inline bool is_inactive() const {return state() == i3ds_asn1::inactive;}
 
   // Returns true if sensor is in active state.
-  inline bool is_active() const {return state() == standby || state() == operational;}
+  inline bool is_active() const {return state() == i3ds_asn1::standby || state() == i3ds_asn1::operational;}
 
   // Returns true if sensor is in standby state.
-  inline bool is_standby() const {return state() == standby;}
+  inline bool is_standby() const {return state() == i3ds_asn1::standby;}
 
   // Returns true if sensor is in operational state.
-  inline bool is_operational() const {return state() == operational;}
+  inline bool is_operational() const {return state() == i3ds_asn1::operational;}
 
   // Returns true if sensor is in failure state.
-  inline bool is_failure() const {return state() == failure;}
+  inline bool is_failure() const {return state() == i3ds_asn1::failure;}
 
   // Get sensor state.
-  inline SensorState state() const {return state_;}
+  inline i3ds_asn1::SensorState state() const {return state_;}
 
   // Get sensor period in microseconds between samples.
-  inline SamplePeriod period() const {return period_;}
+  inline i3ds_asn1::SamplePeriod period() const {return period_;}
 
   // Get number of samples per batch.
-  inline BatchSize batch_size() const {return batch_size_;}
+  inline i3ds_asn1::BatchSize batch_size() const {return batch_size_;}
 
   // Get number of batches to acquire when operational (0 is infinite).
-  inline BatchCount batch_count() const {return batch_count_;}
+  inline i3ds_asn1::BatchCount batch_count() const {return batch_count_;}
 
   // Get name of sensor implementation
-  virtual T_String device_name() const {return device_name_;}
+  virtual i3ds_asn1::T_String device_name() const {return device_name_;}
 
   // Get temperature in Kelvin (defaults to 0.0).
   virtual double temperature() const {return 0.0;}
 
   // Throws exception if sample configuration is not supported.
-  void check_sampling_supported(SampleCommand sample);
+  void check_sampling_supported(i3ds_asn1::SampleCommand sample);
 
   // Returns true if sample configuration is supported.
-  virtual bool is_sampling_supported(SampleCommand sample) = 0;
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample) = 0;
 
   // Attach handlers to the server.
   virtual void Attach(Server& server);
@@ -145,11 +144,11 @@ private:
   // Handler for sensor configuration query.
   void handle_configuration(ConfigurationService::Data& config);
 
-  SensorState state_;
-  SamplePeriod period_;
-  BatchSize batch_size_;
-  BatchCount batch_count_;
-  T_String device_name_;
+  i3ds_asn1::SensorState state_;
+  i3ds_asn1::SamplePeriod period_;
+  i3ds_asn1::BatchSize batch_size_;
+  i3ds_asn1::BatchCount batch_count_;
+  i3ds_asn1::T_String device_name_;
 };
 
 } // namespace i3ds

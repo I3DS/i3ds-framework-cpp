@@ -41,7 +41,7 @@ public:
     int image_count;
 
     // Frame mode (defaults to mono)
-    Frame_mode_t frame_mode;
+    i3ds_asn1::Frame_mode_t frame_mode;
 
     // Data bit-depth and bytes per pixel
     int data_depth;
@@ -63,54 +63,54 @@ public:
     int pattern_offset;
 
     // Node ID for trigger and flash services if supported.
-    NodeID trigger_node;
-    NodeID flash_node;
+    i3ds_asn1::NodeID trigger_node;
+    i3ds_asn1::NodeID flash_node;
   };
 
   // Shared pointer for GigE camera interfaces.
   typedef std::shared_ptr<GigECamera> Ptr;
 
   // Constructor for GigE camera.
-  GigECamera(Context::Ptr context, NodeID node, Parameters param);
+  GigECamera(Context::Ptr context, i3ds_asn1::NodeID node, Parameters param);
 
   // Destructor for GigE camera.
   virtual ~GigECamera();
 
   // Get shutter time for camera in microseconds.
-  virtual ShutterTime shutter() const;
+  virtual i3ds_asn1::ShutterTime shutter() const override;
 
   // Get gain for camera in decibel.
-  virtual SensorGain gain() const;
+  virtual i3ds_asn1::SensorGain gain() const override ;
 
   // Get auto exposure for camera.
-  virtual bool auto_exposure_enabled() const;
+  virtual bool auto_exposure_enabled() const override ;
 
   // Get shutter time limit for camera with auto exposure in microseconds.
-  virtual ShutterTime max_shutter() const;
+  virtual i3ds_asn1::ShutterTime max_shutter() const override ;
 
   // Get gain limit for camera with auto exposure in decibel.
-  virtual SensorGain max_gain() const;
+  virtual i3ds_asn1::SensorGain max_gain() const override ;
 
   // Get the region of interest enabled for camera.
-  virtual bool region_enabled() const;
+  virtual bool region_enabled() const override ;
 
   // Get the region of interest for the camera.
-  virtual PlanarRegion region() const;
+  virtual i3ds_asn1::PlanarRegion region() const override ;
 
   // Get the flash illumination for the camera.
-  virtual bool flash_enabled() const {return flash_enabled_;}
+  virtual bool flash_enabled() const override  {return flash_enabled_;}
 
   // Get the flash strength for the camera.
-  virtual FlashStrength flash_strength() const {return flash_strength_;}
+  virtual i3ds_asn1::FlashStrength flash_strength() const override  {return flash_strength_;}
 
   // Get the pattern illumination for the camera.
-  virtual bool pattern_enabled() const {return pattern_enabled_;}
+  virtual bool pattern_enabled() const override  {return pattern_enabled_;}
 
   // Get the pattern sequence for the camera.
-  virtual PatternSequence pattern_sequence() const {return pattern_sequence_;}
+  virtual i3ds_asn1::PatternSequence pattern_sequence() const override  {return pattern_sequence_;}
 
   // Returns true if sample configuration is supported.
-  virtual bool is_sampling_supported(SampleCommand sample);
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample) override ;
 
 protected:
 
@@ -188,7 +188,7 @@ protected:
   virtual void setAutoGainLimit(double gain_limit) = 0;
 
   // Send image sample where multiple images are stacked in height.
-  virtual bool send_sample(const byte* image, int width, int height);
+  virtual bool send_sample(const i3ds_asn1::byte* image, int width, int height);
 
   // Handler for camera exposure command, must be overloaded.
   virtual void handle_exposure(ExposureService::Data& command) override;
@@ -220,20 +220,20 @@ private:
   bool flash_enabled_;
 
   // Configured flash strength.
-  FlashStrength flash_strength_;
+  i3ds_asn1::FlashStrength flash_strength_;
 
   // True if pattern illumination is enabled.
   bool pattern_enabled_;
 
   // Chosen pattern sequence.
-  PatternSequence pattern_sequence_;
+  i3ds_asn1::PatternSequence pattern_sequence_;
 
   // Image stream publisher.
   Publisher publisher_;
 
   // Helper methods for setting and clearing triggers.
-  void set_trigger(TriggerOutput channel, TriggerOffset offset);
-  void clear_trigger(TriggerOutput channel);
+  void set_trigger(i3ds_asn1::TriggerOutput channel, i3ds_asn1::TriggerOffset offset);
+  void clear_trigger(i3ds_asn1::TriggerOutput channel);
 
   void signal_lost_camera();
 };

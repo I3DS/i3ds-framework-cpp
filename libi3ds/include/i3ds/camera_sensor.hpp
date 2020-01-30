@@ -19,7 +19,6 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/topic.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -49,43 +48,43 @@ public:
   typedef Topic<128, FrameCodec> FrameTopic;
 
   // Constructor for camera.
-  Camera(NodeID node) : Sensor(node) {};
+  Camera(i3ds_asn1::NodeID node) : Sensor(node) {};
 
   // Destructor for camera.
   virtual ~Camera() {};
 
   // Get shutter time for camera in microseconds.
-  virtual ShutterTime shutter() const = 0;
+  virtual i3ds_asn1::ShutterTime shutter() const = 0;
 
   // Get gain for camera in decibel.
-  virtual SensorGain gain() const = 0;
+  virtual i3ds_asn1::SensorGain gain() const = 0;
 
   // Get auto exposure for camera.
   virtual bool auto_exposure_enabled() const {return false;}
 
   // Get shutter time limit for camera with auto exposure in microseconds.
-  virtual ShutterTime max_shutter() const {return 0;}
+  virtual i3ds_asn1::ShutterTime max_shutter() const {return 0;}
 
   // Get gain limit for camera with auto exposure in decibel.
-  virtual SensorGain max_gain() const {return 0.0;}
+  virtual i3ds_asn1::SensorGain max_gain() const {return 0.0;}
 
   // Get the region of interest enabled for camera.
   virtual bool region_enabled() const {return false;}
 
   // Get the region of interest for the camera.
-  virtual PlanarRegion region() const {return {0,0,0,0};}
+  virtual i3ds_asn1::PlanarRegion region() const {return {0,0,0,0};}
 
   // Get the flash illumination for the camera.
   virtual bool flash_enabled() const {return false;}
 
   // Get the flash strength for the camera.
-  virtual FlashStrength flash_strength() const {return 0;}
+  virtual i3ds_asn1::FlashStrength flash_strength() const {return 0;}
 
   // Get the pattern illumination for the camera.
   virtual bool pattern_enabled() const {return false;}
 
   // Get the pattern sequence for the camera.
-  virtual PatternSequence pattern_sequence() const {return 0;}
+  virtual i3ds_asn1::PatternSequence pattern_sequence() const {return 0;}
 
   // Attach handlers to the server.
   virtual void Attach(Server& server);

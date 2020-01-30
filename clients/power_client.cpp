@@ -10,7 +10,7 @@
 
 #include <i3ds/power_client.hpp>
 
-i3ds::PowerClient::PowerClient(Context::Ptr context, NodeID node)
+i3ds::PowerClient::PowerClient(Context::Ptr context, i3ds_asn1::NodeID node)
   : Client(context, node)
 {
 }
@@ -24,15 +24,15 @@ i3ds::PowerClient::enable_channels(const PowerOutputSet& channels)
 
   int code = 0;
 
-  for (PowerOutput c : channels)
+  for (i3ds_asn1::PowerOutput c : channels)
     {
-      if (PowerOutput_IsConstraintValid(&c, &code))
+      if (i3ds_asn1::PowerOutput_IsConstraintValid(&c, &code))
         {
           command.request.arr[c - 1] = true;
         }
       else
         {
-          throw i3ds::CommandError(error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 
@@ -48,15 +48,15 @@ i3ds::PowerClient::disable_channels(const PowerOutputSet& channels)
 
   int code = 0;
 
-  for (PowerOutput c : channels)
+  for (i3ds_asn1::PowerOutput c : channels)
     {
-      if (PowerOutput_IsConstraintValid(&c, &code))
+      if (i3ds_asn1::PowerOutput_IsConstraintValid(&c, &code))
         {
           command.request.arr[c - 1] = true;
         }
       else
         {
-          throw i3ds::CommandError(error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 
@@ -72,15 +72,15 @@ i3ds::PowerClient::set_channels(const PowerOutputSet& channels)
 
   int code = 0;
 
-  for (PowerOutput c : channels)
+  for (i3ds_asn1::PowerOutput c : channels)
     {
-      if (PowerOutput_IsConstraintValid(&c, &code))
+      if (i3ds_asn1::PowerOutput_IsConstraintValid(&c, &code))
         {
           command.request.arr[c - 1] = true;
         }
       else
         {
-          throw i3ds::CommandError(error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 

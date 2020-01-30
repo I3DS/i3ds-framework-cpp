@@ -19,7 +19,6 @@
 #include <i3ds/topic.hpp>
 #include <i3ds/pointcloud.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -41,14 +40,14 @@ public:
   typedef Topic<128, PointCloudCodec> MeasurementTopic;
 
   // Constructor and destructor.
-  LIDAR(NodeID node) : Sensor(node) {};
+  LIDAR(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~LIDAR() {};
 
   // Get the region of interest enabled for LIDAR.
   virtual bool region_enabled() const {return false;}
 
   // Get the region of interest for the LIDAR.
-  virtual PolarRegion region() const {return {0,0,0,0};}
+  virtual i3ds_asn1::PolarRegion region() const {return {0,0,0,0};}
 
   // Attach handlers to the server.
   virtual void Attach(Server& server);

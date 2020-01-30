@@ -12,7 +12,7 @@
 
 #include <i3ds/publisher.hpp>
 
-i3ds::Publisher::Publisher(Context::Ptr context, NodeID node)
+i3ds::Publisher::Publisher(Context::Ptr context, i3ds_asn1::NodeID node)
   : node_(node),
     context_(context)
 {

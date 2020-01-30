@@ -18,7 +18,6 @@
 #include <i3ds/service.hpp>
 #include <i3ds/codec.hpp>
 
-using namespace i3ds_asn1;
 namespace i3ds
 {
 
@@ -35,7 +34,7 @@ public:
   typedef Command<1, FlashSetupCodec> FlashService;
 
   // Constructor for flash.
-  Flash(NodeID node) : Node(node) {};
+  Flash(i3ds_asn1::NodeID node) : Node(node) {};
 
   // Destructor for flash.
   virtual ~Flash() {};

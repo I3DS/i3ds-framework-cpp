@@ -32,7 +32,7 @@ cv::Mat frame_to_cv_mat(const DepthMap& frame, int image_number);
 
 // Sets the contents of a frame-descriptor from a cv::Mat
 void set_descriptor_from_mat(Frame& frame, const cv::Mat& mat,
-                             unsigned long timestamp_us, Frame_mode_t mode,
+                             unsigned long timestamp_us, i3ds_asn1::Frame_mode_t mode,
                              int image_count);
 
 

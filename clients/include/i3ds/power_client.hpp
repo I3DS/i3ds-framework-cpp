@@ -19,7 +19,7 @@
 namespace i3ds
 {
 
-typedef std::set<PowerOutput> PowerOutputSet;
+typedef std::set<i3ds_asn1::PowerOutput> PowerOutputSet;
 
 class PowerClient : public Client
 {
@@ -27,7 +27,7 @@ public:
 
   typedef std::shared_ptr<PowerClient> Ptr;
 
-  PowerClient(Context::Ptr context, NodeID node);
+  PowerClient(Context::Ptr context, i3ds_asn1::NodeID node);
 
   void enable_channels(const PowerOutputSet& channels);
   void disable_channels(const PowerOutputSet& channels);

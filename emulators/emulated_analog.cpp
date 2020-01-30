@@ -14,7 +14,7 @@
 #include <i3ds/emulated_analog.hpp>
 
 i3ds::EmulatedAnalog::Ptr
-i3ds::EmulatedAnalog::CreateTactile(Context::Ptr context, NodeID id)
+i3ds::EmulatedAnalog::CreateTactile(Context::Ptr context, i3ds_asn1::NodeID id)
 {
   Parameters param;
 
@@ -32,7 +32,7 @@ i3ds::EmulatedAnalog::CreateTactile(Context::Ptr context, NodeID id)
 }
 
 i3ds::EmulatedAnalog::Ptr
-i3ds::EmulatedAnalog::CreateForceTorque(Context::Ptr context, NodeID id)
+i3ds::EmulatedAnalog::CreateForceTorque(Context::Ptr context, i3ds_asn1::NodeID id)
 {
   Parameters param;
 
@@ -57,7 +57,7 @@ i3ds::EmulatedAnalog::CreateForceTorque(Context::Ptr context, NodeID id)
   return std::make_shared<EmulatedAnalog>(context, id, param);
 }
 
-i3ds::EmulatedAnalog::EmulatedAnalog(Context::Ptr context, NodeID node, const Parameters& param)
+i3ds::EmulatedAnalog::EmulatedAnalog(Context::Ptr context, i3ds_asn1::NodeID node, const Parameters& param)
   : Analog(node, param.series),
     param_(param),
     sampler_(std::bind(&i3ds::EmulatedAnalog::send_sample, this, std::placeholders::_1)),
@@ -112,7 +112,7 @@ i3ds::EmulatedAnalog::do_deactivate()
 }
 
 bool
-i3ds::EmulatedAnalog::is_sampling_supported(SampleCommand sample)
+i3ds::EmulatedAnalog::is_sampling_supported(i3ds_asn1::SampleCommand sample)
 {
   BOOST_LOG_TRIVIAL(info) << "Emulated tactile sensor with NodeID: " << node() << " is_period_supported()";
   return (sample.batch_size >= 1 && sample.batch_size <=10000*series_count())
@@ -132,7 +132,7 @@ i3ds::EmulatedAnalog::send_sample(unsigned long timestamp_us)
       BOOST_LOG_TRIVIAL(trace) << batches_ << " batches and " << param_.series << " series";
 
       frame_.descriptor.attributes.timestamp = timestamp_us;
-      frame_.descriptor.attributes.validity = sample_valid;
+      frame_.descriptor.attributes.validity = i3ds_asn1::sample_valid;
       frame_.descriptor.series_count = param_.series;
       frame_.descriptor.batch_size = batches_;
 

@@ -18,7 +18,7 @@
 #include <i3ds/codec.hpp>
 #include <i3ds/topic.hpp>
 #include <i3ds/depthmap.hpp>
-using namespace i3ds_asn1;
+
 namespace i3ds
 {
 
@@ -42,14 +42,14 @@ public:
   typedef Topic<128, DepthMapCodec> MeasurementTopic;
 
   // Constructor and destructor.
-  ToFCamera(NodeID node) : Sensor(node) {};
+  ToFCamera(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~ToFCamera() {};
 
   // Get the region of interest enabled for ToF-camera.
   virtual bool region_enabled() const {return false;}
 
   // Get the region of interest for the ToF-camera.
-  virtual PlanarRegion region() const {return {0,0,0,0};}
+  virtual i3ds_asn1::PlanarRegion region() const {return {0,0,0,0};}
 
   // Get the min range configuration of the ToF-camera.
   virtual double range_min_depth() const {return 0.0;}

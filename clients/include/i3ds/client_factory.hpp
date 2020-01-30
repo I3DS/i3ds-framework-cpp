@@ -31,7 +31,7 @@ public:
   virtual ~ClientFactory();
 
   template<typename T>
-  typename T::Ptr Create(NodeID node)
+  typename T::Ptr Create(i3ds_asn1::NodeID node)
   {
     static_assert(std::is_base_of<SensorClient, T>::value, "Not a SensorClient");
     return std::make_shared<T>(context_, node);
