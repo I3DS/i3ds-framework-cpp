@@ -131,10 +131,10 @@ i3ds::EmulatorFactory::CreateHRCamera(std::string sample_dir)
   EmulatedCamera::Parameters param;
 
   param.frame_mode = i3ds_asn1::mode_mono;
-  param.data_depth = 12;
-  param.pixel_size = 2;
-  param.width = 2048;
-  param.height = 2048;
+  param.data_depth = 8;
+  param.pixel_size = 1;
+  param.width = 640;
+  param.height = 640;
   param.image_count = 1;
   param.sample_dir = sample_dir;
 
