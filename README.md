@@ -171,7 +171,8 @@ sudo ldconfig
 ```
 
 This will install the headers under `/usr/local/include/i3ds`,
-`libi3ds.so` under `/usr/local/lib`, and the tools and services under
+`libi3ds.so`, `libi3ds_clients.so` and `libi3ds_emulators.so`
+under `/usr/local/lib`, and the tools and services under
 `/usr/local/bin`. The Python bindings are put in the local install
 directory that can vary among distributions.
 
