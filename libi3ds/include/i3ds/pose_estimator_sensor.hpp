@@ -11,7 +11,7 @@
 #ifndef __I3DS_POSE_ESTIMATOR_HPP
 #define __I3DS_POSE_ESTIMATOR_HPP
 
-#include <i3ds/PoseEstimator.h>
+#include <i3ds_asn1/PoseEstimator.hpp>
 #include <i3ds/frame.hpp>
 
 #include <i3ds/sensor.hpp>
@@ -43,7 +43,7 @@ public:
   typedef Topic<129, PoseEstimatorMeasurementCodec> MeasurementTopic;
 
   // Constructor and destructor.
-  PoseEstimator(NodeID node) : Sensor(node) {};
+  PoseEstimator(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~PoseEstimator() = default;
 
   virtual bool imaging_mode() const {return false;}

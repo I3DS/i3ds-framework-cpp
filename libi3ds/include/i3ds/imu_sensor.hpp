@@ -11,7 +11,7 @@
 #ifndef __I3DS_IMU_HPP
 #define __I3DS_IMU_HPP
 
-#include <i3ds/IMU.h>
+#include <i3ds_asn1/IMU.hpp>
 
 #include <i3ds/topic.hpp>
 #include <i3ds/sensor.hpp>
@@ -33,7 +33,7 @@ public:
   typedef std::shared_ptr<IMU> Ptr;
 
   // Constructor and destructor.
-  IMU(NodeID node) : Sensor(node) {};
+  IMU(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~IMU() {};
 
 };

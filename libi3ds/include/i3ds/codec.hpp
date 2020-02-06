@@ -29,15 +29,15 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 #define CODEC(NAME) struct NAME ## Codec { \
-    typedef NAME Data; \
-    static const int max_size = NAME ## _REQUIRED_BYTES_FOR_ENCODING; \
+    typedef i3ds_asn1::NAME Data; \
+    static const int max_size = i3ds_asn1_ ## NAME ## _REQUIRED_BYTES_FOR_ENCODING; \
     static inline void Initialize(Data& val) { \
       NAME ## _Initialize(&val); \
     } \
-    static inline flag Encode(const Data* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints) { \
+    static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode, i3ds_asn1::flag bCheckConstraints) { \
       return NAME ## _Encode(val, pBitStrm, pErrCode, bCheckConstraints); \
     } \
-    static inline flag Decode(Data* pVal, BitStream* pBitStrm, int* pErrCode) { \
+    static inline i3ds_asn1::flag Decode(Data* pVal, i3ds_asn1::BitStream* pBitStrm, int* pErrCode) { \
       return NAME ## _Decode(pVal, pBitStrm, pErrCode); \
     } \
 }
@@ -57,12 +57,12 @@ struct NullCodec
 
   static inline void Initialize(Data& ) {};
 
-  static inline flag Encode(const Data*, BitStream*, int*, flag)
+  static inline i3ds_asn1::flag Encode(const Data*, i3ds_asn1::BitStream*, int*, i3ds_asn1::flag)
   {
     return true;
   }
 
-  static inline flag Decode(Data*, BitStream*, int*)
+  static inline i3ds_asn1::flag Decode(Data*, i3ds_asn1::BitStream*, int*)
   {
     return true;
   }
@@ -102,10 +102,10 @@ inline size_t set_string(T& ts, std::string s)
 template<typename T>
 void Encode(Message& message, const typename T::Data& data)
 {
-  BitStream bs;
+  i3ds_asn1::BitStream bs;
 
   // Quicker to use AttachBuffer with calloc than Init with malloc. Init zeroes with memset internally.
-  BitStream_AttachBuffer(&bs, (unsigned char*) calloc(T::max_size, sizeof(unsigned char)), T::max_size);
+  i3ds_asn1::BitStream_AttachBuffer(&bs, (unsigned char*) calloc(T::max_size, sizeof(unsigned char)), T::max_size);
 
   int errcode = 0;
 
@@ -115,7 +115,7 @@ void Encode(Message& message, const typename T::Data& data)
       throw CodecError("Cannot encode: Bad data " + std::to_string(errcode));
     }
 
-  message.append_payload(bs.buf, BitStream_GetLength(&bs), false);
+  message.append_payload(bs.buf, i3ds_asn1::BitStream_GetLength(&bs), false);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -134,8 +134,8 @@ inline void Encode<NullCodec>(Message& , const NullCodec::Data& )
 template<typename T>
 void Decode(const Message& message, typename T::Data& data)
 {
-  BitStream bs;
-  BitStream_AttachBuffer(&bs, (unsigned char*) message.data(), message.size());
+  i3ds_asn1::BitStream bs;
+  i3ds_asn1::BitStream_AttachBuffer(&bs, (unsigned char*) message.data(), message.size());
 
   int errcode = 0;
 

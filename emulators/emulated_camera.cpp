@@ -16,7 +16,7 @@
 
 namespace fs = boost::filesystem;
 
-i3ds::EmulatedCamera::EmulatedCamera(Context::Ptr context, NodeID node, Parameters param)
+i3ds::EmulatedCamera::EmulatedCamera(Context::Ptr context, i3ds_asn1::NodeID node, Parameters param)
   : GigECamera(context, node, param),
     sampler_(std::bind(&i3ds::EmulatedCamera::generate_sample, this))
 {
@@ -365,7 +365,7 @@ i3ds::EmulatedCamera::load_images(std::string sample_dir)
 {
   if (sample_dir.size() > 0)
     {
-      int imread_mode = param_.frame_mode == mode_rgb ? cv::IMREAD_COLOR : cv::IMREAD_GRAYSCALE;
+      int imread_mode = param_.frame_mode == i3ds_asn1::mode_rgb ? cv::IMREAD_COLOR : cv::IMREAD_GRAYSCALE;
       try
         {
           std::vector<std::string> file_names;
@@ -404,7 +404,7 @@ i3ds::EmulatedCamera::load_images(std::string sample_dir)
       BOOST_LOG_TRIVIAL(trace) << "Emulated camera generating noise images";
       int cv_type = CV_16UC1;
 
-      if (param_.frame_mode == mode_rgb)
+      if (param_.frame_mode == i3ds_asn1::mode_rgb)
       {
           if (param_.pixel_size == 3) { cv_type = CV_8UC3; }
           if (param_.pixel_size == 6) { cv_type = CV_16UC3; }
@@ -420,7 +420,7 @@ i3ds::EmulatedCamera::load_images(std::string sample_dir)
           cv::Mat img(getSensorHeight(), getSensorWidth(), cv_type, cv::Scalar(0));
 
           int max_pixel_val = (1 << param_.data_depth) - 1;
-          if (param_.frame_mode == mode_rgb)
+          if (param_.frame_mode == i3ds_asn1::mode_rgb)
             {
               cv::randu(img, cv::Scalar(0,0,0), cv::Scalar(max_pixel_val, max_pixel_val, max_pixel_val));
             }

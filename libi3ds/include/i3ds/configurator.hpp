@@ -32,8 +32,8 @@ class SensorConfigurator : public Configurator
 private:
 
 public:
-  NodeID node_id;
-  SamplePeriod period;
+  i3ds_asn1::NodeID node_id;
+  i3ds_asn1::SamplePeriod period;
 
   SensorConfigurator() {}
   virtual ~SensorConfigurator() {}

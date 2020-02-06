@@ -29,17 +29,17 @@ public:
 
   typedef std::shared_ptr<EmulatedRadar> Ptr;
 
-  static Ptr Create(Context::Ptr context, NodeID node);
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID node);
 
-  EmulatedRadar(Context::Ptr context, NodeID node);
+  EmulatedRadar(Context::Ptr context, i3ds_asn1::NodeID node);
   virtual ~EmulatedRadar();
 
   // Getters.
   virtual bool region_enabled() const {return region_enabled_;}
-  virtual PlanarRegion region() const {return region_;}
+  virtual i3ds_asn1::PlanarRegion region() const {return region_;}
 
   // Supported period.
-  virtual bool is_sampling_supported(SampleCommand sample);
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample);
 
 protected:
 
@@ -57,7 +57,7 @@ private:
   bool send_sample(unsigned long timestamp_us);
 
   bool region_enabled_;
-  PlanarRegion region_;
+  i3ds_asn1::PlanarRegion region_;
 
   Sampler sampler_;
 

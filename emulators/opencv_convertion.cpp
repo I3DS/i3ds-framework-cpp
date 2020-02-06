@@ -42,7 +42,7 @@ i3ds::frame_to_cv_mat(const DepthMap& frame, int)
 cv::Mat
 i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
 {
-  const FrameDescriptor& d = frame.descriptor;
+  const i3ds_asn1::FrameDescriptor& d = frame.descriptor;
 
   int rows = d.region.size_y;
   int cols = d.region.size_x;
@@ -51,7 +51,7 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
   int cv_type = CV_16UC1;
   double scaling_factor = 1;
 
-  if (d.frame_mode == mode_rgb)
+  if (d.frame_mode == i3ds_asn1::mode_rgb)
     {
       if (pixel_size == 3) { cv_type = CV_8UC3; }
       if (pixel_size == 6) { cv_type = CV_16UC3; }
@@ -75,12 +75,12 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
 
 void
 i3ds::set_descriptor_from_mat(Frame& frame, const cv::Mat& mat,
-                              unsigned long timestamp_us, Frame_mode_t mode, int image_count)
+                              unsigned long timestamp_us, i3ds_asn1::Frame_mode_t mode, int image_count)
 {
-  FrameDescriptor* d = &frame.descriptor;
+  i3ds_asn1::FrameDescriptor* d = &frame.descriptor;
 
   d->attributes.timestamp = timestamp_us;
-  d->attributes.validity = sample_valid;
+  d->attributes.validity = i3ds_asn1::sample_valid;
 
   d->region.size_x = mat.cols;
   d->region.size_y = mat.rows;

@@ -10,7 +10,7 @@
 
 #include <i3ds/camera_client.hpp>
 
-i3ds::CameraClient::CameraClient(Context::Ptr context, NodeID sensor)
+i3ds::CameraClient::CameraClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : SensorClient(context, sensor)
 {
   Camera::ConfigurationService::Initialize(config_);
@@ -24,7 +24,7 @@ i3ds::CameraClient::load_config()
 }
 
 void
-i3ds::CameraClient::set_exposure(ShutterTime shutter, SensorGain gain)
+i3ds::CameraClient::set_exposure(i3ds_asn1::ShutterTime shutter, i3ds_asn1::SensorGain gain)
 {
   Camera::ExposureService::Data command;
 
@@ -35,7 +35,7 @@ i3ds::CameraClient::set_exposure(ShutterTime shutter, SensorGain gain)
 }
 
 void
-i3ds::CameraClient::set_auto_exposure(bool enable, ShutterTime max_shutter, SensorGain max_gain)
+i3ds::CameraClient::set_auto_exposure(bool enable, i3ds_asn1::ShutterTime max_shutter, i3ds_asn1::SensorGain max_gain)
 {
   Camera::AutoExposureService::Data command;
 
@@ -47,7 +47,7 @@ i3ds::CameraClient::set_auto_exposure(bool enable, ShutterTime max_shutter, Sens
 }
 
 void
-i3ds::CameraClient::set_region(bool enable, PlanarRegion region)
+i3ds::CameraClient::set_region(bool enable, i3ds_asn1::PlanarRegion region)
 {
   Camera::RegionService::Data command;
 
@@ -58,7 +58,7 @@ i3ds::CameraClient::set_region(bool enable, PlanarRegion region)
 }
 
 void
-i3ds::CameraClient::set_flash(bool enable, FlashStrength strength)
+i3ds::CameraClient::set_flash(bool enable, i3ds_asn1::FlashStrength strength)
 {
   Camera::FlashService::Data command;
 
@@ -69,7 +69,7 @@ i3ds::CameraClient::set_flash(bool enable, FlashStrength strength)
 }
 
 void
-i3ds::CameraClient::set_pattern(bool enable, PatternSequence sequence)
+i3ds::CameraClient::set_pattern(bool enable, i3ds_asn1::PatternSequence sequence)
 {
   Camera::PatternService::Data command;
 

@@ -22,18 +22,18 @@ class ToFCameraClient : public SensorClient
 public:
 
   typedef std::shared_ptr<ToFCameraClient> Ptr;
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<ToFCameraClient>(context, id);
   }
 
-  ToFCameraClient(Context::Ptr context, NodeID sensor);
+  ToFCameraClient(Context::Ptr context, i3ds_asn1::NodeID sensor);
 
-  void set_region(bool enable, PlanarRegion region);
+  void set_region(bool enable, i3ds_asn1::PlanarRegion region);
   void set_range(double min_depth, double max_depth);
 
   bool region_enabled() const {return config_.response.region_enabled;}
-  PlanarRegion region() const {return config_.response.region;}
+  i3ds_asn1::PlanarRegion region() const {return config_.response.region;}
   double min_depth() const {return config_.response.min_depth;}
   double max_depth() const {return config_.response.max_depth;}
 

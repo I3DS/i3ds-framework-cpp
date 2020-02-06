@@ -14,12 +14,12 @@
 #include <i3ds/emulated_radar.hpp>
 
 i3ds::EmulatedRadar::Ptr
-i3ds::EmulatedRadar::Create(Context::Ptr context, NodeID node)
+i3ds::EmulatedRadar::Create(Context::Ptr context, i3ds_asn1::NodeID node)
 {
   return std::make_shared<EmulatedRadar>(context, node);
 }
 
-i3ds::EmulatedRadar::EmulatedRadar(Context::Ptr context, NodeID node)
+i3ds::EmulatedRadar::EmulatedRadar(Context::Ptr context, i3ds_asn1::NodeID node)
   : Radar(node),
     sampler_(std::bind(&i3ds::EmulatedRadar::send_sample, this, std::placeholders::_1)),
     publisher_(context, node)
@@ -71,7 +71,7 @@ i3ds::EmulatedRadar::do_deactivate()
 }
 
 bool
-i3ds::EmulatedRadar::is_sampling_supported(SampleCommand sample)
+i3ds::EmulatedRadar::is_sampling_supported(i3ds_asn1::SampleCommand sample)
 {
   BOOST_LOG_TRIVIAL(info) << "Emulated radar with NodeID: " << node() << " is_period_supported()";
   return sample.batch_size == 1 && (0 < sample.period && sample.period <= 10000000);
@@ -95,7 +95,7 @@ i3ds::EmulatedRadar::send_sample(unsigned long timestamp_us)
   BOOST_LOG_TRIVIAL(trace) << "Emulated radar with NodeID: " << node() << " sends sample at " << timestamp_us;
 
   frame_.descriptor.attributes.timestamp = timestamp_us;
-  frame_.descriptor.attributes.validity = sample_valid;
+  frame_.descriptor.attributes.validity = i3ds_asn1::sample_valid;
 
   std::normal_distribution<float> d(100.0, 5.0);
 

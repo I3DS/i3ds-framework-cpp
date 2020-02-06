@@ -29,16 +29,16 @@ public:
 
   typedef std::shared_ptr<EmulatedPoseEstimator> Ptr;
 
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<EmulatedPoseEstimator>(context, id);
   }
 
-  EmulatedPoseEstimator(Context::Ptr context, NodeID id);
+  EmulatedPoseEstimator(Context::Ptr context, i3ds_asn1::NodeID id);
   virtual ~EmulatedPoseEstimator();
 
   // Supported period.
-  virtual bool is_sampling_supported(SampleCommand sample);
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample);
 
   virtual bool imaging_mode() const;
   virtual uint8_t selected_camera() const;
@@ -62,10 +62,10 @@ private:
   Sampler sampler_;
 
   Publisher publisher_;
-  PoseEstimatorMeasurement pose_estimate_;
+  i3ds_asn1::PoseEstimatorMeasurement pose_estimate_;
   Frame frame_;
   size_t image_size_;
-  std::vector<byte*> dummy_images_;
+  std::vector<i3ds_asn1::byte*> dummy_images_;
   const uint8_t n_images_;
   uint8_t current_image_;
 

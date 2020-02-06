@@ -13,7 +13,7 @@
 
 #include <memory>
 
-#include <i3ds/Common.h>
+#include <i3ds_asn1/Common.hpp>
 #include <i3ds/server.hpp>
 
 namespace i3ds
@@ -29,18 +29,18 @@ public:
 
   typedef std::shared_ptr<Node> Ptr;
 
-  Node(NodeID node) : node_(node) {};
+  Node(i3ds_asn1::NodeID node) : node_(node) {};
   virtual ~Node() {};
 
   // Get the node ID.
-  inline NodeID node() const {return node_;}
+  inline i3ds_asn1::NodeID node() const {return node_;}
 
   // Attach service handlers to the server.
   virtual void Attach(Server& server) = 0;
 
 private:
 
-  const NodeID node_;
+  const i3ds_asn1::NodeID node_;
 };
 
 } // namespace i3ds

@@ -26,16 +26,16 @@ public:
 
   typedef std::shared_ptr<EmulatedStarTracker> Ptr;
 
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<EmulatedStarTracker>(context, id);
   }
 
-  EmulatedStarTracker(Context::Ptr context, NodeID id);
+  EmulatedStarTracker(Context::Ptr context, i3ds_asn1::NodeID id);
   virtual ~EmulatedStarTracker();
 
   // Supported period.
-  virtual bool is_sampling_supported(SampleCommand sample);
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample);
 
 protected:
 
@@ -52,7 +52,7 @@ private:
   Sampler sampler_;
 
   Publisher publisher_;
-  StarTrackerMeasurement frame_;
+  i3ds_asn1::StarTrackerMeasurement frame_;
 };
 
 } // namespace i3ds

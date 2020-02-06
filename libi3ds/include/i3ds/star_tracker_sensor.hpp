@@ -11,7 +11,7 @@
 #ifndef __I3DS_STAR_TRACKER_HPP
 #define __I3DS_STAR_TRACKER_HPP
 
-#include <i3ds/StarTracker.h>
+#include <i3ds_asn1/StarTracker.hpp>
 
 #include <i3ds/sensor.hpp>
 #include <i3ds/service.hpp>
@@ -33,7 +33,7 @@ public:
   typedef std::shared_ptr<StarTracker> Ptr;
 
   // Constructor and destructor.
-  StarTracker(NodeID node) : Sensor(node) {};
+  StarTracker(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~StarTracker() {};
 
 };

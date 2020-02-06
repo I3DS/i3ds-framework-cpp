@@ -13,7 +13,7 @@
 
 #include <i3ds/emulated_imu.hpp>
 
-i3ds::EmulatedIMU::EmulatedIMU(Context::Ptr context, NodeID node)
+i3ds::EmulatedIMU::EmulatedIMU(Context::Ptr context, i3ds_asn1::NodeID node)
   : IMU(node),
     sampler_(std::bind(&i3ds::EmulatedIMU::send_sample, this, std::placeholders::_1)),
     publisher_(context, node)
@@ -55,7 +55,7 @@ i3ds::EmulatedIMU::do_deactivate()
 }
 
 bool
-i3ds::EmulatedIMU::is_sampling_supported(SampleCommand sample)
+i3ds::EmulatedIMU::is_sampling_supported(i3ds_asn1::SampleCommand sample)
 {
   BOOST_LOG_TRIVIAL(info) << "Emulated IMU with NodeID: " << node() << " is_period_supported()";
   return sample.batch_size == 1 && (0 < sample.period && sample.period <= 10000000);
@@ -67,7 +67,7 @@ i3ds::EmulatedIMU::send_sample(unsigned long timestamp_us)
   BOOST_LOG_TRIVIAL(trace) << "Emulated IMU with NodeID: " << node() << " sends sample at " << timestamp_us;
 
   frame_.attributes.timestamp = timestamp_us;
-  frame_.attributes.validity = sample_valid;
+  frame_.attributes.validity = i3ds_asn1::sample_valid;
 
   frame_.batch_size = 1;
   frame_.samples.nCount = 1;

@@ -22,16 +22,16 @@ class RadarClient : public SensorClient
 public:
 
   typedef std::shared_ptr<RadarClient> Ptr;
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<RadarClient>(context, id);
   }
 
-  RadarClient(Context::Ptr context, NodeID sensor);
-  void set_region(bool enable, PlanarRegion region);
+  RadarClient(Context::Ptr context, i3ds_asn1::NodeID sensor);
+  void set_region(bool enable, i3ds_asn1::PlanarRegion region);
 
   bool region_enabled() const {return config_.response.region_enabled;}
-  PlanarRegion region() const {return config_.response.region;}
+  i3ds_asn1::PlanarRegion region() const {return config_.response.region;}
 
   virtual void load_config();
 

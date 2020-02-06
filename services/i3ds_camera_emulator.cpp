@@ -70,14 +70,14 @@ int main(int argc, char** argv)
   ("height",         po::value<long>(&param.height)->default_value(2048), "Vertical resolution for camera")
     
   ("trigger",        po::bool_switch(&param.external_trigger)->default_value(false), "External trigger.")
-  ("trigger-node",   po::value<NodeID>(&param.trigger_node)->default_value(20), "Node ID of trigger service.")
+  ("trigger-node",   po::value<i3ds_asn1::NodeID>(&param.trigger_node)->default_value(20), "Node ID of trigger service.")
   ("trigger-source", po::value<int>(&param.trigger_source)->default_value(1), "Trigger generator for camera.")
 
   ("trigger-camera-output", po::value<int>(&param.camera_output)->default_value(2), "Trigger output for camera.")
   ("trigger-camera-offset", po::value<int>(&param.camera_offset)->default_value(5000), "Trigger offset for camera (us).")
 
   ("flash",                po::bool_switch(&param.support_flash)->default_value(false), "Support wide-angle flash.")
-  ("flash-node",           po::value<NodeID>(&param.flash_node)->default_value(21), "Node ID of flash service.")
+  ("flash-node",           po::value<i3ds_asn1::NodeID>(&param.flash_node)->default_value(21), "Node ID of flash service.")
   ("trigger-flash-output", po::value<int>(&param.flash_output)->default_value(8), "Trigger output for flash.")
   ("trigger-flash-offset", po::value<int>(&param.flash_offset)->default_value(4200), "Trigger offset for flash (us).")
 
@@ -99,12 +99,12 @@ int main(int argc, char** argv)
   if (rgb)
     {
       param.pixel_size = param.pixel_size * 3;
-      param.frame_mode = mode_rgb;
+      param.frame_mode = i3ds_asn1::mode_rgb;
       BOOST_LOG_TRIVIAL(info) << "Camera mode: RGB";
     }
   else
     {
-      param.frame_mode = mode_mono;
+      param.frame_mode = i3ds_asn1::mode_mono;
       BOOST_LOG_TRIVIAL(info) << "Camera mode: monochrome";
     }
 

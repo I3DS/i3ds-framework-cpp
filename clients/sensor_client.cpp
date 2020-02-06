@@ -10,7 +10,7 @@
 
 #include <i3ds/sensor_client.hpp>
 
-i3ds::SensorClient::SensorClient(Context::Ptr context, NodeID sensor)
+i3ds::SensorClient::SensorClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : Client(context, sensor)
 {
   Sensor::StatusService::Initialize(status_);
@@ -40,7 +40,7 @@ i3ds::SensorClient::load_all()
 }
 
 void
-i3ds::SensorClient::set_state(StateCommand state)
+i3ds::SensorClient::set_state(i3ds_asn1::StateCommand state)
 {
   Sensor::StateService::Data command;
 
@@ -50,7 +50,7 @@ i3ds::SensorClient::set_state(StateCommand state)
 }
 
 void
-i3ds::SensorClient::set_sampling(SamplePeriod period, BatchSize batch_size, BatchCount batch_count)
+i3ds::SensorClient::set_sampling(i3ds_asn1::SamplePeriod period, i3ds_asn1::BatchSize batch_size, i3ds_asn1::BatchCount batch_count)
 {
   Sensor::SampleService::Data command;
 

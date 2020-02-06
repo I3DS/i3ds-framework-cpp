@@ -39,6 +39,7 @@ usage()
     cat <<EOF
 -A [name]   Create tar-archive with i3ds-files
 -c          Force a full recompile of the entire project
+-e [path]   Path to external location for ASN.1 .so and headers
 -f          Fast, avoid running cmake for configuration, useful when only minor changes since last build
 -I [PATH]   Set install-path
 -t [target] Run tests, either 'all' or specific tests
@@ -48,7 +49,7 @@ EOF
     exit 1;
 }
 
-while getopts ":A:cfI:t:v?" o; do
+while getopts ":A:ce:fI:t:v?" o; do
     case "${o}" in
 	A)
 	    ARCHIVE=${OPTARG}
@@ -56,6 +57,9 @@ while getopts ":A:cfI:t:v?" o; do
 	c)
 	    # Ensure clean compile, avoid stale objects
 	    test -d ${BUILDPATH} && rm -rf ${BUILDPATH}/
+	    ;;
+	e)
+	    EXTERNAL=${OPTARG}
 	    ;;
 	f)
 	    FAST=1
@@ -78,10 +82,26 @@ while getopts ":A:cfI:t:v?" o; do
     esac
 done
 
-test -z ${NUM_CPUS} && NUM_CPUS=$(grep ^cpu\ MHz /proc/cpuinfo | wc -l)
+if [[ -z "${EXTERNAL}" ]]; then
+    echo "External not set"
+    echo $0
+    echo $@
+    if [[ ! -d /usr/include/i3ds_asn1 ]] && [[ ! -e /usr/lib/libi3ds_asn1.so ]]; then
+	echo "Missing reference to libi3ds_asn1.so, this is required"
+	echo "Either install libi3ds_asn1.so into /usr/ or specify external path using -e"
+	exit 1
+    fi
+else
+    if [[ ! -d "${EXTERNAL}" ]] || [[ ! -e "${EXTERNAL}/lib/libi3ds_asn1.so" ]]; then
+	echo "External path to libi3ds_asn1 (${EXTERNAL}) does not exist, or does not contain .so!";
+	exit 1;
+    fi
+fi
 
+test -z ${NUM_CPUS} && NUM_CPUS=$(grep ^cpu\ MHz /proc/cpuinfo | wc -l)
 test -d ${BUILDPATH} || mkdir -p ${BUILDPATH}
 pushd ${BUILDPATH} > /dev/null
+
 
 if [[ -z ${FAST} ]]; then
     cmake .. -DCMAKE_C_COMPILER="gcc" \
@@ -92,7 +112,8 @@ if [[ -z ${FAST} ]]; then
 	  -DBUILD_TESTS=ON \
 	  -DBUILD_BINDINGS=ON \
 	  -DCMAKE_INSTALL_PREFIX="${INSTALL_PATH}" \
-	  -DNO_OPENCV=OFF
+	  -DNO_OPENCV=OFF \
+	  -DI3DS_ASN1_ALT="${EXTERNAL}"
 fi
 
 # Always trigger build, regardless of $FAST

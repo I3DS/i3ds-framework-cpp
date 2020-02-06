@@ -10,7 +10,7 @@
 
 #include <i3ds/analog_client.hpp>
 
-i3ds::AnalogClient::AnalogClient(Context::Ptr context, NodeID sensor)
+i3ds::AnalogClient::AnalogClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : SensorClient(context, sensor)
 {
 }

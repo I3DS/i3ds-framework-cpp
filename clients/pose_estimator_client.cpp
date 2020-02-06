@@ -10,7 +10,7 @@
 
 #include <i3ds/pose_estimator_client.hpp>
 
-i3ds::PoseEstimatorClient::PoseEstimatorClient(Context::Ptr context, NodeID sensor)
+i3ds::PoseEstimatorClient::PoseEstimatorClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : SensorClient(context, sensor)
 {
   PoseEstimator::ConfigurationService::Initialize(config_);

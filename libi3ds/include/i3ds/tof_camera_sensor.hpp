@@ -11,7 +11,7 @@
 #ifndef __I3DS_TOF_CAMERA_HPP
 #define __I3DS_TOF_CAMERA_HPP
 
-#include <i3ds/ToFCamera.h>
+#include <i3ds_asn1/ToFCamera.hpp>
 
 #include <i3ds/sensor.hpp>
 #include <i3ds/service.hpp>
@@ -42,14 +42,14 @@ public:
   typedef Topic<128, DepthMapCodec> MeasurementTopic;
 
   // Constructor and destructor.
-  ToFCamera(NodeID node) : Sensor(node) {};
+  ToFCamera(i3ds_asn1::NodeID node) : Sensor(node) {};
   virtual ~ToFCamera() {};
 
   // Get the region of interest enabled for ToF-camera.
   virtual bool region_enabled() const {return false;}
 
   // Get the region of interest for the ToF-camera.
-  virtual PlanarRegion region() const {return {0,0,0,0};}
+  virtual i3ds_asn1::PlanarRegion region() const {return {0,0,0,0};}
 
   // Get the min range configuration of the ToF-camera.
   virtual double range_min_depth() const {return 0.0;}

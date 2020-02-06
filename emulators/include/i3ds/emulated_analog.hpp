@@ -37,19 +37,19 @@ public:
 
   typedef std::shared_ptr<EmulatedAnalog> Ptr;
 
-  static Ptr CreateTactile(Context::Ptr context, NodeID id);
-  static Ptr CreateForceTorque(Context::Ptr context, NodeID id);
+  static Ptr CreateTactile(Context::Ptr context, i3ds_asn1::NodeID id);
+  static Ptr CreateForceTorque(Context::Ptr context, i3ds_asn1::NodeID id);
 
-  static Ptr Create(Context::Ptr context, NodeID id, const Parameters& param)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id, const Parameters& param)
   {
     return std::make_shared<EmulatedAnalog>(context, id, param);
   }
 
-  EmulatedAnalog(Context::Ptr context, NodeID id, const Parameters& param);
+  EmulatedAnalog(Context::Ptr context, i3ds_asn1::NodeID id, const Parameters& param);
   virtual ~EmulatedAnalog();
 
   // Supported period.
-  virtual bool is_sampling_supported(SampleCommand sample);
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample);
 
 protected:
 
@@ -78,7 +78,7 @@ private:
   MeasurementTopic::Data frame_;
 
   // Number of batches inserted.
-  BatchCount batches_;
+  i3ds_asn1::BatchCount batches_;
 
   // Last value used for smoothing.
   std::vector<uint32_t> last_;

@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
   double gain, max_gain;
   unsigned int flash_strength, pattern_sequence;
   bool enable_auto, enable_region, enable_flash, enable_pattern;
-  PlanarRegion region;
+  i3ds_asn1::PlanarRegion region;
 
   po::options_description desc("Allowed camera control options");
 

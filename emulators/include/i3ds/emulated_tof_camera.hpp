@@ -29,19 +29,19 @@ public:
 
   typedef std::shared_ptr<EmulatedToFCamera> Ptr;
 
-  static Ptr Create(Context::Ptr context, NodeID node);
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID node);
 
-  EmulatedToFCamera(Context::Ptr context, NodeID node);
+  EmulatedToFCamera(Context::Ptr context, i3ds_asn1::NodeID node);
   virtual ~EmulatedToFCamera();
 
   // Getters.
   virtual bool region_enabled() const {return region_enabled_;}
-  virtual PlanarRegion region() const {return region_;}
+  virtual i3ds_asn1::PlanarRegion region() const {return region_;}
   virtual double range_min_depth() const {return min_depth_;}
   virtual double range_max_depth() const {return max_depth_;}
 
   // Supported period.
-  virtual bool is_sampling_supported(SampleCommand sample);
+  virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample);
 
 protected:
 
@@ -60,7 +60,7 @@ private:
   bool send_sample(unsigned long timestamp_us);
 
   bool region_enabled_;
-  PlanarRegion region_;
+  i3ds_asn1::PlanarRegion region_;
 
   float min_depth_, max_depth_;
 

@@ -10,7 +10,7 @@
 
 #include <i3ds/tof_camera_client.hpp>
 
-i3ds::ToFCameraClient::ToFCameraClient(Context::Ptr context, NodeID sensor)
+i3ds::ToFCameraClient::ToFCameraClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : SensorClient(context, sensor)
 {
   ToFCamera::ConfigurationService::Initialize(config_);
@@ -24,7 +24,7 @@ i3ds::ToFCameraClient::load_config()
 }
 
 void
-i3ds::ToFCameraClient::set_region(bool enable, PlanarRegion region)
+i3ds::ToFCameraClient::set_region(bool enable, i3ds_asn1::PlanarRegion region)
 {
   ToFCamera::RegionService::Data command;
 

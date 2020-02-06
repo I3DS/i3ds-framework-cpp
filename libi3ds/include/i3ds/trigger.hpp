@@ -11,7 +11,7 @@
 #ifndef __I3DS_TRIGGER_HPP
 #define __I3DS_TRIGGER_HPP
 
-#include <i3ds/Trigger.h>
+#include <i3ds_asn1/Trigger.hpp>
 
 #include <i3ds/node.hpp>
 #include <i3ds/server.hpp>
@@ -41,7 +41,7 @@ public:
   typedef Command<5, TriggerMaskCodec>         ChannelDisableService;
 
   // Constructor for trigger.
-  Trigger(NodeID node) : Node(node) {};
+  Trigger(i3ds_asn1::NodeID node) : Node(node) {};
 
   // Destructor for trigger.
   virtual ~Trigger() {};

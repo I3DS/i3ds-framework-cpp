@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 {
   i3ds::SensorConfigurator configurator;
   bool enable_region;
-  PlanarRegion region;
+  i3ds_asn1::PlanarRegion region;
 
   po::options_description desc("Allowed radar control options");
 

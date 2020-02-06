@@ -19,8 +19,13 @@ option(BUILD_TESTS    "Build tests and emulators" ON)
 option(BUILD_DEBUG    "Build with debug enabled" OFF)
 option(BUILD_BINDINGS "Build bindings" ON)
 option(NO_OPENCV      "Force OpenCV detection off" OFF)
+option(I3DS_ASN1_ALT  "Alternative location for libi3ds_asn1.so" OFF)
 
 if (BUILD_EMBEDDED)
+  if (I3DS_ASN1_ALT)
+    MESSAGE(FATAL_ERROR "BUILD_EMBEDDED does not accept alternative location for libi3ds_asn1.so")
+  endif (I3DS_ASN1_ALT)
+
   if(NOT DEFINED CMAKE_FIND_ROOT_PATH)
     MESSAGE(FATAL_ERROR "CMAKE_FIND_ROOT_PATH path must be set when compiling for embedded")
   endif(NOT DEFINED CMAKE_FIND_ROOT_PATH)
@@ -29,8 +34,6 @@ if (BUILD_EMBEDDED)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --sysroot=${CMAKE_FIND_ROOT_PATH}")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --sysroot=${CMAKE_FIND_ROOT_PATH}")
 endif (BUILD_EMBEDDED)
-
-include_directories("external/include")
 
 enable_testing ()
 
@@ -157,8 +160,13 @@ else()
   find_package (OpenCV 3.0.0 QUIET)
 endif()
 
+if (I3DS_ASN1_ALT)
+  add_library(i3ds_asn1 SHARED IMPORTED)
+  set_target_properties( i3ds_asn1 PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/${I3DS_ASN1_ALT}/lib/libi3ds_asn1.so)
+  include_directories(BEFORE "${I3DS_ASN1_ALT}/include")
+endif (I3DS_ASN1_ALT)
+
 include_directories (BEFORE "libi3ds/include/")
-include_directories (BEFORE "generated")
 include_directories (BEFORE "clients/include")
 
 if (BUILD_TESTS OR BUILD_TOOLS)

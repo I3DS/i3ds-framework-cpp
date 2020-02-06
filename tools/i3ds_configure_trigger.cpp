@@ -28,7 +28,7 @@ namespace logging = boost::log;
 int main(int argc, char *argv[])
 {
   i3ds::Configurator configurator;
-  NodeID node_id;
+  i3ds_asn1::NodeID node_id;
   int generator;
   int trigger;
   uint32_t period;
@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
     } else {
       BOOST_LOG_TRIVIAL(info) << "Sending generator message: " << generator << " @ " << period << "[µs]";
 
-      TriggerGenerator gen = generator;
-      TriggerPeriod per = period;
+      i3ds_asn1::TriggerGenerator gen = generator;
+      i3ds_asn1::TriggerPeriod per = period;
       trigger_client.set_generator(gen, per);
 
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
     BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
   }
   if (vm.count("trigger") && vm.count("enable")) {
-    i3ds::TriggerOutputSet triggers({static_cast<TriggerOutput>(trigger)});
+    i3ds::TriggerOutputSet triggers({static_cast<i3ds_asn1::TriggerOutput>(trigger)});
     if (enable) {
       BOOST_LOG_TRIVIAL(info) << "Enabling: " << trigger;
       trigger_client.enable_channels(triggers);

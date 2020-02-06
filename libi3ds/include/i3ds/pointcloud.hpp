@@ -12,8 +12,8 @@
 #define __I3DS_POINTCLOUD_HPP
 
 
-#include <i3ds/PointCloud.h>
-#include <i3ds/taste-types.h>
+#include <i3ds_asn1/PointCloud.hpp>
+#include <i3ds_asn1/taste-types.hpp>
 #include <i3ds/codec.hpp>
 
 #include <vector>
@@ -32,7 +32,7 @@ struct PointXYZ
 
 struct PointCloud
 {
-  PointCloudDescriptor descriptor;
+  i3ds_asn1::PointCloudDescriptor descriptor;
   std::vector<PointXYZ> points;
 };
 
@@ -43,17 +43,17 @@ struct PointCloudCodec
   static inline void Initialize(Data& val)
   {
     PointCloudDescriptorCodec::Initialize(val.descriptor);
-    val.descriptor.point_format = fields_xyz_f;
+    val.descriptor.point_format = i3ds_asn1::fields_xyz_f;
     val.descriptor.point_size = sizeof(PointXYZ);
     val.points.clear();
   };
 
-  static inline flag Encode(const Data* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints)
+  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode, i3ds_asn1::flag bCheckConstraints)
   {
     return PointCloudDescriptorCodec::Encode(&(val->descriptor), pBitStrm, pErrCode, bCheckConstraints);
   }
 
-  static inline flag Decode(Data* pVal, BitStream* pBitStrm, int* pErrCode)
+  static inline i3ds_asn1::flag Decode(Data* pVal, i3ds_asn1::BitStream* pBitStrm, int* pErrCode)
   {
     return PointCloudDescriptorCodec::Decode(&pVal->descriptor, pBitStrm, pErrCode);
   }
@@ -69,7 +69,7 @@ inline void Encode<PointCloudCodec>(Message& message, const PointCloudCodec::Dat
 {
   Encode<PointCloudDescriptorCodec>(message, data.descriptor);
 
-  const byte* d = reinterpret_cast<const byte*>(data.points.data());
+  const i3ds_asn1::byte* d = reinterpret_cast<const i3ds_asn1::byte*>(data.points.data());
   const size_t s = data.points.size() * sizeof(PointXYZ);
   
   message.append_payload(d, s);

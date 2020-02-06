@@ -11,7 +11,7 @@
 #ifndef __I3DS_POWER_HPP
 #define __I3DS_POWER_HPP
 
-#include <i3ds/Power.h>
+#include <i3ds_asn1/Power.hpp>
 
 #include <i3ds/node.hpp>
 #include <i3ds/server.hpp>
@@ -36,7 +36,7 @@ public:
   typedef Command<3, PowerMaskCodec>         ChannelsSetService;
 
   // Constructor for trigger.
-  Power(NodeID node) : Node(node) {};
+  Power(i3ds_asn1::NodeID node) : Node(node) {};
 
   // Destructor for trigger.
   virtual ~Power() {};

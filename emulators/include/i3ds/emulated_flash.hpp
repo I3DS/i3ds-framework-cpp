@@ -31,20 +31,20 @@ public:
   // Shared pointer for flash interfaces.
   typedef std::shared_ptr<EmulatedFlash> Ptr;
 
-  static Ptr Create(NodeID id)
+  static Ptr Create(i3ds_asn1::NodeID id)
   {
     return std::make_shared<EmulatedFlash>(id);
   }
 
   // Constructor for flash.
-  EmulatedFlash(NodeID node);
+  EmulatedFlash(i3ds_asn1::NodeID node);
 
   // Destructor for flash.
   virtual ~EmulatedFlash();
 
-  ShutterTime duration() const {return duration_;}
+  i3ds_asn1::ShutterTime duration() const {return duration_;}
 
-  FlashStrength strength() const {return strength_;}
+  i3ds_asn1::FlashStrength strength() const {return strength_;}
 
 protected:
 
@@ -53,8 +53,8 @@ protected:
 
 private:
 
-  ShutterTime duration_;
-  FlashStrength strength_;
+  i3ds_asn1::ShutterTime duration_;
+  i3ds_asn1::FlashStrength strength_;
 };
 
 } // namespace i3ds

@@ -23,37 +23,37 @@ public:
 
   typedef std::shared_ptr<SensorClient> Ptr;
 
-  SensorClient(Context::Ptr context, NodeID sensor);
+  SensorClient(Context::Ptr context, i3ds_asn1::NodeID sensor);
 
   // Returns true if sensor is in inactive state.
-  inline bool is_inactive() const {return state() == inactive;}
+  inline bool is_inactive() const {return state() == i3ds_asn1::inactive;}
 
   // Returns true if sensor is in active state.
-  inline bool is_active() const {return state() == standby || state() == operational;}
+  inline bool is_active() const {return state() == i3ds_asn1::standby || state() == i3ds_asn1::operational;}
 
   // Returns true if sensor is in standby state.
-  inline bool is_standby() const {return state() == standby;}
+  inline bool is_standby() const {return state() == i3ds_asn1::standby;}
 
   // Returns true if sensor is in operational state.
-  inline bool is_operational() const {return state() == operational;}
+  inline bool is_operational() const {return state() == i3ds_asn1::operational;}
 
   // Returns true if sensor is in failure state.
-  inline bool is_failure() const {return state() == failure;}
+  inline bool is_failure() const {return state() == i3ds_asn1::failure;}
 
   // State helper functions.
-  inline void Activate()   {set_state(activate);}
-  inline void Deactivate() {set_state(deactivate);}
-  inline void Start()      {set_state(start);}
-  inline void Stop()       {set_state(stop);}
+  inline void Activate()   {set_state(i3ds_asn1::activate);}
+  inline void Deactivate() {set_state(i3ds_asn1::deactivate);}
+  inline void Start()      {set_state(i3ds_asn1::start);}
+  inline void Stop()       {set_state(i3ds_asn1::stop);}
 
-  void set_state(StateCommand state);
-  void set_sampling(SamplePeriod period, BatchSize batch_size = 1, BatchCount batch_count = 0);
+  void set_state(i3ds_asn1::StateCommand state);
+  void set_sampling(i3ds_asn1::SamplePeriod period, i3ds_asn1::BatchSize batch_size = 1, i3ds_asn1::BatchCount batch_count = 0);
 
-  SensorState state() const {return status_.response.current_state;}
-  Base_Temperature temperature() const {return status_.response.device_temperature;}
-  SamplePeriod period() const {return config_.response.period;}
-  BatchSize batch_size() const {return config_.response.batch_size;}
-  BatchCount batch_count() const {return config_.response.batch_count;}
+  i3ds_asn1::SensorState state() const {return status_.response.current_state;}
+  i3ds_asn1::Base_Temperature temperature() const {return status_.response.device_temperature;}
+  i3ds_asn1::SamplePeriod period() const {return config_.response.period;}
+  i3ds_asn1::BatchSize batch_size() const {return config_.response.batch_size;}
+  i3ds_asn1::BatchCount batch_count() const {return config_.response.batch_count;}
 
   std::string device_name() const {return std::string((const char*)config_.response.device_name.arr, config_.response.device_name.nCount);}
 

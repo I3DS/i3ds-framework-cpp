@@ -10,7 +10,7 @@
 
 #include <i3ds/emulated_trigger.hpp>
 
-i3ds::EmulatedTrigger::EmulatedTrigger(NodeID id)
+i3ds::EmulatedTrigger::EmulatedTrigger(i3ds_asn1::NodeID id)
   : Trigger(id),
     generators_(4),
     channels_(8),
@@ -38,38 +38,38 @@ i3ds::EmulatedTrigger::~EmulatedTrigger()
   BOOST_LOG_TRIVIAL(info) << "Destroy emulated trigger with NodeID: " << node();
 }
 
-TriggerPeriod
-i3ds::EmulatedTrigger::period(TriggerGenerator generator) const
+i3ds_asn1::TriggerPeriod
+i3ds::EmulatedTrigger::period(i3ds_asn1::TriggerGenerator generator) const
 {
   return generators_[generator - 1];
 }
 
-TriggerGenerator
-i3ds::EmulatedTrigger::source(TriggerOutput channel) const
+i3ds_asn1::TriggerGenerator
+i3ds::EmulatedTrigger::source(i3ds_asn1::TriggerOutput channel) const
 {
   return channels_[channel - 1].source;
 }
 
-TriggerDuration
-i3ds::EmulatedTrigger::duration(TriggerOutput channel) const
+i3ds_asn1::TriggerDuration
+i3ds::EmulatedTrigger::duration(i3ds_asn1::TriggerOutput channel) const
 {
   return channels_[channel - 1].duration;
 }
 
-TriggerOffset
-i3ds::EmulatedTrigger::offset(TriggerOutput channel) const
+i3ds_asn1::TriggerOffset
+i3ds::EmulatedTrigger::offset(i3ds_asn1::TriggerOutput channel) const
 {
   return channels_[channel - 1].offset;
 }
 
 bool
-i3ds::EmulatedTrigger::inverted(TriggerOutput channel) const
+i3ds::EmulatedTrigger::inverted(i3ds_asn1::TriggerOutput channel) const
 {
   return channels_[channel - 1].invert;
 }
 
 bool
-i3ds::EmulatedTrigger::enabled(TriggerOutput channel) const
+i3ds::EmulatedTrigger::enabled(i3ds_asn1::TriggerOutput channel) const
 {
   return enabled_[channel - 1];
 }

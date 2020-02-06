@@ -30,9 +30,9 @@ namespace logging = boost::log;
 int main(int argc, char *argv[])
 {
   //i3ds::SensorConfigurator configurator;
-  NodeID node_id = 0;
-  std::vector<PowerOutput> enable_ports;
-  std::vector<PowerOutput> disable_ports;
+  i3ds_asn1::NodeID node_id = 0;
+  std::vector<i3ds_asn1::PowerOutput> enable_ports;
+  std::vector<i3ds_asn1::PowerOutput> disable_ports;
   bool set_ports = false;
   std::string addr_server;
 

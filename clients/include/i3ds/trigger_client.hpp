@@ -19,7 +19,7 @@
 namespace i3ds
 {
 
-typedef std::set<TriggerOutput> TriggerOutputSet;
+typedef std::set<i3ds_asn1::TriggerOutput> TriggerOutputSet;
 
 class TriggerClient : public Client
 {
@@ -27,14 +27,15 @@ public:
 
   typedef std::shared_ptr<TriggerClient> Ptr;
 
-  TriggerClient(Context::Ptr context, NodeID node);
+  TriggerClient(Context::Ptr context, i3ds_asn1::NodeID node);
 
-  void set_generator(TriggerGenerator generator, TriggerPeriod period);
+  void set_generator(i3ds_asn1::TriggerGenerator generator, i3ds_asn1::TriggerPeriod period);
 
-  void set_internal_channel(TriggerOutput channel, TriggerGenerator source, TriggerOffset offset,
-                            TriggerDuration duration, bool invert);
+  void set_internal_channel(i3ds_asn1::TriggerOutput channel, i3ds_asn1::TriggerGenerator source, i3ds_asn1::TriggerOffset offset,
+                            i3ds_asn1::TriggerDuration duration, bool invert);
 
-  void set_external_channel(TriggerOutput channel, TriggerInput source, TriggerOffset offset, TriggerDuration duration,
+  void set_external_channel(i3ds_asn1::TriggerOutput channel, i3ds_asn1::TriggerInput source, 
+                            i3ds_asn1::TriggerOffset offset, i3ds_asn1::TriggerDuration duration,
                             bool bypass, bool invert);
 
   void enable_channels(const TriggerOutputSet& channels);

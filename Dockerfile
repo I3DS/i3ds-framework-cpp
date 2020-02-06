@@ -26,4 +26,13 @@ COPY scripts/valgrind-suppressions.supp /
 
 # If we run as non-root, make sure anyone can exec
 RUN chmod a+x /hostmake.sh
+
+# We always copy external, Docker is primarily used for running tests
+# and building other parts of i3ds-framework, *not* for testing ASN.1,
+# so having slightly outdated libraries is better than not having any.
+#
+# do_docker will pass through -e (external) anyway, so it is still
+# possible to test a newer libi3ds_asn1.so
+COPY external /usr/
+
 ENTRYPOINT ["/hostmake.sh"]

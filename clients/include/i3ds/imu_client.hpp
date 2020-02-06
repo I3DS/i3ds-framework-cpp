@@ -22,12 +22,12 @@ class IMUClient : public SensorClient
 public:
 
   typedef std::shared_ptr<IMUClient> Ptr;
-  static Ptr Create(Context::Ptr context, NodeID id)
+  static Ptr Create(Context::Ptr context, i3ds_asn1::NodeID id)
   {
     return std::make_shared<IMUClient>(context, id);
   }
 
-  IMUClient(Context::Ptr context, NodeID sensor);
+  IMUClient(Context::Ptr context, i3ds_asn1::NodeID sensor);
 
 };
 

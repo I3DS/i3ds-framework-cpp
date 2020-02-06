@@ -13,7 +13,7 @@
 
 #include <i3ds/emulated_star_tracker.hpp>
 
-i3ds::EmulatedStarTracker::EmulatedStarTracker(Context::Ptr context, NodeID node)
+i3ds::EmulatedStarTracker::EmulatedStarTracker(Context::Ptr context, i3ds_asn1::NodeID node)
   : StarTracker(node),
     sampler_(std::bind(&i3ds::EmulatedStarTracker::send_sample, this, std::placeholders::_1)),
     publisher_(context, node)
@@ -55,7 +55,7 @@ i3ds::EmulatedStarTracker::do_deactivate()
 }
 
 bool
-i3ds::EmulatedStarTracker::is_sampling_supported(SampleCommand sample)
+i3ds::EmulatedStarTracker::is_sampling_supported(i3ds_asn1::SampleCommand sample)
 {
   BOOST_LOG_TRIVIAL(info) << "Emulated star tracker with NodeID: " << node() << " is_period_supported()";
   return sample.batch_size == 1 && (0 < sample.period && sample.period <= 10000000);
@@ -67,7 +67,7 @@ i3ds::EmulatedStarTracker::send_sample(unsigned long timestamp_us)
   BOOST_LOG_TRIVIAL(trace) << "Emulated star tracker with NodeID: " << node() << " sends sample at " << timestamp_us;
 
   frame_.attributes.timestamp = timestamp_us;
-  frame_.attributes.validity = sample_valid;
+  frame_.attributes.validity = i3ds_asn1::sample_valid;
 
   frame_.position.im.nCount = 3;
   frame_.position.im.arr[0] = 1.0;

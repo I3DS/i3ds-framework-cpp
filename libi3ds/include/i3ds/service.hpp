@@ -21,10 +21,10 @@ namespace i3ds
 
 CODEC(CommandResponse);
 
-template<EndpointID E, typename T1, typename T2>
+template<i3ds_asn1::EndpointID E, typename T1, typename T2>
 struct Service
 {
-  static const EndpointID endpoint = E;
+  static const i3ds_asn1::EndpointID endpoint = E;
 
   typedef T1 RequestCodec;
   typedef T2 ResponseCodec;
@@ -42,10 +42,10 @@ struct Service
   }
 };
 
-template<EndpointID E, typename T>
+template<i3ds_asn1::EndpointID E, typename T>
 struct Query : public Service<E, NullCodec, T> {};
 
-template<EndpointID E, typename T>
+template<i3ds_asn1::EndpointID E, typename T>
 struct Command : public Service<E, T, CommandResponseCodec> {};
 
 

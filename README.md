@@ -144,13 +144,10 @@ The framework has the following build dependencies:
 * Boost framework (program options and unit test)
 * SWIG and Python development files for optional Python binding
 * OpenCV development files for some of the tools
-* asn1scc: https://confluence.code.sintef.no/display/I3DS/ASN.1+compiler
 
 On Ubuntu 16.04, the packages you should need are:
 * build-essential
 * cmake
-* antlr3
-* fsharp
 * libzmq3-dev
 * libboost-dev
 * libboost-test-dev
@@ -166,7 +163,7 @@ To build and install the framework with CMake do the following:
 ```
 mkdir build/
 cd build/
-cmake .. -DASN1CC_SRC_ROOT_FOLDER=[Path to asn1scc build]
+cmake ..
 make
 make test
 sudo make install
@@ -174,6 +171,15 @@ sudo ldconfig
 ```
 
 This will install the headers under `/usr/local/include/i3ds`,
-`libi3ds.so` under `/usr/local/lib`, and the tools and services under
+`libi3ds.so`, `libi3ds_clients.so` and `libi3ds_emulators.so`
+under `/usr/local/lib`, and the tools and services under
 `/usr/local/bin`. The Python bindings are put in the local install
 directory that can vary among distributions.
+
+### Getting the ASN.1 bindings
+  
+Note that the ASN.1-bindings will not be installed. They are 
+included in this repository under the `external` directory for
+building, but will have to be installed either by manual copying
+from the `external` directory or from the `i3ds-interfaces`
+git repository. See the README file in that repo for details.

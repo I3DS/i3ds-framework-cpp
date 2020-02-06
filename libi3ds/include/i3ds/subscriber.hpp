@@ -88,7 +88,7 @@ public:
 
   // Register callback for topic.
   template<typename T>
-  void Attach(NodeID node, typename Wrapper<T>::Operation operation)
+  void Attach(i3ds_asn1::NodeID node, typename Wrapper<T>::Operation operation)
   {
     attach_handler(Address(node, T::endpoint), Wrapper<T>::Create(operation));
   }

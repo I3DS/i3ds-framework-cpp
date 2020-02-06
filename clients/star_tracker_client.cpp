@@ -10,7 +10,7 @@
 
 #include <i3ds/star_tracker_client.hpp>
 
-i3ds::StarTrackerClient::StarTrackerClient(Context::Ptr context, NodeID sensor)
+i3ds::StarTrackerClient::StarTrackerClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : SensorClient(context, sensor)
 {
 }

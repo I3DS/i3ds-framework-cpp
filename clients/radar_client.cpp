@@ -10,7 +10,7 @@
 
 #include <i3ds/radar_client.hpp>
 
-i3ds::RadarClient::RadarClient(Context::Ptr context, NodeID sensor)
+i3ds::RadarClient::RadarClient(Context::Ptr context, i3ds_asn1::NodeID sensor)
   : SensorClient(context, sensor)
 {
   Radar::ConfigurationService::Initialize(config_);
@@ -24,7 +24,7 @@ i3ds::RadarClient::load_config()
 }
 
 void
-i3ds::RadarClient::set_region(bool enable, PlanarRegion region)
+i3ds::RadarClient::set_region(bool enable, i3ds_asn1::PlanarRegion region)
 {
   Radar::RegionService::Data command;
 

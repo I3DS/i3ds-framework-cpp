@@ -19,10 +19,10 @@
 namespace i3ds
 {
 
-template<EndpointID E, typename T>
+template<i3ds_asn1::EndpointID E, typename T>
 struct Topic
 {
-  static const EndpointID endpoint = E;
+  static const i3ds_asn1::EndpointID endpoint = E;
 
   typedef T Codec;
   typedef typename T::Data Data;

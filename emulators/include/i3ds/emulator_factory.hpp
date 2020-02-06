@@ -35,7 +35,7 @@ class EmulatorFactory
 {
 public:
 
-  EmulatorFactory(Context::Ptr context, NodeID base_id);
+  EmulatorFactory(Context::Ptr context, i3ds_asn1::NodeID base_id);
   virtual ~EmulatorFactory();
 
   Radar::Ptr CreateRadar();
@@ -58,9 +58,9 @@ public:
 private:
 
   Context::Ptr context_;
-  NodeID next_id_;
-  NodeID trigger_id_;
-  NodeID flash_id_;
+  i3ds_asn1::NodeID next_id_;
+  i3ds_asn1::NodeID trigger_id_;
+  i3ds_asn1::NodeID flash_id_;
 };
 
 } // namspace i3ds

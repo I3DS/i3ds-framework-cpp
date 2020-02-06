@@ -41,8 +41,8 @@ signal_handler(int)
 
 bool
 register_node(i3ds::Context::Ptr &context,
-              std::unordered_map<NodeID, i3ds::Socket::Ptr> &publishers,
-              NodeID new_node)
+              std::unordered_map<i3ds_asn1::NodeID, i3ds::Socket::Ptr> &publishers,
+              i3ds_asn1::NodeID new_node)
 {
   auto search = publishers.find(new_node);
 
@@ -63,7 +63,7 @@ main(int argc, char *argv[])
   std::string file_name;
   int node_offset;
   bool is_forced_node = false;
-  NodeID forced_node;
+  i3ds_asn1::NodeID forced_node;
   double speedup;
 
   po::options_description desc("Replays a log file recorded with i3ds_record\n  Available options");
@@ -71,7 +71,7 @@ main(int argc, char *argv[])
   configurator.add_common_options(desc);
   desc.add_options()
   ("input,i", po::value<std::string>(&file_name)->required(), "Name of log file")
-  ("node,n", po::value<NodeID>(&forced_node), "Force the messages to be output on this node")
+  ("node,n", po::value<i3ds_asn1::NodeID>(&forced_node), "Force the messages to be output on this node")
   ("node-offset,p", po::value<int>(&node_offset)->default_value(0), "Offset to the recorded nodes")
   ("speedup,s", po::value<double>(&speedup)->default_value(1.0), "Speedup of replay (1.0 = normal speed)")
   ;
@@ -80,14 +80,14 @@ main(int argc, char *argv[])
   i3ds::SessionReader recording(file_name);
   i3ds::MessageRecord r = recording.get_message();
 
-  NodeID node_id;
+  i3ds_asn1::NodeID node_id;
 
   if (recording.header_found())
     {
       BOOST_LOG_TRIVIAL(trace) << "Header file found.";
       BOOST_LOG_TRIVIAL(info) << "Replaying messages from node IDs:";
 
-      for (NodeID node_id : recording.node_ids)
+      for (i3ds_asn1::NodeID node_id : recording.node_ids)
         {
           BOOST_LOG_TRIVIAL(info) << "  " << node_id;
         }
@@ -109,7 +109,7 @@ main(int argc, char *argv[])
       is_forced_node = true;
     }
 
-  std::unordered_map<NodeID, NodeID> node_id_translation;
+  std::unordered_map<i3ds_asn1::NodeID, i3ds_asn1::NodeID> node_id_translation;
 
   if (recording.header_found())
     {
@@ -117,7 +117,7 @@ main(int argc, char *argv[])
         {
           BOOST_LOG_TRIVIAL(info) << "Publishing to node ID " << forced_node;
 
-          for (NodeID node_id : recording.node_ids)
+          for (i3ds_asn1::NodeID node_id : recording.node_ids)
             {
               node_id_translation[node_id] = forced_node;
             }
@@ -126,9 +126,9 @@ main(int argc, char *argv[])
         {
           BOOST_LOG_TRIVIAL(info) << "Publishing to node IDs: ";
 
-          for (NodeID node_id : recording.node_ids)
+          for (i3ds_asn1::NodeID node_id : recording.node_ids)
             {
-              NodeID new_node = node_id + node_offset;
+              i3ds_asn1::NodeID new_node = node_id + node_offset;
               node_id_translation[node_id] = new_node;
               BOOST_LOG_TRIVIAL(info) << "  " << new_node;
             }
@@ -143,14 +143,14 @@ main(int argc, char *argv[])
         }
       else
         {
-          NodeID new_node = node_id + node_offset;
+          i3ds_asn1::NodeID new_node = node_id + node_offset;
           BOOST_LOG_TRIVIAL(info) << "Publishing to node ID " << new_node << "(and possibly others)";
           node_id_translation[node_id] = new_node;
         }
     }
 
   i3ds::Context::Ptr context = i3ds::Context::Create();
-  std::unordered_map<NodeID, i3ds::Socket::Ptr> publishers;
+  std::unordered_map<i3ds_asn1::NodeID, i3ds::Socket::Ptr> publishers;
 
   for (auto node_node : node_id_translation)
     {
@@ -186,8 +186,8 @@ main(int argc, char *argv[])
             }
 
           i3ds::Address addr = r.msg->address();
-          NodeID old_node = addr.node;
-          NodeID new_node;
+          i3ds_asn1::NodeID old_node = addr.node;
+          i3ds_asn1::NodeID new_node;
 
           auto search = node_id_translation.find(old_node);
 
