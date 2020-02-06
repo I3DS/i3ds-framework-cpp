@@ -39,6 +39,7 @@ usage()
     cat <<EOF
 -A [name]   Create tar-archive with i3ds-files
 -c          Force a full recompile of the entire project
+-e [path]   Path to external location for ASN.1 .so and headers
 -f          Fast, avoid running cmake for configuration, useful when only minor changes since last build
 -I [PATH]   Set install-path
 -t [target] Run tests, either 'all' or specific tests
