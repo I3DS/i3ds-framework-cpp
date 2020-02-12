@@ -12,8 +12,14 @@ flag OctetString_equal(int len1, int len2, const byte arr1[], const byte arr2[])
 
 /* Byte strean functions */
 void ByteStream_Init(ByteStream* pStrm, byte* buf, long count);
+void BitStream_Init2(BitStream* pBitStrm, unsigned char* buf, long count, PushDataFnc pushData, void* pushDataPrm, FetchDataFnc fetchData, void* fetchDataPrm);
+
 void ByteStream_AttachBuffer(ByteStream* pStrm, unsigned char* buf, long count);
+void BitStream_AttachBuffer2(BitStream* pBitStrm, unsigned char* buf, long count, PushDataFnc pushData, void* pushDataPrm, FetchDataFnc fetchData, void* fetchDataPrm);
 asn1SccSint ByteStream_GetLength(ByteStream* pStrm);
+
+void bitstrean_fetch_data_if_required(BitStream* pStrm);
+void bitstrean_push_data_if_required(BitStream* pStrm);
 
 /* Bit strean functions */
 
@@ -70,6 +76,9 @@ flag BitStream_EncodeOctetString_fragmentation(BitStream* pBitStrm, const byte* 
 flag BitStream_DecodeOctetString_fragmentation(BitStream* pBitStrm, byte* arr, int* nCount, asn1SccSint asn1SizeMax);
 flag BitStream_EncodeOctetString(BitStream* pBitStrm, const byte* arr, int nCount, asn1SccSint min, asn1SccSint max);
 flag BitStream_DecodeOctetString(BitStream* pBitStrm, byte* arr, int* nCount, asn1SccSint min, asn1SccSint max);
+
+flag BitStream_EncodeBitString(BitStream* pBitStrm, const byte* arr, int nCount, asn1SccSint asn1SizeMin, asn1SccSint asn1SizeMax);
+flag BitStream_DecodeBitString(BitStream* pBitStrm, byte* arr, int* pCount, asn1SccSint asn1SizeMin, asn1SccSint asn1SizeMax);
 
 /*
 Checks if the bit pattern is (immediatelly) present in the bit stream.
