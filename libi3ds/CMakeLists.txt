@@ -8,7 +8,6 @@ endif (BUILD_TESTS OR BUILD_TOOLS)
 ################################################################################
 
 set (SRCS
-  ${ASN1_SRCS} ${ASN1_HDRS}
   src/communication.cpp
   src/address_server.cpp
   src/receiver.cpp
