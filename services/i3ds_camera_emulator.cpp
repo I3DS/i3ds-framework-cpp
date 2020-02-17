@@ -110,7 +110,7 @@ int main(int argc, char** argv)
 
   BOOST_LOG_TRIVIAL(info) << "Pixel depth: " << param.data_depth;
   BOOST_LOG_TRIVIAL(info) << "Pixel size:  " << param.pixel_size;
-  BOOST_LOG_TRIVIAL(info) << "Sensor size: " << param.width << "x" << param.width << " px";
+  BOOST_LOG_TRIVIAL(info) << "Sensor size: " << param.width << "x" << param.height << " px";
   
   param.image_count = 1;
 
