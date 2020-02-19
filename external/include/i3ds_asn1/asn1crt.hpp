@@ -2,21 +2,33 @@
 #define i3ds_asn1_ASN1SCC_ASN1CRT_H_
 
 #include <stddef.h>
-namespace i3ds_asn1 {
 
-#if (!defined(_MSC_VER) || _MSC_VER >= 1800)
-#  ifndef SWIG
-#    include <stdbool.h>
-#  endif
-#else
-typedef unsigned char bool;
-#define true 1
-#define false 0
-#endif
 
 #ifdef  __cplusplus
 extern "C" {
+#include <cstdint>
+namespace i3ds_asn1 {
+#else
+// C99 check
+#if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
+#  include <stdbool.h>
+#  include <stdint.h>
+#else
+
+typedef unsigned char bool;
+#  define true 1
+#  define false 0
+
+typedef unsigned char uint8_t;
+
+typedef int int32_t;
+typedef unsigned int uint32_t;
+
+typedef long long int64_t;
+typedef unsigned long long uint64_t;
+
 #endif
+#endif	/* __cplusplus */
 
 #ifndef NULL
 #define NULL	0
@@ -44,13 +56,13 @@ extern "C" {
 typedef float asn1Real32;
 typedef double asn1Real64;
 
-typedef unsigned char byte;
+typedef uint8_t byte;
 
-typedef int asn1SccSint32;
-typedef unsigned int asn1SccUint32;
+typedef int32_t asn1SccSint32;
+typedef uint32_t asn1SccUint32;
 
-typedef long long asn1SccSint64;
-typedef unsigned long long asn1SccUint64;
+typedef int64_t asn1SccSint64;
+typedef uint64_t asn1SccUint64;
 
 #if i3ds_asn1_WORD_SIZE==8
 typedef asn1SccUint64 asn1SccUint;
@@ -83,7 +95,12 @@ typedef bool flag;
 
 typedef char NullType;
 
-typedef struct {
+struct BitStream_t;
+
+typedef void(*PushDataFnc)(struct BitStream_t* pThis, void* pushDataPrm);
+typedef void(*FetchDataFnc)(struct BitStream_t* pThis, void* fetchDataPrm);
+
+typedef struct BitStream_t {
 	byte* buf;
 	long count;
 	long currentByte;
@@ -91,21 +108,16 @@ typedef struct {
 	Possible vallues 0..7, 0 is most significant 
 	bit of current byte*/
 	int currentBit; 
+	PushDataFnc pushData;
+	void* pushDataPrm;
+	FetchDataFnc fetchData;
+	void* fetchDataPrm;
 } BitStream;
-/*
-typedef struct BitStream2_t {
-	byte* buf;
-	long count;
-	long currentByte;
-	//Next available bit for writting. 
-	//Possible vallues 0..7, 0 is most significant 
-	//bit of current byte
-	int currentBit;
-	void* udata;
-	void(*fetchData)(struct BitStream2_t* pThis);
-} BitStream2;
 
-*/
+
+
+
+
 typedef struct {
 	byte* buf;
 	long count;
