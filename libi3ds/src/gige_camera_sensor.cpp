@@ -172,6 +172,8 @@ i3ds::GigECamera::do_stop()
 void
 i3ds::GigECamera::do_deactivate()
 {
+  BOOST_LOG_TRIVIAL(info) << "do_activate()";
+
   Close();
 
   flash_enabled_ = false;
