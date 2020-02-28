@@ -85,7 +85,6 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
 #endif
   
   cv::imshow(window_name, outmat);
-  cv::waitKey(5); // Apparently needed to render image properly
 }
 
 bool is_tof_camera(i3ds::DepthMap&) {
@@ -135,6 +134,10 @@ handle_frame(T& data)
 	handle_image("Right camera feed", data, 1, buffer.str());
 	break;
       }
+    }
+  if (!headless_mode)
+    {
+      cv::waitKey(5); // Apparently needed to render image properly
     }
 }
 
