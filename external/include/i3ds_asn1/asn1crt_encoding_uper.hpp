@@ -2,8 +2,8 @@
 #define i3ds_asn1_ASN1SCC_ASN1CRT_ENCODING_UPER_H_
 
 #include <i3ds_asn1/asn1crt_encoding.hpp>
-namespace i3ds_asn1 {
 
+namespace i3ds_asn1 {
 #ifdef  __cplusplus
 extern "C" {
 #endif

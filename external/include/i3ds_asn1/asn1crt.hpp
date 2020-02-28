@@ -7,7 +7,6 @@
 #ifdef  __cplusplus
 extern "C" {
 #include <cstdint>
-namespace i3ds_asn1 {
 #else
 // C99 check
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
@@ -29,6 +28,7 @@ typedef unsigned long long uint64_t;
 
 #endif
 #endif	/* __cplusplus */
+namespace i3ds_asn1 {
 
 #ifndef NULL
 #define NULL	0
