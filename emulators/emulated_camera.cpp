@@ -18,7 +18,7 @@ namespace fs = boost::filesystem;
 
 i3ds::EmulatedCamera::EmulatedCamera(Context::Ptr context, i3ds_asn1::NodeID node, Parameters param)
   : GigECamera(context, node, param),
-    sampler_(std::bind(&i3ds::EmulatedCamera::generate_sample, this))
+    sampler_(std::bind(&i3ds::EmulatedCamera::fetch_and_send_sample, this))
 {
   BOOST_LOG_TRIVIAL(info) << "Create emulated camera with NodeID: " << node;
 
@@ -372,70 +372,74 @@ i3ds::EmulatedCamera::load_images(std::string sample_dir)
           fs::path full_path( fs::initial_path<fs::path>() );
           full_path = fs::system_complete(fs::path(sample_dir));
 
-          if (fs::exists(full_path) && fs::is_directory(full_path))
+          fs::directory_iterator end_iter;
+
+          for (fs::directory_iterator dir_itr(full_path); dir_itr != end_iter; ++dir_itr)
             {
-              fs::directory_iterator end_iter;
-
-              for (fs::directory_iterator dir_itr(full_path); dir_itr != end_iter; ++dir_itr)
+              if (fs::is_regular_file(dir_itr->status()))
                 {
-                  if (fs::is_regular_file(dir_itr->status()))
-                    {
-                      file_names.push_back(dir_itr->path().string());
-                    }
+                  file_names.push_back(dir_itr->path().string());
                 }
+            }
 
-              std::sort(file_names.begin(), file_names.end());
+          std::sort(file_names.begin(), file_names.end());
 
-              for (std::string file_name : file_names)
-                {
-                  sample_images_.push_back(cv::imread(file_name, imread_mode));
-                  BOOST_LOG_TRIVIAL(trace) << "Emulated camera loaded file: " << file_name;
-                }
+          for (std::string file_name : file_names)
+            {
+              sample_images_.push_back(cv::imread(file_name, imread_mode));
+              BOOST_LOG_TRIVIAL(trace) << "Emulated camera loaded file: " << file_name;
             }
         }
       catch (std::exception e)
         {
-          // If anything fails, sample_images_ remains empty, and is not used
           BOOST_LOG_TRIVIAL(warning) << "Error loading sample images: " << e.what();
+          BOOST_LOG_TRIVIAL(warning) << "Generating noise images instead";
+          generate_noise_samples();
         }
     }
   else
     {
-      BOOST_LOG_TRIVIAL(trace) << "Emulated camera generating noise images";
-      int cv_type = CV_16UC1;
+      generate_noise_samples();
+    }
+}
 
+void
+i3ds::EmulatedCamera::generate_noise_samples()
+{
+  BOOST_LOG_TRIVIAL(trace) << "Emulated camera generating noise images";
+  int cv_type = CV_16UC1;
+
+  if (param_.frame_mode == i3ds_asn1::mode_rgb)
+  {
+      if (param_.pixel_size == 3) { cv_type = CV_8UC3; }
+      if (param_.pixel_size == 6) { cv_type = CV_16UC3; }
+  }
+  else
+  {
+      if (param_.pixel_size == 1) { cv_type = CV_8UC1; }
+      if (param_.pixel_size == 2) { cv_type = CV_16UC1; }
+  }
+
+  for (int i = 0; i < 10; i++)
+    {
+      cv::Mat img(getSensorHeight(), getSensorWidth(), cv_type, cv::Scalar(0));
+
+      int max_pixel_val = (1 << param_.data_depth) - 1;
       if (param_.frame_mode == i3ds_asn1::mode_rgb)
-      {
-          if (param_.pixel_size == 3) { cv_type = CV_8UC3; }
-          if (param_.pixel_size == 6) { cv_type = CV_16UC3; }
-      }
-      else
-      {
-          if (param_.pixel_size == 1) { cv_type = CV_8UC1; }
-          if (param_.pixel_size == 2) { cv_type = CV_16UC1; }
-      }
-
-      for (int i = 0; i < 10; i++)
         {
-          cv::Mat img(getSensorHeight(), getSensorWidth(), cv_type, cv::Scalar(0));
-
-          int max_pixel_val = (1 << param_.data_depth) - 1;
-          if (param_.frame_mode == i3ds_asn1::mode_rgb)
-            {
-              cv::randu(img, cv::Scalar(0,0,0), cv::Scalar(max_pixel_val, max_pixel_val, max_pixel_val));
-            }
-          else
-            {
-              cv::randu(img, cv::Scalar(0), cv::Scalar(max_pixel_val));
-            }
-
-          sample_images_.push_back(img);
+          cv::randu(img, cv::Scalar(0,0,0), cv::Scalar(max_pixel_val, max_pixel_val, max_pixel_val));
         }
+      else
+        {
+          cv::randu(img, cv::Scalar(0), cv::Scalar(max_pixel_val));
+        }
+
+      sample_images_.push_back(img);
     }
 }
 
 bool
-i3ds::EmulatedCamera::generate_sample()
+i3ds::EmulatedCamera::fetch_and_send_sample()
 {
   // Get sample image from index.
   if (++current_image_index_ >= sample_images_.size())

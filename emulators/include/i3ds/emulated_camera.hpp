@@ -116,7 +116,9 @@ protected:
   void load_images(std::string sample_dir);
   cv::Mat next_image();
 
-  bool generate_sample();
+  void generate_noise_samples();
+
+  bool fetch_and_send_sample();
 
   int64_t shutter_;
   double gain_;
