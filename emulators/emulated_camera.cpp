@@ -389,11 +389,45 @@ i3ds::EmulatedCamera::load_images(std::string sample_dir)
               sample_images_.push_back(cv::imread(file_name, imread_mode));
               BOOST_LOG_TRIVIAL(trace) << "Emulated camera loaded file: " << file_name;
             }
+
+          sensor_.width = sample_images_[0].cols;
+          sensor_.height = sample_images_[0].rows;
+          region_.width = sensor_.width;
+          region_.height = sensor_.height;
+          pixel_size_ = sample_images_[0].elemSize();
+          switch(sample_images_[0].depth())
+            {
+                case CV_8U: 
+                    data_depth_ = 8;
+                    break;
+                case CV_8S:
+                    data_depth_ = 8;
+                    break;
+                case CV_16U:
+                    data_depth_ = 16;
+                    break;
+                case CV_16S:
+                    data_depth_ = 16;
+                    break;
+                case CV_32S:
+                    data_depth_ = 32;
+                    break;
+                case CV_32F:
+                    data_depth_ = 32;
+                    break;
+                case CV_64F:
+                    data_depth_ = 64;
+                    break;
+                default:
+                    sample_images_.clear();
+                    generate_noise_samples();
+            }
         }
       catch (std::exception e)
         {
           BOOST_LOG_TRIVIAL(warning) << "Error loading sample images: " << e.what();
           BOOST_LOG_TRIVIAL(warning) << "Generating noise images instead";
+          sample_images_.clear();
           generate_noise_samples();
         }
     }
@@ -411,20 +445,20 @@ i3ds::EmulatedCamera::generate_noise_samples()
 
   if (param_.frame_mode == i3ds_asn1::mode_rgb)
   {
-      if (param_.pixel_size == 3) { cv_type = CV_8UC3; }
-      if (param_.pixel_size == 6) { cv_type = CV_16UC3; }
+      if (pixel_size_ == 3) { cv_type = CV_8UC3; }
+      if (pixel_size_ == 6) { cv_type = CV_16UC3; }
   }
   else
   {
-      if (param_.pixel_size == 1) { cv_type = CV_8UC1; }
-      if (param_.pixel_size == 2) { cv_type = CV_16UC1; }
+      if (pixel_size_ == 1) { cv_type = CV_8UC1; }
+      if (pixel_size_ == 2) { cv_type = CV_16UC1; }
   }
 
   for (int i = 0; i < 10; i++)
     {
       cv::Mat img(getSensorHeight(), getSensorWidth(), cv_type, cv::Scalar(0));
 
-      int max_pixel_val = (1 << param_.data_depth) - 1;
+      int max_pixel_val = (1 << data_depth_) - 1;
       if (param_.frame_mode == i3ds_asn1::mode_rgb)
         {
           cv::randu(img, cv::Scalar(0,0,0), cv::Scalar(max_pixel_val, max_pixel_val, max_pixel_val));

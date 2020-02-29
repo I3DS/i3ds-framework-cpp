@@ -205,6 +205,10 @@ protected:
   // Handler for camera pattern command.
   virtual void handle_pattern(PatternService::Data& command) override;
 
+  // Store these parameters as they can be changed after image loading
+  uint8_t data_depth_;
+  uint8_t pixel_size_;
+
 private:
 
   // Client for external trigger configuration, if supported.

@@ -25,6 +25,8 @@ namespace logging = boost::log;
 i3ds::GigECamera::GigECamera(Context::Ptr context, i3ds_asn1::NodeID node, Parameters param)
   : Camera(node),
     param_(param),
+    data_depth_(param.data_depth),
+    pixel_size_(param.pixel_size),
     publisher_(context, node)
 {
   flash_enabled_ = false;
@@ -657,8 +659,8 @@ i3ds::GigECamera::send_sample(const i3ds_asn1::byte* image, int width, int heigh
   frame.descriptor.region.offset_y = r.offset_y;
 
   frame.descriptor.frame_mode = param_.frame_mode;
-  frame.descriptor.data_depth = param_.data_depth;
-  frame.descriptor.pixel_size = param_.pixel_size;
+  frame.descriptor.data_depth = data_depth_;
+  frame.descriptor.pixel_size = pixel_size_;
   frame.descriptor.image_count = param_.image_count;
 
   // Check if region matches the image width and height.
