@@ -57,6 +57,10 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
       if (pixel_size == 6) { cv_type = CV_16UC3; }
       scaling_factor = pow(2,(8 * (pixel_size/3) - d.data_depth));
     }
+  else if (d.frame_mode == i3ds_asn1::mode_uyvy)
+    {
+      cv_type = CV_8UC3;
+    }
   else
     {
       if (pixel_size == 1) { cv_type = CV_8UC1; }
@@ -65,6 +69,11 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
     }
 
   cv::Mat mat(rows, cols, cv_type, (char*)frame.image_data(image_number));
+
+  if (d.frame_mode == i3ds_asn1::mode_uyvy)
+    {
+      cv::cvtColor(mat, mat, COLOR_YUV2RGB_UYVY);
+    }
 
   if (scaling_factor != 1)
     {
