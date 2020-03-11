@@ -18,6 +18,7 @@
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 cv::Mat
 i3ds::frame_to_cv_mat(const DepthMap& frame, int)
@@ -72,7 +73,7 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
 
   if (d.frame_mode == i3ds_asn1::mode_uyvy)
     {
-      cv::cvtColor(mat, mat, COLOR_YUV2RGB_UYVY);
+      cv::cvtColor(mat, mat, cv::COLOR_YUV2RGB_UYVY);
     }
 
   if (scaling_factor != 1)
