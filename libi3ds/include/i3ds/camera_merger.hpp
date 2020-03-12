@@ -125,7 +125,10 @@ class BufferPair
           std::atomic<unsigned int> write_index_;
    };
 
+
   void set_state(i3ds_asn1::StateCommand state, i3ds_asn1::StateCommand backup_state);
+
+  virtual void handle_sample(SampleService::Data& sample);
 
   void handle_frames(Frame data, int cam_number);
 

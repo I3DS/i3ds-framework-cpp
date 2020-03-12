@@ -110,6 +110,16 @@ i3ds::CameraMerger::is_sampling_supported(i3ds_asn1::SampleCommand sample)
 }
 
 void
+i3ds::CameraMerger::handle_sample(SampleService::Data& sample)
+{
+    BOOST_LOG_TRIVIAL(trace) << "CameraMerger handle sample";
+    check_standby();
+
+    cam_1_client_.set_sampling(sample.request.period, sample.request.batch_size, sample.request.batch_count);
+    cam_2_client_.set_sampling(sample.request.period, sample.request.batch_size, sample.request.batch_count);
+}
+
+void
 i3ds::CameraMerger::handle_frames(i3ds::Frame data, int cam_number)
 {
   BOOST_LOG_TRIVIAL(trace) << "CameraMerger received frame from camera: " << cam_number;
@@ -156,6 +166,10 @@ i3ds::CameraMerger::publisher_thread_func()
 
         BOOST_LOG_TRIVIAL(info) << "CameraMerger sending merged frame with timestamp: " << merged_frame.descriptor.attributes.timestamp;
         publisher_.Send<FrameTopic>(merged_frame);
+    }
+    else
+    {
+        BOOST_LOG_TRIVIAL(warning) << "CameraMerger received frames out of sync";
     }
   }
   BOOST_LOG_TRIVIAL(trace) << "Stopping publisher_thread";
