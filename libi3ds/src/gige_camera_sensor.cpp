@@ -35,7 +35,7 @@ i3ds::GigECamera::GigECamera(Context::Ptr context, i3ds_asn1::NodeID node, Param
   pattern_enabled_ = false;
   pattern_sequence_ = 0;
 
-  if (param_.external_trigger)
+  if (param_.external_trigger && param_.trigger_node != 0)
     {
       BOOST_LOG_TRIVIAL(info) << "Using external trigger service with node ID: " << param_.trigger_node;
 
@@ -136,7 +136,7 @@ i3ds::GigECamera::do_activate()
 {
   BOOST_LOG_TRIVIAL(info) << "do_activate()";
 
-  if (param_.external_trigger)
+  if (param_.external_trigger && param_.trigger_node != 0)
     {
       set_trigger(param_.camera_output, param_.camera_offset);
     }
@@ -151,7 +151,7 @@ i3ds::GigECamera::do_start()
 
   Start();
 
-  if (param_.external_trigger)
+  if (param_.external_trigger && param_.trigger_node != 0)
     {
       trigger_->set_generator(param_.trigger_source, period());
       trigger_->enable_channels(trigger_outputs_);
@@ -163,7 +163,7 @@ i3ds::GigECamera::do_stop()
 {
   BOOST_LOG_TRIVIAL(info) << "do_stop()";
 
-  if (param_.external_trigger)
+  if (param_.external_trigger && param_.trigger_node != 0)
     {
       trigger_->disable_channels(trigger_outputs_);
     }
@@ -193,7 +193,7 @@ i3ds::GigECamera::is_sampling_supported(i3ds_asn1::SampleCommand sample)
   BOOST_LOG_TRIVIAL(info) << "is_rate_supported() " << sample.period;
   try
     {
-      if (param_.external_trigger)
+      if (param_.external_trigger && param_.trigger_node != 0)
         {
           // Minimal period 50 ms (= 20 Hz) and maximal 16.7 seconds for external trigger.
           return 50000 <= sample.period && sample.period <= 16777215;
