@@ -60,7 +60,7 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
     }
   else if (d.frame_mode == i3ds_asn1::mode_uyvy)
     {
-      cv_type = CV_8UC3;
+      cv_type = CV_8UC2;
     }
   else
     {
