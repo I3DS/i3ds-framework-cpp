@@ -73,7 +73,7 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
 
   if (d.frame_mode == i3ds_asn1::mode_uyvy)
     {
-      cv::cvtColor(mat, mat, cv::COLOR_YUV2RGB_UYVY);
+      cv::cvtColor(mat, mat, cv::COLOR_YUV2BGR_UYVY);
     }
 
   if (scaling_factor != 1)
