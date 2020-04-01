@@ -81,8 +81,8 @@ i3ds::CameraMerger::do_start()
   BOOST_LOG_TRIVIAL(trace) << "CameraMerger do_start()";
   run_publiser_thread_ = true;
   publisher_thread_ = std::thread(&i3ds::CameraMerger::publisher_thread_func, this);
-  cam_1_subscriber_.Start();
   cam_2_subscriber_.Start();
+  cam_1_subscriber_.Start();
   set_state(i3ds_asn1::start, i3ds_asn1::stop);
 }
 
