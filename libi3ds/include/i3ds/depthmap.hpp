@@ -40,7 +40,8 @@ struct DepthMapCodec
     val.depths.clear();
   };
 
-  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode, i3ds_asn1::flag bCheckConstraints)
+  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode,
+                                       i3ds_asn1::flag bCheckConstraints)
   {
     return DepthMapDescriptorCodec::Encode(&(val->descriptor), pBitStrm, pErrCode, bCheckConstraints);
   }
@@ -63,7 +64,7 @@ inline void Encode<DepthMapCodec>(Message& message, const DepthMapCodec::Data& d
 
   const i3ds_asn1::byte* d = reinterpret_cast<const i3ds_asn1::byte*>(data.depths.data());
   const size_t s = data.depths.size() * sizeof(float);
-  
+
   message.append_payload(d, s);
 }
 

@@ -347,7 +347,8 @@ i3ds::GigECamera::handle_auto_exposure(AutoExposureService::Data& command)
 
           if (limit > (period() / 2.0))
             {
-              throw i3ds::CommandError(i3ds_asn1::error_value, "Shutter limit longer than (period/2) " + std::to_string(period() / 2.) );
+              throw i3ds::CommandError(i3ds_asn1::error_value,
+                                       "Shutter limit longer than (period/2) " + std::to_string(period() / 2.) );
             }
 
           setAutoShutterEnabled(true);
@@ -364,7 +365,7 @@ i3ds::GigECamera::handle_auto_exposure(AutoExposureService::Data& command)
               // Send flash command.
               flash_->set_flash(shutter_duration, flash_strength_);
 
-	      BOOST_LOG_TRIVIAL(trace) << "Setting flash OK";
+              BOOST_LOG_TRIVIAL(trace) << "Setting flash OK";
             }
         }
 
@@ -532,7 +533,7 @@ i3ds::GigECamera::handle_flash(FlashService::Data& command)
           // Send flash command.
           flash_->set_flash(shutter_duration, flash_strength_);
 
-	  BOOST_LOG_TRIVIAL(trace) << "Setting flash OK";
+          BOOST_LOG_TRIVIAL(trace) << "Setting flash OK";
 
           // Enable trigger for flash.
           set_trigger(param_.flash_output, param_.flash_offset);

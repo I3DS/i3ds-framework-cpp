@@ -9,7 +9,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #ifndef __I3DS_CAMERA_MERGER
-#define __I3DS_CAMERA_MERGER 
+#define __I3DS_CAMERA_MERGER
 
 #include <i3ds/sensor.hpp>
 #include <i3ds/frame.hpp>
@@ -32,7 +32,7 @@ public:
 
   typedef Topic<128, FrameCodec> FrameTopic;
 
-  CameraMerger(Context::Ptr context, i3ds_asn1::NodeID node_id, 
+  CameraMerger(Context::Ptr context, i3ds_asn1::NodeID node_id,
                i3ds_asn1::NodeID cam_1_node_id, i3ds_asn1::NodeID cam_2_node_id);
 
   virtual ~CameraMerger() = default;
@@ -50,80 +50,80 @@ protected:
   virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample);
 private:
 
-struct Buffer
-{
+  struct Buffer
+  {
     i3ds_asn1::byte* data_;
     unsigned long timestamp_;
     bool data_ready_;
-};
+  };
 
-class BufferPair
+  class BufferPair
   {
-      public:
-          BufferPair() : 
-              allocated_(false),
-              buffers_(2),
-              write_index_(0)
-          {}
+  public:
+    BufferPair() :
+      allocated_(false),
+      buffers_(2),
+      write_index_(0)
+    {}
 
-          virtual ~BufferPair()
-          {
-            if (allocated_)
+    virtual ~BufferPair()
+    {
+      if (allocated_)
+        {
+          for (auto& buffer : buffers_)
             {
-              for (auto& buffer : buffers_)
-                {
-                  free(buffer.data_);
-                }
+              free(buffer.data_);
             }
-          }
+        }
+    }
 
-          void initialize(size_t size)
-          {
-              size_ = size;
-              for (auto& buffer : buffers_)
-              {
-                  buffer.data_ = static_cast<i3ds_asn1::byte*>(malloc(size_));
-                  buffer.data_ready_ = false;
-              }
-              allocated_ = true;
-          }
+    void initialize(size_t size)
+    {
+      size_ = size;
+      for (auto& buffer : buffers_)
+        {
+          buffer.data_ = static_cast<i3ds_asn1::byte*>(malloc(size_));
+          buffer.data_ready_ = false;
+        }
+      allocated_ = true;
+    }
 
-          void put_data(const i3ds_asn1::byte* data, const unsigned long timestamp)
-          {
-              unsigned int current_write_index; //Make sure to use same index during and after write
-              {
-                  std::unique_lock<std::mutex> lock(mutex_);
-                  current_write_index = write_index_;
-                  buffers_[current_write_index].data_ready_ = false;
-              }
-              std::memcpy(buffers_[current_write_index].data_, data, size_);
-              buffers_[current_write_index].timestamp_ = timestamp;
-              {
-                  std::unique_lock<std::mutex> lock(mutex_);
-                  buffers_[current_write_index].data_ready_ = true;
-                  cond_var_.notify_all();
-              }
-          }
+    void put_data(const i3ds_asn1::byte* data, const unsigned long timestamp)
+    {
+      unsigned int current_write_index; //Make sure to use same index during and after write
+      {
+        std::unique_lock<std::mutex> lock(mutex_);
+        current_write_index = write_index_;
+        buffers_[current_write_index].data_ready_ = false;
+      }
+      std::memcpy(buffers_[current_write_index].data_, data, size_);
+      buffers_[current_write_index].timestamp_ = timestamp;
+      {
+        std::unique_lock<std::mutex> lock(mutex_);
+        buffers_[current_write_index].data_ready_ = true;
+        cond_var_.notify_all();
+      }
+    }
 
-          Buffer get_data()
-          {
-              std::unique_lock<std::mutex> lock(mutex_);
-              cond_var_.wait(lock, [this]{return buffers_[write_index_].data_ready_;});
-              buffers_[write_index_].data_ready_ = false;
-              unsigned int old_write_index = write_index_;
-              write_index_ = (write_index_ + 1) % 2;
-              return buffers_[old_write_index];
-          }
+    Buffer get_data()
+    {
+      std::unique_lock<std::mutex> lock(mutex_);
+      cond_var_.wait(lock, [this] {return buffers_[write_index_].data_ready_;});
+      buffers_[write_index_].data_ready_ = false;
+      unsigned int old_write_index = write_index_;
+      write_index_ = (write_index_ + 1) % 2;
+      return buffers_[old_write_index];
+    }
 
-          bool allocated_;
-          size_t size_;
+    bool allocated_;
+    size_t size_;
 
-      private:
-          std::mutex mutex_;
-          std::condition_variable cond_var_;
-          std::vector<Buffer> buffers_;
-          std::atomic<unsigned int> write_index_;
-   };
+  private:
+    std::mutex mutex_;
+    std::condition_variable cond_var_;
+    std::vector<Buffer> buffers_;
+    std::atomic<unsigned int> write_index_;
+  };
 
 
   void set_state(i3ds_asn1::StateCommand state, i3ds_asn1::StateCommand backup_state);

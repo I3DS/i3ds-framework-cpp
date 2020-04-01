@@ -40,7 +40,8 @@ struct AnalogSeriesCodec
     val.samples.clear();
   };
 
-  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode, i3ds_asn1::flag bCheckConstraints)
+  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode,
+                                       i3ds_asn1::flag bCheckConstraints)
   {
     return AnalogSeriesDescriptorCodec::Encode(&(val->descriptor), pBitStrm, pErrCode, bCheckConstraints);
   }
@@ -63,7 +64,7 @@ inline void Encode<AnalogSeriesCodec>(Message& message, const AnalogSeriesCodec:
 
   const i3ds_asn1::byte* d = reinterpret_cast<const i3ds_asn1::byte*>(data.samples.data());
   const size_t s = data.samples.size() * sizeof(float);
-  
+
   message.append_payload(d, s);
 }
 
