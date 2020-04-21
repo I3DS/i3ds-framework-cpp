@@ -12,6 +12,7 @@ set(TESTS
   pointcloud-test
   depthmap-test
   pose-estimator-test
+  camera-merger-test
   )
 
 if (OpenCV_FOUND)
