@@ -139,6 +139,7 @@ private:
 
   void handle_frames(Frame data, int cam_number);
 
+  void merge_and_send(Buffer cam_1_data, Buffer cam_2_data);
   void publisher_thread_func();
 
   Publisher publisher_;

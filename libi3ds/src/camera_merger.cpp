@@ -147,6 +147,25 @@ i3ds::CameraMerger::handle_frames(i3ds::Frame data, int cam_number)
 }
 
 void
+i3ds::CameraMerger::merge_and_send(Buffer cam_1_data, Buffer cam_2_data)
+{
+  Frame merged_frame;
+  FrameCodec::Initialize(merged_frame);
+
+  merged_frame.descriptor = stored_descriptor_;
+  merged_frame.descriptor.attributes.timestamp = cam_1_data.timestamp_;
+  merged_frame.descriptor.image_count = 2;
+
+  merged_frame.append_image(cam_1_data.data_, camera_buffers_[0].size_);
+  merged_frame.append_image(cam_2_data.data_, camera_buffers_[1].size_);
+
+  BOOST_LOG_TRIVIAL(info) << "CameraMerger sending merged frame with timestamp: " <<
+                             merged_frame.descriptor.attributes.timestamp;
+  publisher_.Send<FrameTopic>(merged_frame);
+
+}
+
+void
 i3ds::CameraMerger::publisher_thread_func()
 {
   BOOST_LOG_TRIVIAL(trace) << "Starting publisher_thread";
@@ -162,19 +181,7 @@ i3ds::CameraMerger::publisher_thread_func()
       BOOST_LOG_TRIVIAL(trace) << "  Timestamp diff: " << t_diff;
       if (t_diff < period()/4)
         {
-          Frame merged_frame;
-          FrameCodec::Initialize(merged_frame);
-
-          merged_frame.descriptor = stored_descriptor_;
-          merged_frame.descriptor.attributes.timestamp = cam_1_data.timestamp_;
-          merged_frame.descriptor.image_count = 2;
-
-          merged_frame.append_image(cam_1_data.data_, camera_buffers_[0].size_);
-          merged_frame.append_image(cam_2_data.data_, camera_buffers_[1].size_);
-
-          BOOST_LOG_TRIVIAL(info) << "CameraMerger sending merged frame with timestamp: " <<
-                                  merged_frame.descriptor.attributes.timestamp;
-          publisher_.Send<FrameTopic>(merged_frame);
+          merge_and_send(cam_1_data, cam_2_data);
         }
       else
         {
@@ -187,7 +194,6 @@ i3ds::CameraMerger::publisher_thread_func()
             {
               camera_buffers_[0].keep_old_value();
             }
-          
         }
     }
   BOOST_LOG_TRIVIAL(trace) << "Stopping publisher_thread";
