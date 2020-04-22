@@ -115,6 +115,13 @@ private:
       return buffers_[old_write_index];
     }
 
+    void keep_old_value()
+    {
+      std::unique_lock<std::mutex> lock(mutex_);
+      write_index_ = (write_index_ + 1) % 2;
+      buffers_[write_index_].data_ready_ = true;
+    }
+
     bool allocated_;
     size_t size_;
 

@@ -179,6 +179,15 @@ i3ds::CameraMerger::publisher_thread_func()
       else
         {
           BOOST_LOG_TRIVIAL(warning) << "CameraMerger received frames out of sync";
+          if (cam_1_data.timestamp_ < cam_2_data.timestamp_)
+            {
+              camera_buffers_[1].keep_old_value();
+            }
+          else
+            {
+              camera_buffers_[0].keep_old_value();
+            }
+          
         }
     }
   BOOST_LOG_TRIVIAL(trace) << "Stopping publisher_thread";

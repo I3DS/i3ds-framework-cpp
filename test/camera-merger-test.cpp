@@ -223,7 +223,6 @@ BOOST_AUTO_TEST_CASE(configure_period)
 
 BOOST_AUTO_TEST_CASE(measurements)
 {
-  received = 0;
   Subscriber subscriber(context);
 
   subscriber.Attach<Camera::FrameTopic>(cam_1_node, 
@@ -241,6 +240,46 @@ BOOST_AUTO_TEST_CASE(measurements)
 
   subscriber.Start();
 
+  std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
+
+  client.set_state(stop);
+
+  subscriber.Stop();
+
+  BOOST_CHECK_GT(received, 0);
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+BOOST_AUTO_TEST_CASE(synchronizing_measurements)
+{
+  Subscriber subscriber(context);
+
+  subscriber.Attach<Camera::FrameTopic>(cam_1_node, 
+                                        [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_1_node);});
+  subscriber.Attach<Camera::FrameTopic>(cam_2_node, 
+                                        [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_2_node);});
+  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node, 
+                                              [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_merger_node);});
+
+  SamplePeriod period = 100000;
+
+  client.set_state(activate);
+  client.set_sampling(period);
+  client.set_state(start);
+
+  subscriber.Start();
+
+  std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
+
+  BOOST_CHECK_GT(received, 0);
+  received = 0;
+
+  SensorClient cam_1_client(context, cam_1_node);
+  cam_1_client.set_state(stop);
+  std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
+  cam_1_client.set_state(start);
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
 
   client.set_state(stop);
