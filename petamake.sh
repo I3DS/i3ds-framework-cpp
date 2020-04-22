@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 BSP_PATH="/opt/bsp"
-BSP_NAME="eross_v3"
-# BSP_NAME=eross_v4
+BSP_NAME="eross_v4"
 
 if [[ "${BSP_NAME}" == "eross_v3" ]]; then
     source /opt/petalinux/2019.1/settings.sh
@@ -12,7 +11,7 @@ else
     echo "Unkonwn BSP"
     exit 0
 fi
-
+test -e${BSP_PATH}/$BSP_NAME/images/linux/sdk/environment-setup-aarch64-xilinx-linux || { echo "Could not find environment, has sdk (petalinux-build --sdk)  been generate?"; exit 1; }
 source ${BSP_PATH}/$BSP_NAME/images/linux/sdk/environment-setup-aarch64-xilinx-linux
 BSP_ROOT=${BSP_PATH}/$BSP_NAME/images/linux/sdk/sysroots/aarch64-xilinx-linux
 
