@@ -32,7 +32,7 @@ i3ds::Configurator::add_common_options(po::options_description& desc)
   ("help,h",    "Show help")
   ("verbose,v", "Verbose output")
   ("quiet,q",   "Quiet output")
-    ;
+  ;
 }
 
 po::variables_map
@@ -41,23 +41,30 @@ i3ds::Configurator::parse_common_options(po::options_description desc, int argc,
   po::variables_map vm;
   po::store(po::parse_command_line(argc, argv, desc), vm);
 
-  if (vm.count("help")) {
+  if (vm.count("help"))
+    {
       std::cout << desc << std::endl;
       exit(0);
-  }
+    }
 
-  if (vm.count("quiet")) {
+  if (vm.count("quiet"))
+    {
       logging::core::get()->set_filter(logging::trivial::severity >= logging::trivial::warning);
-  } else if (!vm.count("verbose")) {
+    }
+  else if (!vm.count("verbose"))
+    {
       logging::core::get()->set_filter(logging::trivial::severity >= logging::trivial::info);
-  }
+    }
 
-  try {
+  try
+    {
       po::notify(vm);
-  } catch (std::exception& e) {
+    }
+  catch (std::exception& e)
+    {
       std::cerr << "Error: " << e.what() << std::endl;
       exit(-1);
-  }
+    }
   return vm;
 }
 

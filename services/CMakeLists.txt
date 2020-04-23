@@ -18,6 +18,7 @@ set (APPS
   i3ds_flash_emulator
   i3ds_address_server
   i3ds_measurement_proxy
+  i3ds_camera_merger
   )
 
 if (OpenCV_FOUND)

@@ -123,7 +123,7 @@ void Encode(Message& message, const typename T::Data& data)
 ////////////////////////////////////////////////////////////////////////////////
 
 template<>
-inline void Encode<NullCodec>(Message& , const NullCodec::Data& )
+inline void Encode<NullCodec>(Message&, const NullCodec::Data& )
 {
 }
 

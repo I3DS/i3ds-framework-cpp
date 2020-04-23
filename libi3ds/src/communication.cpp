@@ -82,8 +82,8 @@ i3ds::Message::size(int i) const
 }
 
 
-const std::string i3ds::Context::DEFAULT_ADDR_SRV_URL = "tcp://localhost:" + 
-                                                        std::to_string(i3ds::AddressServer::DEFAULT_PORT);
+const std::string i3ds::Context::DEFAULT_ADDR_SRV_URL = "tcp://localhost:" +
+    std::to_string(i3ds::AddressServer::DEFAULT_PORT);
 
 i3ds::Context::Context()
   : context_(1),
@@ -102,7 +102,7 @@ i3ds::Context::Context()
 }
 
 i3ds::Context::Context(std::string addr_srv_url)
-    : Context()
+  : Context()
 {
   addr_srv_url_ = addr_srv_url;
 }

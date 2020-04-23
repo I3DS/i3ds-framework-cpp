@@ -28,6 +28,7 @@ set (SRCS
   src/configurator.cpp
   src/message_recording.cpp
   src/pose_estimator_sensor.cpp
+  src/camera_merger.cpp
   )
 
 set (LIBS

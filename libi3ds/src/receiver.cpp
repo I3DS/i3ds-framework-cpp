@@ -76,7 +76,7 @@ i3ds::Receiver::Run()
       catch(std::exception& e)
         {
           std::cerr << "Exception: " << e.what() << std::endl;
-	  running_ = false;
+          running_ = false;
         }
     }
 

@@ -48,7 +48,8 @@ struct PointCloudCodec
     val.points.clear();
   };
 
-  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode, i3ds_asn1::flag bCheckConstraints)
+  static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode,
+                                       i3ds_asn1::flag bCheckConstraints)
   {
     return PointCloudDescriptorCodec::Encode(&(val->descriptor), pBitStrm, pErrCode, bCheckConstraints);
   }
@@ -71,7 +72,7 @@ inline void Encode<PointCloudCodec>(Message& message, const PointCloudCodec::Dat
 
   const i3ds_asn1::byte* d = reinterpret_cast<const i3ds_asn1::byte*>(data.points.data());
   const size_t s = data.points.size() * sizeof(PointXYZ);
-  
+
   message.append_payload(d, s);
 }
 

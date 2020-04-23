@@ -86,8 +86,8 @@ public:
 
   // Constructor for Context
   //
-  // The default constructor uses the environment variable I3DS_ADDR_SRV_URL as the address 
-  // of the address server. If it is not found, the default_addr_ string is used. 
+  // The default constructor uses the environment variable I3DS_ADDR_SRV_URL as the address
+  // of the address server. If it is not found, the default_addr_ string is used.
   // If the constructor taking a string is used, that overrides either.
   Context();
   Context(std::string addr_srv_url);

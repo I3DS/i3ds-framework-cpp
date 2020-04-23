@@ -136,7 +136,7 @@ private:
   void handle_state(StateService::Data& command);
 
   // Handler for sample configuration.
-  void handle_sample(SampleService::Data& sample);
+  virtual void handle_sample(SampleService::Data& sample);
 
   // Handler for sensor status query.
   void handle_status(StatusService::Data& status);
