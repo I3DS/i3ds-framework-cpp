@@ -52,7 +52,7 @@ main(int argc, char *argv[])
 
   configurator.add_common_options(desc);
   desc.add_options()
-  ("node,n", po::value(&node_ids)->required(), "Node ID of sensor")
+  ("node,n", po::value(&node_ids)->required()->multitoken(), "Node IDs of sensors")
   ("endpoint,e", po::value(&endpoint_id), "Endpoint ID of measurement. Subscribes to all messages if not specified")
   ("messages,m", po::value(&n_messages)->default_value(0), "Number of messages to record. 0 means no limit.")
   ("output,o", po::value<std::string>(&file_name)->default_value("out.log"), "File name to write output.")
