@@ -24,6 +24,7 @@ i3ds::Camera::Attach(Server& server)
   server.Attach<PatternService>(node(), std::bind(&i3ds::Camera::handle_pattern, this, _1));
   server.Attach<FlashService>(node(), std::bind(&i3ds::Camera::handle_flash, this, _1));
   server.Attach<ConfigurationService>(node(), std::bind(&i3ds::Camera::handle_configuration, this, _1));
+  server.Attach<SequenceService>(node(), std::bind(&i3ds::Camera::handle_sequence, this, _1));
 }
 
 void
@@ -51,6 +52,12 @@ i3ds::Camera::handle_pattern(PatternService::Data&)
 }
 
 void
+i3ds::Camera::handle_sequence(SequenceService::Data&)
+{
+  throw CommandError(i3ds_asn1::error_unsupported, "Camera image-sequence modifier not supported");
+}
+
+void
 i3ds::Camera::handle_configuration(ConfigurationService::Data& config)
 {
   check_active();
@@ -68,6 +75,9 @@ i3ds::Camera::handle_configuration(ConfigurationService::Data& config)
       config.response.flash_strength = flash_strength();
       config.response.pattern_enabled = pattern_enabled();
       config.response.pattern_sequence = pattern_sequence();
+      config.response.image_sequence_enabled = image_sequence_enabled();
+      config.response.image_sequence = image_sequence();
+      config.response.image_max_sequence = image_max_sequence();
     }
   catch (DeviceError& e)
     {

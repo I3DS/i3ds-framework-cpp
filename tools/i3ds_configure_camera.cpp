@@ -47,6 +47,9 @@ print_camera_settings(i3ds::CameraClient& camera)
 
   std::cout << "\"pattern-enabled\" : " << camera.pattern_enabled() << "," << std::endl;
   std::cout << "\"pattern-sequence\" : " << camera.pattern_sequence() << std::endl;
+  std::cout << "\"image-sequence-enabled\" : " << camera.image_sequence_enabled() << std::endl;
+  std::cout << "\"image-sequence\" : " << camera.image_sequence() << std::endl;
+  std::cout << "\"image-max-sequence\" : " << camera.image_max_sequence() << std::endl;
   std::cout << "}" << std::endl;
 }
 
@@ -56,6 +59,7 @@ int main(int argc, char *argv[])
   unsigned int shutter, max_shutter;
   double gain, max_gain;
   unsigned int flash_strength, pattern_sequence;
+  int img_series;
   bool enable_auto, enable_region, enable_flash, enable_pattern;
   i3ds_asn1::PlanarRegion region;
 
@@ -83,6 +87,7 @@ int main(int argc, char *argv[])
 
   ("pattern", po::value(&enable_pattern), "Enable camera pattern illumination")
   ("pattern-sequence", po::value(&pattern_sequence)->default_value(1), "Pattern sequence to use")
+  ("img-series", po::value(&img_series), "Instruct camera to capture a sequence of images upon next activate (-1 for continous mode).")
   ;
 
   po::variables_map vm = configurator.parse_common_options(desc, argc, argv);
@@ -178,7 +183,16 @@ int main(int argc, char *argv[])
       camera.set_pattern(enable_pattern, pattern_sequence);
 
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
-    }
+      }
+
+      if (vm.count("img-series")) {
+          BOOST_LOG_TRIVIAL(trace) << "setting a limit to captured images (" << img_series << ")";
+          if (img_series > 0)
+              camera.set_series(true, img_series);
+          else
+              camera.set_series(false, 0);
+          BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
+      }
 
   // Print config, this is the final command.
   if (vm.count("print"))

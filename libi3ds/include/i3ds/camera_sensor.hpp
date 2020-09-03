@@ -27,6 +27,7 @@ CODEC(CameraAutoExposure);
 CODEC(CameraRegion);
 CODEC(CameraFlash);
 CODEC(CameraPattern);
+CODEC(CameraImgSequence);
 CODEC(CameraConfiguration);
 
 class Camera : public Sensor
@@ -43,6 +44,7 @@ public:
   typedef Command<19, CameraFlashCodec>         FlashService;
   typedef Command<20, CameraPatternCodec>       PatternService;
   typedef Query  <21, CameraConfigurationCodec> ConfigurationService;
+  typedef Command<22, CameraImgSequenceCodec>   SequenceService;
 
   // Camera topics
   typedef Topic<128, FrameCodec> FrameTopic;
@@ -86,6 +88,18 @@ public:
   // Get the pattern sequence for the camera.
   virtual i3ds_asn1::PatternSequence pattern_sequence() const {return 0;}
 
+  // sequence stream is enabled
+  virtual bool image_sequence_enabled() const { return false; }
+
+  // Get the current position in the image sequence
+  virtual i3ds_asn1::ImageSequence image_sequence() const { return 0; }
+  virtual i3ds_asn1::ImageSequence image_max_sequence() const { return 0; }
+
+  // Ready sensor for next image in sequence, will return false if
+  // no more images should be added to sequence
+  virtual bool image_sequence_ready_next() { return false; }
+  virtual void image_sequence_reset() {};
+
   // Attach handlers to the server.
   virtual void Attach(Server& server);
 
@@ -105,6 +119,9 @@ protected:
 
   // Handler for camera pattern command.
   virtual void handle_pattern(PatternService::Data& command);
+
+  // handler for camera sequence command
+  virtual void handle_sequence(SequenceService::Data& command);
 
   // Handler for camera configuration query.
   virtual void handle_configuration(ConfigurationService::Data& config);

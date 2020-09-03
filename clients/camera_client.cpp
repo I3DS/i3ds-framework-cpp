@@ -78,3 +78,12 @@ i3ds::CameraClient::set_pattern(bool enable, i3ds_asn1::PatternSequence sequence
 
   Call<Camera::PatternService>(command);
 }
+
+void
+i3ds::CameraClient::set_series(bool enable, i3ds_asn1::ImageSequence imgseq)
+{
+  Camera::SequenceService::Data command;
+  command.request.enable = enable;
+  command.request.image_sequence = imgseq;
+  Call<Camera::SequenceService>(command);
+}

@@ -34,6 +34,7 @@ public:
   void set_region(bool enable, i3ds_asn1::PlanarRegion region);
   void set_flash(bool enable, i3ds_asn1::FlashStrength strength);
   void set_pattern(bool enable, i3ds_asn1::PatternSequence sequence);
+  void set_series(bool enable, i3ds_asn1::ImageSequence imgseq);
 
   i3ds_asn1::ShutterTime shutter() const {return config_.response.shutter;}
   i3ds_asn1::SensorGain gain() const {return config_.response.gain;}
@@ -47,6 +48,9 @@ public:
   bool pattern_enabled() const {return config_.response.pattern_enabled;}
   i3ds_asn1::PatternSequence pattern_sequence() const {return config_.response.pattern_sequence;}
 
+  bool image_sequence_enabled() const {  return config_.response.image_sequence_enabled; }
+  i3ds_asn1::ImageSequence image_sequence() const {  return config_.response.image_sequence; }
+  i3ds_asn1::ImageSequence image_max_sequence() const {  return config_.response.image_max_sequence; }
   virtual void load_config();
 
 private:
