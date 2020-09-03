@@ -493,6 +493,8 @@ i3ds::EmulatedCamera::fetch_and_send_sample()
                            << image.depth() << " depth";
 
   send_sample(image.data, region_.width, region_.height);
+  if (image_sequence_enabled())
+      return image_sequence_ready_next();
 
   return true;
 }
