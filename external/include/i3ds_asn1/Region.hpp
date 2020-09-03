@@ -22,28 +22,28 @@ typedef struct {
 
 void PlanarRegion_Initialize(PlanarRegion* pVal);
 
-#define i3ds_asn1_ERR_PLANARREGION		11548  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_OFFSET_X_2		11507  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_OFFSET_Y_2		11519  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_SIZE_X_2		11531  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_SIZE_Y_2		11543  /**/
+#define i3ds_asn1_ERR_PLANARREGION		2713  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_OFFSET_X_2		2672  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_OFFSET_Y_2		2684  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_SIZE_X_2		2696  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_PLANARREGION_SIZE_Y_2		2708  /**/
 flag PlanarRegion_IsConstraintValid(const PlanarRegion* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION		11549  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_OFFSET_X_2		11508  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_OFFSET_Y_2		11520  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_SIZE_X_2		11532  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_SIZE_Y_2		11544  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION		2714  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_OFFSET_X_2		2673  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_OFFSET_Y_2		2685  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_SIZE_X_2		2697  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PLANARREGION_SIZE_Y_2		2709  /**/
 #define i3ds_asn1_PlanarRegion_REQUIRED_BYTES_FOR_ENCODING       8 
 #define i3ds_asn1_PlanarRegion_REQUIRED_BITS_FOR_ENCODING        64
 
 flag PlanarRegion_Encode(const PlanarRegion* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_PLANARREGION		11550  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_OFFSET_X_2		11509  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_OFFSET_Y_2		11521  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_SIZE_X_2		11533  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_SIZE_Y_2		11545  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_PLANARREGION		2715  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_OFFSET_X_2		2674  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_OFFSET_Y_2		2686  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_SIZE_X_2		2698  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PLANARREGION_SIZE_Y_2		2710  /**/
 flag PlanarRegion_Decode(PlanarRegion* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- PolarRegion --------------------------------------------*/
 typedef struct {
@@ -56,28 +56,28 @@ typedef struct {
 
 void PolarRegion_Initialize(PolarRegion* pVal);
 
-#define i3ds_asn1_ERR_POLARREGION		11603  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_OFFSET_X_2		11562  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_OFFSET_Y_2		11574  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_SIZE_X_2		11586  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_SIZE_Y_2		11598  /**/
+#define i3ds_asn1_ERR_POLARREGION		2768  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_OFFSET_X_2		2727  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_OFFSET_Y_2		2739  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_SIZE_X_2		2751  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POLARREGION_SIZE_Y_2		2763  /**/
 flag PolarRegion_IsConstraintValid(const PolarRegion* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POLARREGION		11604  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_OFFSET_X_2		11563  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_OFFSET_Y_2		11575  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_SIZE_X_2		11587  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_SIZE_Y_2		11599  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POLARREGION		2769  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_OFFSET_X_2		2728  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_OFFSET_Y_2		2740  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_SIZE_X_2		2752  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POLARREGION_SIZE_Y_2		2764  /**/
 #define i3ds_asn1_PolarRegion_REQUIRED_BYTES_FOR_ENCODING       52 
 #define i3ds_asn1_PolarRegion_REQUIRED_BITS_FOR_ENCODING        416
 
 flag PolarRegion_Encode(const PolarRegion* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POLARREGION		11605  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_OFFSET_X_2		11564  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_OFFSET_Y_2		11576  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_SIZE_X_2		11588  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_SIZE_Y_2		11600  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POLARREGION		2770  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_OFFSET_X_2		2729  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_OFFSET_Y_2		2741  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_SIZE_X_2		2753  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POLARREGION_SIZE_Y_2		2765  /**/
 flag PolarRegion_Decode(PolarRegion* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

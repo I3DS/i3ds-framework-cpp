@@ -21,22 +21,22 @@ typedef struct {
 
 void StarTrackerMeasurement_Initialize(StarTrackerMeasurement* pVal);
 
-#define i3ds_asn1_ERR_STARTRACKERMEASUREMENT		12060  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12012  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_POSITION_2		12055  /**/
+#define i3ds_asn1_ERR_STARTRACKERMEASUREMENT		3225  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_ATTRIBUTES_2		3177  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_POSITION_2		3220  /**/
 flag StarTrackerMeasurement_IsConstraintValid(const StarTrackerMeasurement* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT		12061  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12013  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_POSITION_2		12056  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT		3226  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		3178  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_POSITION_2		3221  /**/
 #define i3ds_asn1_StarTrackerMeasurement_REQUIRED_BYTES_FOR_ENCODING       118 
 #define i3ds_asn1_StarTrackerMeasurement_REQUIRED_BITS_FOR_ENCODING        943
 
 flag StarTrackerMeasurement_Encode(const StarTrackerMeasurement* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT		12062  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12014  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_POSITION_2		12057  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT		3227  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		3179  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_POSITION_2		3222  /**/
 flag StarTrackerMeasurement_Decode(StarTrackerMeasurement* pVal, BitStream* pBitStrm, int* pErrCode);
 
  
