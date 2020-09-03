@@ -35,6 +35,10 @@ i3ds::GigECamera::GigECamera(Context::Ptr context, i3ds_asn1::NodeID node, Param
   pattern_enabled_ = false;
   pattern_sequence_ = 0;
 
+  img_seq_enabled_ = false;
+  img_seq_ = 0;
+  img_seq_ctr_ = 0;
+
   if (param_.external_trigger && param_.trigger_node != 0)
     {
       BOOST_LOG_TRIVIAL(info) << "Using external trigger service with node ID: " << param_.trigger_node;
@@ -149,6 +153,8 @@ i3ds::GigECamera::do_start()
 {
   BOOST_LOG_TRIVIAL(info) << "do_start()";
 
+  image_sequence_reset();
+
   Start();
 
   if (param_.external_trigger && param_.trigger_node != 0)
@@ -183,6 +189,10 @@ i3ds::GigECamera::do_deactivate()
 
   pattern_enabled_ = false;
   pattern_sequence_ = 0;
+
+  img_seq_enabled_ = false;
+  img_seq_ = 0;
+  img_seq_ctr_ = 0;
 
   trigger_outputs_.clear();
 }
@@ -606,6 +616,36 @@ i3ds::GigECamera::handle_pattern(PatternService::Data& command)
       clear_trigger(param_.pattern_output);
     }
 }
+void
+i3ds::GigECamera::image_sequence_reset()
+{
+    if (img_seq_enabled_)
+        img_seq_ctr_ = 0;
+}
+
+void
+i3ds::GigECamera::handle_sequence(SequenceService::Data& command)
+{
+    check_standby();
+
+    if (command.request.enable) {
+        if (command.request.image_sequence > 0) {
+            img_seq_enabled_ = true;
+            img_seq_ = command.request.image_sequence;
+            img_seq_ctr_ = 0;
+            BOOST_LOG_TRIVIAL(info) << "Entering Sequence-length mode (seqlen: " << img_seq_ << ")";
+        } else {
+            throw CommandError(i3ds_asn1::error_value, "invalid seqlen (0)");
+        }
+    } else {
+        BOOST_LOG_TRIVIAL(info) << "Sequence length disabled.";
+        img_seq_enabled_ = false;
+        img_seq_ = 0;
+        img_seq_ctr_ = 0;
+    }
+}
+
+
 
 void
 i3ds::GigECamera::set_trigger(i3ds_asn1::TriggerOutput channel, i3ds_asn1::TriggerOffset offset)

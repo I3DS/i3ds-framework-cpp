@@ -109,6 +109,14 @@ public:
   // Get the pattern sequence for the camera.
   virtual i3ds_asn1::PatternSequence pattern_sequence() const override  {return pattern_sequence_;}
 
+  // Get the image sequence status for the camera
+  virtual bool image_sequence_enabled() const override { return img_seq_enabled_; }
+  virtual i3ds_asn1::ImageSequence image_sequence() const override { return img_seq_ctr_; }
+  virtual i3ds_asn1::ImageSequence image_max_sequence() const override { return img_seq_; }
+  virtual bool image_sequence_ready_next() override { return ++img_seq_ctr_ < img_seq_; }
+  virtual void image_sequence_reset() override;
+
+
   // Returns true if sample configuration is supported.
   virtual bool is_sampling_supported(i3ds_asn1::SampleCommand sample) override ;
 
@@ -205,6 +213,9 @@ protected:
   // Handler for camera pattern command.
   virtual void handle_pattern(PatternService::Data& command) override;
 
+  // handler for camera sequence command
+  virtual void handle_sequence(SequenceService::Data& command) override;
+
   // Store these parameters as they can be changed after image loading
   uint8_t data_depth_;
   uint8_t pixel_size_;
@@ -231,6 +242,13 @@ private:
 
   // Chosen pattern sequence.
   i3ds_asn1::PatternSequence pattern_sequence_;
+
+  // Image sequence active (i.e. take N images and stop)
+  bool img_seq_enabled_;
+  // length of currently configured sequence length (i.e. N)
+  i3ds_asn1::ImageSequence img_seq_;
+  // current step in active sequence (1-indexed)
+  i3ds_asn1::ImageSequence img_seq_ctr_;
 
   // Image stream publisher.
   Publisher publisher_;
