@@ -26,6 +26,7 @@ if (OpenCV_FOUND)
   set (SRCS
     ${SRCS}
     ${CAMERA_EMULATOR_SRCS}
+    forwarding_camera.cpp
     )
 endif (OpenCV_FOUND)
 
