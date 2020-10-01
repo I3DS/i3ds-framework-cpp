@@ -172,7 +172,7 @@ if [[ ! -z ${ARCHIVE} ]]; then
 
     pushd ${INSTALL_PATH} > /dev/null
     tarname=$(basename ${ARCHIVE})
-    tar cf /app/${tarname} . --owner=root --group=root &>/dev/null
+    tar cf ../${tarname} . --owner=root --group=root &>/dev/null
     popd > /dev/null
     echo "${tarname} created"
 fi
