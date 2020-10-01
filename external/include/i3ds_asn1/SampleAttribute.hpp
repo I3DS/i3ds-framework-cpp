@@ -26,16 +26,16 @@ typedef enum {
 
 void SampleValidity_Initialize(SampleValidity* pVal);
 
-#define i3ds_asn1_ERR_SAMPLEVALIDITY		2775  /**/
+#define i3ds_asn1_ERR_SAMPLEVALIDITY		11761  /**/
 flag SampleValidity_IsConstraintValid(const SampleValidity* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLEVALIDITY		2776  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLEVALIDITY		11762  /**/
 #define i3ds_asn1_SampleValidity_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_SampleValidity_REQUIRED_BITS_FOR_ENCODING        2
 
 flag SampleValidity_Encode(const SampleValidity* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SAMPLEVALIDITY		2777  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SAMPLEVALIDITY		11763  /**/
 flag SampleValidity_Decode(SampleValidity* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef struct {
     int nCount; 
@@ -46,16 +46,16 @@ typedef struct {
 
 void T_String8_Initialize(T_String8* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_T_STRING8		2782  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_T_STRING8		11768  /**/
 flag T_String8_IsConstraintValid(const T_String8* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_T_STRING8		2783  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_T_STRING8		11769  /**/
 #define i3ds_asn1_T_String8_REQUIRED_BYTES_FOR_ENCODING       9 
 #define i3ds_asn1_T_String8_REQUIRED_BITS_FOR_ENCODING        68
 
 flag T_String8_Encode(const T_String8* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_T_STRING8		2784  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_T_STRING8		11770  /**/
 flag T_String8_Decode(T_String8* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Attribute_value_t --------------------------------------------*/
 
@@ -81,28 +81,28 @@ typedef struct {
 
 void Attribute_value_t_Initialize(Attribute_value_t* pVal);
 
-#define i3ds_asn1_ERR_ATTRIBUTE_VALUE_T		2837  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_BOOLEAN_VALUE_2		2796  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_DISCRETE_VALUE_2		2808  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_REAL_VALUE_2		2820  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_STRING_VALUE_2		2832  /**/
+#define i3ds_asn1_ERR_ATTRIBUTE_VALUE_T		11823  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_BOOLEAN_VALUE_2		11782  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_DISCRETE_VALUE_2		11794  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_REAL_VALUE_2		11806  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_ATTRIBUTE_VALUE_T_STRING_VALUE_2		11818  /**/
 flag Attribute_value_t_IsConstraintValid(const Attribute_value_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T		2838  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_BOOLEAN_VALUE_2		2797  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_DISCRETE_VALUE_2		2809  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_REAL_VALUE_2		2821  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_STRING_VALUE_2		2833  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T		11824  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_BOOLEAN_VALUE_2		11783  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_DISCRETE_VALUE_2		11795  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_REAL_VALUE_2		11807  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ATTRIBUTE_VALUE_T_STRING_VALUE_2		11819  /**/
 #define i3ds_asn1_Attribute_value_t_REQUIRED_BYTES_FOR_ENCODING       14 
 #define i3ds_asn1_Attribute_value_t_REQUIRED_BITS_FOR_ENCODING        106
 
 flag Attribute_value_t_Encode(const Attribute_value_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T		2839  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_BOOLEAN_VALUE_2		2798  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_DISCRETE_VALUE_2		2810  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_REAL_VALUE_2		2822  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_STRING_VALUE_2		2834  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T		11825  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_BOOLEAN_VALUE_2		11784  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_DISCRETE_VALUE_2		11796  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_REAL_VALUE_2		11808  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ATTRIBUTE_VALUE_T_STRING_VALUE_2		11820  /**/
 flag Attribute_value_t_Decode(Attribute_value_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Sample_attribute_t --------------------------------------------*/
 typedef struct {
@@ -113,22 +113,22 @@ typedef struct {
 
 void Sample_attribute_t_Initialize(Sample_attribute_t* pVal);
 
-#define i3ds_asn1_ERR_SAMPLE_ATTRIBUTE_T		2916  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_KEY_2		2851  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_VALUE_2		2911  /**/
+#define i3ds_asn1_ERR_SAMPLE_ATTRIBUTE_T		11902  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_KEY_2		11837  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_VALUE_2		11897  /**/
 flag Sample_attribute_t_IsConstraintValid(const Sample_attribute_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLE_ATTRIBUTE_T		2917  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_KEY_2		2852  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_VALUE_2		2912  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLE_ATTRIBUTE_T		11903  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_KEY_2		11838  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_VALUE_2		11898  /**/
 #define i3ds_asn1_Sample_attribute_t_REQUIRED_BYTES_FOR_ENCODING       15 
 #define i3ds_asn1_Sample_attribute_t_REQUIRED_BITS_FOR_ENCODING        114
 
 flag Sample_attribute_t_Encode(const Sample_attribute_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SAMPLE_ATTRIBUTE_T		2918  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_KEY_2		2853  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_VALUE_2		2913  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SAMPLE_ATTRIBUTE_T		11904  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_KEY_2		11839  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLE_ATTRIBUTE_T_ATTRIBUTE_VALUE_2		11899  /**/
 flag Sample_attribute_t_Decode(Sample_attribute_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- SampleAttributes --------------------------------------------*/
 
@@ -148,28 +148,28 @@ typedef struct {
 void SampleAttributes_attributes_Initialize(SampleAttributes_attributes* pVal);
 void SampleAttributes_Initialize(SampleAttributes* pVal);
 
-#define i3ds_asn1_ERR_SAMPLEATTRIBUTES		3043  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_TIMESTAMP_2_2		2935  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_VALIDITY_2		2947  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_ATTRIBUTES		3036  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_ATTRIBUTES_ELM_2		3031  /**/
+#define i3ds_asn1_ERR_SAMPLEATTRIBUTES		12029  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_TIMESTAMP_2_2		11921  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_VALIDITY_2		11933  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_ATTRIBUTES		12022  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_SAMPLEATTRIBUTES_ATTRIBUTES_ELM_2		12017  /**/
 flag SampleAttributes_IsConstraintValid(const SampleAttributes* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES		3044  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_TIMESTAMP_2_2		2936  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_VALIDITY_2		2948  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_ATTRIBUTES		3037  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_ATTRIBUTES_ELM_2		3032  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES		12030  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_TIMESTAMP_2_2		11922  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_VALIDITY_2		11934  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_ATTRIBUTES		12023  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLEATTRIBUTES_ATTRIBUTES_ELM_2		12018  /**/
 #define i3ds_asn1_SampleAttributes_REQUIRED_BYTES_FOR_ENCODING       66 
 #define i3ds_asn1_SampleAttributes_REQUIRED_BITS_FOR_ENCODING        525
 
 flag SampleAttributes_Encode(const SampleAttributes* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES		3045  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_TIMESTAMP_2_2		2937  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_VALIDITY_2		2949  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_ATTRIBUTES		3038  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_ATTRIBUTES_ELM_2		3033  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES		12031  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_TIMESTAMP_2_2		11923  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_VALIDITY_2		11935  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_ATTRIBUTES		12024  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLEATTRIBUTES_ATTRIBUTES_ELM_2		12019  /**/
 flag SampleAttributes_Decode(SampleAttributes* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

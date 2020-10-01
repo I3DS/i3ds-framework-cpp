@@ -20,22 +20,22 @@ typedef struct {
 
 void FlashSetup_Initialize(FlashSetup* pVal);
 
-#define i3ds_asn1_ERR_FLASHSETUP		3743  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FLASHSETUP_DURATION_2_2		3721  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FLASHSETUP_STRENGTH_2_2		3738  /**/
+#define i3ds_asn1_ERR_FLASHSETUP		12729  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FLASHSETUP_DURATION_2_2		12707  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FLASHSETUP_STRENGTH_2_2		12724  /**/
 flag FlashSetup_IsConstraintValid(const FlashSetup* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_FLASHSETUP		3744  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FLASHSETUP_DURATION_2_2		3722  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FLASHSETUP_STRENGTH_2_2		3739  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_FLASHSETUP		12730  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FLASHSETUP_DURATION_2_2		12708  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FLASHSETUP_STRENGTH_2_2		12725  /**/
 #define i3ds_asn1_FlashSetup_REQUIRED_BYTES_FOR_ENCODING       5 
 #define i3ds_asn1_FlashSetup_REQUIRED_BITS_FOR_ENCODING        40
 
 flag FlashSetup_Encode(const FlashSetup* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_FLASHSETUP		3745  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FLASHSETUP_DURATION_2_2		3723  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FLASHSETUP_STRENGTH_2_2		3740  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_FLASHSETUP		12731  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FLASHSETUP_DURATION_2_2		12709  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FLASHSETUP_STRENGTH_2_2		12726  /**/
 flag FlashSetup_Decode(FlashSetup* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

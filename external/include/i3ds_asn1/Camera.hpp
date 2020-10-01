@@ -18,80 +18,80 @@ typedef T_Float SensorGain;
 
 void SensorGain_Initialize(SensorGain* pVal);
 
-#define i3ds_asn1_ERR_SENSORGAIN_2		1204  /**/
+#define i3ds_asn1_ERR_SENSORGAIN_2		10190  /**/
 flag SensorGain_IsConstraintValid(const SensorGain* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SENSORGAIN_2		1205  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SENSORGAIN_2		10191  /**/
 #define i3ds_asn1_SensorGain_REQUIRED_BYTES_FOR_ENCODING       13 
 #define i3ds_asn1_SensorGain_REQUIRED_BITS_FOR_ENCODING        104
 
 flag SensorGain_Encode(const SensorGain* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SENSORGAIN_2		1206  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SENSORGAIN_2		10192  /**/
 flag SensorGain_Decode(SensorGain* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef T_UInt16 PatternSequence;
 
 
 void PatternSequence_Initialize(PatternSequence* pVal);
 
-#define i3ds_asn1_ERR_PATTERNSEQUENCE_2		1437  /**/
+#define i3ds_asn1_ERR_PATTERNSEQUENCE_2		10423  /**/
 flag PatternSequence_IsConstraintValid(const PatternSequence* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNSEQUENCE_2		1438  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNSEQUENCE_2		10424  /**/
 #define i3ds_asn1_PatternSequence_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_PatternSequence_REQUIRED_BITS_FOR_ENCODING        16
 
 flag PatternSequence_Encode(const PatternSequence* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_PATTERNSEQUENCE_2		1439  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_PATTERNSEQUENCE_2		10425  /**/
 flag PatternSequence_Decode(PatternSequence* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef T_UInt16 PatternID;
 
 
 void PatternID_Initialize(PatternID* pVal);
 
-#define i3ds_asn1_ERR_PATTERNID_2		1449  /**/
+#define i3ds_asn1_ERR_PATTERNID_2		10435  /**/
 flag PatternID_IsConstraintValid(const PatternID* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNID_2		1450  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNID_2		10436  /**/
 #define i3ds_asn1_PatternID_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_PatternID_REQUIRED_BITS_FOR_ENCODING        16
 
 flag PatternID_Encode(const PatternID* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_PATTERNID_2		1451  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_PATTERNID_2		10437  /**/
 flag PatternID_Decode(PatternID* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef T_UInt8 FlashStrength;
 
 
 void FlashStrength_Initialize(FlashStrength* pVal);
 
-#define i3ds_asn1_ERR_FLASHSTRENGTH_2		1310  /**/
+#define i3ds_asn1_ERR_FLASHSTRENGTH_2		10296  /**/
 flag FlashStrength_IsConstraintValid(const FlashStrength* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_FLASHSTRENGTH_2		1311  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_FLASHSTRENGTH_2		10297  /**/
 #define i3ds_asn1_FlashStrength_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_FlashStrength_REQUIRED_BITS_FOR_ENCODING        8
 
 flag FlashStrength_Encode(const FlashStrength* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_FLASHSTRENGTH_2		1312  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_FLASHSTRENGTH_2		10298  /**/
 flag FlashStrength_Decode(FlashStrength* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef T_UInt32 ShutterTime;
 
 
 void ShutterTime_Initialize(ShutterTime* pVal);
 
-#define i3ds_asn1_ERR_SHUTTERTIME_2		1192  /**/
+#define i3ds_asn1_ERR_SHUTTERTIME_2		10178  /**/
 flag ShutterTime_IsConstraintValid(const ShutterTime* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SHUTTERTIME_2		1193  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SHUTTERTIME_2		10179  /**/
 #define i3ds_asn1_ShutterTime_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_ShutterTime_REQUIRED_BITS_FOR_ENCODING        32
 
 flag ShutterTime_Encode(const ShutterTime* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SHUTTERTIME_2		1194  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SHUTTERTIME_2		10180  /**/
 flag ShutterTime_Decode(ShutterTime* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CameraExposure --------------------------------------------*/
 typedef struct {
@@ -102,38 +102,38 @@ typedef struct {
 
 void CameraExposure_Initialize(CameraExposure* pVal);
 
-#define i3ds_asn1_ERR_CAMERAEXPOSURE		1243  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAEXPOSURE_SHUTTER_2_2		1221  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAEXPOSURE_GAIN_2_2		1238  /**/
+#define i3ds_asn1_ERR_CAMERAEXPOSURE		10229  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAEXPOSURE_SHUTTER_2_2		10207  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAEXPOSURE_GAIN_2_2		10224  /**/
 flag CameraExposure_IsConstraintValid(const CameraExposure* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAEXPOSURE		1244  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAEXPOSURE_SHUTTER_2_2		1222  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAEXPOSURE_GAIN_2_2		1239  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAEXPOSURE		10230  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAEXPOSURE_SHUTTER_2_2		10208  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAEXPOSURE_GAIN_2_2		10225  /**/
 #define i3ds_asn1_CameraExposure_REQUIRED_BYTES_FOR_ENCODING       17 
 #define i3ds_asn1_CameraExposure_REQUIRED_BITS_FOR_ENCODING        136
 
 flag CameraExposure_Encode(const CameraExposure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CAMERAEXPOSURE		1245  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAEXPOSURE_SHUTTER_2_2		1223  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAEXPOSURE_GAIN_2_2		1240  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CAMERAEXPOSURE		10231  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAEXPOSURE_SHUTTER_2_2		10209  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAEXPOSURE_GAIN_2_2		10226  /**/
 flag CameraExposure_Decode(CameraExposure* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef T_UInt32 ImageSequence;
 
 
 void ImageSequence_Initialize(ImageSequence* pVal);
 
-#define i3ds_asn1_ERR_IMAGESEQUENCE_2		1497  /**/
+#define i3ds_asn1_ERR_IMAGESEQUENCE_2		10483  /**/
 flag ImageSequence_IsConstraintValid(const ImageSequence* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_IMAGESEQUENCE_2		1498  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_IMAGESEQUENCE_2		10484  /**/
 #define i3ds_asn1_ImageSequence_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_ImageSequence_REQUIRED_BITS_FOR_ENCODING        32
 
 flag ImageSequence_Encode(const ImageSequence* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_IMAGESEQUENCE_2		1499  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_IMAGESEQUENCE_2		10485  /**/
 flag ImageSequence_Decode(ImageSequence* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CameraAutoExposure --------------------------------------------*/
 typedef struct {
@@ -145,25 +145,25 @@ typedef struct {
 
 void CameraAutoExposure_Initialize(CameraAutoExposure* pVal);
 
-#define i3ds_asn1_ERR_CAMERAAUTOEXPOSURE		1296  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAAUTOEXPOSURE_ENABLE_2		1257  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAAUTOEXPOSURE_MAX_SHUTTER_2_2		1274  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAAUTOEXPOSURE_MAX_GAIN_2_2		1291  /**/
+#define i3ds_asn1_ERR_CAMERAAUTOEXPOSURE		10282  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAAUTOEXPOSURE_ENABLE_2		10243  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAAUTOEXPOSURE_MAX_SHUTTER_2_2		10260  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAAUTOEXPOSURE_MAX_GAIN_2_2		10277  /**/
 flag CameraAutoExposure_IsConstraintValid(const CameraAutoExposure* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE		1297  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE_ENABLE_2		1258  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE_MAX_SHUTTER_2_2		1275  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE_MAX_GAIN_2_2		1292  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE		10283  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE_ENABLE_2		10244  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE_MAX_SHUTTER_2_2		10261  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAAUTOEXPOSURE_MAX_GAIN_2_2		10278  /**/
 #define i3ds_asn1_CameraAutoExposure_REQUIRED_BYTES_FOR_ENCODING       18 
 #define i3ds_asn1_CameraAutoExposure_REQUIRED_BITS_FOR_ENCODING        137
 
 flag CameraAutoExposure_Encode(const CameraAutoExposure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE		1298  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE_ENABLE_2		1259  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE_MAX_SHUTTER_2_2		1276  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE_MAX_GAIN_2_2		1293  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE		10284  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE_ENABLE_2		10245  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE_MAX_SHUTTER_2_2		10262  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAAUTOEXPOSURE_MAX_GAIN_2_2		10279  /**/
 flag CameraAutoExposure_Decode(CameraAutoExposure* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CameraFlash --------------------------------------------*/
 typedef struct {
@@ -174,22 +174,22 @@ typedef struct {
 
 void CameraFlash_Initialize(CameraFlash* pVal);
 
-#define i3ds_asn1_ERR_CAMERAFLASH		1344  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAFLASH_ENABLE_2		1322  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAFLASH_STRENGTH_2_2		1339  /**/
+#define i3ds_asn1_ERR_CAMERAFLASH		10330  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAFLASH_ENABLE_2		10308  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAFLASH_STRENGTH_2_2		10325  /**/
 flag CameraFlash_IsConstraintValid(const CameraFlash* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAFLASH		1345  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAFLASH_ENABLE_2		1323  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAFLASH_STRENGTH_2_2		1340  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAFLASH		10331  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAFLASH_ENABLE_2		10309  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAFLASH_STRENGTH_2_2		10326  /**/
 #define i3ds_asn1_CameraFlash_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_CameraFlash_REQUIRED_BITS_FOR_ENCODING        9
 
 flag CameraFlash_Encode(const CameraFlash* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CAMERAFLASH		1346  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAFLASH_ENABLE_2		1324  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAFLASH_STRENGTH_2_2		1341  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CAMERAFLASH		10332  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAFLASH_ENABLE_2		10310  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAFLASH_STRENGTH_2_2		10327  /**/
 flag CameraFlash_Decode(CameraFlash* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CameraRegion --------------------------------------------*/
 typedef struct {
@@ -200,22 +200,22 @@ typedef struct {
 
 void CameraRegion_Initialize(CameraRegion* pVal);
 
-#define i3ds_asn1_ERR_CAMERAREGION		1423  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAREGION_ENABLE_2		1358  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAREGION_REGION_2		1418  /**/
+#define i3ds_asn1_ERR_CAMERAREGION		10409  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAREGION_ENABLE_2		10344  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAREGION_REGION_2		10404  /**/
 flag CameraRegion_IsConstraintValid(const CameraRegion* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAREGION		1424  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAREGION_ENABLE_2		1359  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAREGION_REGION_2		1419  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAREGION		10410  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAREGION_ENABLE_2		10345  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAREGION_REGION_2		10405  /**/
 #define i3ds_asn1_CameraRegion_REQUIRED_BYTES_FOR_ENCODING       9 
 #define i3ds_asn1_CameraRegion_REQUIRED_BITS_FOR_ENCODING        65
 
 flag CameraRegion_Encode(const CameraRegion* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CAMERAREGION		1425  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAREGION_ENABLE_2		1360  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAREGION_REGION_2		1420  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CAMERAREGION		10411  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAREGION_ENABLE_2		10346  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAREGION_REGION_2		10406  /**/
 flag CameraRegion_Decode(CameraRegion* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CameraPattern --------------------------------------------*/
 typedef struct {
@@ -226,22 +226,22 @@ typedef struct {
 
 void CameraPattern_Initialize(CameraPattern* pVal);
 
-#define i3ds_asn1_ERR_CAMERAPATTERN		1483  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAPATTERN_ENABLE_2		1461  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAPATTERN_PATTERN_SEQUENCE_2_2		1478  /**/
+#define i3ds_asn1_ERR_CAMERAPATTERN		10469  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAPATTERN_ENABLE_2		10447  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAPATTERN_PATTERN_SEQUENCE_2_2		10464  /**/
 flag CameraPattern_IsConstraintValid(const CameraPattern* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAPATTERN		1484  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAPATTERN_ENABLE_2		1462  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAPATTERN_PATTERN_SEQUENCE_2_2		1479  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAPATTERN		10470  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAPATTERN_ENABLE_2		10448  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAPATTERN_PATTERN_SEQUENCE_2_2		10465  /**/
 #define i3ds_asn1_CameraPattern_REQUIRED_BYTES_FOR_ENCODING       3 
 #define i3ds_asn1_CameraPattern_REQUIRED_BITS_FOR_ENCODING        17
 
 flag CameraPattern_Encode(const CameraPattern* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CAMERAPATTERN		1485  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAPATTERN_ENABLE_2		1463  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAPATTERN_PATTERN_SEQUENCE_2_2		1480  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CAMERAPATTERN		10471  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAPATTERN_ENABLE_2		10449  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAPATTERN_PATTERN_SEQUENCE_2_2		10466  /**/
 flag CameraPattern_Decode(CameraPattern* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CameraImgSequence --------------------------------------------*/
 typedef struct {
@@ -252,22 +252,22 @@ typedef struct {
 
 void CameraImgSequence_Initialize(CameraImgSequence* pVal);
 
-#define i3ds_asn1_ERR_CAMERAIMGSEQUENCE		1531  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAIMGSEQUENCE_ENABLE_2		1509  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERAIMGSEQUENCE_IMAGE_SEQUENCE_2_2		1526  /**/
+#define i3ds_asn1_ERR_CAMERAIMGSEQUENCE		10517  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAIMGSEQUENCE_ENABLE_2		10495  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERAIMGSEQUENCE_IMAGE_SEQUENCE_2_2		10512  /**/
 flag CameraImgSequence_IsConstraintValid(const CameraImgSequence* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAIMGSEQUENCE		1532  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAIMGSEQUENCE_ENABLE_2		1510  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAIMGSEQUENCE_IMAGE_SEQUENCE_2_2		1527  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CAMERAIMGSEQUENCE		10518  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAIMGSEQUENCE_ENABLE_2		10496  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERAIMGSEQUENCE_IMAGE_SEQUENCE_2_2		10513  /**/
 #define i3ds_asn1_CameraImgSequence_REQUIRED_BYTES_FOR_ENCODING       5 
 #define i3ds_asn1_CameraImgSequence_REQUIRED_BITS_FOR_ENCODING        33
 
 flag CameraImgSequence_Encode(const CameraImgSequence* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CAMERAIMGSEQUENCE		1533  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAIMGSEQUENCE_ENABLE_2		1511  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAIMGSEQUENCE_IMAGE_SEQUENCE_2_2		1528  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CAMERAIMGSEQUENCE		10519  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAIMGSEQUENCE_ENABLE_2		10497  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERAIMGSEQUENCE_IMAGE_SEQUENCE_2_2		10514  /**/
 flag CameraImgSequence_Decode(CameraImgSequence* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CameraConfiguration --------------------------------------------*/
 typedef struct {
@@ -290,58 +290,58 @@ typedef struct {
 
 void CameraConfiguration_Initialize(CameraConfiguration* pVal);
 
-#define i3ds_asn1_ERR_CAMERACONFIGURATION		1794  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_SHUTTER_2_2		1550  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_GAIN_2_2		1567  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_AUTO_EXPOSURE_ENABLED_2		1579  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_MAX_SHUTTER_2_2		1596  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_MAX_GAIN_2_2		1613  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_REGION_ENABLED_2		1625  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_REGION_2		1685  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_FLASH_ENABLED_2		1697  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_FLASH_STRENGTH_2_2		1714  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_PATTERN_ENABLED_2		1726  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_PATTERN_SEQUENCE_2_2		1743  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_IMAGE_SEQUENCE_ENABLED_2		1755  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_IMAGE_SEQUENCE_2_2		1772  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_IMAGE_MAX_SEQUENCE_2_2		1789  /**/
+#define i3ds_asn1_ERR_CAMERACONFIGURATION		10780  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_SHUTTER_2_2		10536  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_GAIN_2_2		10553  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_AUTO_EXPOSURE_ENABLED_2		10565  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_MAX_SHUTTER_2_2		10582  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_MAX_GAIN_2_2		10599  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_REGION_ENABLED_2		10611  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_REGION_2		10671  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_FLASH_ENABLED_2		10683  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_FLASH_STRENGTH_2_2		10700  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_PATTERN_ENABLED_2		10712  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_PATTERN_SEQUENCE_2_2		10729  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_IMAGE_SEQUENCE_ENABLED_2		10741  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_IMAGE_SEQUENCE_2_2		10758  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CAMERACONFIGURATION_IMAGE_MAX_SEQUENCE_2_2		10775  /**/
 flag CameraConfiguration_IsConstraintValid(const CameraConfiguration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION		1795  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_SHUTTER_2_2		1551  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_GAIN_2_2		1568  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_AUTO_EXPOSURE_ENABLED_2		1580  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_MAX_SHUTTER_2_2		1597  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_MAX_GAIN_2_2		1614  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_REGION_ENABLED_2		1626  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_REGION_2		1686  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_FLASH_ENABLED_2		1698  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_FLASH_STRENGTH_2_2		1715  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_PATTERN_ENABLED_2		1727  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_PATTERN_SEQUENCE_2_2		1744  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_ENABLED_2		1756  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_2_2		1773  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_IMAGE_MAX_SEQUENCE_2_2		1790  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION		10781  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_SHUTTER_2_2		10537  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_GAIN_2_2		10554  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_AUTO_EXPOSURE_ENABLED_2		10566  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_MAX_SHUTTER_2_2		10583  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_MAX_GAIN_2_2		10600  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_REGION_ENABLED_2		10612  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_REGION_2		10672  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_FLASH_ENABLED_2		10684  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_FLASH_STRENGTH_2_2		10701  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_PATTERN_ENABLED_2		10713  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_PATTERN_SEQUENCE_2_2		10730  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_ENABLED_2		10742  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_2_2		10759  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CAMERACONFIGURATION_IMAGE_MAX_SEQUENCE_2_2		10776  /**/
 #define i3ds_asn1_CameraConfiguration_REQUIRED_BYTES_FOR_ENCODING       54 
 #define i3ds_asn1_CameraConfiguration_REQUIRED_BITS_FOR_ENCODING        429
 
 flag CameraConfiguration_Encode(const CameraConfiguration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION		1796  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_SHUTTER_2_2		1552  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_GAIN_2_2		1569  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_AUTO_EXPOSURE_ENABLED_2		1581  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_MAX_SHUTTER_2_2		1598  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_MAX_GAIN_2_2		1615  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_REGION_ENABLED_2		1627  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_REGION_2		1687  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_FLASH_ENABLED_2		1699  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_FLASH_STRENGTH_2_2		1716  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_PATTERN_ENABLED_2		1728  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_PATTERN_SEQUENCE_2_2		1745  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_ENABLED_2		1757  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_2_2		1774  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_IMAGE_MAX_SEQUENCE_2_2		1791  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION		10782  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_SHUTTER_2_2		10538  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_GAIN_2_2		10555  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_AUTO_EXPOSURE_ENABLED_2		10567  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_MAX_SHUTTER_2_2		10584  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_MAX_GAIN_2_2		10601  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_REGION_ENABLED_2		10613  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_REGION_2		10673  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_FLASH_ENABLED_2		10685  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_FLASH_STRENGTH_2_2		10702  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_PATTERN_ENABLED_2		10714  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_PATTERN_SEQUENCE_2_2		10731  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_ENABLED_2		10743  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_IMAGE_SEQUENCE_2_2		10760  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CAMERACONFIGURATION_IMAGE_MAX_SEQUENCE_2_2		10777  /**/
 flag CameraConfiguration_Decode(CameraConfiguration* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

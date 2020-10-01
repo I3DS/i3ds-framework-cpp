@@ -21,22 +21,22 @@ typedef struct {
 
 void RadarRegion_Initialize(RadarRegion* pVal);
 
-#define i3ds_asn1_ERR_RADARREGION		2579  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_RADARREGION_ENABLE_2		2514  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_RADARREGION_REGION_2		2574  /**/
+#define i3ds_asn1_ERR_RADARREGION		11565  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RADARREGION_ENABLE_2		11500  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RADARREGION_REGION_2		11560  /**/
 flag RadarRegion_IsConstraintValid(const RadarRegion* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_RADARREGION		2580  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARREGION_ENABLE_2		2515  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARREGION_REGION_2		2575  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_RADARREGION		11566  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARREGION_ENABLE_2		11501  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARREGION_REGION_2		11561  /**/
 #define i3ds_asn1_RadarRegion_REQUIRED_BYTES_FOR_ENCODING       9 
 #define i3ds_asn1_RadarRegion_REQUIRED_BITS_FOR_ENCODING        65
 
 flag RadarRegion_Encode(const RadarRegion* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_RADARREGION		2581  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARREGION_ENABLE_2		2516  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARREGION_REGION_2		2576  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_RADARREGION		11567  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARREGION_ENABLE_2		11502  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARREGION_REGION_2		11562  /**/
 flag RadarRegion_Decode(RadarRegion* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- RadarConfiguration --------------------------------------------*/
 typedef struct {
@@ -47,22 +47,22 @@ typedef struct {
 
 void RadarConfiguration_Initialize(RadarConfiguration* pVal);
 
-#define i3ds_asn1_ERR_RADARCONFIGURATION		2658  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_RADARCONFIGURATION_REGION_ENABLED_2		2593  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_RADARCONFIGURATION_REGION_2		2653  /**/
+#define i3ds_asn1_ERR_RADARCONFIGURATION		11644  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RADARCONFIGURATION_REGION_ENABLED_2		11579  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RADARCONFIGURATION_REGION_2		11639  /**/
 flag RadarConfiguration_IsConstraintValid(const RadarConfiguration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_RADARCONFIGURATION		2659  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARCONFIGURATION_REGION_ENABLED_2		2594  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARCONFIGURATION_REGION_2		2654  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_RADARCONFIGURATION		11645  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARCONFIGURATION_REGION_ENABLED_2		11580  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RADARCONFIGURATION_REGION_2		11640  /**/
 #define i3ds_asn1_RadarConfiguration_REQUIRED_BYTES_FOR_ENCODING       9 
 #define i3ds_asn1_RadarConfiguration_REQUIRED_BITS_FOR_ENCODING        65
 
 flag RadarConfiguration_Encode(const RadarConfiguration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_RADARCONFIGURATION		2660  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARCONFIGURATION_REGION_ENABLED_2		2595  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARCONFIGURATION_REGION_2		2655  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_RADARCONFIGURATION		11646  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARCONFIGURATION_REGION_ENABLED_2		11581  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RADARCONFIGURATION_REGION_2		11641  /**/
 flag RadarConfiguration_Decode(RadarConfiguration* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

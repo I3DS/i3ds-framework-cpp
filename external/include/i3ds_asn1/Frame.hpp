@@ -15,7 +15,7 @@ namespace i3ds_asn1 {
 
 
 typedef enum {
-    mode_undefined = 0,
+    i3ds_asn1_Frame_mode_t_mode_undefined = 0,
     mode_mono = 1,
     mode_rgb = 2,
     mode_bgr = 3,
@@ -32,7 +32,7 @@ typedef enum {
 } Frame_mode_t;
 
 // please use the following macros to avoid breaking code.
-#define i3ds_asn1_Frame_mode_t_mode_undefined mode_undefined
+#define i3ds_asn1_Frame_mode_t_mode_undefined i3ds_asn1_Frame_mode_t_mode_undefined
 #define i3ds_asn1_Frame_mode_t_mode_mono mode_mono
 #define i3ds_asn1_Frame_mode_t_mode_rgb mode_rgb
 #define i3ds_asn1_Frame_mode_t_mode_bgr mode_bgr
@@ -49,16 +49,16 @@ typedef enum {
 
 void Frame_mode_t_Initialize(Frame_mode_t* pVal);
 
-#define i3ds_asn1_ERR_FRAME_MODE_T		1801  /**/
+#define i3ds_asn1_ERR_FRAME_MODE_T		10787  /**/
 flag Frame_mode_t_IsConstraintValid(const Frame_mode_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_FRAME_MODE_T		1802  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_FRAME_MODE_T		10788  /**/
 #define i3ds_asn1_Frame_mode_t_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Frame_mode_t_REQUIRED_BITS_FOR_ENCODING        4
 
 flag Frame_mode_t_Encode(const Frame_mode_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_FRAME_MODE_T		1803  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_FRAME_MODE_T		10789  /**/
 flag Frame_mode_t_Decode(Frame_mode_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- FrameDescriptor --------------------------------------------*/
 typedef struct {
@@ -73,34 +73,34 @@ typedef struct {
 
 void FrameDescriptor_Initialize(FrameDescriptor* pVal);
 
-#define i3ds_asn1_ERR_FRAMEDESCRIPTOR		2048  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_ATTRIBUTES_2		1935  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_FRAME_MODE_2		1947  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_DATA_DEPTH_2		1959  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_PIXEL_SIZE_2		1971  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_REGION_2		2031  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_IMAGE_COUNT_2		2043  /**/
+#define i3ds_asn1_ERR_FRAMEDESCRIPTOR		11034  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_ATTRIBUTES_2		10921  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_FRAME_MODE_2		10933  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_DATA_DEPTH_2		10945  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_PIXEL_SIZE_2		10957  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_REGION_2		11017  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_FRAMEDESCRIPTOR_IMAGE_COUNT_2		11029  /**/
 flag FrameDescriptor_IsConstraintValid(const FrameDescriptor* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR		2049  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_ATTRIBUTES_2		1936  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_FRAME_MODE_2		1948  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_DATA_DEPTH_2		1960  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_PIXEL_SIZE_2		1972  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_REGION_2		2032  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_IMAGE_COUNT_2		2044  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR		11035  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_ATTRIBUTES_2		10922  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_FRAME_MODE_2		10934  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_DATA_DEPTH_2		10946  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_PIXEL_SIZE_2		10958  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_REGION_2		11018  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_FRAMEDESCRIPTOR_IMAGE_COUNT_2		11030  /**/
 #define i3ds_asn1_FrameDescriptor_REQUIRED_BYTES_FOR_ENCODING       78 
 #define i3ds_asn1_FrameDescriptor_REQUIRED_BITS_FOR_ENCODING        617
 
 flag FrameDescriptor_Encode(const FrameDescriptor* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR		2050  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_ATTRIBUTES_2		1937  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_FRAME_MODE_2		1949  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_DATA_DEPTH_2		1961  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_PIXEL_SIZE_2		1973  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_REGION_2		2033  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_IMAGE_COUNT_2		2045  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR		11036  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_ATTRIBUTES_2		10923  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_FRAME_MODE_2		10935  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_DATA_DEPTH_2		10947  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_PIXEL_SIZE_2		10959  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_REGION_2		11019  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_FRAMEDESCRIPTOR_IMAGE_COUNT_2		11031  /**/
 flag FrameDescriptor_Decode(FrameDescriptor* pVal, BitStream* pBitStrm, int* pErrCode);
 
  
