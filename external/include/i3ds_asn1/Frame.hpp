@@ -20,15 +20,16 @@ typedef enum {
     mode_rgb = 2,
     mode_bgr = 3,
     mode_uyvy = 4,
-    mode_rgba = 5,
-    mode_bayer_rggb = 6,
-    mode_bayer_grbg = 7,
-    mode_bayer_bggr = 8,
-    mode_bayer_gbrg = 9,
-    mode_pjpg = 10,
-    mode_jpeg = 11,
-    mode_png = 12,
-    mode_tiff = 13
+    mode_yuyv = 5,
+    mode_rgba = 6,
+    mode_bayer_rggb = 7,
+    mode_bayer_grbg = 8,
+    mode_bayer_bggr = 9,
+    mode_bayer_gbrg = 10,
+    mode_pjpg = 11,
+    mode_jpeg = 12,
+    mode_png = 13,
+    mode_tiff = 14
 } Frame_mode_t;
 
 // please use the following macros to avoid breaking code.
@@ -37,6 +38,7 @@ typedef enum {
 #define i3ds_asn1_Frame_mode_t_mode_rgb mode_rgb
 #define i3ds_asn1_Frame_mode_t_mode_bgr mode_bgr
 #define i3ds_asn1_Frame_mode_t_mode_uyvy mode_uyvy
+#define i3ds_asn1_Frame_mode_t_mode_yuyv mode_yuyv
 #define i3ds_asn1_i3ds_asn1_Frame_mode_t_mode_rgba mode_rgba
 #define i3ds_asn1_Frame_mode_t_mode_bayer_rggb mode_bayer_rggb
 #define i3ds_asn1_Frame_mode_t_mode_bayer_grbg mode_bayer_grbg
