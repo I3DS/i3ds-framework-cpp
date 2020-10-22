@@ -18,48 +18,48 @@ typedef T_UInt32 SamplePeriod;
 
 void SamplePeriod_Initialize(SamplePeriod* pVal);
 
-#define i3ds_asn1_ERR_SAMPLEPERIOD_2		9957  /**/
+#define i3ds_asn1_ERR_SAMPLEPERIOD_2		10014  /**/
 flag SamplePeriod_IsConstraintValid(const SamplePeriod* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLEPERIOD_2		9958  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLEPERIOD_2		10015  /**/
 #define i3ds_asn1_SamplePeriod_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_SamplePeriod_REQUIRED_BITS_FOR_ENCODING        32
 
 flag SamplePeriod_Encode(const SamplePeriod* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SAMPLEPERIOD_2		9959  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SAMPLEPERIOD_2		10016  /**/
 flag SamplePeriod_Decode(SamplePeriod* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef T_UInt32 BatchSize;
 
 
 void BatchSize_Initialize(BatchSize* pVal);
 
-#define i3ds_asn1_ERR_BATCHSIZE_2		9969  /**/
+#define i3ds_asn1_ERR_BATCHSIZE_2		10026  /**/
 flag BatchSize_IsConstraintValid(const BatchSize* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BATCHSIZE_2		9970  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BATCHSIZE_2		10027  /**/
 #define i3ds_asn1_BatchSize_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_BatchSize_REQUIRED_BITS_FOR_ENCODING        32
 
 flag BatchSize_Encode(const BatchSize* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BATCHSIZE_2		9971  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BATCHSIZE_2		10028  /**/
 flag BatchSize_Decode(BatchSize* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef T_UInt32 BatchCount;
 
 
 void BatchCount_Initialize(BatchCount* pVal);
 
-#define i3ds_asn1_ERR_BATCHCOUNT_2		9981  /**/
+#define i3ds_asn1_ERR_BATCHCOUNT_2		10038  /**/
 flag BatchCount_IsConstraintValid(const BatchCount* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BATCHCOUNT_2		9982  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BATCHCOUNT_2		10039  /**/
 #define i3ds_asn1_BatchCount_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_BatchCount_REQUIRED_BITS_FOR_ENCODING        32
 
 flag BatchCount_Encode(const BatchCount* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BATCHCOUNT_2		9983  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BATCHCOUNT_2		10040  /**/
 flag BatchCount_Decode(BatchCount* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- SampleCommand --------------------------------------------*/
 typedef struct {
@@ -71,25 +71,25 @@ typedef struct {
 
 void SampleCommand_Initialize(SampleCommand* pVal);
 
-#define i3ds_asn1_ERR_SAMPLECOMMAND		10037  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLECOMMAND_PERIOD_2_2		9998  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLECOMMAND_BATCH_SIZE_2_2		10015  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SAMPLECOMMAND_BATCH_COUNT_2_2		10032  /**/
+#define i3ds_asn1_ERR_SAMPLECOMMAND		10094  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLECOMMAND_PERIOD_2_2		10055  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLECOMMAND_BATCH_SIZE_2_2		10072  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SAMPLECOMMAND_BATCH_COUNT_2_2		10089  /**/
 flag SampleCommand_IsConstraintValid(const SampleCommand* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND		10038  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND_PERIOD_2_2		9999  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND_BATCH_SIZE_2_2		10016  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND_BATCH_COUNT_2_2		10033  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND		10095  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND_PERIOD_2_2		10056  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND_BATCH_SIZE_2_2		10073  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SAMPLECOMMAND_BATCH_COUNT_2_2		10090  /**/
 #define i3ds_asn1_SampleCommand_REQUIRED_BYTES_FOR_ENCODING       12 
 #define i3ds_asn1_SampleCommand_REQUIRED_BITS_FOR_ENCODING        96
 
 flag SampleCommand_Encode(const SampleCommand* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND		10039  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND_PERIOD_2_2		10000  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND_BATCH_SIZE_2_2		10017  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND_BATCH_COUNT_2_2		10034  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND		10096  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND_PERIOD_2_2		10057  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND_BATCH_SIZE_2_2		10074  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SAMPLECOMMAND_BATCH_COUNT_2_2		10091  /**/
 flag SampleCommand_Decode(SampleCommand* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- SensorConfiguration --------------------------------------------*/
 typedef struct {
@@ -102,28 +102,28 @@ typedef struct {
 
 void SensorConfiguration_Initialize(SensorConfiguration* pVal);
 
-#define i3ds_asn1_ERR_SENSORCONFIGURATION		10107  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_DEVICE_NAME_2		10051  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_PERIOD_2_2		10068  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_BATCH_SIZE_2_2		10085  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_BATCH_COUNT_2_2		10102  /**/
+#define i3ds_asn1_ERR_SENSORCONFIGURATION		10164  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_DEVICE_NAME_2		10108  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_PERIOD_2_2		10125  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_BATCH_SIZE_2_2		10142  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SENSORCONFIGURATION_BATCH_COUNT_2_2		10159  /**/
 flag SensorConfiguration_IsConstraintValid(const SensorConfiguration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION		10108  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_DEVICE_NAME_2		10052  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_PERIOD_2_2		10069  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_BATCH_SIZE_2_2		10086  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_BATCH_COUNT_2_2		10103  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION		10165  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_DEVICE_NAME_2		10109  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_PERIOD_2_2		10126  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_BATCH_SIZE_2_2		10143  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORCONFIGURATION_BATCH_COUNT_2_2		10160  /**/
 #define i3ds_asn1_SensorConfiguration_REQUIRED_BYTES_FOR_ENCODING       53 
 #define i3ds_asn1_SensorConfiguration_REQUIRED_BITS_FOR_ENCODING        422
 
 flag SensorConfiguration_Encode(const SensorConfiguration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION		10109  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_DEVICE_NAME_2		10053  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_PERIOD_2_2		10070  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_BATCH_SIZE_2_2		10087  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_BATCH_COUNT_2_2		10104  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION		10166  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_DEVICE_NAME_2		10110  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_PERIOD_2_2		10127  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_BATCH_SIZE_2_2		10144  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORCONFIGURATION_BATCH_COUNT_2_2		10161  /**/
 flag SensorConfiguration_Decode(SensorConfiguration* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     inactive = 0,
@@ -140,16 +140,16 @@ typedef enum {
 
 void SensorState_Initialize(SensorState* pVal);
 
-#define i3ds_asn1_ERR_SENSORSTATE		9893  /**/
+#define i3ds_asn1_ERR_SENSORSTATE		9950  /**/
 flag SensorState_IsConstraintValid(const SensorState* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATE		9894  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATE		9951  /**/
 #define i3ds_asn1_SensorState_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_SensorState_REQUIRED_BITS_FOR_ENCODING        2
 
 flag SensorState_Encode(const SensorState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SENSORSTATE		9895  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SENSORSTATE		9952  /**/
 flag SensorState_Decode(SensorState* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- SensorStatus --------------------------------------------*/
 typedef struct {
@@ -160,22 +160,22 @@ typedef struct {
 
 void SensorStatus_Initialize(SensorStatus* pVal);
 
-#define i3ds_asn1_ERR_SENSORSTATUS		9943  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SENSORSTATUS_CURRENT_STATE_2		9914  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SENSORSTATUS_DEVICE_TEMPERATURE_2		9938  /**/
+#define i3ds_asn1_ERR_SENSORSTATUS		10000  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SENSORSTATUS_CURRENT_STATE_2		9971  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SENSORSTATUS_DEVICE_TEMPERATURE_2		9995  /**/
 flag SensorStatus_IsConstraintValid(const SensorStatus* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATUS		9944  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATUS_CURRENT_STATE_2		9915  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATUS_DEVICE_TEMPERATURE_2		9939  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATUS		10001  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATUS_CURRENT_STATE_2		9972  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SENSORSTATUS_DEVICE_TEMPERATURE_2		9996  /**/
 #define i3ds_asn1_SensorStatus_REQUIRED_BYTES_FOR_ENCODING       14 
 #define i3ds_asn1_SensorStatus_REQUIRED_BITS_FOR_ENCODING        106
 
 flag SensorStatus_Encode(const SensorStatus* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SENSORSTATUS		9945  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORSTATUS_CURRENT_STATE_2		9916  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORSTATUS_DEVICE_TEMPERATURE_2		9940  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SENSORSTATUS		10002  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORSTATUS_CURRENT_STATE_2		9973  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SENSORSTATUS_DEVICE_TEMPERATURE_2		9997  /**/
 flag SensorStatus_Decode(SensorStatus* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     activate = 0,
@@ -192,16 +192,16 @@ typedef enum {
 
 void StateCommand_Initialize(StateCommand* pVal);
 
-#define i3ds_asn1_ERR_STATECOMMAND		9900  /**/
+#define i3ds_asn1_ERR_STATECOMMAND		9957  /**/
 flag StateCommand_IsConstraintValid(const StateCommand* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STATECOMMAND		9901  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STATECOMMAND		9958  /**/
 #define i3ds_asn1_StateCommand_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_StateCommand_REQUIRED_BITS_FOR_ENCODING        2
 
 flag StateCommand_Encode(const StateCommand* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STATECOMMAND		9902  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STATECOMMAND		9959  /**/
 flag StateCommand_Decode(StateCommand* pVal, BitStream* pBitStrm, int* pErrCode);
 
  
