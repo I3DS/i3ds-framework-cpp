@@ -13,6 +13,7 @@
 
 #include <i3ds/frame.hpp>
 #include <i3ds/depthmap.hpp>
+#include <i3ds/pointcloud.hpp>
 
 #include <opencv2/core/core.hpp>
 
@@ -29,6 +30,9 @@ cv::Mat frame_to_cv_mat(const Frame& frame, int image_number);
 // the returned object is only valid while the Frame is in scope.
 cv::Mat frame_to_cv_mat(const DepthMap& frame, int image_number);
 
+// Create a cv::Mat represeantation of a PointCLoud
+// num is not used, included for
+cv::Mat frame_to_cv_mat(PointCloud& pc, int num = 0);
 
 // Sets the contents of a frame-descriptor from a cv::Mat
 void set_descriptor_from_mat(Frame& frame, const cv::Mat& mat,

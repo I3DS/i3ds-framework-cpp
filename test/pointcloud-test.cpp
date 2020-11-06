@@ -7,6 +7,8 @@
 #include <random>
 
 #include <i3ds/pointcloud.hpp>
+#include <i3ds/opencv_convertion.hpp>
+#include <opencv2/core/core.hpp>
 
 using namespace i3ds;
 
@@ -55,4 +57,25 @@ BOOST_AUTO_TEST_CASE(pointcloud_encdec)
       BOOST_CHECK_EQUAL(p.y, p2.y);
       BOOST_CHECK_EQUAL(p.z, p2.z);
     }
+}
+
+BOOST_AUTO_TEST_CASE(pointcloud_to_mat)
+{
+  PointCloud pc;
+  PointCloudCodec::Initialize(pc);
+  pc.points.reserve(10);
+  for (size_t i=0; i < 10; i++) {
+      PointXYZ p;
+      p.x = i * 1.0f;
+      p.y = i * 2.0f;
+      p.z = i * 3.0f;
+      pc.points.push_back(p);
+  }
+
+  cv::Mat mat = i3ds::frame_to_cv_mat(pc);
+  for (size_t i=0; i < 10; i++) {
+      BOOST_CHECK_EQUAL(pc.points[i].x, mat.at<float>(i,0));
+      BOOST_CHECK_EQUAL(pc.points[i].y, mat.at<float>(i,1));
+      BOOST_CHECK_EQUAL(pc.points[i].z, mat.at<float>(i,2));
+  }
 }

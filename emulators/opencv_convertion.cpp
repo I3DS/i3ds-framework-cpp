@@ -85,6 +85,12 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
   return mat;
 }
 
+cv::Mat
+i3ds::frame_to_cv_mat(PointCloud& pc, int)
+{
+    return cv::Mat(pc.points.size(), 1, CV_32FC3, pc.points.data());
+}
+
 void
 i3ds::set_descriptor_from_mat(Frame& frame, const cv::Mat& mat,
                               unsigned long timestamp_us, i3ds_asn1::Frame_mode_t mode, int image_count)
