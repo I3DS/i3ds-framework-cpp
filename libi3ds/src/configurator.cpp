@@ -91,18 +91,18 @@ i3ds::SensorConfigurator::handle_sensor_commands(po::variables_map& vm, i3ds::Se
   if (vm.count("activate"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command ACTIVATE";
-      client.set_state(i3ds_asn1::activate);
+      client.set_state(i3ds_asn1::StateCommand_activate);
     }
   else if (vm.count("stop"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command STOP";
-      client.set_state(i3ds_asn1::stop);
+      client.set_state(i3ds_asn1::StateCommand_stop);
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
     }
   else if (vm.count("deactivate"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command DEACTIVATE";
-      client.set_state(i3ds_asn1::deactivate);
+      client.set_state(i3ds_asn1::StateCommand_deactivate);
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
     }
   else if (vm.count("period"))
@@ -114,7 +114,7 @@ i3ds::SensorConfigurator::handle_sensor_commands(po::variables_map& vm, i3ds::Se
   else if (vm.count("start"))
     {
       BOOST_LOG_TRIVIAL(info) << "Command START";
-      client.set_state(i3ds_asn1::start);
+      client.set_state(i3ds_asn1::StateCommand_start);
       BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
     }
 }
@@ -128,16 +128,16 @@ i3ds::SensorConfigurator::print_sensor_status(i3ds::SensorClient& client)
   std::string state_string;
   switch (state)
     {
-    case i3ds_asn1::inactive:
+    case i3ds_asn1::SensorState_inactive:
       state_string = "inactive";
       break;
-    case i3ds_asn1::standby:
+    case i3ds_asn1::SensorState_standby:
       state_string = "standby";
       break;
-    case i3ds_asn1::operational:
+    case i3ds_asn1::SensorState_operational:
       state_string = "operational";
       break;
-    case i3ds_asn1::failure:
+    case i3ds_asn1::SensorState_failure:
       state_string = "failure";
       break;
     default:

@@ -21,22 +21,22 @@ typedef struct {
 
 void LIDARRegion_Initialize(LIDARRegion* pVal);
 
-#define i3ds_asn1_ERR_LIDARREGION		11113  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_LIDARREGION_ENABLE_2		11048  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_LIDARREGION_REGION_2		11108  /**/
+#define i3ds_asn1_ERR_LIDARREGION		11411  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_LIDARREGION_ENABLE_2		11346  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_LIDARREGION_REGION_2		11406  /**/
 flag LIDARRegion_IsConstraintValid(const LIDARRegion* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_LIDARREGION		11114  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARREGION_ENABLE_2		11049  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARREGION_REGION_2		11109  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_LIDARREGION		11412  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARREGION_ENABLE_2		11347  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARREGION_REGION_2		11407  /**/
 #define i3ds_asn1_LIDARRegion_REQUIRED_BYTES_FOR_ENCODING       53 
 #define i3ds_asn1_LIDARRegion_REQUIRED_BITS_FOR_ENCODING        417
 
 flag LIDARRegion_Encode(const LIDARRegion* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_LIDARREGION		11115  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARREGION_ENABLE_2		11050  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARREGION_REGION_2		11110  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_LIDARREGION		11413  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARREGION_ENABLE_2		11348  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARREGION_REGION_2		11408  /**/
 flag LIDARRegion_Decode(LIDARRegion* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- LIDARConfiguration --------------------------------------------*/
 typedef struct {
@@ -47,22 +47,22 @@ typedef struct {
 
 void LIDARConfiguration_Initialize(LIDARConfiguration* pVal);
 
-#define i3ds_asn1_ERR_LIDARCONFIGURATION		11192  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_LIDARCONFIGURATION_REGION_ENABLED_2		11127  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_LIDARCONFIGURATION_REGION_2		11187  /**/
+#define i3ds_asn1_ERR_LIDARCONFIGURATION		11490  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_LIDARCONFIGURATION_REGION_ENABLED_2		11425  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_LIDARCONFIGURATION_REGION_2		11485  /**/
 flag LIDARConfiguration_IsConstraintValid(const LIDARConfiguration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_LIDARCONFIGURATION		11193  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARCONFIGURATION_REGION_ENABLED_2		11128  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARCONFIGURATION_REGION_2		11188  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_LIDARCONFIGURATION		11491  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARCONFIGURATION_REGION_ENABLED_2		11426  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_LIDARCONFIGURATION_REGION_2		11486  /**/
 #define i3ds_asn1_LIDARConfiguration_REQUIRED_BYTES_FOR_ENCODING       53 
 #define i3ds_asn1_LIDARConfiguration_REQUIRED_BITS_FOR_ENCODING        417
 
 flag LIDARConfiguration_Encode(const LIDARConfiguration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_LIDARCONFIGURATION		11194  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARCONFIGURATION_REGION_ENABLED_2		11129  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARCONFIGURATION_REGION_2		11189  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_LIDARCONFIGURATION		11492  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARCONFIGURATION_REGION_ENABLED_2		11427  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_LIDARCONFIGURATION_REGION_2		11487  /**/
 flag LIDARConfiguration_Decode(LIDARConfiguration* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

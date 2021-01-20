@@ -54,7 +54,7 @@ i3ds::Server::Handle(Message& message, Socket& socket)
   if (handlers_.count(message.address()) == 0)
     {
       response.set_address(Address(message.node(), 0));
-      set_response(error, i3ds_asn1::error_endpoint_id, "Unknown address: " + message.address().to_string());
+      set_response(error, i3ds_asn1::ResultCode_error_endpoint_id, "Unknown address: " + message.address().to_string());
       Encode<CommandResponseCodec>(response, error);
     }
   else
@@ -72,7 +72,7 @@ i3ds::Server::Handle(Message& message, Socket& socket)
         }
       catch(std::exception& e)
         {
-          set_response(error, i3ds_asn1::error_other, e.what());
+          set_response(error, i3ds_asn1::ResultCode_error_other, e.what());
           Encode<CommandResponseCodec>(response, error);
         }
     }

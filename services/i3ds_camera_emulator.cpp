@@ -99,12 +99,12 @@ int main(int argc, char** argv)
   if (rgb)
     {
       param.pixel_size = param.pixel_size * 3;
-      param.frame_mode = i3ds_asn1::mode_rgb;
+      param.frame_mode = i3ds_asn1::Frame_mode_t_mode_rgb;
       BOOST_LOG_TRIVIAL(info) << "Camera mode: RGB";
     }
   else
     {
-      param.frame_mode = i3ds_asn1::mode_mono;
+      param.frame_mode = i3ds_asn1::Frame_mode_t_mode_mono;
       BOOST_LOG_TRIVIAL(info) << "Camera mode: monochrome";
     }
 

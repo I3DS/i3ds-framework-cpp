@@ -79,7 +79,7 @@ i3ds::TriggerClient::enable_channels(const TriggerOutputSet& channels)
         }
       else
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 
@@ -103,7 +103,7 @@ i3ds::TriggerClient::disable_channels(const TriggerOutputSet& channels)
         }
       else
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 

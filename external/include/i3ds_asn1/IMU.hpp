@@ -27,34 +27,34 @@ typedef struct {
 
 void IMUSample_Initialize(IMUSample* pVal);
 
-#define i3ds_asn1_ERR_IMUSAMPLE		9251  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_X_RATE_2		9186  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_X_ACCELERATION_2		9198  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Y_RATE_2		9210  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Y_ACCELERATION_2		9222  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Z_RATE_2		9234  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Z_ACCELERATION_2		9246  /**/
+#define i3ds_asn1_ERR_IMUSAMPLE		9549  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_X_RATE_2		9484  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_X_ACCELERATION_2		9496  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Y_RATE_2		9508  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Y_ACCELERATION_2		9520  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Z_RATE_2		9532  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUSAMPLE_AXIS_Z_ACCELERATION_2		9544  /**/
 flag IMUSample_IsConstraintValid(const IMUSample* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE		9252  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_X_RATE_2		9187  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_X_ACCELERATION_2		9199  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Y_RATE_2		9211  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Y_ACCELERATION_2		9223  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Z_RATE_2		9235  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Z_ACCELERATION_2		9247  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE		9550  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_X_RATE_2		9485  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_X_ACCELERATION_2		9497  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Y_RATE_2		9509  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Y_ACCELERATION_2		9521  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Z_RATE_2		9533  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUSAMPLE_AXIS_Z_ACCELERATION_2		9545  /**/
 #define i3ds_asn1_IMUSample_REQUIRED_BYTES_FOR_ENCODING       78 
 #define i3ds_asn1_IMUSample_REQUIRED_BITS_FOR_ENCODING        624
 
 flag IMUSample_Encode(const IMUSample* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE		9253  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_X_RATE_2		9188  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_X_ACCELERATION_2		9200  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Y_RATE_2		9212  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Y_ACCELERATION_2		9224  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Z_RATE_2		9236  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Z_ACCELERATION_2		9248  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE		9551  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_X_RATE_2		9486  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_X_ACCELERATION_2		9498  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Y_RATE_2		9510  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Y_ACCELERATION_2		9522  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Z_RATE_2		9534  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUSAMPLE_AXIS_Z_ACCELERATION_2		9546  /**/
 flag IMUSample_Decode(IMUSample* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- IMUMeasurement20 --------------------------------------------*/
 
@@ -74,28 +74,28 @@ typedef struct {
 void IMUMeasurement20_samples_Initialize(IMUMeasurement20_samples* pVal);
 void IMUMeasurement20_Initialize(IMUMeasurement20* pVal);
 
-#define i3ds_asn1_ERR_IMUMEASUREMENT20		9498  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_ATTRIBUTES_2		9385  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_SAMPLES		9474  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_SAMPLES_ELM_2		9469  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_BATCH_SIZE_2_2		9493  /**/
+#define i3ds_asn1_ERR_IMUMEASUREMENT20		9796  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_ATTRIBUTES_2		9683  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_SAMPLES		9772  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_SAMPLES_ELM_2		9767  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_IMUMEASUREMENT20_BATCH_SIZE_2_2		9791  /**/
 flag IMUMeasurement20_IsConstraintValid(const IMUMeasurement20* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20		9499  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_ATTRIBUTES_2		9386  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_SAMPLES		9475  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_SAMPLES_ELM_2		9470  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_BATCH_SIZE_2_2		9494  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20		9797  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_ATTRIBUTES_2		9684  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_SAMPLES		9773  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_SAMPLES_ELM_2		9768  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_IMUMEASUREMENT20_BATCH_SIZE_2_2		9792  /**/
 #define i3ds_asn1_IMUMeasurement20_REQUIRED_BYTES_FOR_ENCODING       1631 
 #define i3ds_asn1_IMUMeasurement20_REQUIRED_BITS_FOR_ENCODING        13042
 
 flag IMUMeasurement20_Encode(const IMUMeasurement20* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20		9500  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_ATTRIBUTES_2		9387  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_SAMPLES		9476  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_SAMPLES_ELM_2		9471  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_BATCH_SIZE_2_2		9495  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20		9798  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_ATTRIBUTES_2		9685  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_SAMPLES		9774  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_SAMPLES_ELM_2		9769  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_IMUMEASUREMENT20_BATCH_SIZE_2_2		9793  /**/
 flag IMUMeasurement20_Decode(IMUMeasurement20* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

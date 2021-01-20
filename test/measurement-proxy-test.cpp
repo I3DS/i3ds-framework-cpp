@@ -112,16 +112,16 @@ BOOST_AUTO_TEST_CASE(pub_sub_test)
 
   SamplePeriod period = 100000;
 
-  client.set_state(activate);
+  client.set_state(StateCommand_activate);
   client.set_sampling(period);
-  client.set_state(start);
+  client.set_state(StateCommand_start);
 
   subscriber1.Start();
   subscriber2.Start();
 
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
 
-  client.set_state(stop);
+  client.set_state(StateCommand_stop);
 
   subscriber1.Stop();
   subscriber2.Stop();

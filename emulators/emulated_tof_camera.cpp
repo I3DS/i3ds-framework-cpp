@@ -106,7 +106,7 @@ i3ds::EmulatedToFCamera::send_sample(unsigned long timestamp_us)
   BOOST_LOG_TRIVIAL(trace) << "Emulated ToF camera with NodeID: " << node() << " sends sample at " << timestamp_us;
 
   frame_.descriptor.attributes.timestamp = timestamp_us;
-  frame_.descriptor.attributes.validity = i3ds_asn1::sample_valid;
+  frame_.descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
 
   std::uniform_real_distribution<float> d(min_depth_, max_depth_);
 

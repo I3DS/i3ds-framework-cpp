@@ -132,7 +132,7 @@ i3ds::GigECamera::signal_lost_camera()
   BOOST_LOG_TRIVIAL(error) <<  error_string;
   set_failure();
 
-  throw CommandError(i3ds_asn1::error_other, error_string);
+  throw CommandError(i3ds_asn1::ResultCode_error_other, error_string);
 }
 
 void
@@ -240,7 +240,7 @@ i3ds::GigECamera::handle_exposure(ExposureService::Data& command)
       // Cannot set manual exposure when auto exposure is enabled.
       if (auto_exposure_enabled())
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "In auto-exposure mode");
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "In auto-exposure mode");
         }
 
       // Check that shutter is within limits.
@@ -250,17 +250,17 @@ i3ds::GigECamera::handle_exposure(ExposureService::Data& command)
 
       if (shutter > (int64_t) period())
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Shutter time longer than period: " + std::to_string(period()) );
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Shutter time longer than period: " + std::to_string(period()) );
         }
 
       if (shutter > shutter_max)
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Shutter time longer than max " + std::to_string(shutter_max));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Shutter time longer than max " + std::to_string(shutter_max));
         }
 
       if (shutter < shutter_min)
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Shutter time shorter than min " + std::to_string(shutter_min));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Shutter time shorter than min " + std::to_string(shutter_min));
         }
 
       // Check that gain is within limits.
@@ -270,12 +270,12 @@ i3ds::GigECamera::handle_exposure(ExposureService::Data& command)
 
       if (gain > gain_max)
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Gain higher than max value: " + std::to_string(gain_max));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Gain higher than max value: " + std::to_string(gain_max));
         }
 
       if (gain < gain_min)
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Gain lower than min value: " + std::to_string(gain_min));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Gain lower than min value: " + std::to_string(gain_min));
         }
 
       // Update gain and shutter.
@@ -297,7 +297,7 @@ i3ds::GigECamera::handle_exposure(ExposureService::Data& command)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
   catch (...)
     {
@@ -321,7 +321,7 @@ i3ds::GigECamera::handle_auto_exposure(AutoExposureService::Data& command)
 
       if (!(support_shutter || support_gain))
         {
-          throw i3ds::CommandError(i3ds_asn1::error_unsupported, "Auto exposure is not supported");
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_unsupported, "Auto exposure is not supported");
         }
 
       if (!command.request.enable)
@@ -347,17 +347,17 @@ i3ds::GigECamera::handle_auto_exposure(AutoExposureService::Data& command)
 
           if (limit > limit_max)
             {
-              throw i3ds::CommandError(i3ds_asn1::error_value, "Shutter limit longer than max " + std::to_string(limit_max));
+              throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Shutter limit longer than max " + std::to_string(limit_max));
             }
 
           if (limit < limit_min)
             {
-              throw i3ds::CommandError(i3ds_asn1::error_value, "Shutter limit shorter than min " + std::to_string(limit_min));
+              throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Shutter limit shorter than min " + std::to_string(limit_min));
             }
 
           if (limit > (period() / 2.0))
             {
-              throw i3ds::CommandError(i3ds_asn1::error_value,
+              throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value,
                                        "Shutter limit longer than (period/2) " + std::to_string(period() / 2.) );
             }
 
@@ -387,12 +387,12 @@ i3ds::GigECamera::handle_auto_exposure(AutoExposureService::Data& command)
 
           if (limit > limit_max)
             {
-              throw i3ds::CommandError(i3ds_asn1::error_value, "Gain limit larger than max " + std::to_string(limit_max));
+              throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Gain limit larger than max " + std::to_string(limit_max));
             }
 
           if (limit < limit_min)
             {
-              throw i3ds::CommandError(i3ds_asn1::error_value, "Gain limit smaller than min " + std::to_string(limit_min));
+              throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Gain limit smaller than min " + std::to_string(limit_min));
             }
 
           setAutoGainEnabled(true);
@@ -408,7 +408,7 @@ i3ds::GigECamera::handle_auto_exposure(AutoExposureService::Data& command)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
   catch (...)
     {
@@ -425,7 +425,7 @@ i3ds::GigECamera::handle_region(RegionService::Data& command)
 
   if (!isRegionSupported())
     {
-      throw CommandError(i3ds_asn1::error_unsupported, "ROI not supported for camera");
+      throw CommandError(i3ds_asn1::ResultCode_error_unsupported, "ROI not supported for camera");
     }
 
   try
@@ -445,7 +445,7 @@ i3ds::GigECamera::handle_region(RegionService::Data& command)
 
               ss << "Region width + offset larger than sensor width: (" <<  sx << "+" << ox << ") > " << getSensorWidth();
 
-              throw i3ds::CommandError(i3ds_asn1::error_value, ss.str());
+              throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, ss.str());
             }
 
           if ((sy + oy) > getSensorHeight())
@@ -454,7 +454,7 @@ i3ds::GigECamera::handle_region(RegionService::Data& command)
 
               ss << "Region height + offset larger than sensor height: (" <<  sy << "+" << oy << ") > " << getSensorHeight();
 
-              throw i3ds::CommandError(i3ds_asn1::error_value, ss.str());
+              throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, ss.str());
             }
 
           // Do resize in correct order
@@ -517,7 +517,7 @@ i3ds::GigECamera::handle_flash(FlashService::Data& command)
     {
       if (!param_.support_flash)
         {
-          throw i3ds::CommandError(i3ds_asn1::error_unsupported, "Flash not supported without starting camera in triggered mode");
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_unsupported, "Flash not supported without starting camera in triggered mode");
         }
 
       flash_enabled_ = command.request.enable;
@@ -582,14 +582,14 @@ i3ds::GigECamera::handle_pattern(PatternService::Data& command)
 
   if(!param_.support_pattern)
     {
-      throw i3ds::CommandError(i3ds_asn1::error_unsupported, "Pattern not activated when started camera server");
+      throw i3ds::CommandError(i3ds_asn1::ResultCode_error_unsupported, "Pattern not activated when started camera server");
     }
 
   check_standby();
 
   if (!trigger_)
     {
-      throw i3ds::CommandError(i3ds_asn1::error_unsupported, "Pattern only supported in triggered mode");
+      throw i3ds::CommandError(i3ds_asn1::ResultCode_error_unsupported, "Pattern only supported in triggered mode");
     }
 
   pattern_enabled_ = command.request.enable;
@@ -599,7 +599,7 @@ i3ds::GigECamera::handle_pattern(PatternService::Data& command)
       // Only support one pattern sequence, not controllable as of now.
       if (command.request.pattern_sequence != 1)
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Unsupported pattern sequence");
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Unsupported pattern sequence");
         }
 
       pattern_sequence_ = command.request.pattern_sequence;
@@ -635,7 +635,7 @@ i3ds::GigECamera::handle_sequence(SequenceService::Data& command)
             img_seq_ctr_ = 0;
             BOOST_LOG_TRIVIAL(info) << "Entering Sequence-length mode (seqlen: " << img_seq_ << ")";
         } else {
-            throw CommandError(i3ds_asn1::error_value, "invalid seqlen (0)");
+            throw CommandError(i3ds_asn1::ResultCode_error_value, "invalid seqlen (0)");
         }
     } else {
         BOOST_LOG_TRIVIAL(info) << "Sequence length disabled.";
@@ -663,7 +663,7 @@ i3ds::GigECamera::set_trigger(i3ds_asn1::TriggerOutput channel, i3ds_asn1::Trigg
 
       BOOST_LOG_TRIVIAL(error) << error;
 
-      throw CommandError(i3ds_asn1::error_other, error);
+      throw CommandError(i3ds_asn1::ResultCode_error_other, error);
     }
 
   // Enable the trigger on do_start.
@@ -692,7 +692,7 @@ i3ds::GigECamera::send_sample(const i3ds_asn1::byte* image, int width, int heigh
 
   // Set metadata of the frame.
   frame.descriptor.attributes.timestamp = get_timestamp();
-  frame.descriptor.attributes.validity = i3ds_asn1::sample_valid;
+  frame.descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
 
   frame.descriptor.region.size_x = r.size_x;
   frame.descriptor.region.size_y = r.size_y;

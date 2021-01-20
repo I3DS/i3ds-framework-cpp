@@ -66,7 +66,7 @@ camera_test(std::string name,
   i3ds::FrameCodec::Initialize(*frame);
 
   frame->descriptor.attributes.timestamp = 123456789;
-  frame->descriptor.attributes.validity = i3ds_asn1::sample_valid;
+  frame->descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
   frame->descriptor.region.size_x = size_x;
   frame->descriptor.region.size_y = size_y;
   frame->descriptor.pixel_size = pixel_size;
@@ -98,7 +98,7 @@ lidar_test(unsigned int n_replications, unsigned int n_points)
   i3ds::PointCloudCodec::Initialize(*cloud);
 
   cloud->descriptor.attributes.timestamp = 123456789;
-  cloud->descriptor.attributes.validity = i3ds_asn1::sample_valid;
+  cloud->descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
   cloud->descriptor.width = n_points;
   cloud->descriptor.height = 1;
 
@@ -120,7 +120,7 @@ radar_test(unsigned int n_replications, unsigned int n_points)
   i3ds::DepthMapCodec::Initialize(*map);
 
   map->descriptor.attributes.timestamp = 123456789;
-  map->descriptor.attributes.validity = i3ds_asn1::sample_valid;
+  map->descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
   map->descriptor.width = 1000;
   map->descriptor.height = n_points / 1000;
 

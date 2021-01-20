@@ -52,14 +52,14 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
   int cv_type = CV_16UC1;
   double scaling_factor = 1;
 
-  if (d.frame_mode == i3ds_asn1::mode_rgb)
+  if (d.frame_mode == i3ds_asn1::Frame_mode_t_mode_rgb)
     {
       if (pixel_size == 3) { cv_type = CV_8UC3; }
       if (pixel_size == 6) { cv_type = CV_16UC3; }
       scaling_factor = pow(2,(8 * (pixel_size/3) - d.data_depth));
     }
-  else if (d.frame_mode == i3ds_asn1::mode_uyvy ||
-           d.frame_mode == i3ds_asn1::mode_yuyv)
+  else if (d.frame_mode == i3ds_asn1::Frame_mode_t_mode_uyvy ||
+           d.frame_mode == i3ds_asn1::Frame_mode_t_mode_yuyv)
     {
       cv_type = CV_8UC2;
     }
@@ -72,9 +72,9 @@ i3ds::frame_to_cv_mat(const Frame& frame, int image_number)
 
   cv::Mat mat(rows, cols, cv_type, (char*)frame.image_data(image_number));
 
-  if (d.frame_mode == i3ds_asn1::mode_uyvy) {
+  if (d.frame_mode == i3ds_asn1::Frame_mode_t_mode_uyvy) {
       cv::cvtColor(mat, mat, cv::COLOR_YUV2BGR_UYVY);
-  } else if (d.frame_mode == i3ds_asn1::mode_yuyv) {
+  } else if (d.frame_mode == i3ds_asn1::Frame_mode_t_mode_yuyv) {
       cv::cvtColor(mat, mat, cv::COLOR_YUV2BGR_YUY2);
   }
 
@@ -98,7 +98,7 @@ i3ds::set_descriptor_from_mat(Frame& frame, const cv::Mat& mat,
   i3ds_asn1::FrameDescriptor* d = &frame.descriptor;
 
   d->attributes.timestamp = timestamp_us;
-  d->attributes.validity = i3ds_asn1::sample_valid;
+  d->attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
 
   d->region.size_x = mat.cols;
   d->region.size_y = mat.rows;

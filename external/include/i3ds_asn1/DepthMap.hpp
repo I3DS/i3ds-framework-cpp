@@ -15,24 +15,24 @@ namespace i3ds_asn1 {
 
 
 typedef enum {
-    depth_f = 0
+    Depth_format_t_depth_f = 0
 } Depth_format_t;
 
 // please use the following macros to avoid breaking code.
-#define i3ds_asn1_Depth_format_t_depth_f depth_f
+#define nsDepth_format_t_depth_f i3ds_asn1::Depth_format_t_depth_f
 
 void Depth_format_t_Initialize(Depth_format_t* pVal);
 
-#define i3ds_asn1_ERR_DEPTH_FORMAT_T		9505  /**/
+#define i3ds_asn1_ERR_DEPTH_FORMAT_T		9803  /**/
 flag Depth_format_t_IsConstraintValid(const Depth_format_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_DEPTH_FORMAT_T		9506  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_DEPTH_FORMAT_T		9804  /**/
 #define i3ds_asn1_Depth_format_t_REQUIRED_BYTES_FOR_ENCODING       0 
 #define i3ds_asn1_Depth_format_t_REQUIRED_BITS_FOR_ENCODING        0
 
 flag Depth_format_t_Encode(const Depth_format_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_DEPTH_FORMAT_T		9507  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_DEPTH_FORMAT_T		9805  /**/
 flag Depth_format_t_Decode(Depth_format_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- DepthMapDescriptor --------------------------------------------*/
 typedef struct {
@@ -46,31 +46,31 @@ typedef struct {
 
 void DepthMapDescriptor_Initialize(DepthMapDescriptor* pVal);
 
-#define i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR		9692  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_ATTRIBUTES_2		9639  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_DEPTH_FORMAT_2		9651  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_DEPTH_SIZE_2		9663  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_WIDTH_2		9675  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_HEIGHT_2		9687  /**/
+#define i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR		9990  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_ATTRIBUTES_2		9937  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_DEPTH_FORMAT_2		9949  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_DEPTH_SIZE_2		9961  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_WIDTH_2		9973  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_DEPTHMAPDESCRIPTOR_HEIGHT_2		9985  /**/
 flag DepthMapDescriptor_IsConstraintValid(const DepthMapDescriptor* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR		9693  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_ATTRIBUTES_2		9640  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_DEPTH_FORMAT_2		9652  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_DEPTH_SIZE_2		9664  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_WIDTH_2		9676  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_HEIGHT_2		9688  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR		9991  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_ATTRIBUTES_2		9938  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_DEPTH_FORMAT_2		9950  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_DEPTH_SIZE_2		9962  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_WIDTH_2		9974  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_DEPTHMAPDESCRIPTOR_HEIGHT_2		9986  /**/
 #define i3ds_asn1_DepthMapDescriptor_REQUIRED_BYTES_FOR_ENCODING       71 
 #define i3ds_asn1_DepthMapDescriptor_REQUIRED_BITS_FOR_ENCODING        565
 
 flag DepthMapDescriptor_Encode(const DepthMapDescriptor* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR		9694  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_ATTRIBUTES_2		9641  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_DEPTH_FORMAT_2		9653  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_DEPTH_SIZE_2		9665  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_WIDTH_2		9677  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_HEIGHT_2		9689  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR		9992  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_ATTRIBUTES_2		9939  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_DEPTH_FORMAT_2		9951  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_DEPTH_SIZE_2		9963  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_WIDTH_2		9975  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_DEPTHMAPDESCRIPTOR_HEIGHT_2		9987  /**/
 flag DepthMapDescriptor_Decode(DepthMapDescriptor* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

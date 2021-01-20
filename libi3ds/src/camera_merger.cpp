@@ -44,7 +44,7 @@ i3ds::CameraMerger::set_state(i3ds_asn1::StateCommand state, i3ds_asn1::StateCom
 
   if (current_state_cam_1 != current_state_cam_2)
     {
-      throw CommandError(i3ds_asn1::error_other, "Cameras are in inconsistent states");
+      throw CommandError(i3ds_asn1::ResultCode_error_other, "Cameras are in inconsistent states");
     }
 
   try
@@ -53,7 +53,7 @@ i3ds::CameraMerger::set_state(i3ds_asn1::StateCommand state, i3ds_asn1::StateCom
     }
   catch(i3ds::CommandError& e)
     {
-      throw CommandError(i3ds_asn1::error_other, std::string("Camera 1: ", e.what()));
+      throw CommandError(i3ds_asn1::ResultCode_error_other, std::string("Camera 1: ", e.what()));
     }
 
   try
@@ -63,7 +63,7 @@ i3ds::CameraMerger::set_state(i3ds_asn1::StateCommand state, i3ds_asn1::StateCom
   catch(i3ds::CommandError& e)
     {
       cam_1_client_.set_state(backup_state);
-      throw CommandError(i3ds_asn1::error_other, std::string("Camera 2: ", e.what()));
+      throw CommandError(i3ds_asn1::ResultCode_error_other, std::string("Camera 2: ", e.what()));
     }
 
 }
@@ -72,7 +72,7 @@ void
 i3ds::CameraMerger::do_activate()
 {
   BOOST_LOG_TRIVIAL(trace) << "CameraMerger do_activate()";
-  set_state(i3ds_asn1::activate, i3ds_asn1::deactivate);
+  set_state(i3ds_asn1::StateCommand_activate, i3ds_asn1::StateCommand_deactivate);
 }
 
 void
@@ -83,7 +83,7 @@ i3ds::CameraMerger::do_start()
   publisher_thread_ = std::thread(&i3ds::CameraMerger::publisher_thread_func, this);
   cam_2_subscriber_.Start();
   cam_1_subscriber_.Start();
-  set_state(i3ds_asn1::start, i3ds_asn1::stop);
+  set_state(i3ds_asn1::StateCommand_start, i3ds_asn1::StateCommand_stop);
 }
 
 void
@@ -97,14 +97,14 @@ i3ds::CameraMerger::do_stop()
     }
   cam_1_subscriber_.Stop();
   cam_2_subscriber_.Stop();
-  set_state(i3ds_asn1::stop, i3ds_asn1::stop);
+  set_state(i3ds_asn1::StateCommand_stop, i3ds_asn1::StateCommand_stop);
 }
 
 void
 i3ds::CameraMerger::do_deactivate()
 {
   BOOST_LOG_TRIVIAL(trace) << "CameraMerger do_deactivate()";
-  set_state(i3ds_asn1::deactivate, i3ds_asn1::deactivate);
+  set_state(i3ds_asn1::StateCommand_deactivate, i3ds_asn1::StateCommand_deactivate);
 }
 
 bool
@@ -136,7 +136,7 @@ i3ds::CameraMerger::handle_frames(i3ds::Frame data, int cam_number)
       camera_buffers_[cam_number].initialize(data.image_size(0));
     }
 
-  if (data.descriptor.attributes.validity == i3ds_asn1::sample_valid)
+  if (data.descriptor.attributes.validity == i3ds_asn1::SampleValidity_sample_valid)
     {
       camera_buffers_[cam_number].put_data(data.image_data(0), data.descriptor.attributes.timestamp);
     }

@@ -20,83 +20,83 @@ typedef struct {
 
 void TriggerMask_Initialize(TriggerMask* pVal);
 
-#define i3ds_asn1_ERR_TRIGGERMASK		12485  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TRIGGERMASK_ELM_2		12480  /**/
+#define i3ds_asn1_ERR_TRIGGERMASK		12783  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TRIGGERMASK_ELM_2		12778  /**/
 flag TriggerMask_IsConstraintValid(const TriggerMask* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERMASK		12486  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TRIGGERMASK_ELM_2		12481  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERMASK		12784  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TRIGGERMASK_ELM_2		12779  /**/
 #define i3ds_asn1_TriggerMask_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_TriggerMask_REQUIRED_BITS_FOR_ENCODING        8
 
 flag TriggerMask_Encode(const TriggerMask* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERMASK		12487  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TRIGGERMASK_ELM_2		12482  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERMASK		12785  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TRIGGERMASK_ELM_2		12780  /**/
 flag TriggerMask_Decode(TriggerMask* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint TriggerGenerator;
 
 
 void TriggerGenerator_Initialize(TriggerGenerator* pVal);
 
-#define i3ds_asn1_ERR_TRIGGERGENERATOR		12431  /**/
+#define i3ds_asn1_ERR_TRIGGERGENERATOR		12729  /**/
 flag TriggerGenerator_IsConstraintValid(const TriggerGenerator* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERGENERATOR		12432  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERGENERATOR		12730  /**/
 #define i3ds_asn1_TriggerGenerator_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_TriggerGenerator_REQUIRED_BITS_FOR_ENCODING        2
 
 flag TriggerGenerator_Encode(const TriggerGenerator* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERGENERATOR		12433  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERGENERATOR		12731  /**/
 flag TriggerGenerator_Decode(TriggerGenerator* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint TriggerInput;
 
 
 void TriggerInput_Initialize(TriggerInput* pVal);
 
-#define i3ds_asn1_ERR_TRIGGERINPUT		12438  /**/
+#define i3ds_asn1_ERR_TRIGGERINPUT		12736  /**/
 flag TriggerInput_IsConstraintValid(const TriggerInput* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERINPUT		12439  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERINPUT		12737  /**/
 #define i3ds_asn1_TriggerInput_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_TriggerInput_REQUIRED_BITS_FOR_ENCODING        2
 
 flag TriggerInput_Encode(const TriggerInput* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERINPUT		12440  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERINPUT		12738  /**/
 flag TriggerInput_Decode(TriggerInput* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint TriggerOutput;
 
 
 void TriggerOutput_Initialize(TriggerOutput* pVal);
 
-#define i3ds_asn1_ERR_TRIGGEROUTPUT		12445  /**/
+#define i3ds_asn1_ERR_TRIGGEROUTPUT		12743  /**/
 flag TriggerOutput_IsConstraintValid(const TriggerOutput* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGEROUTPUT		12446  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGEROUTPUT		12744  /**/
 #define i3ds_asn1_TriggerOutput_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_TriggerOutput_REQUIRED_BITS_FOR_ENCODING        3
 
 flag TriggerOutput_Encode(const TriggerOutput* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TRIGGEROUTPUT		12447  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TRIGGEROUTPUT		12745  /**/
 flag TriggerOutput_Decode(TriggerOutput* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint TriggerPeriod;
 
 
 void TriggerPeriod_Initialize(TriggerPeriod* pVal);
 
-#define i3ds_asn1_ERR_TRIGGERPERIOD		12452  /**/
+#define i3ds_asn1_ERR_TRIGGERPERIOD		12750  /**/
 flag TriggerPeriod_IsConstraintValid(const TriggerPeriod* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERPERIOD		12453  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERPERIOD		12751  /**/
 #define i3ds_asn1_TriggerPeriod_REQUIRED_BYTES_FOR_ENCODING       3 
 #define i3ds_asn1_TriggerPeriod_REQUIRED_BITS_FOR_ENCODING        24
 
 flag TriggerPeriod_Encode(const TriggerPeriod* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERPERIOD		12454  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERPERIOD		12752  /**/
 flag TriggerPeriod_Decode(TriggerPeriod* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- GeneratorSetup --------------------------------------------*/
 typedef struct {
@@ -107,54 +107,54 @@ typedef struct {
 
 void GeneratorSetup_Initialize(GeneratorSetup* pVal);
 
-#define i3ds_asn1_ERR_GENERATORSETUP		12516  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_GENERATORSETUP_SOURCE_2		12499  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_GENERATORSETUP_PERIOD_2		12511  /**/
+#define i3ds_asn1_ERR_GENERATORSETUP		12814  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_GENERATORSETUP_SOURCE_2		12797  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_GENERATORSETUP_PERIOD_2		12809  /**/
 flag GeneratorSetup_IsConstraintValid(const GeneratorSetup* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_GENERATORSETUP		12517  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_GENERATORSETUP_SOURCE_2		12500  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_GENERATORSETUP_PERIOD_2		12512  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_GENERATORSETUP		12815  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_GENERATORSETUP_SOURCE_2		12798  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_GENERATORSETUP_PERIOD_2		12810  /**/
 #define i3ds_asn1_GeneratorSetup_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_GeneratorSetup_REQUIRED_BITS_FOR_ENCODING        26
 
 flag GeneratorSetup_Encode(const GeneratorSetup* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_GENERATORSETUP		12518  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_GENERATORSETUP_SOURCE_2		12501  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_GENERATORSETUP_PERIOD_2		12513  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_GENERATORSETUP		12816  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_GENERATORSETUP_SOURCE_2		12799  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_GENERATORSETUP_PERIOD_2		12811  /**/
 flag GeneratorSetup_Decode(GeneratorSetup* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint TriggerOffset;
 
 
 void TriggerOffset_Initialize(TriggerOffset* pVal);
 
-#define i3ds_asn1_ERR_TRIGGEROFFSET		12459  /**/
+#define i3ds_asn1_ERR_TRIGGEROFFSET		12757  /**/
 flag TriggerOffset_IsConstraintValid(const TriggerOffset* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGEROFFSET		12460  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGEROFFSET		12758  /**/
 #define i3ds_asn1_TriggerOffset_REQUIRED_BYTES_FOR_ENCODING       3 
 #define i3ds_asn1_TriggerOffset_REQUIRED_BITS_FOR_ENCODING        24
 
 flag TriggerOffset_Encode(const TriggerOffset* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TRIGGEROFFSET		12461  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TRIGGEROFFSET		12759  /**/
 flag TriggerOffset_Decode(TriggerOffset* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint TriggerDuration;
 
 
 void TriggerDuration_Initialize(TriggerDuration* pVal);
 
-#define i3ds_asn1_ERR_TRIGGERDURATION		12466  /**/
+#define i3ds_asn1_ERR_TRIGGERDURATION		12764  /**/
 flag TriggerDuration_IsConstraintValid(const TriggerDuration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERDURATION		12467  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERDURATION		12765  /**/
 #define i3ds_asn1_TriggerDuration_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_TriggerDuration_REQUIRED_BITS_FOR_ENCODING        10
 
 flag TriggerDuration_Encode(const TriggerDuration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERDURATION		12468  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TRIGGERDURATION		12766  /**/
 flag TriggerDuration_Decode(TriggerDuration* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- ChannelInternal --------------------------------------------*/
 typedef struct {
@@ -168,31 +168,31 @@ typedef struct {
 
 void ChannelInternal_Initialize(ChannelInternal* pVal);
 
-#define i3ds_asn1_ERR_CHANNELINTERNAL		12583  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_OUTPUT_CHANNEL_2		12530  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_SOURCE_2		12542  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_OFFSET_2		12554  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_DURATION_2		12566  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_INVERT_2		12578  /**/
+#define i3ds_asn1_ERR_CHANNELINTERNAL		12881  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_OUTPUT_CHANNEL_2		12828  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_SOURCE_2		12840  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_OFFSET_2		12852  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_DURATION_2		12864  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELINTERNAL_INVERT_2		12876  /**/
 flag ChannelInternal_IsConstraintValid(const ChannelInternal* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL		12584  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_OUTPUT_CHANNEL_2		12531  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_SOURCE_2		12543  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_OFFSET_2		12555  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_DURATION_2		12567  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_INVERT_2		12579  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL		12882  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_OUTPUT_CHANNEL_2		12829  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_SOURCE_2		12841  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_OFFSET_2		12853  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_DURATION_2		12865  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_INVERT_2		12877  /**/
 #define i3ds_asn1_ChannelInternal_REQUIRED_BYTES_FOR_ENCODING       5 
 #define i3ds_asn1_ChannelInternal_REQUIRED_BITS_FOR_ENCODING        40
 
 flag ChannelInternal_Encode(const ChannelInternal* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL		12585  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_OUTPUT_CHANNEL_2		12532  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_SOURCE_2		12544  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_OFFSET_2		12556  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_DURATION_2		12568  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_INVERT_2		12580  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL		12883  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_OUTPUT_CHANNEL_2		12830  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_SOURCE_2		12842  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_OFFSET_2		12854  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_DURATION_2		12866  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELINTERNAL_INVERT_2		12878  /**/
 flag ChannelInternal_Decode(ChannelInternal* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- ChannelExternal --------------------------------------------*/
 typedef struct {
@@ -207,34 +207,34 @@ typedef struct {
 
 void ChannelExternal_Initialize(ChannelExternal* pVal);
 
-#define i3ds_asn1_ERR_CHANNELEXTERNAL		12662  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_OUTPUT_CHANNEL_2		12597  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_SOURCE_2		12609  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_OFFSET_2		12621  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_DURATION_2		12633  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_BYPASS_2		12645  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_INVERT_2		12657  /**/
+#define i3ds_asn1_ERR_CHANNELEXTERNAL		12960  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_OUTPUT_CHANNEL_2		12895  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_SOURCE_2		12907  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_OFFSET_2		12919  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_DURATION_2		12931  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_BYPASS_2		12943  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_CHANNELEXTERNAL_INVERT_2		12955  /**/
 flag ChannelExternal_IsConstraintValid(const ChannelExternal* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL		12663  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_OUTPUT_CHANNEL_2		12598  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_SOURCE_2		12610  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_OFFSET_2		12622  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_DURATION_2		12634  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_BYPASS_2		12646  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_INVERT_2		12658  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL		12961  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_OUTPUT_CHANNEL_2		12896  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_SOURCE_2		12908  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_OFFSET_2		12920  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_DURATION_2		12932  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_BYPASS_2		12944  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_INVERT_2		12956  /**/
 #define i3ds_asn1_ChannelExternal_REQUIRED_BYTES_FOR_ENCODING       6 
 #define i3ds_asn1_ChannelExternal_REQUIRED_BITS_FOR_ENCODING        41
 
 flag ChannelExternal_Encode(const ChannelExternal* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL		12664  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_OUTPUT_CHANNEL_2		12599  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_SOURCE_2		12611  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_OFFSET_2		12623  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_DURATION_2		12635  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_BYPASS_2		12647  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_INVERT_2		12659  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL		12962  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_OUTPUT_CHANNEL_2		12897  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_SOURCE_2		12909  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_OFFSET_2		12921  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_DURATION_2		12933  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_BYPASS_2		12945  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_CHANNELEXTERNAL_INVERT_2		12957  /**/
 flag ChannelExternal_Decode(ChannelExternal* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

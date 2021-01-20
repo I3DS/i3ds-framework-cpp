@@ -95,7 +95,7 @@ i3ds::EmulatedRadar::send_sample(unsigned long timestamp_us)
   BOOST_LOG_TRIVIAL(trace) << "Emulated radar with NodeID: " << node() << " sends sample at " << timestamp_us;
 
   frame_.descriptor.attributes.timestamp = timestamp_us;
-  frame_.descriptor.attributes.validity = i3ds_asn1::sample_valid;
+  frame_.descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
 
   std::normal_distribution<float> d(100.0, 5.0);
 

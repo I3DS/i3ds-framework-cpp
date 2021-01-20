@@ -76,7 +76,7 @@ BOOST_AUTO_TEST_CASE(pose_estimator_imaging_mode)
 {
   bool imaging_mode = true;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_imaging_mode(imaging_mode);
 
   BOOST_CHECK_EQUAL(pe->imaging_mode(), imaging_mode);
@@ -93,7 +93,7 @@ BOOST_AUTO_TEST_CASE(pose_estimator_camera_select)
 {
   uint8_t camera = 4;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_selected_camera(camera);
 
   BOOST_CHECK_EQUAL(pe->selected_camera(), camera);
@@ -138,7 +138,7 @@ handle_frame_measurement(PoseEstimator::FrameTopic::Data& data)
   BOOST_CHECK_EQUAL(data.descriptor.region.offset_x, 0);
   BOOST_CHECK_EQUAL(data.descriptor.region.offset_y, 0);
 
-  BOOST_CHECK_EQUAL(data.descriptor.frame_mode, mode_mono);
+  BOOST_CHECK_EQUAL(data.descriptor.frame_mode, Frame_mode_t_mode_mono);
   BOOST_CHECK_EQUAL(data.descriptor.data_depth, 8);
   BOOST_CHECK_EQUAL(data.descriptor.pixel_size, 1);
   frames_received++;
@@ -156,19 +156,19 @@ BOOST_AUTO_TEST_CASE(pose_estimator_sampling)
 
   SamplePeriod period = 100000;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_sampling(period);
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   subscriber.Start();
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
   BOOST_CHECK_GT(poses_received, 0);
 
   client->set_imaging_mode(true);
-  client->set_state(start);
+  client->set_state(StateCommand_start);
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
   BOOST_CHECK_GT(frames_received, 0);
 
   subscriber.Stop();

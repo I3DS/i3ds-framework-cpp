@@ -16,80 +16,80 @@ typedef T_Int64 Timepoint;
 
 void Timepoint_Initialize(Timepoint* pVal);
 
-#define i3ds_asn1_ERR_TIMEPOINT_2		9136  /**/
+#define i3ds_asn1_ERR_TIMEPOINT_2		9434  /**/
 flag Timepoint_IsConstraintValid(const Timepoint* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TIMEPOINT_2		9137  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TIMEPOINT_2		9435  /**/
 #define i3ds_asn1_Timepoint_REQUIRED_BYTES_FOR_ENCODING       8 
 #define i3ds_asn1_Timepoint_REQUIRED_BITS_FOR_ENCODING        64
 
 flag Timepoint_Encode(const Timepoint* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TIMEPOINT_2		9138  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TIMEPOINT_2		9436  /**/
 flag Timepoint_Decode(Timepoint* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint NodeID;
 
 
 void NodeID_Initialize(NodeID* pVal);
 
-#define i3ds_asn1_ERR_NODEID		9115  /**/
+#define i3ds_asn1_ERR_NODEID		9413  /**/
 flag NodeID_IsConstraintValid(const NodeID* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_NODEID		9116  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_NODEID		9414  /**/
 #define i3ds_asn1_NodeID_REQUIRED_BYTES_FOR_ENCODING       3 
 #define i3ds_asn1_NodeID_REQUIRED_BITS_FOR_ENCODING        24
 
 flag NodeID_Encode(const NodeID* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_NODEID		9117  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_NODEID		9415  /**/
 flag NodeID_Decode(NodeID* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint EndpointID;
 
 
 void EndpointID_Initialize(EndpointID* pVal);
 
-#define i3ds_asn1_ERR_ENDPOINTID		9122  /**/
+#define i3ds_asn1_ERR_ENDPOINTID		9420  /**/
 flag EndpointID_IsConstraintValid(const EndpointID* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_ENDPOINTID		9123  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_ENDPOINTID		9421  /**/
 #define i3ds_asn1_EndpointID_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_EndpointID_REQUIRED_BITS_FOR_ENCODING        8
 
 flag EndpointID_Encode(const EndpointID* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_ENDPOINTID		9124  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_ENDPOINTID		9422  /**/
 flag EndpointID_Decode(EndpointID* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
-    success = 0,
-    error_node_id = 1,
-    error_endpoint_id = 2,
-    error_unsupported = 3,
-    error_state = 4,
-    error_value = 5,
-    error_other = 6
+    ResultCode_success = 0,
+    ResultCode_error_node_id = 1,
+    ResultCode_error_endpoint_id = 2,
+    ResultCode_error_unsupported = 3,
+    ResultCode_error_state = 4,
+    ResultCode_error_value = 5,
+    ResultCode_error_other = 6
 } ResultCode;
 
 // please use the following macros to avoid breaking code.
-#define i3ds_asn1_ResultCode_success success
-#define i3ds_asn1_ResultCode_error_node_id error_node_id
-#define i3ds_asn1_ResultCode_error_endpoint_id error_endpoint_id
-#define i3ds_asn1_ResultCode_error_unsupported error_unsupported
-#define i3ds_asn1_ResultCode_error_state error_state
-#define i3ds_asn1_ResultCode_error_value error_value
-#define i3ds_asn1_ResultCode_error_other error_other
+#define nsResultCode_success i3ds_asn1::ResultCode_success
+#define nsResultCode_error_node_id i3ds_asn1::ResultCode_error_node_id
+#define nsResultCode_error_endpoint_id i3ds_asn1::ResultCode_error_endpoint_id
+#define nsResultCode_error_unsupported i3ds_asn1::ResultCode_error_unsupported
+#define nsResultCode_error_state i3ds_asn1::ResultCode_error_state
+#define nsResultCode_error_value i3ds_asn1::ResultCode_error_value
+#define nsResultCode_error_other i3ds_asn1::ResultCode_error_other
 
 void ResultCode_Initialize(ResultCode* pVal);
 
-#define i3ds_asn1_ERR_RESULTCODE		9141  /**/
+#define i3ds_asn1_ERR_RESULTCODE		9439  /**/
 flag ResultCode_IsConstraintValid(const ResultCode* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_RESULTCODE		9142  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_RESULTCODE		9440  /**/
 #define i3ds_asn1_ResultCode_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_ResultCode_REQUIRED_BITS_FOR_ENCODING        3
 
 flag ResultCode_Encode(const ResultCode* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_RESULTCODE		9143  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_RESULTCODE		9441  /**/
 flag ResultCode_Decode(ResultCode* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- CommandResponse --------------------------------------------*/
 typedef struct {
@@ -100,22 +100,22 @@ typedef struct {
 
 void CommandResponse_Initialize(CommandResponse* pVal);
 
-#define i3ds_asn1_ERR_COMMANDRESPONSE		9172  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_COMMANDRESPONSE_RESULT_2		9155  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_COMMANDRESPONSE_MESSAGE_2		9167  /**/
+#define i3ds_asn1_ERR_COMMANDRESPONSE		9470  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_COMMANDRESPONSE_RESULT_2		9453  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_COMMANDRESPONSE_MESSAGE_2		9465  /**/
 flag CommandResponse_IsConstraintValid(const CommandResponse* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_COMMANDRESPONSE		9173  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_COMMANDRESPONSE_RESULT_2		9156  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_COMMANDRESPONSE_MESSAGE_2		9168  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_COMMANDRESPONSE		9471  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_COMMANDRESPONSE_RESULT_2		9454  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_COMMANDRESPONSE_MESSAGE_2		9466  /**/
 #define i3ds_asn1_CommandResponse_REQUIRED_BYTES_FOR_ENCODING       42 
 #define i3ds_asn1_CommandResponse_REQUIRED_BITS_FOR_ENCODING        329
 
 flag CommandResponse_Encode(const CommandResponse* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_COMMANDRESPONSE		9174  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_COMMANDRESPONSE_RESULT_2		9157  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_COMMANDRESPONSE_MESSAGE_2		9169  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_COMMANDRESPONSE		9472  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_COMMANDRESPONSE_RESULT_2		9455  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_COMMANDRESPONSE_MESSAGE_2		9467  /**/
 flag CommandResponse_Decode(CommandResponse* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

@@ -16,7 +16,7 @@ i3ds::Sensor::Sensor(i3ds_asn1::NodeID node)
   : Node(node)
 {
   // Sensors are initially inactive.
-  state_ = i3ds_asn1::inactive;
+  state_ = i3ds_asn1::SensorState_inactive;
 
   // Default setting one sample at 1 Hz.
   period_ = 1000000;
@@ -35,7 +35,7 @@ i3ds::Sensor::check_inactive() const
 {
   if (!is_inactive())
     {
-      throw CommandError(i3ds_asn1::error_state, "Sensor is not in inactive state");
+      throw CommandError(i3ds_asn1::ResultCode_error_state, "Sensor is not in inactive state");
     }
 }
 
@@ -44,7 +44,7 @@ i3ds::Sensor::check_active() const
 {
   if (!is_active())
     {
-      throw CommandError(i3ds_asn1::error_state, "Sensor is not in active state");
+      throw CommandError(i3ds_asn1::ResultCode_error_state, "Sensor is not in active state");
     }
 }
 
@@ -53,7 +53,7 @@ i3ds::Sensor::check_standby() const
 {
   if (!is_standby())
     {
-      throw CommandError(i3ds_asn1::error_state, "Sensor is not in standby state");
+      throw CommandError(i3ds_asn1::ResultCode_error_state, "Sensor is not in standby state");
     }
 }
 
@@ -62,7 +62,7 @@ i3ds::Sensor::check_operational() const
 {
   if (!is_operational())
     {
-      throw CommandError(i3ds_asn1::error_state, "Sensor is not in operational state");
+      throw CommandError(i3ds_asn1::ResultCode_error_state, "Sensor is not in operational state");
     }
 }
 
@@ -71,7 +71,7 @@ i3ds::Sensor::check_failure() const
 {
   if (!is_failure())
     {
-      throw CommandError(i3ds_asn1::error_state, "Sensor is not in failure state");
+      throw CommandError(i3ds_asn1::ResultCode_error_state, "Sensor is not in failure state");
     }
 }
 
@@ -80,7 +80,7 @@ i3ds::Sensor::check_sampling_supported(i3ds_asn1::SampleCommand sample)
 {
   if (!is_sampling_supported(sample))
     {
-      throw CommandError(i3ds_asn1::error_value, "Sample configuration not supported");
+      throw CommandError(i3ds_asn1::ResultCode_error_value, "Sample configuration not supported");
     }
 }
 
@@ -98,30 +98,30 @@ i3ds::Sensor::Attach(Server& server)
 void
 i3ds::Sensor::set_failure()
 {
-  if (state_ != i3ds_asn1::failure)
+  if (state_ != i3ds_asn1::SensorState_failure)
     {
       do_failure();
-      state_ = i3ds_asn1::failure;
+      state_ = i3ds_asn1::SensorState_failure;
     }
 }
 
 void
 i3ds::Sensor::handle_state(StateService::Data& command)
 {
-  i3ds_asn1::ResultCode result = i3ds_asn1::error_state;
+  i3ds_asn1::ResultCode result = i3ds_asn1::ResultCode_error_state;
 
   try
     {
       switch(state_)
         {
-        case i3ds_asn1::inactive:
-          if (command.request == i3ds_asn1::activate)
+        case i3ds_asn1::SensorState_inactive:
+          if (command.request == i3ds_asn1::StateCommand_activate)
             {
               do_activate();
-              state_ = i3ds_asn1::standby;
-              result = i3ds_asn1::success;
+              state_ = i3ds_asn1::SensorState_standby;
+              result = i3ds_asn1::ResultCode_success;
             }
-          else if (command.request == i3ds_asn1::deactivate)
+          else if (command.request == i3ds_asn1::StateCommand_deactivate)
             {
               set_string(command.response.message, "Already in inactivate state, ignoring command.");
             }
@@ -132,38 +132,38 @@ i3ds::Sensor::handle_state(StateService::Data& command)
 
           break;
 
-        case i3ds_asn1::standby:
-          if (command.request == i3ds_asn1::deactivate)
+        case i3ds_asn1::SensorState_standby:
+          if (command.request == i3ds_asn1::StateCommand_deactivate)
             {
               do_deactivate();
-              state_ = i3ds_asn1::inactive;
-              result = i3ds_asn1::success;
+              state_ = i3ds_asn1::SensorState_inactive;
+              result = i3ds_asn1::ResultCode_success;
             }
-          else if (command.request == i3ds_asn1::start)
+          else if (command.request == i3ds_asn1::StateCommand_start)
             {
               do_start();
-              state_ = i3ds_asn1::operational;
-              result = i3ds_asn1::success;
+              state_ = i3ds_asn1::SensorState_operational;
+              result = i3ds_asn1::ResultCode_success;
             }
-          else if (command.request == i3ds_asn1::activate)
+          else if (command.request == i3ds_asn1::StateCommand_activate)
             {
               set_string(command.response.message, "Already in standby state, ignoring command");
             }
-          else if (command.request == i3ds_asn1::stop)
+          else if (command.request == i3ds_asn1::StateCommand_stop)
             {
               set_string(command.response.message, "Command not allowed for standby state.");
             }
 
           break;
 
-        case i3ds_asn1::operational:
-          if (command.request == i3ds_asn1::stop)
+        case i3ds_asn1::SensorState_operational:
+          if (command.request == i3ds_asn1::StateCommand_stop)
             {
               do_stop();
-              state_ = i3ds_asn1::standby;
-              result = i3ds_asn1::success;
+              state_ = i3ds_asn1::SensorState_standby;
+              result = i3ds_asn1::ResultCode_success;
             }
-          else if (command.request == i3ds_asn1::start)
+          else if (command.request == i3ds_asn1::StateCommand_start)
             {
               set_string(command.response.message,"Already in operational state, ignoring command.");
             }
@@ -173,12 +173,12 @@ i3ds::Sensor::handle_state(StateService::Data& command)
             }
           break;
 
-        case i3ds_asn1::failure:
-          if (command.request == i3ds_asn1::deactivate)
+        case i3ds_asn1::SensorState_failure:
+          if (command.request == i3ds_asn1::StateCommand_deactivate)
             {
               do_deactivate();
-              state_ = i3ds_asn1::inactive;
-              result = i3ds_asn1::success;
+              state_ = i3ds_asn1::SensorState_inactive;
+              result = i3ds_asn1::ResultCode_success;
             }
           else
             {
@@ -195,7 +195,7 @@ i3ds::Sensor::handle_state(StateService::Data& command)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
 }
 
@@ -215,7 +215,7 @@ i3ds::Sensor::handle_sample(SampleService::Data& sample)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
 }
 
@@ -230,7 +230,7 @@ i3ds::Sensor::handle_status(StatusService::Data& status)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
 }
 
@@ -249,7 +249,7 @@ i3ds::Sensor::handle_configuration(ConfigurationService::Data& config)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
 }
 
