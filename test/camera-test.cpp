@@ -106,7 +106,7 @@ void F::Setup(bool support_trigger, bool support_flash, bool support_pattern, bo
 
   // Camera frame configuration
   param.image_count = stereo ? 2 : 1;
-  param.frame_mode  = mode_mono;
+  param.frame_mode  = Frame_mode_t_mode_mono;
   param.data_depth  = 16;
   param.pixel_size  = 2;
 
@@ -214,7 +214,7 @@ BOOST_AUTO_TEST_CASE(camera_internal_sampling)
   BatchSize batch_size = 1;
   BatchCount batch_count = 1;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_sampling(period, batch_size, batch_count);
 
   BOOST_CHECK_EQUAL(camera->period(), period);
@@ -233,7 +233,7 @@ BOOST_AUTO_TEST_CASE(camera_external_sampling)
   BatchSize batch_size = 1;
   BatchCount batch_count = 1;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_sampling(period, batch_size, batch_count);
 
   BOOST_CHECK_EQUAL(camera->period(), period);
@@ -243,12 +243,12 @@ BOOST_AUTO_TEST_CASE(camera_external_sampling)
   BOOST_CHECK_GT(trigger->duration(param.camera_output), 0);
   BOOST_CHECK_EQUAL(trigger->inverted(param.camera_output), false);
 
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   BOOST_CHECK_EQUAL(trigger->period(param.trigger_source), period);
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), true);
 
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
 
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), false);
 }
@@ -269,7 +269,7 @@ BOOST_AUTO_TEST_CASE(camera_configuration_query)
   bool pattern_enabled = true;
   PatternSequence pattern_sequence = 1;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
 
   client->set_exposure(shutter, gain);
   client->set_auto_exposure(auto_exposure_enabled, max_shutter, max_gain);
@@ -301,7 +301,7 @@ BOOST_AUTO_TEST_CASE(camera_mono_region)
 {
   SetupDefault();
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
 
   BOOST_CHECK_EQUAL(camera->region_enabled(), false);
 
@@ -363,7 +363,7 @@ BOOST_AUTO_TEST_CASE(camera_stereo_region)
 {
   SetupStereo();
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
 
   BOOST_CHECK_EQUAL(camera->region_enabled(), false);
 
@@ -383,7 +383,7 @@ BOOST_AUTO_TEST_CASE(camera_exposure)
 {
   SetupDefault();
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
 
   // Check manual exposure settings.
   BOOST_CHECK_EQUAL(camera->auto_exposure_enabled(), false);
@@ -421,7 +421,7 @@ BOOST_AUTO_TEST_CASE(camera_pattern_settings)
   BatchCount batch_count = 1;
   PatternSequence pattern = 1;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_sampling(period, batch_size, batch_count);
   client->set_pattern(true, pattern);
 
@@ -439,13 +439,13 @@ BOOST_AUTO_TEST_CASE(camera_pattern_settings)
   BOOST_CHECK_GT(trigger->duration(param.pattern_output), 0);
   BOOST_CHECK_EQUAL(trigger->inverted(param.pattern_output), false);
 
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   BOOST_CHECK_EQUAL(trigger->period(param.trigger_source), period);
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), true);
   BOOST_CHECK_EQUAL(trigger->enabled(param.pattern_output), true);
 
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
 
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), false);
   BOOST_CHECK_EQUAL(trigger->enabled(param.pattern_output), false);
@@ -454,12 +454,12 @@ BOOST_AUTO_TEST_CASE(camera_pattern_settings)
 
   BOOST_CHECK_EQUAL(camera->pattern_sequence(), 0);
 
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), true);
   BOOST_CHECK_EQUAL(trigger->enabled(param.pattern_output), false);
 
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
 
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), false);
   BOOST_CHECK_EQUAL(trigger->enabled(param.pattern_output), false);
@@ -477,7 +477,7 @@ BOOST_AUTO_TEST_CASE(camera_flash_settings)
   FlashStrength strength = 50;
   ShutterTime shutter = 10000;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_sampling(period, batch_size, batch_count);
   client->set_exposure(shutter, 0.0);
   client->set_flash(true, strength);
@@ -496,13 +496,13 @@ BOOST_AUTO_TEST_CASE(camera_flash_settings)
   BOOST_CHECK_GT(trigger->duration(param.flash_output), 0);
   BOOST_CHECK_EQUAL(trigger->inverted(param.flash_output), false);
 
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   BOOST_CHECK_EQUAL(trigger->period(param.trigger_source), period);
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), true);
   BOOST_CHECK_EQUAL(trigger->enabled(param.flash_output), true);
 
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
 
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), false);
   BOOST_CHECK_EQUAL(trigger->enabled(param.flash_output), false);
@@ -511,12 +511,12 @@ BOOST_AUTO_TEST_CASE(camera_flash_settings)
 
   BOOST_CHECK_EQUAL(camera->flash_strength(), 0);
 
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), true);
   BOOST_CHECK_EQUAL(trigger->enabled(param.flash_output), false);
 
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
 
   BOOST_CHECK_EQUAL(trigger->enabled(param.camera_output), false);
   BOOST_CHECK_EQUAL(trigger->enabled(param.flash_output), false);
@@ -537,13 +537,13 @@ BOOST_AUTO_TEST_CASE(camera_mono_sampling)
 
   SamplePeriod period = 100000;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_sampling(period);
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
 
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
 
   subscriber.Stop();
 
@@ -565,13 +565,13 @@ BOOST_AUTO_TEST_CASE(camera_stereo_sampling)
 
   SamplePeriod period = 100000;
 
-  client->set_state(activate);
+  client->set_state(StateCommand_activate);
   client->set_sampling(period);
-  client->set_state(start);
+  client->set_state(StateCommand_start);
 
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
 
-  client->set_state(stop);
+  client->set_state(StateCommand_stop);
 
   subscriber.Stop();
 

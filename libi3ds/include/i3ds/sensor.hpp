@@ -66,19 +66,19 @@ public:
   void check_failure() const;
 
   // Returns true if sensor is in inactive state.
-  inline bool is_inactive() const {return state() == i3ds_asn1::inactive;}
+  inline bool is_inactive() const {return state() == i3ds_asn1::SensorState_inactive;}
 
   // Returns true if sensor is in active state.
-  inline bool is_active() const {return state() == i3ds_asn1::standby || state() == i3ds_asn1::operational;}
+  inline bool is_active() const {return state() == i3ds_asn1::SensorState_standby || state() == i3ds_asn1::SensorState_operational;}
 
   // Returns true if sensor is in standby state.
-  inline bool is_standby() const {return state() == i3ds_asn1::standby;}
+  inline bool is_standby() const {return state() == i3ds_asn1::SensorState_standby;}
 
   // Returns true if sensor is in operational state.
-  inline bool is_operational() const {return state() == i3ds_asn1::operational;}
+  inline bool is_operational() const {return state() == i3ds_asn1::SensorState_operational;}
 
   // Returns true if sensor is in failure state.
-  inline bool is_failure() const {return state() == i3ds_asn1::failure;}
+  inline bool is_failure() const {return state() == i3ds_asn1::SensorState_failure;}
 
   // Get sensor state.
   inline i3ds_asn1::SensorState state() const {return state_;}

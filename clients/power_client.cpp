@@ -32,7 +32,7 @@ i3ds::PowerClient::enable_channels(const PowerOutputSet& channels)
         }
       else
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 
@@ -56,7 +56,7 @@ i3ds::PowerClient::disable_channels(const PowerOutputSet& channels)
         }
       else
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 
@@ -80,7 +80,7 @@ i3ds::PowerClient::set_channels(const PowerOutputSet& channels)
         }
       else
         {
-          throw i3ds::CommandError(i3ds_asn1::error_value, "Invalid output channel " + std::to_string(c));
+          throw i3ds::CommandError(i3ds_asn1::ResultCode_error_value, "Invalid output channel " + std::to_string(c));
         }
     }
 

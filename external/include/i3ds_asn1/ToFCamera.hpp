@@ -22,22 +22,22 @@ typedef struct {
 
 void ToFRange_Initialize(ToFRange* pVal);
 
-#define i3ds_asn1_ERR_TOFRANGE		12321  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFRANGE_MIN_DEPTH_2		12304  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFRANGE_MAX_DEPTH_2		12316  /**/
+#define i3ds_asn1_ERR_TOFRANGE		3392  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFRANGE_MIN_DEPTH_2		3375  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFRANGE_MAX_DEPTH_2		3387  /**/
 flag ToFRange_IsConstraintValid(const ToFRange* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TOFRANGE		12322  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFRANGE_MIN_DEPTH_2		12305  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFRANGE_MAX_DEPTH_2		12317  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TOFRANGE		3393  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFRANGE_MIN_DEPTH_2		3376  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFRANGE_MAX_DEPTH_2		3388  /**/
 #define i3ds_asn1_ToFRange_REQUIRED_BYTES_FOR_ENCODING       26 
 #define i3ds_asn1_ToFRange_REQUIRED_BITS_FOR_ENCODING        208
 
 flag ToFRange_Encode(const ToFRange* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TOFRANGE		12323  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFRANGE_MIN_DEPTH_2		12306  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFRANGE_MAX_DEPTH_2		12318  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TOFRANGE		3394  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFRANGE_MIN_DEPTH_2		3377  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFRANGE_MAX_DEPTH_2		3389  /**/
 flag ToFRange_Decode(ToFRange* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- ToFRegion --------------------------------------------*/
 typedef struct {
@@ -48,22 +48,22 @@ typedef struct {
 
 void ToFRegion_Initialize(ToFRegion* pVal);
 
-#define i3ds_asn1_ERR_TOFREGION		12290  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFREGION_ENABLE_2		12225  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFREGION_REGION_2		12285  /**/
+#define i3ds_asn1_ERR_TOFREGION		3361  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFREGION_ENABLE_2		3296  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFREGION_REGION_2		3356  /**/
 flag ToFRegion_IsConstraintValid(const ToFRegion* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TOFREGION		12291  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFREGION_ENABLE_2		12226  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFREGION_REGION_2		12286  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TOFREGION		3362  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFREGION_ENABLE_2		3297  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFREGION_REGION_2		3357  /**/
 #define i3ds_asn1_ToFRegion_REQUIRED_BYTES_FOR_ENCODING       9 
 #define i3ds_asn1_ToFRegion_REQUIRED_BITS_FOR_ENCODING        65
 
 flag ToFRegion_Encode(const ToFRegion* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TOFREGION		12292  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFREGION_ENABLE_2		12227  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFREGION_REGION_2		12287  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TOFREGION		3363  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFREGION_ENABLE_2		3298  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFREGION_REGION_2		3358  /**/
 flag ToFRegion_Decode(ToFRegion* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- ToFConfiguration --------------------------------------------*/
 typedef struct {
@@ -76,28 +76,28 @@ typedef struct {
 
 void ToFConfiguration_Initialize(ToFConfiguration* pVal);
 
-#define i3ds_asn1_ERR_TOFCONFIGURATION		12424  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_REGION_ENABLED_2		12335  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_REGION_2		12395  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_MIN_DEPTH_2		12407  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_MAX_DEPTH_2		12419  /**/
+#define i3ds_asn1_ERR_TOFCONFIGURATION		3495  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_REGION_ENABLED_2		3406  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_REGION_2		3466  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_MIN_DEPTH_2		3478  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_TOFCONFIGURATION_MAX_DEPTH_2		3490  /**/
 flag ToFConfiguration_IsConstraintValid(const ToFConfiguration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION		12425  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_REGION_ENABLED_2		12336  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_REGION_2		12396  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_MIN_DEPTH_2		12408  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_MAX_DEPTH_2		12420  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION		3496  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_REGION_ENABLED_2		3407  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_REGION_2		3467  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_MIN_DEPTH_2		3479  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TOFCONFIGURATION_MAX_DEPTH_2		3491  /**/
 #define i3ds_asn1_ToFConfiguration_REQUIRED_BYTES_FOR_ENCODING       35 
 #define i3ds_asn1_ToFConfiguration_REQUIRED_BITS_FOR_ENCODING        273
 
 flag ToFConfiguration_Encode(const ToFConfiguration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION		12426  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_REGION_ENABLED_2		12337  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_REGION_2		12397  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_MIN_DEPTH_2		12409  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_MAX_DEPTH_2		12421  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION		3497  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_REGION_ENABLED_2		3408  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_REGION_2		3468  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_MIN_DEPTH_2		3480  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_TOFCONFIGURATION_MAX_DEPTH_2		3492  /**/
 flag ToFConfiguration_Decode(ToFConfiguration* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

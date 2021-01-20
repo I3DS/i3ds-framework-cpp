@@ -22,39 +22,39 @@ typedef struct {
 
 void PointCloudAcquire_Initialize(PointCloudAcquire* pVal);
 
-#define i3ds_asn1_ERR_POINTCLOUDACQUIRE		9943  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDACQUIRE_PUBLISH_IMAGES_2		9938  /**/
+#define i3ds_asn1_ERR_POINTCLOUDACQUIRE		1014  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDACQUIRE_PUBLISH_IMAGES_2		1009  /**/
 flag PointCloudAcquire_IsConstraintValid(const PointCloudAcquire* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDACQUIRE		9944  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDACQUIRE_PUBLISH_IMAGES_2		9939  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDACQUIRE		1015  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDACQUIRE_PUBLISH_IMAGES_2		1010  /**/
 #define i3ds_asn1_PointCloudAcquire_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PointCloudAcquire_REQUIRED_BITS_FOR_ENCODING        1
 
 flag PointCloudAcquire_Encode(const PointCloudAcquire* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDACQUIRE		9945  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDACQUIRE_PUBLISH_IMAGES_2		9940  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDACQUIRE		1016  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDACQUIRE_PUBLISH_IMAGES_2		1011  /**/
 flag PointCloudAcquire_Decode(PointCloudAcquire* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
-    fields_xyz_f = 0
+    Point_format_t_fields_xyz_f = 0
 } Point_format_t;
 
 // please use the following macros to avoid breaking code.
-#define i3ds_asn1_Point_format_t_fields_xyz_f fields_xyz_f
+#define nsPoint_format_t_fields_xyz_f i3ds_asn1::Point_format_t_fields_xyz_f
 
 void Point_format_t_Initialize(Point_format_t* pVal);
 
-#define i3ds_asn1_ERR_POINT_FORMAT_T		9699  /**/
+#define i3ds_asn1_ERR_POINT_FORMAT_T		770  /**/
 flag Point_format_t_IsConstraintValid(const Point_format_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POINT_FORMAT_T		9700  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POINT_FORMAT_T		771  /**/
 #define i3ds_asn1_Point_format_t_REQUIRED_BYTES_FOR_ENCODING       0 
 #define i3ds_asn1_Point_format_t_REQUIRED_BITS_FOR_ENCODING        0
 
 flag Point_format_t_Encode(const Point_format_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POINT_FORMAT_T		9701  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POINT_FORMAT_T		772  /**/
 flag Point_format_t_Decode(Point_format_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- PointCloudDescriptor --------------------------------------------*/
 typedef struct {
@@ -68,57 +68,57 @@ typedef struct {
 
 void PointCloudDescriptor_Initialize(PointCloudDescriptor* pVal);
 
-#define i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR		9886  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_ATTRIBUTES_2		9833  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_POINT_FORMAT_2		9845  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_POINT_SIZE_2		9857  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_WIDTH_2		9869  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_HEIGHT_2		9881  /**/
+#define i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR		957  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_ATTRIBUTES_2		904  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_POINT_FORMAT_2		916  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_POINT_SIZE_2		928  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_WIDTH_2		940  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDDESCRIPTOR_HEIGHT_2		952  /**/
 flag PointCloudDescriptor_IsConstraintValid(const PointCloudDescriptor* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR		9887  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_ATTRIBUTES_2		9834  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_POINT_FORMAT_2		9846  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_POINT_SIZE_2		9858  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_WIDTH_2		9870  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_HEIGHT_2		9882  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR		958  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_ATTRIBUTES_2		905  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_POINT_FORMAT_2		917  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_POINT_SIZE_2		929  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_WIDTH_2		941  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDDESCRIPTOR_HEIGHT_2		953  /**/
 #define i3ds_asn1_PointCloudDescriptor_REQUIRED_BYTES_FOR_ENCODING       76 
 #define i3ds_asn1_PointCloudDescriptor_REQUIRED_BITS_FOR_ENCODING        605
 
 flag PointCloudDescriptor_Encode(const PointCloudDescriptor* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR		9888  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_ATTRIBUTES_2		9835  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_POINT_FORMAT_2		9847  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_POINT_SIZE_2		9859  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_WIDTH_2		9871  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_HEIGHT_2		9883  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR		959  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_ATTRIBUTES_2		906  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_POINT_FORMAT_2		918  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_POINT_SIZE_2		930  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_WIDTH_2		942  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDDESCRIPTOR_HEIGHT_2		954  /**/
 flag PointCloudDescriptor_Decode(PointCloudDescriptor* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
-    i3ds_asn1_PointCloudSensorMode_mode_undefined = 0,
-    mode_camera = 1,
-    mode_camera_oneshot = 2,
-    mode_structured_light = 3
+    PointCloudSensorMode_mode_undefined = 0,
+    PointCloudSensorMode_mode_camera = 1,
+    PointCloudSensorMode_mode_camera_oneshot = 2,
+    PointCloudSensorMode_mode_structured_light = 3
 } PointCloudSensorMode;
 
 // please use the following macros to avoid breaking code.
-#define i3ds_asn1_PointCloudSensorMode_mode_undefined i3ds_asn1_PointCloudSensorMode_mode_undefined
-#define i3ds_asn1_PointCloudSensorMode_mode_camera mode_camera
-#define i3ds_asn1_i3ds_asn1_PointCloudSensorMode_mode_camera_oneshot mode_camera_oneshot
-#define i3ds_asn1_PointCloudSensorMode_mode_structured_light mode_structured_light
+#define nsPointCloudSensorMode_mode_undefined i3ds_asn1::PointCloudSensorMode_mode_undefined
+#define nsPointCloudSensorMode_mode_camera i3ds_asn1::PointCloudSensorMode_mode_camera
+#define nsPointCloudSensorMode_mode_camera_oneshot i3ds_asn1::PointCloudSensorMode_mode_camera_oneshot
+#define nsPointCloudSensorMode_mode_structured_light i3ds_asn1::PointCloudSensorMode_mode_structured_light
 
 void PointCloudSensorMode_Initialize(PointCloudSensorMode* pVal);
 
-#define i3ds_asn1_ERR_POINTCLOUDSENSORMODE		9893  /**/
+#define i3ds_asn1_ERR_POINTCLOUDSENSORMODE		964  /**/
 flag PointCloudSensorMode_IsConstraintValid(const PointCloudSensorMode* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDSENSORMODE		9894  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDSENSORMODE		965  /**/
 #define i3ds_asn1_PointCloudSensorMode_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PointCloudSensorMode_REQUIRED_BITS_FOR_ENCODING        2
 
 flag PointCloudSensorMode_Encode(const PointCloudSensorMode* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDSENSORMODE		9895  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDSENSORMODE		966  /**/
 flag PointCloudSensorMode_Decode(PointCloudSensorMode* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- PointCloudMode --------------------------------------------*/
 typedef struct {
@@ -129,22 +129,22 @@ typedef struct {
 
 void PointCloudMode_Initialize(PointCloudMode* pVal);
 
-#define i3ds_asn1_ERR_POINTCLOUDMODE		9924  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDMODE_MODE_2		9907  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDMODE_ENABLE_FLASH_2		9919  /**/
+#define i3ds_asn1_ERR_POINTCLOUDMODE		995  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDMODE_MODE_2		978  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POINTCLOUDMODE_ENABLE_FLASH_2		990  /**/
 flag PointCloudMode_IsConstraintValid(const PointCloudMode* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDMODE		9925  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDMODE_MODE_2		9908  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDMODE_ENABLE_FLASH_2		9920  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDMODE		996  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDMODE_MODE_2		979  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POINTCLOUDMODE_ENABLE_FLASH_2		991  /**/
 #define i3ds_asn1_PointCloudMode_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PointCloudMode_REQUIRED_BITS_FOR_ENCODING        3
 
 flag PointCloudMode_Encode(const PointCloudMode* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDMODE		9926  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDMODE_MODE_2		9909  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDMODE_ENABLE_FLASH_2		9921  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDMODE		997  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDMODE_MODE_2		980  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POINTCLOUDMODE_ENABLE_FLASH_2		992  /**/
 flag PointCloudMode_Decode(PointCloudMode* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

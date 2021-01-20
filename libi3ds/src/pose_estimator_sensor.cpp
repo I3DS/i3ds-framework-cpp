@@ -26,13 +26,13 @@ i3ds::PoseEstimator::Attach(Server& server)
 void
 i3ds::PoseEstimator::handle_imaging_mode(ImagingModeService::Data&)
 {
-  throw CommandError(i3ds_asn1::error_unsupported, "Imaging mode not supported");
+  throw CommandError(i3ds_asn1::ResultCode_error_unsupported, "Imaging mode not supported");
 }
 
 void
 i3ds::PoseEstimator::handle_camera_select(CameraSelectService::Data&)
 {
-  throw CommandError(i3ds_asn1::error_unsupported, "Camera select not supported");
+  throw CommandError(i3ds_asn1::ResultCode_error_unsupported, "Camera select not supported");
 }
 
 void
@@ -47,12 +47,12 @@ i3ds::PoseEstimator::handle_configuration(ConfigurationService::Data& config)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
   catch (...)
     {
       /// \todo This forces it into failure state, but the first error message give wrong message on client side.
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, "Probably lost connection. Going to failure mode.");
+      throw CommandError(i3ds_asn1::ResultCode_error_other, "Probably lost connection. Going to failure mode.");
     }
 }

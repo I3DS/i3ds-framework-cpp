@@ -77,7 +77,7 @@ i3ds::Client::Stop()
 template<>
 void i3ds::Client::Check<i3ds_asn1::CommandResponse>(i3ds_asn1::CommandResponse& response)
 {
-  if (response.result != i3ds_asn1::success)
+  if (response.result != i3ds_asn1::ResultCode_success)
     {
       throw CommandError(response.result, to_string(response.message));
     }

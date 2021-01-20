@@ -132,7 +132,7 @@ i3ds::EmulatedAnalog::send_sample(unsigned long timestamp_us)
       BOOST_LOG_TRIVIAL(trace) << batches_ << " batches and " << param_.series << " series";
 
       frame_.descriptor.attributes.timestamp = timestamp_us;
-      frame_.descriptor.attributes.validity = i3ds_asn1::sample_valid;
+      frame_.descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
       frame_.descriptor.series_count = param_.series;
       frame_.descriptor.batch_size = batches_;
 

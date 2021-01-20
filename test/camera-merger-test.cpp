@@ -61,7 +61,7 @@ struct F
       cam_1_param.support_flash = false;
       cam_1_param.support_pattern = false;
 
-      cam_1_param.frame_mode  = mode_mono;
+      cam_1_param.frame_mode  = Frame_mode_t_mode_mono;
       cam_1_param.data_depth  = 8;
       cam_1_param.pixel_size  = 1;
 
@@ -180,24 +180,24 @@ BOOST_FIXTURE_TEST_SUITE(s, F)
 
 BOOST_AUTO_TEST_CASE(state_transitions)
 {
-  BOOST_CHECK_EQUAL(cam_1->state(), inactive);
-  BOOST_CHECK_EQUAL(cam_2->state(), inactive);
+  BOOST_CHECK_EQUAL(cam_1->state(), SensorState_inactive);
+  BOOST_CHECK_EQUAL(cam_2->state(), SensorState_inactive);
 
-  client.set_state(activate);
-  BOOST_CHECK_EQUAL(cam_1->state(), standby);
-  BOOST_CHECK_EQUAL(cam_2->state(), standby);
+  client.set_state(StateCommand_activate);
+  BOOST_CHECK_EQUAL(cam_1->state(), SensorState_standby);
+  BOOST_CHECK_EQUAL(cam_2->state(), SensorState_standby);
 
-  client.set_state(start);
-  BOOST_CHECK_EQUAL(cam_1->state(), operational);
-  BOOST_CHECK_EQUAL(cam_2->state(), operational);
+  client.set_state(StateCommand_start);
+  BOOST_CHECK_EQUAL(cam_1->state(), SensorState_operational);
+  BOOST_CHECK_EQUAL(cam_2->state(), SensorState_operational);
 
-  client.set_state(stop);
-  BOOST_CHECK_EQUAL(cam_1->state(), standby);
-  BOOST_CHECK_EQUAL(cam_2->state(), standby);
+  client.set_state(StateCommand_stop);
+  BOOST_CHECK_EQUAL(cam_1->state(), SensorState_standby);
+  BOOST_CHECK_EQUAL(cam_2->state(), SensorState_standby);
 
-  client.set_state(deactivate);
-  BOOST_CHECK_EQUAL(cam_1->state(), inactive);
-  BOOST_CHECK_EQUAL(cam_2->state(), inactive);
+  client.set_state(StateCommand_deactivate);
+  BOOST_CHECK_EQUAL(cam_1->state(), SensorState_inactive);
+  BOOST_CHECK_EQUAL(cam_2->state(), SensorState_inactive);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -208,7 +208,7 @@ BOOST_AUTO_TEST_CASE(configure_period)
   BatchSize batch_size = 2;
   BatchCount batch_count = 8;
 
-  client.set_state(activate);
+  client.set_state(StateCommand_activate);
   client.set_sampling(period, batch_size, batch_count);
 
   BOOST_CHECK_EQUAL(cam_1->period(), period);
@@ -234,15 +234,15 @@ BOOST_AUTO_TEST_CASE(measurements)
 
   SamplePeriod period = 100000;
 
-  client.set_state(activate);
+  client.set_state(StateCommand_activate);
   client.set_sampling(period);
-  client.set_state(start);
+  client.set_state(StateCommand_start);
 
   subscriber.Start();
 
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
 
-  client.set_state(stop);
+  client.set_state(StateCommand_stop);
 
   subscriber.Stop();
 
@@ -265,9 +265,9 @@ BOOST_AUTO_TEST_CASE(synchronizing_measurements)
 
   SamplePeriod period = 100000;
 
-  client.set_state(activate);
+  client.set_state(StateCommand_activate);
   client.set_sampling(period);
-  client.set_state(start);
+  client.set_state(StateCommand_start);
 
   subscriber.Start();
 
@@ -277,12 +277,12 @@ BOOST_AUTO_TEST_CASE(synchronizing_measurements)
   received = 0;
 
   SensorClient cam_1_client(context, cam_1_node);
-  cam_1_client.set_state(stop);
+  cam_1_client.set_state(StateCommand_stop);
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
-  cam_1_client.set_state(start);
+  cam_1_client.set_state(StateCommand_start);
   std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
 
-  client.set_state(stop);
+  client.set_state(StateCommand_stop);
 
   subscriber.Stop();
 

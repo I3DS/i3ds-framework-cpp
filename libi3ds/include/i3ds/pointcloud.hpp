@@ -43,7 +43,7 @@ struct PointCloudCodec
   static inline void Initialize(Data& val)
   {
     PointCloudDescriptorCodec::Initialize(val.descriptor);
-    val.descriptor.point_format = i3ds_asn1::fields_xyz_f;
+    val.descriptor.point_format = i3ds_asn1::Point_format_t_fields_xyz_f;
     val.descriptor.point_size = sizeof(PointXYZ);
     val.points.clear();
   };

@@ -35,7 +35,7 @@ struct DepthMapCodec
   static inline void Initialize(Data& val)
   {
     DepthMapDescriptorCodec::Initialize(val.descriptor);
-    val.descriptor.depth_format = i3ds_asn1::depth_f;
+    val.descriptor.depth_format = i3ds_asn1::Depth_format_t_depth_f;
     val.descriptor.depth_size = sizeof(float);
     val.depths.clear();
   };

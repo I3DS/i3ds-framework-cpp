@@ -120,7 +120,7 @@ void TestClient::test_legal_state_command(StateCommand sc)
 {
   ResultCode r = issue_state_command(sc);
 
-  BOOST_CHECK_EQUAL(r, success);
+  BOOST_CHECK_EQUAL(r, ResultCode_success);
 }
 
 void TestClient::test_illegal_state_command(StateCommand sc)
@@ -132,7 +132,7 @@ void TestClient::test_illegal_state_command(StateCommand sc)
     }
   catch (CommandError& e)
     {
-      BOOST_CHECK_EQUAL(e.result(), error_state);
+      BOOST_CHECK_EQUAL(e.result(), ResultCode_error_state);
     }
 }
 
@@ -154,7 +154,7 @@ void TestClient::test_legal_sample_command(SamplePeriod period, BatchSize batch_
 {
   ResultCode r = issue_sample_command(period, batch_size);
 
-  BOOST_CHECK_EQUAL(r, success);
+  BOOST_CHECK_EQUAL(r, ResultCode_success);
 }
 
 void TestClient::test_illegal_sample_command(SamplePeriod period, BatchSize batch_size, ResultCode error)
@@ -212,7 +212,7 @@ BOOST_FIXTURE_TEST_SUITE(s, F)
 BOOST_AUTO_TEST_CASE(sensor_creation)
 {
   BOOST_CHECK_EQUAL(sensor->node(), id);
-  BOOST_CHECK_EQUAL(sensor->state(), inactive);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_inactive);
   BOOST_CHECK_EQUAL(sensor->period(), 1000000);
   BOOST_CHECK_EQUAL(sensor->batch_size(), 1);
   BOOST_CHECK_EQUAL(sensor->batch_count(), 0);
@@ -224,54 +224,54 @@ BOOST_AUTO_TEST_CASE(sensor_creation)
 BOOST_AUTO_TEST_CASE(sensor_state_command)
 {
   // Test commands from INACTIVE.
-  client->test_illegal_state_command(start);
-  BOOST_CHECK_EQUAL(sensor->state(), inactive);
+  client->test_illegal_state_command(StateCommand_start);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_inactive);
   sensor->test_no_callback();
 
-  client->test_illegal_state_command(stop);
-  BOOST_CHECK_EQUAL(sensor->state(), inactive);
+  client->test_illegal_state_command(StateCommand_stop);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_inactive);
   sensor->test_no_callback();
 
-  client->test_illegal_state_command(deactivate);
-  BOOST_CHECK_EQUAL(sensor->state(), inactive);
+  client->test_illegal_state_command(StateCommand_deactivate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_inactive);
   sensor->test_no_callback();
 
-  client->test_legal_state_command(activate);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_legal_state_command(StateCommand_activate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
   sensor->test_callback_and_clear("do_activate");
 
   // Test commands from STANDBY.
-  client->test_illegal_state_command(activate);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_illegal_state_command(StateCommand_activate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
   sensor->test_no_callback();
 
-  client->test_legal_state_command(deactivate);
-  BOOST_CHECK_EQUAL(sensor->state(), inactive);
+  client->test_legal_state_command(StateCommand_deactivate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_inactive);
   sensor->test_callback_and_clear("do_deactivate");
 
-  client->test_legal_state_command(activate);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_legal_state_command(StateCommand_activate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
   sensor->test_callback_and_clear("do_activate");
 
-  client->test_legal_state_command(start);
-  BOOST_CHECK_EQUAL(sensor->state(), operational);
+  client->test_legal_state_command(StateCommand_start);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_operational);
   sensor->test_callback_and_clear("do_start");
 
   // Test commands from OPERATIONAL.
-  client->test_illegal_state_command(start);
-  BOOST_CHECK_EQUAL(sensor->state(), operational);
+  client->test_illegal_state_command(StateCommand_start);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_operational);
   sensor->test_no_callback();
 
-  client->test_illegal_state_command(deactivate);
-  BOOST_CHECK_EQUAL(sensor->state(), operational);
+  client->test_illegal_state_command(StateCommand_deactivate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_operational);
   sensor->test_no_callback();
 
-  client->test_illegal_state_command(activate);
-  BOOST_CHECK_EQUAL(sensor->state(), operational);
+  client->test_illegal_state_command(StateCommand_activate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_operational);
   sensor->test_no_callback();
 
-  client->test_legal_state_command(stop);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_legal_state_command(StateCommand_stop);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
   sensor->test_callback_and_clear("do_stop");
 }
 
@@ -280,17 +280,17 @@ BOOST_AUTO_TEST_CASE(sensor_state_command)
 BOOST_AUTO_TEST_CASE(sensor_sample_command)
 {
   // Test from INACTIVE (illegal).
-  BOOST_CHECK_EQUAL(sensor->state(), inactive);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_inactive);
 
-  client->test_illegal_sample_command(10000, 1, error_state);
+  client->test_illegal_sample_command(10000, 1, ResultCode_error_state);
   sensor->test_no_callback();
 
   // Test from STANDBY (legal).
-  client->test_legal_state_command(activate);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_legal_state_command(StateCommand_activate);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
 
   client->test_legal_sample_command(1000, 2);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
   BOOST_CHECK_EQUAL(sensor->period(), 1000);
   BOOST_CHECK_EQUAL(sensor->batch_size(), 2);
 
@@ -298,33 +298,33 @@ BOOST_AUTO_TEST_CASE(sensor_sample_command)
   BOOST_CHECK_EQUAL(client->period(), 1000);
   BOOST_CHECK_EQUAL(client->batch_size(), 2);
 
-  client->test_illegal_sample_command(2000000, 1, error_value);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_illegal_sample_command(2000000, 1, ResultCode_error_value);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
   BOOST_CHECK_EQUAL(sensor->period(), 1000);
   BOOST_CHECK_EQUAL(sensor->batch_size(), 2);
 
   client->test_legal_sample_command(2000, 3);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
   BOOST_CHECK_EQUAL(sensor->period(), 2000);
   BOOST_CHECK_EQUAL(sensor->batch_size(), 3);
 
-  client->test_illegal_sample_command(10, 1, error_value);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_illegal_sample_command(10, 1, ResultCode_error_value);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
 
-  client->test_illegal_sample_command(2000000, 1, error_value);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_illegal_sample_command(2000000, 1, ResultCode_error_value);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
 
-  client->test_illegal_sample_command(1000, 0, error_value);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_illegal_sample_command(1000, 0, ResultCode_error_value);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
 
-  client->test_illegal_sample_command(1000, 100, error_value);
-  BOOST_CHECK_EQUAL(sensor->state(), standby);
+  client->test_illegal_sample_command(1000, 100, ResultCode_error_value);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_standby);
 
   // Test from OPERATIONAL (illegal).
-  client->test_legal_state_command(start);
-  BOOST_CHECK_EQUAL(sensor->state(), operational);
+  client->test_legal_state_command(StateCommand_start);
+  BOOST_CHECK_EQUAL(sensor->state(), SensorState_operational);
 
-  client->test_illegal_sample_command(10000, 1, error_state);
+  client->test_illegal_sample_command(10000, 1, ResultCode_error_state);
 
 }
 
@@ -332,7 +332,7 @@ BOOST_AUTO_TEST_CASE(sensor_sample_command)
 
 BOOST_AUTO_TEST_CASE(test_device_name)
 {
-  client->test_legal_state_command(activate);
+  client->test_legal_state_command(StateCommand_activate);
   client->load_all();
   BOOST_CHECK_EQUAL(client->device_name(), "Test sensor");
 }

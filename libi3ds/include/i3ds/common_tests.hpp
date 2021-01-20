@@ -26,7 +26,7 @@ void
 test_sensor_creation(Sensor::Ptr sensor, i3ds_asn1::NodeID node)
 {
   BOOST_CHECK_EQUAL(sensor->node(), node);
-  BOOST_CHECK_EQUAL(sensor->state(), i3ds_asn1::inactive);
+  BOOST_CHECK_EQUAL(sensor->state(), i3ds_asn1::SensorState_inactive);
   BOOST_CHECK_EQUAL(sensor->period(), 1000000);
 }
 
@@ -37,7 +37,7 @@ test_sample_settings(SensorClient::Ptr client)
   i3ds_asn1::BatchSize batch_size = 1;
   i3ds_asn1::BatchCount batch_count = 1;
 
-  client->set_state(i3ds_asn1::activate);
+  client->set_state(i3ds_asn1::StateCommand_activate);
 
   client->set_sampling(period, batch_size, batch_count);
   client->load_config();
@@ -54,7 +54,7 @@ test_region(typename SensorType::Ptr sensor, typename ClientType::Ptr client)
   RegionType r1 = {300, 200, 150, 100};
   bool region_enabled = true;
 
-  client->set_state(i3ds_asn1::activate);
+  client->set_state(i3ds_asn1::StateCommand_activate);
   client->set_region(region_enabled, r1);
 
   BOOST_CHECK_EQUAL(sensor->region_enabled(), region_enabled);

@@ -27,7 +27,7 @@ i3ds::EmulatedPoseEstimator::EmulatedPoseEstimator(Context::Ptr context, i3ds_as
   frame_.descriptor.region.offset_x = 0;
   frame_.descriptor.region.offset_y = 0;
 
-  frame_.descriptor.frame_mode = i3ds_asn1::mode_mono;
+  frame_.descriptor.frame_mode = i3ds_asn1::Frame_mode_t_mode_mono;
   frame_.descriptor.data_depth = 8;
   frame_.descriptor.pixel_size = 1;
 
@@ -115,7 +115,7 @@ i3ds::EmulatedPoseEstimator::send_sample(unsigned long timestamp_us)
       BOOST_LOG_TRIVIAL(trace) << "Emulated pose estimator with NodeID: " << node() << " sends image at " << timestamp_us;
 
       frame_.descriptor.attributes.timestamp = timestamp_us;
-      frame_.descriptor.attributes.validity = i3ds_asn1::sample_valid;
+      frame_.descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
 
       frame_.descriptor.image_count = 1;
 
@@ -138,7 +138,7 @@ i3ds::EmulatedPoseEstimator::send_sample(unsigned long timestamp_us)
       BOOST_LOG_TRIVIAL(trace) << "Emulated pose estimator with NodeID: " << node() << " sends pose sample at " << timestamp_us;
 
       pose_estimate_.attributes.timestamp = timestamp_us;
-      pose_estimate_.attributes.validity = i3ds_asn1::sample_valid;
+      pose_estimate_.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
 
       pose_estimate_.estimated_pose.position.data.nCount = 3;
       pose_estimate_.estimated_pose.position.data.arr[0] = 1.0;

@@ -105,7 +105,7 @@ i3ds::EmulatorFactory::CreateTIRCamera(std::string sample_dir)
 {
   EmulatedCamera::Parameters param;
 
-  param.frame_mode = i3ds_asn1::mode_mono;
+  param.frame_mode = i3ds_asn1::Frame_mode_t_mode_mono;
   param.data_depth = 16;
   param.pixel_size = 2;
   param.width = 640;
@@ -130,7 +130,7 @@ i3ds::EmulatorFactory::CreateHRCamera(std::string sample_dir)
 {
   EmulatedCamera::Parameters param;
 
-  param.frame_mode = i3ds_asn1::mode_mono;
+  param.frame_mode = i3ds_asn1::Frame_mode_t_mode_mono;
   param.data_depth = 8;
   param.pixel_size = 1;
   param.width = 640;
@@ -161,7 +161,7 @@ i3ds::EmulatorFactory::CreateStereoCamera(std::string sample_dir)
 {
   EmulatedCamera::Parameters param;
 
-  param.frame_mode = i3ds_asn1::mode_mono;
+  param.frame_mode = i3ds_asn1::Frame_mode_t_mode_mono;
   param.data_depth = 12;
   param.pixel_size = 2;
   param.width = 2048;

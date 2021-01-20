@@ -26,13 +26,13 @@ i3ds::ToFCamera::Attach(Server& server)
 void
 i3ds::ToFCamera::handle_region(RegionService::Data& )
 {
-  throw CommandError(i3ds_asn1::error_unsupported, "Region of interest not supported");
+  throw CommandError(i3ds_asn1::ResultCode_error_unsupported, "Region of interest not supported");
 }
 
 void
 i3ds::ToFCamera::handle_range(RangeService::Data& )
 {
-  throw CommandError(i3ds_asn1::error_unsupported, "Range setting not supported");
+  throw CommandError(i3ds_asn1::ResultCode_error_unsupported, "Range setting not supported");
 }
 
 void
@@ -50,6 +50,6 @@ i3ds::ToFCamera::handle_configuration(ConfigurationService::Data& config)
   catch (DeviceError& e)
     {
       set_failure();
-      throw CommandError(i3ds_asn1::error_other, e.what());
+      throw CommandError(i3ds_asn1::ResultCode_error_other, e.what());
     }
 }
