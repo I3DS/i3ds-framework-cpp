@@ -32,13 +32,13 @@
     typedef i3ds_asn1::NAME Data; \
     static const int max_size = i3ds_asn1_ ## NAME ## _REQUIRED_BYTES_FOR_ENCODING; \
     static inline void Initialize(Data& val) { \
-      NAME ## _Initialize(&val); \
+      i3ds_asn1::NAME ## _Initialize(&val); \
     } \
     static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode, i3ds_asn1::flag bCheckConstraints) { \
-      return NAME ## _Encode(val, pBitStrm, pErrCode, bCheckConstraints); \
+      return i3ds_asn1::NAME ## _Encode(val, pBitStrm, pErrCode, bCheckConstraints); \
     } \
     static inline i3ds_asn1::flag Decode(Data* pVal, i3ds_asn1::BitStream* pBitStrm, int* pErrCode) { \
-      return NAME ## _Decode(pVal, pBitStrm, pErrCode); \
+      return i3ds_asn1::NAME ## _Decode(pVal, pBitStrm, pErrCode); \
     } \
 }
 
