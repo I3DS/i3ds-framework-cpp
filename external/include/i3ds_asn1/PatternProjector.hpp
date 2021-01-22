@@ -24,16 +24,16 @@ typedef enum {
 
 void PatternSensorMode_Initialize(PatternSensorMode* pVal);
 
-#define i3ds_asn1_ERR_PATTERNSENSORMODE		13034  /**/
+#define i3ds_asn1_ERR_PATTERNSENSORMODE		12998  /**/
 flag PatternSensorMode_IsConstraintValid(const PatternSensorMode* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNSENSORMODE		13035  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNSENSORMODE		12999  /**/
 #define i3ds_asn1_PatternSensorMode_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PatternSensorMode_REQUIRED_BITS_FOR_ENCODING        2
 
 flag PatternSensorMode_Encode(const PatternSensorMode* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_PATTERNSENSORMODE		13036  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_PATTERNSENSORMODE		13000  /**/
 flag PatternSensorMode_Decode(PatternSensorMode* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- PatternDescriptor --------------------------------------------*/
 typedef struct {
@@ -44,22 +44,22 @@ typedef struct {
 
 void PatternDescriptor_Initialize(PatternDescriptor* pVal);
 
-#define i3ds_asn1_ERR_PATTERNDESCRIPTOR		13065  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_PATTERNDESCRIPTOR_MODE_2		13048  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_PATTERNDESCRIPTOR_ENABLE_2		13060  /**/
+#define i3ds_asn1_ERR_PATTERNDESCRIPTOR		13029  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_PATTERNDESCRIPTOR_MODE_2		13012  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_PATTERNDESCRIPTOR_ENABLE_2		13024  /**/
 flag PatternDescriptor_IsConstraintValid(const PatternDescriptor* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNDESCRIPTOR		13066  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PATTERNDESCRIPTOR_MODE_2		13049  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PATTERNDESCRIPTOR_ENABLE_2		13061  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_PATTERNDESCRIPTOR		13030  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PATTERNDESCRIPTOR_MODE_2		13013  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_PATTERNDESCRIPTOR_ENABLE_2		13025  /**/
 #define i3ds_asn1_PatternDescriptor_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PatternDescriptor_REQUIRED_BITS_FOR_ENCODING        3
 
 flag PatternDescriptor_Encode(const PatternDescriptor* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_PATTERNDESCRIPTOR		13067  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PATTERNDESCRIPTOR_MODE_2		13050  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PATTERNDESCRIPTOR_ENABLE_2		13062  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_PATTERNDESCRIPTOR		13031  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PATTERNDESCRIPTOR_MODE_2		13014  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_PATTERNDESCRIPTOR_ENABLE_2		13026  /**/
 flag PatternDescriptor_Decode(PatternDescriptor* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

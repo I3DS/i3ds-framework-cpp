@@ -25,16 +25,16 @@ typedef enum {
 
 void InfuseMode_Initialize(InfuseMode* pVal);
 
-#define i3ds_asn1_ERR_INFUSEMODE		9042  /**/
+#define i3ds_asn1_ERR_INFUSEMODE		9006  /**/
 flag InfuseMode_IsConstraintValid(const InfuseMode* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODE		9043  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODE		9007  /**/
 #define i3ds_asn1_InfuseMode_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_InfuseMode_REQUIRED_BITS_FOR_ENCODING        2
 
 flag InfuseMode_Encode(const InfuseMode* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_INFUSEMODE		9044  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_INFUSEMODE		9008  /**/
 flag InfuseMode_Decode(InfuseMode* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- InfuseModus --------------------------------------------*/
 typedef struct {
@@ -45,22 +45,22 @@ typedef struct {
 
 void InfuseModus_Initialize(InfuseModus* pVal);
 
-#define i3ds_asn1_ERR_INFUSEMODUS		9073  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSEMODUS_MODE_2		9056  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSEMODUS_GNC_TIME_2		9068  /**/
+#define i3ds_asn1_ERR_INFUSEMODUS		9037  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSEMODUS_MODE_2		9020  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSEMODUS_GNC_TIME_2		9032  /**/
 flag InfuseModus_IsConstraintValid(const InfuseModus* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS		9074  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS_MODE_2		9057  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS_GNC_TIME_2		9069  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS		9038  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS_MODE_2		9021  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS_GNC_TIME_2		9033  /**/
 #define i3ds_asn1_InfuseModus_REQUIRED_BYTES_FOR_ENCODING       14 
 #define i3ds_asn1_InfuseModus_REQUIRED_BITS_FOR_ENCODING        106
 
 flag InfuseModus_Encode(const InfuseModus* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS		9075  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS_MODE_2		9058  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS_GNC_TIME_2		9070  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS		9039  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS_MODE_2		9022  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS_GNC_TIME_2		9034  /**/
 flag InfuseModus_Decode(InfuseModus* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- InfuseSequence --------------------------------------------*/
 
@@ -103,55 +103,55 @@ void InfuseSequence_q_svc_clt_meas_Initialize(InfuseSequence_q_svc_clt_meas* pVa
 void InfuseSequence_cov_svc_pose_svc_clt_meas_Initialize(InfuseSequence_cov_svc_pose_svc_clt_meas* pVal);
 void InfuseSequence_Initialize(InfuseSequence* pVal);
 
-#define i3ds_asn1_ERR_INFUSESEQUENCE		9221  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		9092  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		9087  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		9106  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_Q_SVC_CLT_MEAS		9123  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		9118  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		9137  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		9149  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		9166  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		9161  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		9180  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		9192  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		9204  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_MODE_2		9216  /**/
+#define i3ds_asn1_ERR_INFUSESEQUENCE		9185  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		9056  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		9051  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		9070  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_Q_SVC_CLT_MEAS		9087  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		9082  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		9101  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		9113  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		9130  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		9125  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		9144  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		9156  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		9168  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_MODE_2		9180  /**/
 flag InfuseSequence_IsConstraintValid(const InfuseSequence* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE		9222  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		9093  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		9088  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		9107  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS		9124  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		9119  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		9138  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		9150  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		9167  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		9162  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		9181  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		9193  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		9205  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_MODE_2		9217  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE		9186  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		9057  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		9052  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		9071  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS		9088  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		9083  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		9102  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		9114  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		9131  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		9126  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		9145  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		9157  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		9169  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_MODE_2		9181  /**/
 #define i3ds_asn1_InfuseSequence_REQUIRED_BYTES_FOR_ENCODING       570 
 #define i3ds_asn1_InfuseSequence_REQUIRED_BITS_FOR_ENCODING        4553
 
 flag InfuseSequence_Encode(const InfuseSequence* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE		9223  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		9094  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		9089  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		9108  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS		9125  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		9120  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		9139  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		9151  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		9168  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		9163  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		9182  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		9194  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		9206  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_MODE_2		9218  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE		9187  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		9058  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		9053  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		9072  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS		9089  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		9084  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		9103  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		9115  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		9132  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		9127  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		9146  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		9158  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		9170  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_MODE_2		9182  /**/
 flag InfuseSequence_Decode(InfuseSequence* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

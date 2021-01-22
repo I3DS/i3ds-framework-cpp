@@ -21,22 +21,22 @@ typedef struct {
 
 void StarTrackerMeasurement_Initialize(StarTrackerMeasurement* pVal);
 
-#define i3ds_asn1_ERR_STARTRACKERMEASUREMENT		12509  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12461  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_POSITION_2		12504  /**/
+#define i3ds_asn1_ERR_STARTRACKERMEASUREMENT		12473  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12425  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_POSITION_2		12468  /**/
 flag StarTrackerMeasurement_IsConstraintValid(const StarTrackerMeasurement* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT		12510  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12462  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_POSITION_2		12505  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT		12474  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12426  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_POSITION_2		12469  /**/
 #define i3ds_asn1_StarTrackerMeasurement_REQUIRED_BYTES_FOR_ENCODING       118 
 #define i3ds_asn1_StarTrackerMeasurement_REQUIRED_BITS_FOR_ENCODING        943
 
 flag StarTrackerMeasurement_Encode(const StarTrackerMeasurement* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT		12511  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12463  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_POSITION_2		12506  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT		12475  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		12427  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_POSITION_2		12470  /**/
 flag StarTrackerMeasurement_Decode(StarTrackerMeasurement* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

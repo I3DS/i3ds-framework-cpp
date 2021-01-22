@@ -22,22 +22,22 @@ typedef struct {
 
 void PoseEstimatorMeasurement_Initialize(PoseEstimatorMeasurement* pVal);
 
-#define i3ds_asn1_ERR_POSEESTIMATORMEASUREMENT		11784  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORMEASUREMENT_ATTRIBUTES_2		11693  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORMEASUREMENT_ESTIMATED_POSE_2		11779  /**/
+#define i3ds_asn1_ERR_POSEESTIMATORMEASUREMENT		11748  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORMEASUREMENT_ATTRIBUTES_2		11657  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORMEASUREMENT_ESTIMATED_POSE_2		11743  /**/
 flag PoseEstimatorMeasurement_IsConstraintValid(const PoseEstimatorMeasurement* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORMEASUREMENT		11785  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORMEASUREMENT_ATTRIBUTES_2		11694  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORMEASUREMENT_ESTIMATED_POSE_2		11780  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORMEASUREMENT		11749  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORMEASUREMENT_ATTRIBUTES_2		11658  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORMEASUREMENT_ESTIMATED_POSE_2		11744  /**/
 #define i3ds_asn1_PoseEstimatorMeasurement_REQUIRED_BYTES_FOR_ENCODING       158 
 #define i3ds_asn1_PoseEstimatorMeasurement_REQUIRED_BITS_FOR_ENCODING        1257
 
 flag PoseEstimatorMeasurement_Encode(const PoseEstimatorMeasurement* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORMEASUREMENT		11786  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORMEASUREMENT_ATTRIBUTES_2		11695  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORMEASUREMENT_ESTIMATED_POSE_2		11781  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORMEASUREMENT		11750  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORMEASUREMENT_ATTRIBUTES_2		11659  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORMEASUREMENT_ESTIMATED_POSE_2		11745  /**/
 flag PoseEstimatorMeasurement_Decode(PoseEstimatorMeasurement* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- PoseEstimatorImagingMode --------------------------------------------*/
 typedef struct {
@@ -47,19 +47,19 @@ typedef struct {
 
 void PoseEstimatorImagingMode_Initialize(PoseEstimatorImagingMode* pVal);
 
-#define i3ds_asn1_ERR_POSEESTIMATORIMAGINGMODE		11509  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORIMAGINGMODE_IMAGING_MODE_2		11504  /**/
+#define i3ds_asn1_ERR_POSEESTIMATORIMAGINGMODE		11473  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORIMAGINGMODE_IMAGING_MODE_2		11468  /**/
 flag PoseEstimatorImagingMode_IsConstraintValid(const PoseEstimatorImagingMode* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORIMAGINGMODE		11510  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORIMAGINGMODE_IMAGING_MODE_2		11505  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORIMAGINGMODE		11474  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORIMAGINGMODE_IMAGING_MODE_2		11469  /**/
 #define i3ds_asn1_PoseEstimatorImagingMode_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PoseEstimatorImagingMode_REQUIRED_BITS_FOR_ENCODING        1
 
 flag PoseEstimatorImagingMode_Encode(const PoseEstimatorImagingMode* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORIMAGINGMODE		11511  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORIMAGINGMODE_IMAGING_MODE_2		11506  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORIMAGINGMODE		11475  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORIMAGINGMODE_IMAGING_MODE_2		11470  /**/
 flag PoseEstimatorImagingMode_Decode(PoseEstimatorImagingMode* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- PoseEstimatorCameraSelect --------------------------------------------*/
 typedef struct {
@@ -69,19 +69,19 @@ typedef struct {
 
 void PoseEstimatorCameraSelect_Initialize(PoseEstimatorCameraSelect* pVal);
 
-#define i3ds_asn1_ERR_POSEESTIMATORCAMERASELECT		11528  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORCAMERASELECT_CAMERA_SELECT_2		11523  /**/
+#define i3ds_asn1_ERR_POSEESTIMATORCAMERASELECT		11492  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORCAMERASELECT_CAMERA_SELECT_2		11487  /**/
 flag PoseEstimatorCameraSelect_IsConstraintValid(const PoseEstimatorCameraSelect* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCAMERASELECT		11529  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCAMERASELECT_CAMERA_SELECT_2		11524  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCAMERASELECT		11493  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCAMERASELECT_CAMERA_SELECT_2		11488  /**/
 #define i3ds_asn1_PoseEstimatorCameraSelect_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PoseEstimatorCameraSelect_REQUIRED_BITS_FOR_ENCODING        8
 
 flag PoseEstimatorCameraSelect_Encode(const PoseEstimatorCameraSelect* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCAMERASELECT		11530  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCAMERASELECT_CAMERA_SELECT_2		11525  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCAMERASELECT		11494  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCAMERASELECT_CAMERA_SELECT_2		11489  /**/
 flag PoseEstimatorCameraSelect_Decode(PoseEstimatorCameraSelect* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- PoseEstimatorConfiguration --------------------------------------------*/
 typedef struct {
@@ -92,22 +92,22 @@ typedef struct {
 
 void PoseEstimatorConfiguration_Initialize(PoseEstimatorConfiguration* pVal);
 
-#define i3ds_asn1_ERR_POSEESTIMATORCONFIGURATION		11559  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORCONFIGURATION_IMAGING_MODE_2		11542  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORCONFIGURATION_CAMERA_SELECT_2		11554  /**/
+#define i3ds_asn1_ERR_POSEESTIMATORCONFIGURATION		11523  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORCONFIGURATION_IMAGING_MODE_2		11506  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POSEESTIMATORCONFIGURATION_CAMERA_SELECT_2		11518  /**/
 flag PoseEstimatorConfiguration_IsConstraintValid(const PoseEstimatorConfiguration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCONFIGURATION		11560  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCONFIGURATION_IMAGING_MODE_2		11543  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCONFIGURATION_CAMERA_SELECT_2		11555  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCONFIGURATION		11524  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCONFIGURATION_IMAGING_MODE_2		11507  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POSEESTIMATORCONFIGURATION_CAMERA_SELECT_2		11519  /**/
 #define i3ds_asn1_PoseEstimatorConfiguration_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_PoseEstimatorConfiguration_REQUIRED_BITS_FOR_ENCODING        9
 
 flag PoseEstimatorConfiguration_Encode(const PoseEstimatorConfiguration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCONFIGURATION		11561  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCONFIGURATION_IMAGING_MODE_2		11544  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCONFIGURATION_CAMERA_SELECT_2		11556  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCONFIGURATION		11525  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCONFIGURATION_IMAGING_MODE_2		11508  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POSEESTIMATORCONFIGURATION_CAMERA_SELECT_2		11520  /**/
 flag PoseEstimatorConfiguration_Decode(PoseEstimatorConfiguration* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

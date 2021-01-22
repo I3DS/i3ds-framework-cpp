@@ -11,27 +11,23 @@ namespace i3ds_asn1 {
 
 
 typedef enum {
-    GripperState_error = 0,
+    GripperState_error = -1,
+    GripperState_disabled = 0,
     GripperState_standby = 1,
-    GripperState_operational = 2,
+    GripperState_open = 2,
     GripperState_capturing = 3,
-    GripperState_capture_soft = 4,
-    GripperState_capture_hard = 5,
-    GripperState_capture_rigid = 6,
-    GripperState_idle = 7,
-    GripperState_release = 8
+    GripperState_captured = 4,
+    GripperState_releasing = 5
 } GripperState;
 
 // please use the following macros to avoid breaking code.
 #define nsGripperState_error i3ds_asn1::GripperState_error
+#define nsGripperState_disabled i3ds_asn1::GripperState_disabled
 #define nsGripperState_standby i3ds_asn1::GripperState_standby
-#define nsGripperState_operational i3ds_asn1::GripperState_operational
+#define nsGripperState_open i3ds_asn1::GripperState_open
 #define nsGripperState_capturing i3ds_asn1::GripperState_capturing
-#define nsGripperState_capture_soft i3ds_asn1::GripperState_capture_soft
-#define nsGripperState_capture_hard i3ds_asn1::GripperState_capture_hard
-#define nsGripperState_capture_rigid i3ds_asn1::GripperState_capture_rigid
-#define nsGripperState_idle i3ds_asn1::GripperState_idle
-#define nsGripperState_release i3ds_asn1::GripperState_release
+#define nsGripperState_captured i3ds_asn1::GripperState_captured
+#define nsGripperState_releasing i3ds_asn1::GripperState_releasing
 
 void GripperState_Initialize(GripperState* pVal);
 
@@ -40,24 +36,26 @@ flag GripperState_IsConstraintValid(const GripperState* pVal, int* pErrCode);
 
 #define i3ds_asn1_ERR_UPER_ENCODE_GRIPPERSTATE		8931  /**/
 #define i3ds_asn1_GripperState_REQUIRED_BYTES_FOR_ENCODING       1 
-#define i3ds_asn1_GripperState_REQUIRED_BITS_FOR_ENCODING        4
+#define i3ds_asn1_GripperState_REQUIRED_BITS_FOR_ENCODING        3
 
 flag GripperState_Encode(const GripperState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
 #define i3ds_asn1_ERR_UPER_DECODE_GRIPPERSTATE		8932  /**/
 flag GripperState_Decode(GripperState* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
-    GripperCMD_stop = 0,
-    GripperCMD_activate = 1,
+    GripperCMD_disable = 0,
+    GripperCMD_enable = 1,
     GripperCMD_capture = 2,
-    GripperCMD_release = 3
+    GripperCMD_release = 3,
+    GripperCMD_stop = 4
 } GripperCMD;
 
 // please use the following macros to avoid breaking code.
-#define nsGripperCMD_stop i3ds_asn1::GripperCMD_stop
-#define nsGripperCMD_activate i3ds_asn1::GripperCMD_activate
+#define nsGripperCMD_disable i3ds_asn1::GripperCMD_disable
+#define nsGripperCMD_enable i3ds_asn1::GripperCMD_enable
 #define nsGripperCMD_capture i3ds_asn1::GripperCMD_capture
 #define nsGripperCMD_release i3ds_asn1::GripperCMD_release
+#define nsGripperCMD_stop i3ds_asn1::GripperCMD_stop
 
 void GripperCMD_Initialize(GripperCMD* pVal);
 
@@ -66,7 +64,7 @@ flag GripperCMD_IsConstraintValid(const GripperCMD* pVal, int* pErrCode);
 
 #define i3ds_asn1_ERR_UPER_ENCODE_GRIPPERCMD		8938  /**/
 #define i3ds_asn1_GripperCMD_REQUIRED_BYTES_FOR_ENCODING       1 
-#define i3ds_asn1_GripperCMD_REQUIRED_BITS_FOR_ENCODING        2
+#define i3ds_asn1_GripperCMD_REQUIRED_BITS_FOR_ENCODING        3
 
 flag GripperCMD_Encode(const GripperCMD* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 

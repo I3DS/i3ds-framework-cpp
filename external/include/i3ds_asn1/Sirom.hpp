@@ -28,23 +28,23 @@ flag SiromCANId_Encode(const SiromCANId* pVal, BitStream* pBitStrm, int* pErrCod
 #define i3ds_asn1_ERR_UPER_DECODE_SIROMCANID_2		8967  /**/
 flag SiromCANId_Decode(SiromCANId* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
-    SiromState_standby = 0,
-    SiromState_open = 1,
-    SiromState_capturing = 2,
-    SiromState_opening = 3,
+    SiromState_error = -1,
+    SiromState_disabled = 0,
+    SiromState_standby = 1,
+    SiromState_open = 2,
+    SiromState_latching = 3,
     SiromState_latched = 4,
-    SiromState_power = 5,
-    SiromState_failure = 6
+    SiromState_powered = 5
 } SiromState;
 
 // please use the following macros to avoid breaking code.
+#define nsSiromState_error i3ds_asn1::SiromState_error
+#define nsSiromState_disabled i3ds_asn1::SiromState_disabled
 #define nsSiromState_standby i3ds_asn1::SiromState_standby
 #define nsSiromState_open i3ds_asn1::SiromState_open
-#define nsSiromState_capturing i3ds_asn1::SiromState_capturing
-#define nsSiromState_opening i3ds_asn1::SiromState_opening
+#define nsSiromState_latching i3ds_asn1::SiromState_latching
 #define nsSiromState_latched i3ds_asn1::SiromState_latched
-#define nsSiromState_power i3ds_asn1::SiromState_power
-#define nsSiromState_failure i3ds_asn1::SiromState_failure
+#define nsSiromState_powered i3ds_asn1::SiromState_powered
 
 void SiromState_Initialize(SiromState* pVal);
 
@@ -59,48 +59,24 @@ flag SiromState_Encode(const SiromState* pVal, BitStream* pBitStrm, int* pErrCod
 
 #define i3ds_asn1_ERR_UPER_DECODE_SIROMSTATE		8946  /**/
 flag SiromState_Decode(SiromState* pVal, BitStream* pBitStrm, int* pErrCode);
-/*-- SiromStatus --------------------------------------------*/
-typedef struct {
-    T_UInt32 canid;
-    SiromState current_state;
-
-} SiromStatus;
-
-void SiromStatus_Initialize(SiromStatus* pVal);
-
-#define i3ds_asn1_ERR_SIROMSTATUS		9035  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SIROMSTATUS_CANID_2_2		9018  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SIROMSTATUS_CURRENT_STATE_2		9030  /**/
-flag SiromStatus_IsConstraintValid(const SiromStatus* pVal, int* pErrCode);
-
-#define i3ds_asn1_ERR_UPER_ENCODE_SIROMSTATUS		9036  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SIROMSTATUS_CANID_2_2		9019  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SIROMSTATUS_CURRENT_STATE_2		9031  /**/
-#define i3ds_asn1_SiromStatus_REQUIRED_BYTES_FOR_ENCODING       5 
-#define i3ds_asn1_SiromStatus_REQUIRED_BITS_FOR_ENCODING        35
-
-flag SiromStatus_Encode(const SiromStatus* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define i3ds_asn1_ERR_UPER_DECODE_SIROMSTATUS		9037  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SIROMSTATUS_CANID_2_2		9020  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SIROMSTATUS_CURRENT_STATE_2		9032  /**/
-flag SiromStatus_Decode(SiromStatus* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
-    SiromCommand_stop = 0,
-    SiromCommand_to_rtc = 1,
-    SiromCommand_to_lat = 2,
-    SiromCommand_to_stby = 3,
-    SiromCommand_pwr_on = 4,
-    SiromCommand_pwr_off = 5
+    SiromCommand_disable = 0,
+    SiromCommand_goto_open = 1,
+    SiromCommand_goto_latched = 2,
+    SiromCommand_goto_standby = 3,
+    SiromCommand_power_on = 4,
+    SiromCommand_power_off = 5,
+    SiromCommand_stop = 6
 } SiromCommand;
 
 // please use the following macros to avoid breaking code.
+#define nsSiromCommand_disable i3ds_asn1::SiromCommand_disable
+#define nsSiromCommand_goto_open i3ds_asn1::SiromCommand_goto_open
+#define nsSiromCommand_goto_latched i3ds_asn1::SiromCommand_goto_latched
+#define nsSiromCommand_goto_standby i3ds_asn1::SiromCommand_goto_standby
+#define nsSiromCommand_power_on i3ds_asn1::SiromCommand_power_on
+#define nsSiromCommand_power_off i3ds_asn1::SiromCommand_power_off
 #define nsSiromCommand_stop i3ds_asn1::SiromCommand_stop
-#define nsSiromCommand_to_rtc i3ds_asn1::SiromCommand_to_rtc
-#define nsSiromCommand_to_lat i3ds_asn1::SiromCommand_to_lat
-#define nsSiromCommand_to_stby i3ds_asn1::SiromCommand_to_stby
-#define nsSiromCommand_pwr_on i3ds_asn1::SiromCommand_pwr_on
-#define nsSiromCommand_pwr_off i3ds_asn1::SiromCommand_pwr_off
 
 void SiromCommand_Initialize(SiromCommand* pVal);
 
