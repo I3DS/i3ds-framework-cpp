@@ -16,16 +16,16 @@ typedef T_UInt32 SiromCANId;
 
 void SiromCANId_Initialize(SiromCANId* pVal);
 
-#define i3ds_asn1_ERR_SIROMCANID_2		8965  /**/
+#define i3ds_asn1_ERR_SIROMCANID_2		3880  /**/
 flag SiromCANId_IsConstraintValid(const SiromCANId* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SIROMCANID_2		8966  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SIROMCANID_2		3881  /**/
 #define i3ds_asn1_SiromCANId_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_SiromCANId_REQUIRED_BITS_FOR_ENCODING        32
 
 flag SiromCANId_Encode(const SiromCANId* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SIROMCANID_2		8967  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SIROMCANID_2		3882  /**/
 flag SiromCANId_Decode(SiromCANId* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     SiromState_error = -1,
@@ -48,16 +48,16 @@ typedef enum {
 
 void SiromState_Initialize(SiromState* pVal);
 
-#define i3ds_asn1_ERR_SIROMSTATE		8944  /**/
+#define i3ds_asn1_ERR_SIROMSTATE		3859  /**/
 flag SiromState_IsConstraintValid(const SiromState* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SIROMSTATE		8945  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SIROMSTATE		3860  /**/
 #define i3ds_asn1_SiromState_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_SiromState_REQUIRED_BITS_FOR_ENCODING        3
 
 flag SiromState_Encode(const SiromState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SIROMSTATE		8946  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SIROMSTATE		3861  /**/
 flag SiromState_Decode(SiromState* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     SiromCommand_disable = 0,
@@ -80,16 +80,16 @@ typedef enum {
 
 void SiromCommand_Initialize(SiromCommand* pVal);
 
-#define i3ds_asn1_ERR_SIROMCOMMAND		8951  /**/
+#define i3ds_asn1_ERR_SIROMCOMMAND		3866  /**/
 flag SiromCommand_IsConstraintValid(const SiromCommand* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SIROMCOMMAND		8952  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SIROMCOMMAND		3867  /**/
 #define i3ds_asn1_SiromCommand_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_SiromCommand_REQUIRED_BITS_FOR_ENCODING        3
 
 flag SiromCommand_Encode(const SiromCommand* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SIROMCOMMAND		8953  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SIROMCOMMAND		3868  /**/
 flag SiromCommand_Decode(SiromCommand* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- SiromMsg --------------------------------------------*/
 typedef struct {
@@ -100,22 +100,22 @@ typedef struct {
 
 void SiromMsg_Initialize(SiromMsg* pVal);
 
-#define i3ds_asn1_ERR_SIROMMSG		8999  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SIROMMSG_CANID_2_2		8982  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_SIROMMSG_CMD_2		8994  /**/
+#define i3ds_asn1_ERR_SIROMMSG		3914  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SIROMMSG_CANID_2_2		3897  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_SIROMMSG_CMD_2		3909  /**/
 flag SiromMsg_IsConstraintValid(const SiromMsg* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SIROMMSG		9000  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SIROMMSG_CANID_2_2		8983  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SIROMMSG_CMD_2		8995  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SIROMMSG		3915  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SIROMMSG_CANID_2_2		3898  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_SIROMMSG_CMD_2		3910  /**/
 #define i3ds_asn1_SiromMsg_REQUIRED_BYTES_FOR_ENCODING       5 
 #define i3ds_asn1_SiromMsg_REQUIRED_BITS_FOR_ENCODING        35
 
 flag SiromMsg_Encode(const SiromMsg* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SIROMMSG		9001  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SIROMMSG_CANID_2_2		8984  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SIROMMSG_CMD_2		8996  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SIROMMSG		3916  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SIROMMSG_CANID_2_2		3899  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_SIROMMSG_CMD_2		3911  /**/
 flag SiromMsg_Decode(SiromMsg* pVal, BitStream* pBitStrm, int* pErrCode);
 
  
