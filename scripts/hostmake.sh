@@ -174,7 +174,7 @@ if [[ ! -z ${ARCHIVE} ]]; then
     tarname=$(basename ${ARCHIVE})
     tar cf ../${tarname} . --owner=root --group=root &>/dev/null
     popd > /dev/null
-    echo "${tarname} created"
+    mv -v ${INSTALL_PATH}/../${tarname} .
 fi
 
 popd > /dev/null
