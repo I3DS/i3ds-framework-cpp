@@ -50,4 +50,3 @@ set_target_properties (
 
 install (TARGETS i3ds DESTINATION lib)
 install (DIRECTORY include/ DESTINATION include FILES_MATCHING PATTERN "*.hpp")
-install (FILES ${ASN1_HDRS} DESTINATION include/i3ds)
