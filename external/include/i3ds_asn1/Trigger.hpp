@@ -15,7 +15,7 @@ namespace i3ds_asn1 {
 
 typedef struct {
     
-    T_Boolean arr[8];
+    T_Boolean arr[10];
 } TriggerMask;
 
 void TriggerMask_Initialize(TriggerMask* pVal);
@@ -26,8 +26,8 @@ flag TriggerMask_IsConstraintValid(const TriggerMask* pVal, int* pErrCode);
 
 #define i3ds_asn1_ERR_UPER_ENCODE_TRIGGERMASK		3557  /**/
 #define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_TRIGGERMASK_ELM_2		3552  /**/
-#define i3ds_asn1_TriggerMask_REQUIRED_BYTES_FOR_ENCODING       1 
-#define i3ds_asn1_TriggerMask_REQUIRED_BITS_FOR_ENCODING        8
+#define i3ds_asn1_TriggerMask_REQUIRED_BYTES_FOR_ENCODING       2 
+#define i3ds_asn1_TriggerMask_REQUIRED_BITS_FOR_ENCODING        10
 
 flag TriggerMask_Encode(const TriggerMask* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
@@ -76,7 +76,7 @@ flag TriggerOutput_IsConstraintValid(const TriggerOutput* pVal, int* pErrCode);
 
 #define i3ds_asn1_ERR_UPER_ENCODE_TRIGGEROUTPUT		3517  /**/
 #define i3ds_asn1_TriggerOutput_REQUIRED_BYTES_FOR_ENCODING       1 
-#define i3ds_asn1_TriggerOutput_REQUIRED_BITS_FOR_ENCODING        3
+#define i3ds_asn1_TriggerOutput_REQUIRED_BITS_FOR_ENCODING        4
 
 flag TriggerOutput_Encode(const TriggerOutput* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
@@ -182,8 +182,8 @@ flag ChannelInternal_IsConstraintValid(const ChannelInternal* pVal, int* pErrCod
 #define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_OFFSET_2		3626  /**/
 #define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_DURATION_2		3638  /**/
 #define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELINTERNAL_INVERT_2		3650  /**/
-#define i3ds_asn1_ChannelInternal_REQUIRED_BYTES_FOR_ENCODING       5 
-#define i3ds_asn1_ChannelInternal_REQUIRED_BITS_FOR_ENCODING        40
+#define i3ds_asn1_ChannelInternal_REQUIRED_BYTES_FOR_ENCODING       6 
+#define i3ds_asn1_ChannelInternal_REQUIRED_BITS_FOR_ENCODING        41
 
 flag ChannelInternal_Encode(const ChannelInternal* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
@@ -224,7 +224,7 @@ flag ChannelExternal_IsConstraintValid(const ChannelExternal* pVal, int* pErrCod
 #define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_BYPASS_2		3717  /**/
 #define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_CHANNELEXTERNAL_INVERT_2		3729  /**/
 #define i3ds_asn1_ChannelExternal_REQUIRED_BYTES_FOR_ENCODING       6 
-#define i3ds_asn1_ChannelExternal_REQUIRED_BITS_FOR_ENCODING        41
+#define i3ds_asn1_ChannelExternal_REQUIRED_BITS_FOR_ENCODING        42
 
 flag ChannelExternal_Encode(const ChannelExternal* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
