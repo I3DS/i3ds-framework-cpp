@@ -33,12 +33,12 @@ if (SWIG_FOUND)
 
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/i3ds_binding.py
       ${CMAKE_CURRENT_BINARY_DIR}/__pycache__/i3ds_binding.cpython-36.pyc
-      DESTINATION ${CMAKE_INSTALL_PREFIX}${Python3_SITELIB}
+      DESTINATION ${Python3_SITELIB}
       )
 
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/_i3ds_python.so
       RENAME _i3ds_binding.so
-      DESTINATION ${CMAKE_INSTALL_PREFIX}${Python3_SITELIB}
+      DESTINATION ${Python3_SITELIB}
       )
 
     add_custom_command(TARGET _i3ds_python

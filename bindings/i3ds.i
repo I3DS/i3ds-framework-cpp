@@ -35,6 +35,8 @@ using namespace i3ds_asn1;
 %shared_ptr(i3ds::AnalogClient)
 %shared_ptr(i3ds::LIDARClient)
 
+namespace i3ds_asn1 {
+
 typedef long long asn1SccSint;
 typedef unsigned long long asn1SccUint;
 
@@ -64,13 +66,13 @@ typedef asn1SccUint NodeId;
 typedef asn1SccUint EndpointId;
 
 typedef enum {
-    success = 0,
-    error_node_id = 1,
-    error_endpoint_id = 2,
-    error_unsupported = 3,
-    error_state = 4,
-    error_value = 5,
-    error_other = 6
+    ResultCode_success = 0,
+    ResultCode_error_node_id = 1,
+    ResultCode_error_endpoint_id = 2,
+    ResultCode_error_unsupported = 3,
+    ResultCode_error_state = 4,
+    ResultCode_error_value = 5,
+    ResultCode_error_other = 6
 } ResultCode;
 
 typedef struct {
@@ -79,17 +81,17 @@ typedef struct {
 } CommandResponse;
 
 typedef enum {
-    activate = 0,
-    start = 1,
-    stop = 2,
-    deactivate = 3
+    StateCommand_activate = 0,
+    StateCommand_start = 1,
+    StateCommand_stop = 2,
+    StateCommand_deactivate = 3
 } StateCommand;
 
 typedef enum {
-    inactive = 0,
-    standby = 1,
-    operational = 2,
-    failure = 3
+    SensorState_inactive = 0,
+    SensorState_standby = 1,
+    SensorState_operational = 2,
+    SensorState_failure = 3
 } SensorState;
 
 typedef T_UInt32 SamplePeriod;
@@ -109,6 +111,8 @@ typedef struct {
     T_Float size_x;
     T_Float size_y;
 } PolarRegion;
+
+} // namespace i3ds_asn1
 
 namespace i3ds {
   
