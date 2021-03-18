@@ -13,146 +13,370 @@ namespace i3ds_asn1 {
 
 
 typedef enum {
-    InfuseMode_dis = 0,
-    InfuseMode_rorn = 1,
-    InfuseMode_tprn = 2
-} InfuseMode;
+    Trg_pfip_infuse_mode_modeEnum_dis = 0,
+    Trg_pfip_infuse_mode_modeEnum_rorn = 1,
+    Trg_pfip_infuse_mode_modeEnum_tprn = 2
+} Trg_pfip_infuse_mode_modeEnum;
 
 // please use the following macros to avoid breaking code.
-#define nsInfuseMode_dis i3ds_asn1::InfuseMode_dis
-#define nsInfuseMode_rorn i3ds_asn1::InfuseMode_rorn
-#define nsInfuseMode_tprn i3ds_asn1::InfuseMode_tprn
+#define nsTrg_pfip_infuse_mode_modeEnum_dis i3ds_asn1::Trg_pfip_infuse_mode_modeEnum_dis
+#define nsTrg_pfip_infuse_mode_modeEnum_rorn i3ds_asn1::Trg_pfip_infuse_mode_modeEnum_rorn
+#define nsTrg_pfip_infuse_mode_modeEnum_tprn i3ds_asn1::Trg_pfip_infuse_mode_modeEnum_tprn
 
-void InfuseMode_Initialize(InfuseMode* pVal);
+void Trg_pfip_infuse_mode_modeEnum_Initialize(Trg_pfip_infuse_mode_modeEnum* pVal);
 
-#define i3ds_asn1_ERR_INFUSEMODE		3921  /**/
-flag InfuseMode_IsConstraintValid(const InfuseMode* pVal, int* pErrCode);
+#define i3ds_asn1_ERR_TRG_PFIP_INFUSE_MODE_MODEENUM		3921  /**/
+flag Trg_pfip_infuse_mode_modeEnum_IsConstraintValid(const Trg_pfip_infuse_mode_modeEnum* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODE		3922  /**/
-#define i3ds_asn1_InfuseMode_REQUIRED_BYTES_FOR_ENCODING       1 
-#define i3ds_asn1_InfuseMode_REQUIRED_BITS_FOR_ENCODING        2
+#define i3ds_asn1_ERR_UPER_ENCODE_TRG_PFIP_INFUSE_MODE_MODEENUM		3922  /**/
+#define i3ds_asn1_Trg_pfip_infuse_mode_modeEnum_REQUIRED_BYTES_FOR_ENCODING       1 
+#define i3ds_asn1_Trg_pfip_infuse_mode_modeEnum_REQUIRED_BITS_FOR_ENCODING        2
 
-flag InfuseMode_Encode(const InfuseMode* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag Trg_pfip_infuse_mode_modeEnum_Encode(const Trg_pfip_infuse_mode_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_INFUSEMODE		3923  /**/
-flag InfuseMode_Decode(InfuseMode* pVal, BitStream* pBitStrm, int* pErrCode);
-/*-- InfuseModus --------------------------------------------*/
+#define i3ds_asn1_ERR_UPER_DECODE_TRG_PFIP_INFUSE_MODE_MODEENUM		3923  /**/
+flag Trg_pfip_infuse_mode_modeEnum_Decode(Trg_pfip_infuse_mode_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- INFUSE_IP_IF_Input --------------------------------------------*/
 typedef struct {
-    InfuseMode mode;
+    Trg_pfip_infuse_mode_modeEnum trg_pfip_infuse_mode;
     T_Double gnc_time;
 
-} InfuseModus;
+} INFUSE_IP_IF_Input;
 
-void InfuseModus_Initialize(InfuseModus* pVal);
+void INFUSE_IP_IF_Input_Initialize(INFUSE_IP_IF_Input* pVal);
 
-#define i3ds_asn1_ERR_INFUSEMODUS		3952  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSEMODUS_MODE_2		3935  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSEMODUS_GNC_TIME_2		3947  /**/
-flag InfuseModus_IsConstraintValid(const InfuseModus* pVal, int* pErrCode);
+#define i3ds_asn1_ERR_INFUSE_IP_IF_INPUT		3952  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_INPUT_TRG_PFIP_INFUSE_MODE_2		3935  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_INPUT_GNC_TIME_2		3947  /**/
+flag INFUSE_IP_IF_Input_IsConstraintValid(const INFUSE_IP_IF_Input* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS		3953  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS_MODE_2		3936  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSEMODUS_GNC_TIME_2		3948  /**/
-#define i3ds_asn1_InfuseModus_REQUIRED_BYTES_FOR_ENCODING       14 
-#define i3ds_asn1_InfuseModus_REQUIRED_BITS_FOR_ENCODING        106
+#define i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_INPUT		3953  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_INPUT_TRG_PFIP_INFUSE_MODE_2		3936  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_INPUT_GNC_TIME_2		3948  /**/
+#define i3ds_asn1_INFUSE_IP_IF_Input_REQUIRED_BYTES_FOR_ENCODING       14 
+#define i3ds_asn1_INFUSE_IP_IF_Input_REQUIRED_BITS_FOR_ENCODING        106
 
-flag InfuseModus_Encode(const InfuseModus* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag INFUSE_IP_IF_Input_Encode(const INFUSE_IP_IF_Input* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS		3954  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS_MODE_2		3937  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSEMODUS_GNC_TIME_2		3949  /**/
-flag InfuseModus_Decode(InfuseModus* pVal, BitStream* pBitStrm, int* pErrCode);
-/*-- InfuseSequence --------------------------------------------*/
+#define i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_INPUT		3954  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_INPUT_TRG_PFIP_INFUSE_MODE_2		3937  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_INPUT_GNC_TIME_2		3949  /**/
+flag INFUSE_IP_IF_Input_Decode(INFUSE_IP_IF_Input* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef enum {
+    Flg_pfip_mode_meas_modeEnum_dis = 0,
+    Flg_pfip_mode_meas_modeEnum_rorn = 1,
+    Flg_pfip_mode_meas_modeEnum_tprn = 2
+} Flg_pfip_mode_meas_modeEnum;
+
+// please use the following macros to avoid breaking code.
+#define nsFlg_pfip_mode_meas_modeEnum_dis i3ds_asn1::Flg_pfip_mode_meas_modeEnum_dis
+#define nsFlg_pfip_mode_meas_modeEnum_rorn i3ds_asn1::Flg_pfip_mode_meas_modeEnum_rorn
+#define nsFlg_pfip_mode_meas_modeEnum_tprn i3ds_asn1::Flg_pfip_mode_meas_modeEnum_tprn
+
+void Flg_pfip_mode_meas_modeEnum_Initialize(Flg_pfip_mode_meas_modeEnum* pVal);
+
+#define i3ds_asn1_ERR_FLG_PFIP_MODE_MEAS_MODEENUM		3959  /**/
+flag Flg_pfip_mode_meas_modeEnum_IsConstraintValid(const Flg_pfip_mode_meas_modeEnum* pVal, int* pErrCode);
+
+#define i3ds_asn1_ERR_UPER_ENCODE_FLG_PFIP_MODE_MEAS_MODEENUM		3960  /**/
+#define i3ds_asn1_Flg_pfip_mode_meas_modeEnum_REQUIRED_BYTES_FOR_ENCODING       1 
+#define i3ds_asn1_Flg_pfip_mode_meas_modeEnum_REQUIRED_BITS_FOR_ENCODING        2
+
+flag Flg_pfip_mode_meas_modeEnum_Encode(const Flg_pfip_mode_meas_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define i3ds_asn1_ERR_UPER_DECODE_FLG_PFIP_MODE_MEAS_MODEENUM		3961  /**/
+flag Flg_pfip_mode_meas_modeEnum_Decode(Flg_pfip_mode_meas_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- INFUSE_IP_IF_Output --------------------------------------------*/
 
 
 typedef struct {
     int nCount; 
     
     T_Double arr[3];
-} InfuseSequence_svc_pos_svc_clt_meas;
+} INFUSE_IP_IF_Output_svc_pos_svc_clt_meas;
 
 
 typedef struct {
     int nCount; 
     
     T_Double arr[4];
-} InfuseSequence_q_svc_clt_meas;
+} INFUSE_IP_IF_Output_q_svc_clt_meas;
 
 
 typedef struct {
     int nCount; 
     
     T_Double arr[36];
-} InfuseSequence_cov_svc_pose_svc_clt_meas;
+} INFUSE_IP_IF_Output_cov_svc_pose_svc_clt_meas;
 typedef struct {
-    InfuseSequence_svc_pos_svc_clt_meas svc_pos_svc_clt_meas;
-    T_Boolean flg_svc_pos_svc_clt_meas;
-    InfuseSequence_q_svc_clt_meas q_svc_clt_meas;
-    T_Boolean flg_q_svc_clt_meas;
+    INFUSE_IP_IF_Output_svc_pos_svc_clt_meas svc_pos_svc_clt_meas;
+    INFUSE_IP_IF_Output_q_svc_clt_meas q_svc_clt_meas;
     T_UInt64 pose_proc_delay_meas;
-    InfuseSequence_cov_svc_pose_svc_clt_meas cov_svc_pose_svc_clt_meas;
+    INFUSE_IP_IF_Output_cov_svc_pose_svc_clt_meas cov_svc_pose_svc_clt_meas;
     T_Boolean flg_pfip_converged_meas;
     T_Boolean flg_sppj_PC_used_meas;
     T_Boolean flg_pfip_detectfailed_meas;
-    InfuseMode mode;
+    Flg_pfip_mode_meas_modeEnum flg_pfip_mode_meas;
 
-} InfuseSequence;
+} INFUSE_IP_IF_Output;
 
-void InfuseSequence_svc_pos_svc_clt_meas_Initialize(InfuseSequence_svc_pos_svc_clt_meas* pVal);
-void InfuseSequence_q_svc_clt_meas_Initialize(InfuseSequence_q_svc_clt_meas* pVal);
-void InfuseSequence_cov_svc_pose_svc_clt_meas_Initialize(InfuseSequence_cov_svc_pose_svc_clt_meas* pVal);
-void InfuseSequence_Initialize(InfuseSequence* pVal);
+void INFUSE_IP_IF_Output_svc_pos_svc_clt_meas_Initialize(INFUSE_IP_IF_Output_svc_pos_svc_clt_meas* pVal);
+void INFUSE_IP_IF_Output_q_svc_clt_meas_Initialize(INFUSE_IP_IF_Output_q_svc_clt_meas* pVal);
+void INFUSE_IP_IF_Output_cov_svc_pose_svc_clt_meas_Initialize(INFUSE_IP_IF_Output_cov_svc_pose_svc_clt_meas* pVal);
+void INFUSE_IP_IF_Output_Initialize(INFUSE_IP_IF_Output* pVal);
 
-#define i3ds_asn1_ERR_INFUSESEQUENCE		4100  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		3971  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		3966  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		3985  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_Q_SVC_CLT_MEAS		4002  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		3997  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		4016  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		4028  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		4045  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		4040  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		4059  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		4071  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		4083  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_INFUSESEQUENCE_MODE_2		4095  /**/
-flag InfuseSequence_IsConstraintValid(const InfuseSequence* pVal, int* pErrCode);
+#define i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT		4083  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_SVC_POS_SVC_CLT_MEAS		3978  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_SVC_POS_SVC_CLT_MEAS_ELM_2		3973  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_Q_SVC_CLT_MEAS		3997  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_Q_SVC_CLT_MEAS_ELM_2		3992  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_POSE_PROC_DELAY_MEAS_2		4011  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_COV_SVC_POSE_SVC_CLT_MEAS		4028  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		4023  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_FLG_PFIP_CONVERGED_MEAS_2		4042  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_FLG_SPPJ_PC_USED_MEAS_2		4054  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_FLG_PFIP_DETECTFAILED_MEAS_2		4066  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_INFUSE_IP_IF_OUTPUT_FLG_PFIP_MODE_MEAS_2		4078  /**/
+flag INFUSE_IP_IF_Output_IsConstraintValid(const INFUSE_IP_IF_Output* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE		4101  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		3972  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		3967  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		3986  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS		4003  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		3998  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		4017  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		4029  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		4046  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		4041  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		4060  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		4072  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		4084  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSESEQUENCE_MODE_2		4096  /**/
-#define i3ds_asn1_InfuseSequence_REQUIRED_BYTES_FOR_ENCODING       570 
-#define i3ds_asn1_InfuseSequence_REQUIRED_BITS_FOR_ENCODING        4553
+#define i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT		4084  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_SVC_POS_SVC_CLT_MEAS		3979  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_SVC_POS_SVC_CLT_MEAS_ELM_2		3974  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_Q_SVC_CLT_MEAS		3998  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_Q_SVC_CLT_MEAS_ELM_2		3993  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_POSE_PROC_DELAY_MEAS_2		4012  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_COV_SVC_POSE_SVC_CLT_MEAS		4029  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		4024  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_FLG_PFIP_CONVERGED_MEAS_2		4043  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_FLG_SPPJ_PC_USED_MEAS_2		4055  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_FLG_PFIP_DETECTFAILED_MEAS_2		4067  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_INFUSE_IP_IF_OUTPUT_FLG_PFIP_MODE_MEAS_2		4079  /**/
+#define i3ds_asn1_INFUSE_IP_IF_Output_REQUIRED_BYTES_FOR_ENCODING       569 
+#define i3ds_asn1_INFUSE_IP_IF_Output_REQUIRED_BITS_FOR_ENCODING        4551
 
-flag InfuseSequence_Encode(const InfuseSequence* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag INFUSE_IP_IF_Output_Encode(const INFUSE_IP_IF_Output* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE		4102  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS		3973  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_SVC_POS_SVC_CLT_MEAS_ELM_2		3968  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_SVC_POS_SVC_CLT_MEAS_2		3987  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS		4004  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_Q_SVC_CLT_MEAS_ELM_2		3999  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_Q_SVC_CLT_MEAS_2		4018  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_POSE_PROC_DELAY_MEAS_2		4030  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS		4047  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		4042  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_PFIP_CONVERGED_MEAS_2		4061  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_SPPJ_PC_USED_MEAS_2		4073  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_FLG_PFIP_DETECTFAILED_MEAS_2		4085  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSESEQUENCE_MODE_2		4097  /**/
-flag InfuseSequence_Decode(InfuseSequence* pVal, BitStream* pBitStrm, int* pErrCode);
+#define i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT		4085  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_SVC_POS_SVC_CLT_MEAS		3980  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_SVC_POS_SVC_CLT_MEAS_ELM_2		3975  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_Q_SVC_CLT_MEAS		3999  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_Q_SVC_CLT_MEAS_ELM_2		3994  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_POSE_PROC_DELAY_MEAS_2		4013  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_COV_SVC_POSE_SVC_CLT_MEAS		4030  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_COV_SVC_POSE_SVC_CLT_MEAS_ELM_2		4025  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_FLG_PFIP_CONVERGED_MEAS_2		4044  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_FLG_SPPJ_PC_USED_MEAS_2		4056  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_FLG_PFIP_DETECTFAILED_MEAS_2		4068  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_INFUSE_IP_IF_OUTPUT_FLG_PFIP_MODE_MEAS_2		4080  /**/
+flag INFUSE_IP_IF_Output_Decode(INFUSE_IP_IF_Output* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef enum {
+    Trg_raip_mode_modeEnum_dis = 0,
+    Trg_raip_mode_modeEnum_jbsf = 1,
+    Trg_raip_mode_modeEnum_prince = 2,
+    Trg_raip_mode_modeEnum_assist = 3,
+    Trg_raip_mode_modeEnum_sirom = 4,
+    Trg_raip_mode_modeEnum_point_cloud = 5
+} Trg_raip_mode_modeEnum;
+
+// please use the following macros to avoid breaking code.
+#define nsTrg_raip_mode_modeEnum_dis i3ds_asn1::Trg_raip_mode_modeEnum_dis
+#define nsTrg_raip_mode_modeEnum_jbsf i3ds_asn1::Trg_raip_mode_modeEnum_jbsf
+#define nsTrg_raip_mode_modeEnum_prince i3ds_asn1::Trg_raip_mode_modeEnum_prince
+#define nsTrg_raip_mode_modeEnum_assist i3ds_asn1::Trg_raip_mode_modeEnum_assist
+#define nsTrg_raip_mode_modeEnum_sirom i3ds_asn1::Trg_raip_mode_modeEnum_sirom
+#define nsTrg_raip_mode_modeEnum_point_cloud i3ds_asn1::Trg_raip_mode_modeEnum_point_cloud
+
+void Trg_raip_mode_modeEnum_Initialize(Trg_raip_mode_modeEnum* pVal);
+
+#define i3ds_asn1_ERR_TRG_RAIP_MODE_MODEENUM		4090  /**/
+flag Trg_raip_mode_modeEnum_IsConstraintValid(const Trg_raip_mode_modeEnum* pVal, int* pErrCode);
+
+#define i3ds_asn1_ERR_UPER_ENCODE_TRG_RAIP_MODE_MODEENUM		4091  /**/
+#define i3ds_asn1_Trg_raip_mode_modeEnum_REQUIRED_BYTES_FOR_ENCODING       1 
+#define i3ds_asn1_Trg_raip_mode_modeEnum_REQUIRED_BITS_FOR_ENCODING        3
+
+flag Trg_raip_mode_modeEnum_Encode(const Trg_raip_mode_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define i3ds_asn1_ERR_UPER_DECODE_TRG_RAIP_MODE_MODEENUM		4092  /**/
+flag Trg_raip_mode_modeEnum_Decode(Trg_raip_mode_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef enum {
+    Trg_raip_config_selector_modeEnum_empty = 0,
+    Trg_raip_config_selector_modeEnum_gripper = 1,
+    Trg_raip_config_selector_modeEnum_gripper_client = 2,
+    Trg_raip_config_selector_modeEnum_sirom = 3,
+    Trg_raip_config_selector_modeEnum_sirom_oru = 4
+} Trg_raip_config_selector_modeEnum;
+
+// please use the following macros to avoid breaking code.
+#define nsTrg_raip_config_selector_modeEnum_empty i3ds_asn1::Trg_raip_config_selector_modeEnum_empty
+#define nsTrg_raip_config_selector_modeEnum_gripper i3ds_asn1::Trg_raip_config_selector_modeEnum_gripper
+#define nsTrg_raip_config_selector_modeEnum_gripper_client i3ds_asn1::Trg_raip_config_selector_modeEnum_gripper_client
+#define nsTrg_raip_config_selector_modeEnum_sirom i3ds_asn1::Trg_raip_config_selector_modeEnum_sirom
+#define nsTrg_raip_config_selector_modeEnum_sirom_oru i3ds_asn1::Trg_raip_config_selector_modeEnum_sirom_oru
+
+void Trg_raip_config_selector_modeEnum_Initialize(Trg_raip_config_selector_modeEnum* pVal);
+
+#define i3ds_asn1_ERR_TRG_RAIP_CONFIG_SELECTOR_MODEENUM		4097  /**/
+flag Trg_raip_config_selector_modeEnum_IsConstraintValid(const Trg_raip_config_selector_modeEnum* pVal, int* pErrCode);
+
+#define i3ds_asn1_ERR_UPER_ENCODE_TRG_RAIP_CONFIG_SELECTOR_MODEENUM		4098  /**/
+#define i3ds_asn1_Trg_raip_config_selector_modeEnum_REQUIRED_BYTES_FOR_ENCODING       1 
+#define i3ds_asn1_Trg_raip_config_selector_modeEnum_REQUIRED_BITS_FOR_ENCODING        3
+
+flag Trg_raip_config_selector_modeEnum_Encode(const Trg_raip_config_selector_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define i3ds_asn1_ERR_UPER_DECODE_TRG_RAIP_CONFIG_SELECTOR_MODEENUM		4099  /**/
+flag Trg_raip_config_selector_modeEnum_Decode(Trg_raip_config_selector_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- RA_IP_IF_Input --------------------------------------------*/
+typedef struct {
+    Trg_raip_mode_modeEnum trg_raip_mode;
+    Trg_raip_config_selector_modeEnum trg_raip_config_selector;
+    T_Boolean trg_raip_reset;
+    T_Double gnc_time;
+
+} RA_IP_IF_Input;
+
+void RA_IP_IF_Input_Initialize(RA_IP_IF_Input* pVal);
+
+#define i3ds_asn1_ERR_RA_IP_IF_INPUT		4152  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_INPUT_TRG_RAIP_MODE_2		4111  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_INPUT_TRG_RAIP_CONFIG_SELECTOR_2		4123  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_INPUT_TRG_RAIP_RESET_2		4135  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_INPUT_GNC_TIME_2		4147  /**/
+flag RA_IP_IF_Input_IsConstraintValid(const RA_IP_IF_Input* pVal, int* pErrCode);
+
+#define i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_INPUT		4153  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_INPUT_TRG_RAIP_MODE_2		4112  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_INPUT_TRG_RAIP_CONFIG_SELECTOR_2		4124  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_INPUT_TRG_RAIP_RESET_2		4136  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_INPUT_GNC_TIME_2		4148  /**/
+#define i3ds_asn1_RA_IP_IF_Input_REQUIRED_BYTES_FOR_ENCODING       14 
+#define i3ds_asn1_RA_IP_IF_Input_REQUIRED_BITS_FOR_ENCODING        111
+
+flag RA_IP_IF_Input_Encode(const RA_IP_IF_Input* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_INPUT		4154  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_INPUT_TRG_RAIP_MODE_2		4113  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_INPUT_TRG_RAIP_CONFIG_SELECTOR_2		4125  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_INPUT_TRG_RAIP_RESET_2		4137  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_INPUT_GNC_TIME_2		4149  /**/
+flag RA_IP_IF_Input_Decode(RA_IP_IF_Input* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef enum {
+    Flg_raip_mode_modeEnum_dis = 0,
+    Flg_raip_mode_modeEnum_pbsf = 1
+} Flg_raip_mode_modeEnum;
+
+// please use the following macros to avoid breaking code.
+#define nsFlg_raip_mode_modeEnum_dis i3ds_asn1::Flg_raip_mode_modeEnum_dis
+#define nsFlg_raip_mode_modeEnum_pbsf i3ds_asn1::Flg_raip_mode_modeEnum_pbsf
+
+void Flg_raip_mode_modeEnum_Initialize(Flg_raip_mode_modeEnum* pVal);
+
+#define i3ds_asn1_ERR_FLG_RAIP_MODE_MODEENUM		4159  /**/
+flag Flg_raip_mode_modeEnum_IsConstraintValid(const Flg_raip_mode_modeEnum* pVal, int* pErrCode);
+
+#define i3ds_asn1_ERR_UPER_ENCODE_FLG_RAIP_MODE_MODEENUM		4160  /**/
+#define i3ds_asn1_Flg_raip_mode_modeEnum_REQUIRED_BYTES_FOR_ENCODING       1 
+#define i3ds_asn1_Flg_raip_mode_modeEnum_REQUIRED_BITS_FOR_ENCODING        1
+
+flag Flg_raip_mode_modeEnum_Encode(const Flg_raip_mode_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define i3ds_asn1_ERR_UPER_DECODE_FLG_RAIP_MODE_MODEENUM		4161  /**/
+flag Flg_raip_mode_modeEnum_Decode(Flg_raip_mode_modeEnum* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- RA_IP_IF_Output --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    T_Double arr[3];
+} RA_IP_IF_Output_rgti_pos_rgti_clt_meas;
+
+
+typedef struct {
+    int nCount; 
+    
+    T_Double arr[3];
+} RA_IP_IF_Output_rgti_vel_rgti_clt_meas;
+
+
+typedef struct {
+    int nCount; 
+    
+    T_Double arr[4];
+} RA_IP_IF_Output_q_rgti_clt_meas;
+
+
+typedef struct {
+    int nCount; 
+    
+    T_Double arr[3];
+} RA_IP_IF_Output_rgti_rate_rgti_clt_meas;
+typedef struct {
+    RA_IP_IF_Output_rgti_pos_rgti_clt_meas rgti_pos_rgti_clt_meas;
+    RA_IP_IF_Output_rgti_vel_rgti_clt_meas rgti_vel_rgti_clt_meas;
+    RA_IP_IF_Output_q_rgti_clt_meas q_rgti_clt_meas;
+    RA_IP_IF_Output_rgti_rate_rgti_clt_meas rgti_rate_rgti_clt_meas;
+    T_Boolean flg_raip_converged_meas;
+    T_Boolean flg_raip_trackloss_meas;
+    T_Boolean flg_rppj_pc_used_meas;
+    Flg_raip_mode_modeEnum flg_raip_mode;
+
+} RA_IP_IF_Output;
+
+void RA_IP_IF_Output_rgti_pos_rgti_clt_meas_Initialize(RA_IP_IF_Output_rgti_pos_rgti_clt_meas* pVal);
+void RA_IP_IF_Output_rgti_vel_rgti_clt_meas_Initialize(RA_IP_IF_Output_rgti_vel_rgti_clt_meas* pVal);
+void RA_IP_IF_Output_q_rgti_clt_meas_Initialize(RA_IP_IF_Output_q_rgti_clt_meas* pVal);
+void RA_IP_IF_Output_rgti_rate_rgti_clt_meas_Initialize(RA_IP_IF_Output_rgti_rate_rgti_clt_meas* pVal);
+void RA_IP_IF_Output_Initialize(RA_IP_IF_Output* pVal);
+
+#define i3ds_asn1_ERR_RA_IP_IF_OUTPUT		4290  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_RGTI_POS_RGTI_CLT_MEAS		4178  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_RGTI_POS_RGTI_CLT_MEAS_ELM_2		4173  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_RGTI_VEL_RGTI_CLT_MEAS		4197  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_RGTI_VEL_RGTI_CLT_MEAS_ELM_2		4192  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_Q_RGTI_CLT_MEAS		4216  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_Q_RGTI_CLT_MEAS_ELM_2		4211  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_RGTI_RATE_RGTI_CLT_MEAS		4235  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_RGTI_RATE_RGTI_CLT_MEAS_ELM_2		4230  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_FLG_RAIP_CONVERGED_MEAS_2		4249  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_FLG_RAIP_TRACKLOSS_MEAS_2		4261  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_FLG_RPPJ_PC_USED_MEAS_2		4273  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_RA_IP_IF_OUTPUT_FLG_RAIP_MODE_2		4285  /**/
+flag RA_IP_IF_Output_IsConstraintValid(const RA_IP_IF_Output* pVal, int* pErrCode);
+
+#define i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT		4291  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_RGTI_POS_RGTI_CLT_MEAS		4179  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_RGTI_POS_RGTI_CLT_MEAS_ELM_2		4174  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_RGTI_VEL_RGTI_CLT_MEAS		4198  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_RGTI_VEL_RGTI_CLT_MEAS_ELM_2		4193  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_Q_RGTI_CLT_MEAS		4217  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_Q_RGTI_CLT_MEAS_ELM_2		4212  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_RGTI_RATE_RGTI_CLT_MEAS		4236  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_RGTI_RATE_RGTI_CLT_MEAS_ELM_2		4231  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_FLG_RAIP_CONVERGED_MEAS_2		4250  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_FLG_RAIP_TRACKLOSS_MEAS_2		4262  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_FLG_RPPJ_PC_USED_MEAS_2		4274  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_RA_IP_IF_OUTPUT_FLG_RAIP_MODE_2		4286  /**/
+#define i3ds_asn1_RA_IP_IF_Output_REQUIRED_BYTES_FOR_ENCODING       171 
+#define i3ds_asn1_RA_IP_IF_Output_REQUIRED_BITS_FOR_ENCODING        1364
+
+flag RA_IP_IF_Output_Encode(const RA_IP_IF_Output* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT		4292  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_RGTI_POS_RGTI_CLT_MEAS		4180  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_RGTI_POS_RGTI_CLT_MEAS_ELM_2		4175  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_RGTI_VEL_RGTI_CLT_MEAS		4199  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_RGTI_VEL_RGTI_CLT_MEAS_ELM_2		4194  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_Q_RGTI_CLT_MEAS		4218  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_Q_RGTI_CLT_MEAS_ELM_2		4213  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_RGTI_RATE_RGTI_CLT_MEAS		4237  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_RGTI_RATE_RGTI_CLT_MEAS_ELM_2		4232  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_FLG_RAIP_CONVERGED_MEAS_2		4251  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_FLG_RAIP_TRACKLOSS_MEAS_2		4263  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_FLG_RPPJ_PC_USED_MEAS_2		4275  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_RA_IP_IF_OUTPUT_FLG_RAIP_MODE_2		4287  /**/
+flag RA_IP_IF_Output_Decode(RA_IP_IF_Output* pVal, BitStream* pBitStrm, int* pErrCode);
 
  
 
