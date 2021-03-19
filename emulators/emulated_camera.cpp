@@ -67,6 +67,12 @@ void
 i3ds::EmulatedCamera::Start()
 {
   BOOST_LOG_TRIVIAL(trace) << "Emulated camera with NodeID: " << node() << " Start()";
+
+  // reset to last image so that the first out is the first
+  // (fetch_and_send does a pre-increment befor testing for size, and we
+  // want the index to start at 0 in this case)
+  current_image_index_ = sample_images_.size() -1;
+
   sampler_.Start(period());
 }
 
