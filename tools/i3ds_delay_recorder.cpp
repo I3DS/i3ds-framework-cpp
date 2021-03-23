@@ -69,8 +69,10 @@ private:
     BOOST_LOG_TRIVIAL(trace) << "Received message at " << current_time_as_int;
   }
 
+  // Template specialization for data types with descriptor
+  template <typename T>
   void
-  handle_frame(i3ds::Camera::FrameTopic::Data& message)
+  handle_frame(typename T::Data& message)
   {
     long long current_time_as_int = i3ds::get_timestamp();
     long long delay = current_time_as_int - message.descriptor.attributes.timestamp;
@@ -150,8 +152,26 @@ void
 DelayRecorder::Attach<i3ds::Camera::FrameTopic>()
 {
   using std::placeholders::_1;
-  subscriber_.Attach<i3ds::Camera::FrameTopic>(node_id_, std::bind(&DelayRecorder::handle_frame, this, _1));
+  subscriber_.Attach<i3ds::Camera::FrameTopic>(node_id_, std::bind(&DelayRecorder::handle_frame<i3ds::Camera::FrameTopic>, this, _1));
 }
+
+template <>
+void
+DelayRecorder::Attach<i3ds::LIDAR::MeasurementTopic>()
+{
+  using std::placeholders::_1;
+  subscriber_.Attach<i3ds::LIDAR::MeasurementTopic>(node_id_, std::bind(&DelayRecorder::handle_frame<i3ds::LIDAR::MeasurementTopic>, this, _1));
+}
+
+template <>
+void
+DelayRecorder::Attach<i3ds::ToFCamera::MeasurementTopic>()
+{
+  using std::placeholders::_1;
+  subscriber_.Attach<i3ds::ToFCamera::MeasurementTopic>(node_id_, std::bind(&DelayRecorder::handle_frame<i3ds::ToFCamera::MeasurementTopic>, this, _1));
+}
+
+// RADAR uses same topic type as ToFCamera, and uses its specialization.
 
 int
 main(int argc, char *argv[])
