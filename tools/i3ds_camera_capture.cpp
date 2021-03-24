@@ -43,6 +43,7 @@ int width = -1;
 bool headless_mode = false;
 std::string output = "", format;
 bool do_output = false, do_scale = false, do_size = false;
+long long prev_time = 0;
 
 unsigned int img_index = 0;
 
@@ -60,6 +61,13 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
 {
   cv::Mat mat = i3ds::frame_to_cv_mat(frame, image_number);
 
+  long long current_time = i3ds::get_timestamp();
+  long long sent_time = frame.descriptor.attributes.timestamp;
+  long long delay = current_time - sent_time;
+  long long period = sent_time - prev_time;
+
+  prev_time = sent_time;
+
   if (do_output) {
 
     std::ostringstream path;
@@ -67,14 +75,11 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
     path << std::setw(5) << std::setfill('0') << img_index;
     path << "_" << image_number << "." << format;
 
-    long long current_time = i3ds::get_timestamp();
-    long long sent_time = frame.descriptor.attributes.timestamp;
-    long long delay = current_time - sent_time;
-
     logfile << path.str() << ","
-      << current_time << ","
-      << sent_time << ","
-      << delay << std::endl;
+	    << current_time << ","
+	    << sent_time << ","
+	    << delay << ","
+	    << period << std::endl;
 
     cv::imwrite(path.str(), mat);
   }
@@ -83,22 +88,33 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
     return;
   }
 
-  cv::Mat outmat;
+  cv::Mat mat2, mat3;
 
   if(do_size){
     cv::Size size = mat.size();
     float height = (size.height * width)/size.width;
-    cv::resize(mat, outmat, cv::Size(width, height), 0, 0, cv::INTER_AREA);
+    cv::resize(mat, mat2, cv::Size(width, height), 0, 0, cv::INTER_AREA);
   } else if (do_scale) {
-    cv::resize(mat, outmat, cv::Size(0, 0), scale/100, scale/100, cv::INTER_AREA);
+    cv::resize(mat, mat2, cv::Size(0, 0), scale/100, scale/100, cv::INTER_AREA);
   } else {
-    outmat = mat;
+    mat2 = mat;
   }
 #if CV_MAJOR_VERSION == 3
   cv::setWindowTitle (window_name, window_name + " " + fps_text);
 #endif
 
-  cv::imshow(window_name, outmat);
+  cv::Scalar value(0);
+
+  cv::copyMakeBorder(mat2, mat3, 40, 0, 0, 0, cv::BORDER_CONSTANT, value);
+
+  std::ostringstream display;
+
+  display << std::fixed << std::setprecision(9);
+  display << "Delay: " << delay * 1.0e-3 << " ms, Period: " << period * 1.0e-6 << " s";
+
+  cv::putText(mat3, display.str(), cv::Point(20, 30), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(100000), 1, CV_AA);
+
+  cv::imshow(window_name, mat3);
 }
 
 bool is_tof_camera(i3ds::DepthMap&) {
@@ -188,7 +204,9 @@ int main(int argc, char *argv[])
     std::cout << "Storing data to: " << output << "_XXXXX." << format << std::endl
 	      << "Logging time to: " << output << ".csv"  << std::endl;
 
-    logfile.open (output + ".csv", std::ofstream::out | std::ofstream::app);
+    logfile.open (output + ".csv", std::ofstream::out);
+
+    logfile << "# FILE,RECEIVED,SENT,DELAY,PERIOD" << std::endl;
   }
 
   std::cout << "Connecting to Node with ID: " << node << std::endl;
