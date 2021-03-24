@@ -9,6 +9,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <fstream>
 #include <csignal>
 #include <cmath>
 #include <cstring>
@@ -20,6 +21,7 @@
 #include <i3ds/tof_camera_sensor.hpp>
 #include <i3ds/frame.hpp>
 #include <i3ds/depthmap.hpp>
+#include <i3ds/time.hpp>
 
 #include <i3ds/opencv_convertion.hpp>
 
@@ -44,6 +46,8 @@ bool do_output = false, do_scale = false, do_size = false;
 
 unsigned int img_index = 0;
 
+std::ofstream logfile;
+
 void
 signal_handler(int)
 {
@@ -57,14 +61,24 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
   cv::Mat mat = i3ds::frame_to_cv_mat(frame, image_number);
 
   if (do_output) {
+
     std::ostringstream path;
     path <<  output << "_";
     path << std::setw(5) << std::setfill('0') << img_index;
     path << "_" << image_number << "." << format;
-    
+
+    long long current_time = i3ds::get_timestamp();
+    long long sent_time = frame.descriptor.attributes.timestamp;
+    long long delay = current_time - sent_time;
+
+    logfile << path.str() << ","
+      << current_time << ","
+      << sent_time << ","
+      << delay << std::endl;
+
     cv::imwrite(path.str(), mat);
   }
-  
+
   if (headless_mode) {
     return;
   }
@@ -83,7 +97,7 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
 #if CV_MAJOR_VERSION == 3
   cv::setWindowTitle (window_name, window_name + " " + fps_text);
 #endif
-  
+
   cv::imshow(window_name, outmat);
 }
 
@@ -152,14 +166,15 @@ int main(int argc, char *argv[])
   desc.add_options()
   ("node,n", po::value<int>(&node)->default_value(10), "Node ID of camera")
   ("scale,x", po::value(&scale), "Camera scale [%]")
-  ("width,w", po::value(&width), "Maximal image width [px]") 
-  ("output,o", po::value(&output), "Output path template") 
+  ("width,w", po::value(&width), "Maximal image width [px]")
+  ("output,o", po::value(&output), "Output path template")
   ("format,f", po::value(&format)->default_value("tiff"), "Output format")
   ("tof", po::value(&tof_version)->default_value(false), "TOF version")
-  ("nogui,g", po::bool_switch(&headless_mode), "Headless mode") 
+  ("nogui,g", po::bool_switch(&headless_mode), "Headless mode")
   ;
 
   po::variables_map vm = configurator.parse_common_options(desc, argc, argv);
+
   if (vm.count("width")) {
     do_size = true;
     std::cout << "Scaling width to: " << width << " [px]" << std::endl;
@@ -170,7 +185,10 @@ int main(int argc, char *argv[])
 
   if (vm.count("output")) {
     do_output = true;
-    std::cout << "Storing data to: " << output << "_XXXXX." << format << std::endl;
+    std::cout << "Storing data to: " << output << "_XXXXX." << format << std::endl
+	      << "Logging time to: " << output << ".csv"  << std::endl;
+
+    logfile.open (output + ".csv", std::ofstream::out | std::ofstream::app);
   }
 
   std::cout << "Connecting to Node with ID: " << node << std::endl;
