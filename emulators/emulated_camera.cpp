@@ -371,7 +371,7 @@ i3ds::EmulatedCamera::load_images(std::string sample_dir)
 {
   if (sample_dir.size() > 0)
     {
-      int imread_mode = param_.frame_mode == i3ds_asn1::Frame_mode_t_mode_rgb ? cv::IMREAD_COLOR : cv::IMREAD_GRAYSCALE;
+      int imread_mode = param_.frame_mode == i3ds_asn1::Frame_mode_t_mode_rgb ? cv::IMREAD_COLOR : -1;
       try
         {
           std::vector<std::string> file_names;

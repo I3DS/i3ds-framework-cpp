@@ -29,7 +29,7 @@ cmake .. -DCMAKE_C_COMPILER="aarch64-xilinx-linux-gcc" \
       -DBUILD_TESTS=OFF \
       -DBUILD_BINDINGS=OFF \
       -DGENERATE_ASN=OFF \
-      -DNO_OPENCV=ON
+      -DNO_OPENCV=OFF
 
 test -z ${NUM_CPUS} && NUM_CPUS=$(grep ^cpu\ MHz /proc/cpuinfo | wc -l)
 make -j${NUM_CPUS}
