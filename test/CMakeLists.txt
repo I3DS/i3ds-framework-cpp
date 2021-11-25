@@ -9,10 +9,8 @@ set(TESTS
   star-tracker-test
   analog-test
   measurement-proxy-test
-  pointcloud-test
   depthmap-test
   pose-estimator-test
-  camera-merger-test
   )
 
 if (OpenCV_FOUND)
@@ -20,6 +18,8 @@ if (OpenCV_FOUND)
     ${TESTS}
     camera-test
     tof-camera-test
+    camera-merger-test
+    pointcloud-test
     )
 endif (OpenCV_FOUND)
 
