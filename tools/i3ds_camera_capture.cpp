@@ -112,7 +112,7 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
   display << std::fixed << std::setprecision(9);
   display << "Delay: " << delay * 1.0e-3 << " ms, Period: " << period * 1.0e-6 << " s";
 
-  cv::putText(mat3, display.str(), cv::Point(20, 30), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(100000), 1, CV_AA);
+  cv::putText(mat3, display.str(), cv::Point(20, 30), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(100000), 1, cv::LINE_AA);
 
   cv::imshow(window_name, mat3);
 }

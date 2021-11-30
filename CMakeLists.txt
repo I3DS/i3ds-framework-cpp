@@ -166,7 +166,7 @@ endif (NOT CMAKE_C_FLAGS)
 if (NO_OPENCV)
   set(OpenCV_FOUND 0)
 else()
-  find_package (OpenCV 3.0.0 QUIET)
+  find_package (OpenCV 4.0.0 QUIET)
 endif()
 
 if (I3DS_ASN1_ALT)
