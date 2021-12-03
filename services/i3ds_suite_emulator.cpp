@@ -20,7 +20,10 @@
 #include <i3ds/emulator_factory.hpp>
 #include <i3ds/configurator.hpp>
 
+#ifndef BOOST_LOG_DYN_LINK
 #define BOOST_LOG_DYN_LINK
+#endif
+
 
 #include <boost/log/core.hpp>
 #include <boost/log/trivial.hpp>

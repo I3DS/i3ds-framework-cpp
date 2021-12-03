@@ -18,7 +18,10 @@
 #include <i3ds/configurator.hpp>
 #include <i3ds/analog_sensor.hpp>
 
+#ifndef BOOST_LOG_DYN_LINK
 #define BOOST_LOG_DYN_LINK
+#endif
+
 #include <boost/log/trivial.hpp>
 #include <boost/program_options.hpp>
 

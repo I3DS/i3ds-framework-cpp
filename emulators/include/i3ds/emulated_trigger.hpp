@@ -16,7 +16,10 @@
 
 #include <i3ds/trigger.hpp>
 
+#ifndef BOOST_LOG_DYN_LINK
 #define BOOST_LOG_DYN_LINK
+#endif
+
 
 #include <boost/log/core.hpp>
 #include <boost/log/trivial.hpp>

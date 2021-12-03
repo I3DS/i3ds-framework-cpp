@@ -8,7 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 
+#ifndef BOOST_LOG_DYN_LINK
 #define BOOST_LOG_DYN_LINK
+#endif
+
 #include <boost/log/trivial.hpp>
 
 #include <i3ds/emulated_pose_estimator.hpp>

@@ -18,7 +18,10 @@
 #include <i3ds/imu_sensor.hpp>
 #include <i3ds/configurator.hpp>
 
+#ifndef BOOST_LOG_DYN_LINK
 #define BOOST_LOG_DYN_LINK
+#endif
+
 #include <boost/log/trivial.hpp>
 #include <boost/program_options.hpp>
 
