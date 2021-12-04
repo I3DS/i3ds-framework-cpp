@@ -14,6 +14,7 @@
 #include <boost/test/unit_test.hpp>
 
 #include <i3ds/address_server.hpp>
+#include <i3ds/exception.hpp>
 
 using namespace i3ds;
 
@@ -23,14 +24,15 @@ using namespace i3ds;
 std::string get_address(zmq::socket_t *socket, std::string input)
 {
   zmq::message_t request (input.length());
-  memcpy (request.data (), input.c_str(), input.length());
-  socket->send (request);
+  memcpy(request.data (), input.c_str(), input.length());
+  socket->send(request, zmq::send_flags::none);
 
   zmq::message_t reply;
-  socket->recv (&reply);
-  std::string reply_string = std::string(static_cast<char*>(reply.data()), reply.size());
-  return reply_string;
-
+  if(socket->recv(reply, zmq::recv_flags::none))
+  {
+    return std::string(static_cast<char*>(reply.data()), reply.size());
+  }
+  throw Timeout();
 }
 ////////////////////////////////////////////////////////////////////////////////
 

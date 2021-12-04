@@ -45,7 +45,7 @@ i3ds::MeasurementProxy::Start()
 void
 i3ds::MeasurementProxy::Stop()
 {
-  control_send_socket_.send("TERMINATE", 9, 0);
+  control_send_socket_.send(zmq::str_buffer("TERMINATE"), zmq::send_flags::none);
   if(worker_.joinable())
     {
       worker_.join();
@@ -55,8 +55,8 @@ i3ds::MeasurementProxy::Stop()
 void
 i3ds::MeasurementProxy::Run()
 {
-  zmq::proxy_steerable(static_cast<void *>(subscribe_socket_),
-                       static_cast<void *>(publish_socket_),
-                       nullptr,
-                       static_cast<void *>(control_recv_socket_));
+  zmq::proxy_steerable(subscribe_socket_,
+                       publish_socket_,
+                       zmq::socket_ref(),
+                       control_recv_socket_);
 }

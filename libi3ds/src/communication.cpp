@@ -15,6 +15,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <cstdlib>
+#include <zmq.hpp>
 
 void i3ds_message_free(void* data, void*)
 {
@@ -143,11 +144,11 @@ i3ds::Context::get_config(i3ds_asn1::NodeID node, int type)
 
   zmq::message_t request (query.length());
   memcpy (request.data (), query.c_str(), query.length());
-  address_socket_.send(request);
+  address_socket_.send(request, zmq::send_flags::none);
 
   zmq::message_t reply;
 
-  if (address_socket_.recv(&reply) < 1)
+  if (!address_socket_.recv(reply, zmq::recv_flags::none))
     {
       throw CommunicationError("Could not connect to address server");
     }
@@ -244,14 +245,14 @@ i3ds::Socket::Send(Message& message)
   const std::string a = message.address().to_string();
   zmq::message_t header(a.c_str(), a.size());
 
-  socket_.send(header, n > 0 ? ZMQ_SNDMORE : 0);
+  socket_.send(header, n > 0 ? zmq::send_flags::sndmore : zmq::send_flags::none);
 
   for (int i = 0; i < n; i++)
     {
       zmq::message_t msg;
 
-      msg.move(&message.payload_.at(i));
-      socket_.send(msg, i < (n - 1) ? ZMQ_SNDMORE : 0);
+      msg.move(message.payload_.at(i));
+      socket_.send(msg, i < (n - 1) ? zmq::send_flags::sndmore : zmq::send_flags::none);
     }
 
   message.payload_.clear();
@@ -267,7 +268,7 @@ i3ds::Socket::Receive(Message& message, int timeout_ms)
   zmq::message_t header;
   bool more;
 
-  if (!socket_.recv(&header))
+  if (!socket_.recv(header, zmq::recv_flags::none))
     {
       throw Timeout();
     }
@@ -287,7 +288,10 @@ i3ds::Socket::Receive(Message& message, int timeout_ms)
 
       zmq::message_t* msg = &message.payload_.back();
 
-      socket_.recv(msg);
+      if (!socket_.recv(*msg, zmq::recv_flags::none))
+      {
+        throw Timeout();
+      }
 
       more = msg->more();
     }
