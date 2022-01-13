@@ -99,7 +99,7 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
   } else {
     mat2 = mat;
   }
-#if CV_MAJOR_VERSION == 3
+#if CV_MAJOR_VERSION == 3 || CV_MAJOR_VERSION == 4
   cv::setWindowTitle (window_name, window_name + " " + fps_text);
 #endif
 

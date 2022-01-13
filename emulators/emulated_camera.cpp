@@ -429,7 +429,7 @@ i3ds::EmulatedCamera::load_images(std::string sample_dir)
                     generate_noise_samples();
             }
         }
-      catch (std::exception e)
+      catch (std::exception &e)
         {
           BOOST_LOG_TRIVIAL(warning) << "Error loading sample images: " << e.what();
           BOOST_LOG_TRIVIAL(warning) << "Generating noise images instead";
