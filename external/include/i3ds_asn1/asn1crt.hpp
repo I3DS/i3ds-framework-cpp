@@ -6,17 +6,19 @@
 
 #ifdef  __cplusplus
 extern "C" {
-#include <cstdint>
-#else
-// C99 check
-#if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
+#  include <stdint.h>
+#  include <inttypes.h>
+ /* C99 check */
+#elif (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L) || _MSC_VER >= 1900
 #  include <stdbool.h>
 #  include <stdint.h>
-#else
-
+#  include <inttypes.h>
+#else /* No C++ nor C99 */
+#  ifndef _MSC_VER
 typedef unsigned char bool;
-#  define true 1
-#  define false 0
+#    define true 1u
+#    define false 0u
+#  endif /* _MSC_VER */
 
 typedef unsigned char uint8_t;
 
@@ -26,9 +28,7 @@ typedef unsigned int uint32_t;
 typedef long long int64_t;
 typedef unsigned long long uint64_t;
 
-#endif
-#endif	/* __cplusplus */
-namespace i3ds_asn1 {
+#endif	/* C++/C99 */
 
 #ifndef NULL
 #define NULL	0
@@ -42,12 +42,30 @@ namespace i3ds_asn1 {
 #define FALSE	false
 #endif
 
+namespace i3ds_asn1 {
+
 #ifndef i3ds_asn1_WORD_SIZE
 #define i3ds_asn1_WORD_SIZE	8
 #endif
 
 #ifndef FP_i3ds_asn1_WORD_SIZE
 #define FP_i3ds_asn1_WORD_SIZE	8
+#endif
+
+#ifndef i3ds_asn1_PRId32
+#define i3ds_asn1_PRId32 "d"
+#endif
+
+#ifndef i3ds_asn1_PRId64
+#define i3ds_asn1_PRId64 "lld"
+#endif
+
+#ifndef i3ds_asn1_PRIu32
+#define i3ds_asn1_PRIu32 "u"
+#endif
+
+#ifndef i3ds_asn1_PRIu64
+#define i3ds_asn1_PRIu64 "llu"
 #endif
 
 #define i3ds_asn1_OBJECT_IDENTIFIER_MAX_LENGTH	20
@@ -67,9 +85,13 @@ typedef uint64_t asn1SccUint64;
 #if i3ds_asn1_WORD_SIZE==8
 typedef asn1SccUint64 asn1SccUint;
 typedef asn1SccSint64 asn1SccSint;
+#define i3ds_asn1_i3ds_asn1_ASN1SCC_PRId i3ds_asn1_PRId64
+#define i3ds_asn1_i3ds_asn1_ASN1SCC_PRIu i3ds_asn1_PRIu64
 #else
 typedef asn1SccUint32 asn1SccUint;
 typedef asn1SccSint32 asn1SccSint;
+#define i3ds_asn1_i3ds_asn1_ASN1SCC_PRId i3ds_asn1_PRId32
+#define i3ds_asn1_i3ds_asn1_ASN1SCC_PRIu i3ds_asn1_PRIu32
 #endif
 
 asn1SccUint int2uint(asn1SccSint v);
@@ -97,8 +119,8 @@ typedef char NullType;
 
 struct BitStream_t;
 
-typedef void(*PushDataFnc)(struct BitStream_t* pThis, void* pushDataPrm);
-typedef void(*FetchDataFnc)(struct BitStream_t* pThis, void* fetchDataPrm);
+//typedef void(*PushDataFnc)(struct BitStream_t* pThis, void* pushDataPrm);
+//typedef void(*FetchDataFnc)(struct BitStream_t* pThis, void* fetchDataPrm);
 
 typedef struct BitStream_t {
 	byte* buf;
@@ -108,9 +130,9 @@ typedef struct BitStream_t {
 	Possible vallues 0..7, 0 is most significant 
 	bit of current byte*/
 	int currentBit; 
-	PushDataFnc pushData;
+	//PushDataFnc pushData;
 	void* pushDataPrm;
-	FetchDataFnc fetchData;
+	//FetchDataFnc fetchData;
 	void* fetchDataPrm;
 } BitStream;
 

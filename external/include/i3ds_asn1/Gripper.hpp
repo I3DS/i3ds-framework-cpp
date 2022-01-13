@@ -31,16 +31,16 @@ typedef enum {
 
 void GripperState_Initialize(GripperState* pVal);
 
-#define i3ds_asn1_ERR_GRIPPERSTATE		3845  /**/
+#define i3ds_asn1_ERR_GRIPPERSTATE		1  /**/
 flag GripperState_IsConstraintValid(const GripperState* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_GRIPPERSTATE		3846  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_GRIPPERSTATE		2  /**/
 #define i3ds_asn1_GripperState_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_GripperState_REQUIRED_BITS_FOR_ENCODING        3
 
 flag GripperState_Encode(const GripperState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_GRIPPERSTATE		3847  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_GRIPPERSTATE		3  /**/
 flag GripperState_Decode(GripperState* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     GripperCMD_disable = 0,
@@ -59,16 +59,16 @@ typedef enum {
 
 void GripperCMD_Initialize(GripperCMD* pVal);
 
-#define i3ds_asn1_ERR_GRIPPERCMD		3852  /**/
+#define i3ds_asn1_ERR_GRIPPERCMD		8  /**/
 flag GripperCMD_IsConstraintValid(const GripperCMD* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_GRIPPERCMD		3853  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_GRIPPERCMD		9  /**/
 #define i3ds_asn1_GripperCMD_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_GripperCMD_REQUIRED_BITS_FOR_ENCODING        3
 
 flag GripperCMD_Encode(const GripperCMD* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_GRIPPERCMD		3854  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_GRIPPERCMD		10  /**/
 flag GripperCMD_Decode(GripperCMD* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

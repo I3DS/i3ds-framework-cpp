@@ -21,22 +21,22 @@ typedef struct {
 
 void StarTrackerMeasurement_Initialize(StarTrackerMeasurement* pVal);
 
-#define i3ds_asn1_ERR_STARTRACKERMEASUREMENT		3282  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_ATTRIBUTES_2		3234  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_POSITION_2		3277  /**/
+#define i3ds_asn1_ERR_STARTRACKERMEASUREMENT		4306  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_ATTRIBUTES_2		4250  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STARTRACKERMEASUREMENT_POSITION_2		4299  /**/
 flag StarTrackerMeasurement_IsConstraintValid(const StarTrackerMeasurement* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT		3283  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		3235  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_POSITION_2		3278  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT		4307  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		4251  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STARTRACKERMEASUREMENT_POSITION_2		4300  /**/
 #define i3ds_asn1_StarTrackerMeasurement_REQUIRED_BYTES_FOR_ENCODING       118 
 #define i3ds_asn1_StarTrackerMeasurement_REQUIRED_BITS_FOR_ENCODING        943
 
 flag StarTrackerMeasurement_Encode(const StarTrackerMeasurement* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT		3284  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		3236  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_POSITION_2		3279  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT		4308  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_ATTRIBUTES_2		4252  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STARTRACKERMEASUREMENT_POSITION_2		4301  /**/
 flag StarTrackerMeasurement_Decode(StarTrackerMeasurement* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

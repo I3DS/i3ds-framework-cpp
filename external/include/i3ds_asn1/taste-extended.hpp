@@ -20,118 +20,118 @@ typedef struct {
 
 void T_Time_Initialize(T_Time* pVal);
 
-#define i3ds_asn1_ERR_T_TIME		13172  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_T_TIME_SECS_2		13155  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_T_TIME_NSECS_2		13167  /**/
+#define i3ds_asn1_ERR_T_TIME		14988  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_T_TIME_SECS_2		14967  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_T_TIME_NSECS_2		14981  /**/
 flag T_Time_IsConstraintValid(const T_Time* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_TIME		13173  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_T_TIME_SECS_2		13156  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_T_TIME_NSECS_2		13168  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_TIME		14989  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_T_TIME_SECS_2		14968  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_T_TIME_NSECS_2		14982  /**/
 #define i3ds_asn1_T_Time_REQUIRED_BYTES_FOR_ENCODING       8 
 #define i3ds_asn1_T_Time_REQUIRED_BITS_FOR_ENCODING        64
 
 flag T_Time_Encode(const T_Time* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_TIME		13174  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_T_TIME_SECS_2		13157  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_T_TIME_NSECS_2		13169  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_TIME		14990  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_T_TIME_SECS_2		14969  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_T_TIME_NSECS_2		14983  /**/
 flag T_Time_Decode(T_Time* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1Real T_Double;
 
 
 void T_Double_Initialize(T_Double* pVal);
 
-#define i3ds_asn1_ERR_T_DOUBLE		13099  /**/
+#define i3ds_asn1_ERR_T_DOUBLE		14911  /**/
 flag T_Double_IsConstraintValid(const T_Double* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_DOUBLE		13100  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_DOUBLE		14912  /**/
 #define i3ds_asn1_T_Double_REQUIRED_BYTES_FOR_ENCODING       13 
 #define i3ds_asn1_T_Double_REQUIRED_BITS_FOR_ENCODING        104
 
 flag T_Double_Encode(const T_Double* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_DOUBLE		13101  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_DOUBLE		14913  /**/
 flag T_Double_Decode(T_Double* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1Real T_Float;
 
 
 void T_Float_Initialize(T_Float* pVal);
 
-#define i3ds_asn1_ERR_T_FLOAT		13106  /**/
+#define i3ds_asn1_ERR_T_FLOAT		14918  /**/
 flag T_Float_IsConstraintValid(const T_Float* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_FLOAT		13107  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_FLOAT		14919  /**/
 #define i3ds_asn1_T_Float_REQUIRED_BYTES_FOR_ENCODING       13 
 #define i3ds_asn1_T_Float_REQUIRED_BITS_FOR_ENCODING        104
 
 flag T_Float_Encode(const T_Float* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_FLOAT		13108  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_FLOAT		14920  /**/
 flag T_Float_Decode(T_Float* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccSint T_Int16;
 
 
 void T_Int16_Initialize(T_Int16* pVal);
 
-#define i3ds_asn1_ERR_T_INT16		13113  /**/
+#define i3ds_asn1_ERR_T_INT16		14925  /**/
 flag T_Int16_IsConstraintValid(const T_Int16* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_INT16		13114  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_INT16		14926  /**/
 #define i3ds_asn1_T_Int16_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_T_Int16_REQUIRED_BITS_FOR_ENCODING        16
 
 flag T_Int16_Encode(const T_Int16* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_INT16		13115  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_INT16		14927  /**/
 flag T_Int16_Decode(T_Int16* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint T_UInt16;
 
 
 void T_UInt16_Initialize(T_UInt16* pVal);
 
-#define i3ds_asn1_ERR_T_UINT16		13120  /**/
+#define i3ds_asn1_ERR_T_UINT16		14932  /**/
 flag T_UInt16_IsConstraintValid(const T_UInt16* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_UINT16		13121  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_UINT16		14933  /**/
 #define i3ds_asn1_T_UInt16_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_T_UInt16_REQUIRED_BITS_FOR_ENCODING        16
 
 flag T_UInt16_Encode(const T_UInt16* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_UINT16		13122  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_UINT16		14934  /**/
 flag T_UInt16_Decode(T_UInt16* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint T_UInt64;
 
 
 void T_UInt64_Initialize(T_UInt64* pVal);
 
-#define i3ds_asn1_ERR_T_UINT64		13127  /**/
+#define i3ds_asn1_ERR_T_UINT64		14939  /**/
 flag T_UInt64_IsConstraintValid(const T_UInt64* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_UINT64		13128  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_UINT64		14940  /**/
 #define i3ds_asn1_T_UInt64_REQUIRED_BYTES_FOR_ENCODING       8 
 #define i3ds_asn1_T_UInt64_REQUIRED_BITS_FOR_ENCODING        64
 
 flag T_UInt64_Encode(const T_UInt64* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_UINT64		13129  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_UINT64		14941  /**/
 flag T_UInt64_Decode(T_UInt64* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccSint T_Int64;
 
 
 void T_Int64_Initialize(T_Int64* pVal);
 
-#define i3ds_asn1_ERR_T_INT64		13134  /**/
+#define i3ds_asn1_ERR_T_INT64		14946  /**/
 flag T_Int64_IsConstraintValid(const T_Int64* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_INT64		13135  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_INT64		14947  /**/
 #define i3ds_asn1_T_Int64_REQUIRED_BYTES_FOR_ENCODING       8 
 #define i3ds_asn1_T_Int64_REQUIRED_BITS_FOR_ENCODING        64
 
 flag T_Int64_Encode(const T_Int64* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_INT64		13136  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_INT64		14948  /**/
 flag T_Int64_Decode(T_Int64* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef struct {
     int nCount; 
@@ -142,16 +142,16 @@ typedef struct {
 
 void T_String_Initialize(T_String* pVal);
 
-#define i3ds_asn1_ERR_T_STRING		13141  /**/
+#define i3ds_asn1_ERR_T_STRING		14953  /**/
 flag T_String_IsConstraintValid(const T_String* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_T_STRING		13142  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_T_STRING		14954  /**/
 #define i3ds_asn1_T_String_REQUIRED_BYTES_FOR_ENCODING       41 
 #define i3ds_asn1_T_String_REQUIRED_BITS_FOR_ENCODING        326
 
 flag T_String_Encode(const T_String* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_T_STRING		13143  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_T_STRING		14955  /**/
 flag T_String_Decode(T_String* pVal, BitStream* pBitStrm, int* pErrCode);
 
 extern const T_UInt32 numT_String; 

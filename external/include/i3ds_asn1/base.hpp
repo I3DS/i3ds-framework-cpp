@@ -21,19 +21,19 @@ typedef struct {
 
 void Base_Angle_Initialize(Base_Angle* pVal);
 
-#define i3ds_asn1_ERR_BASE_ANGLE		5245  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_ANGLE_RAD_2		5240  /**/
+#define i3ds_asn1_ERR_BASE_ANGLE		6007  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_ANGLE_RAD_2		6000  /**/
 flag Base_Angle_IsConstraintValid(const Base_Angle* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_ANGLE		5246  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_ANGLE_RAD_2		5241  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_ANGLE		6008  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_ANGLE_RAD_2		6001  /**/
 #define i3ds_asn1_Base_Angle_REQUIRED_BYTES_FOR_ENCODING       13 
 #define i3ds_asn1_Base_Angle_REQUIRED_BITS_FOR_ENCODING        104
 
 flag Base_Angle_Encode(const Base_Angle* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_ANGLE		5247  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_ANGLE_RAD_2		5242  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_ANGLE		6009  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_ANGLE_RAD_2		6002  /**/
 flag Base_Angle_Decode(Base_Angle* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_commands_Motion2D --------------------------------------------*/
 typedef struct {
@@ -45,25 +45,25 @@ typedef struct {
 
 void Base_commands_Motion2D_Initialize(Base_commands_Motion2D* pVal);
 
-#define i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D		6019  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D_TRANSLATION_2		5978  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D_ROTATION_2		5990  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D_HEADING_2		6014  /**/
+#define i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D		6889  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D_TRANSLATION_2		6840  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D_ROTATION_2		6854  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_MOTION2D_HEADING_2		6882  /**/
 flag Base_commands_Motion2D_IsConstraintValid(const Base_commands_Motion2D* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D		6020  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		5979  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_ROTATION_2		5991  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_HEADING_2		6015  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D		6890  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		6841  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_ROTATION_2		6855  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_HEADING_2		6883  /**/
 #define i3ds_asn1_Base_commands_Motion2D_REQUIRED_BYTES_FOR_ENCODING       39 
 #define i3ds_asn1_Base_commands_Motion2D_REQUIRED_BITS_FOR_ENCODING        312
 
 flag Base_commands_Motion2D_Encode(const Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D		6021  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		5980  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_ROTATION_2		5992  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_HEADING_2		6016  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D		6891  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		6842  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_ROTATION_2		6856  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_HEADING_2		6884  /**/
 flag Base_commands_Motion2D_Decode(Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_PoseUpdateThreshold --------------------------------------------*/
 typedef struct {
@@ -74,22 +74,22 @@ typedef struct {
 
 void Base_PoseUpdateThreshold_Initialize(Base_PoseUpdateThreshold* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSEUPDATETHRESHOLD		5393  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		5376  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSEUPDATETHRESHOLD_ANGLE_2		5388  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSEUPDATETHRESHOLD		6175  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		6154  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSEUPDATETHRESHOLD_ANGLE_2		6168  /**/
 flag Base_PoseUpdateThreshold_IsConstraintValid(const Base_PoseUpdateThreshold* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD		5394  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		5377  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		5389  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD		6176  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		6155  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		6169  /**/
 #define i3ds_asn1_Base_PoseUpdateThreshold_REQUIRED_BYTES_FOR_ENCODING       26 
 #define i3ds_asn1_Base_PoseUpdateThreshold_REQUIRED_BITS_FOR_ENCODING        208
 
 flag Base_PoseUpdateThreshold_Encode(const Base_PoseUpdateThreshold* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD		5395  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		5378  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		5390  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD		6177  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		6156  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		6170  /**/
 flag Base_PoseUpdateThreshold_Decode(Base_PoseUpdateThreshold* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Temperature --------------------------------------------*/
 typedef struct {
@@ -99,19 +99,19 @@ typedef struct {
 
 void Base_Temperature_Initialize(Base_Temperature* pVal);
 
-#define i3ds_asn1_ERR_BASE_TEMPERATURE		5431  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TEMPERATURE_KELVIN_2		5426  /**/
+#define i3ds_asn1_ERR_BASE_TEMPERATURE		6217  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TEMPERATURE_KELVIN_2		6210  /**/
 flag Base_Temperature_IsConstraintValid(const Base_Temperature* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TEMPERATURE		5432  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TEMPERATURE_KELVIN_2		5427  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TEMPERATURE		6218  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TEMPERATURE_KELVIN_2		6211  /**/
 #define i3ds_asn1_Base_Temperature_REQUIRED_BYTES_FOR_ENCODING       13 
 #define i3ds_asn1_Base_Temperature_REQUIRED_BITS_FOR_ENCODING        104
 
 flag Base_Temperature_Encode(const Base_Temperature* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_TEMPERATURE		5433  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TEMPERATURE_KELVIN_2		5428  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_TEMPERATURE		6219  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TEMPERATURE_KELVIN_2		6212  /**/
 flag Base_Temperature_Decode(Base_Temperature* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_commands_Speed6D --------------------------------------------*/
 typedef struct {
@@ -126,34 +126,34 @@ typedef struct {
 
 void Base_commands_Speed6D_Initialize(Base_commands_Speed6D* pVal);
 
-#define i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D		6098  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_SURGE_2		6033  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_SWAY_2		6045  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_HEAVE_2		6057  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_ROLL_2		6069  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_PITCH_2		6081  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_YAW_2		6093  /**/
+#define i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D		6980  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_SURGE_2		6903  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_SWAY_2		6917  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_HEAVE_2		6931  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_ROLL_2		6945  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_PITCH_2		6959  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_SPEED6D_YAW_2		6973  /**/
 flag Base_commands_Speed6D_IsConstraintValid(const Base_commands_Speed6D* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D		6099  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SURGE_2		6034  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SWAY_2		6046  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_HEAVE_2		6058  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_ROLL_2		6070  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_PITCH_2		6082  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_YAW_2		6094  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D		6981  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SURGE_2		6904  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SWAY_2		6918  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_HEAVE_2		6932  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_ROLL_2		6946  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_PITCH_2		6960  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_YAW_2		6974  /**/
 #define i3ds_asn1_Base_commands_Speed6D_REQUIRED_BYTES_FOR_ENCODING       78 
 #define i3ds_asn1_Base_commands_Speed6D_REQUIRED_BITS_FOR_ENCODING        624
 
 flag Base_commands_Speed6D_Encode(const Base_commands_Speed6D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D		6100  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SURGE_2		6035  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SWAY_2		6047  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_HEAVE_2		6059  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_ROLL_2		6071  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_PITCH_2		6083  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_YAW_2		6095  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D		6982  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SURGE_2		6905  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SWAY_2		6919  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_HEAVE_2		6933  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_ROLL_2		6947  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_PITCH_2		6961  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_YAW_2		6975  /**/
 flag Base_commands_Speed6D_Decode(Base_commands_Speed6D* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_AngleAxisd --------------------------------------------*/
 
@@ -172,25 +172,25 @@ typedef struct {
 void Wrappers_AngleAxisd_axis_Initialize(Wrappers_AngleAxisd_axis* pVal);
 void Wrappers_AngleAxisd_Initialize(Wrappers_AngleAxisd* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD		10414  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD_ANGLE_2		10390  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD_AXIS		10407  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		10402  /**/
+#define i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD		11894  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD_ANGLE_2		11866  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD_AXIS		11887  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		11880  /**/
 flag Wrappers_AngleAxisd_IsConstraintValid(const Wrappers_AngleAxisd* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD		10415  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_ANGLE_2		10391  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS		10408  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		10403  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD		11895  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_ANGLE_2		11867  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS		11888  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		11881  /**/
 #define i3ds_asn1_Wrappers_AngleAxisd_REQUIRED_BYTES_FOR_ENCODING       53 
 #define i3ds_asn1_Wrappers_AngleAxisd_REQUIRED_BITS_FOR_ENCODING        418
 
 flag Wrappers_AngleAxisd_Encode(const Wrappers_AngleAxisd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD		10416  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_ANGLE_2		10392  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS		10409  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		10404  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD		11896  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_ANGLE_2		11868  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS		11889  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		11882  /**/
 flag Wrappers_AngleAxisd_Decode(Wrappers_AngleAxisd* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Vector2d --------------------------------------------*/
 
@@ -208,22 +208,22 @@ typedef struct {
 void Wrappers_Vector2d_data_Initialize(Wrappers_Vector2d_data* pVal);
 void Wrappers_Vector2d_Initialize(Wrappers_Vector2d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_VECTOR2D		10440  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR2D_DATA		10433  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR2D_DATA_ELM_2		10428  /**/
+#define i3ds_asn1_ERR_WRAPPERS_VECTOR2D		11922  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR2D_DATA		11915  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR2D_DATA_ELM_2		11908  /**/
 flag Wrappers_Vector2d_IsConstraintValid(const Wrappers_Vector2d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR2D		10441  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA		10434  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA_ELM_2		10429  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR2D		11923  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA		11916  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA_ELM_2		11909  /**/
 #define i3ds_asn1_Wrappers_Vector2d_REQUIRED_BYTES_FOR_ENCODING       27 
 #define i3ds_asn1_Wrappers_Vector2d_REQUIRED_BITS_FOR_ENCODING        209
 
 flag Wrappers_Vector2d_Encode(const Wrappers_Vector2d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR2D		10442  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA		10435  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA_ELM_2		10430  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR2D		11924  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA		11917  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA_ELM_2		11910  /**/
 flag Wrappers_Vector2d_Decode(Wrappers_Vector2d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Pose2D --------------------------------------------*/
 typedef struct {
@@ -234,22 +234,22 @@ typedef struct {
 
 void Base_Pose2D_Initialize(Base_Pose2D* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D		5362  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_POSITION_2		5345  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_ORIENTATION_2		5357  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D		6140  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_POSITION_2		6119  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_ORIENTATION_2		6133  /**/
 flag Base_Pose2D_IsConstraintValid(const Base_Pose2D* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D		5363  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_POSITION_2		5346  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_ORIENTATION_2		5358  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D		6141  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_POSITION_2		6120  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_ORIENTATION_2		6134  /**/
 #define i3ds_asn1_Base_Pose2D_REQUIRED_BYTES_FOR_ENCODING       40 
 #define i3ds_asn1_Base_Pose2D_REQUIRED_BITS_FOR_ENCODING        313
 
 flag Base_Pose2D_Encode(const Base_Pose2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D		5364  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_POSITION_2		5347  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_ORIENTATION_2		5359  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D		6142  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_POSITION_2		6121  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_ORIENTATION_2		6135  /**/
 flag Base_Pose2D_Decode(Base_Pose2D* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Pose2D_m --------------------------------------------*/
 typedef struct {
@@ -260,22 +260,22 @@ typedef struct {
 
 void Base_Pose2D_m_Initialize(Base_Pose2D_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_M		10848  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_M_POSITION_2		10831  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_M_ORIENTATION_2		10843  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_M		12370  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_M_POSITION_2		12349  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE2D_M_ORIENTATION_2		12363  /**/
 flag Base_Pose2D_m_IsConstraintValid(const Base_Pose2D_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_M		10849  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_M_POSITION_2		10832  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_M_ORIENTATION_2		10844  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_M		12371  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_M_POSITION_2		12350  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE2D_M_ORIENTATION_2		12364  /**/
 #define i3ds_asn1_Base_Pose2D_m_REQUIRED_BYTES_FOR_ENCODING       40 
 #define i3ds_asn1_Base_Pose2D_m_REQUIRED_BITS_FOR_ENCODING        313
 
 flag Base_Pose2D_m_Encode(const Base_Pose2D_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_M		10850  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_M_POSITION_2		10833  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_M_ORIENTATION_2		10845  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_M		12372  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_M_POSITION_2		12351  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE2D_M_ORIENTATION_2		12365  /**/
 flag Base_Pose2D_m_Decode(Base_Pose2D_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Matrix2d --------------------------------------------*/
 
@@ -293,22 +293,22 @@ typedef struct {
 void Wrappers_Matrix2d_data_Initialize(Wrappers_Matrix2d_data* pVal);
 void Wrappers_Matrix2d_Initialize(Wrappers_Matrix2d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_MATRIX2D		10466  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX2D_DATA		10459  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX2D_DATA_ELM_2		10454  /**/
+#define i3ds_asn1_ERR_WRAPPERS_MATRIX2D		11950  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX2D_DATA		11943  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX2D_DATA_ELM_2		11936  /**/
 flag Wrappers_Matrix2d_IsConstraintValid(const Wrappers_Matrix2d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX2D		10467  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA		10460  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA_ELM_2		10455  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX2D		11951  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA		11944  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA_ELM_2		11937  /**/
 #define i3ds_asn1_Wrappers_Matrix2d_REQUIRED_BYTES_FOR_ENCODING       53 
 #define i3ds_asn1_Wrappers_Matrix2d_REQUIRED_BITS_FOR_ENCODING        418
 
 flag Wrappers_Matrix2d_Encode(const Wrappers_Matrix2d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX2D		10468  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA		10461  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA_ELM_2		10456  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX2D		11952  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA		11945  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA_ELM_2		11938  /**/
 flag Wrappers_Matrix2d_Decode(Wrappers_Matrix2d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Vector3d --------------------------------------------*/
 
@@ -326,22 +326,22 @@ typedef struct {
 void Wrappers_Vector3d_data_Initialize(Wrappers_Vector3d_data* pVal);
 void Wrappers_Vector3d_Initialize(Wrappers_Vector3d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_VECTOR3D		10492  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR3D_DATA		10485  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR3D_DATA_ELM_2		10480  /**/
+#define i3ds_asn1_ERR_WRAPPERS_VECTOR3D		11978  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR3D_DATA		11971  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR3D_DATA_ELM_2		11964  /**/
 flag Wrappers_Vector3d_IsConstraintValid(const Wrappers_Vector3d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR3D		10493  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA		10486  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA_ELM_2		10481  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR3D		11979  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA		11972  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA_ELM_2		11965  /**/
 #define i3ds_asn1_Wrappers_Vector3d_REQUIRED_BYTES_FOR_ENCODING       40 
 #define i3ds_asn1_Wrappers_Vector3d_REQUIRED_BITS_FOR_ENCODING        314
 
 flag Wrappers_Vector3d_Encode(const Wrappers_Vector3d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR3D		10494  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA		10487  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA_ELM_2		10482  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR3D		11980  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA		11973  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA_ELM_2		11966  /**/
 flag Wrappers_Vector3d_Decode(Wrappers_Vector3d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Wrench --------------------------------------------*/
 typedef struct {
@@ -352,22 +352,22 @@ typedef struct {
 
 void Base_Wrench_Initialize(Base_Wrench* pVal);
 
-#define i3ds_asn1_ERR_BASE_WRENCH		5226  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_FORCE_2		5190  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_TORQUE_2		5221  /**/
+#define i3ds_asn1_ERR_BASE_WRENCH		5986  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_FORCE_2		5944  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_TORQUE_2		5979  /**/
 flag Base_Wrench_IsConstraintValid(const Base_Wrench* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH		5227  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_FORCE_2		5191  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_TORQUE_2		5222  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH		5987  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_FORCE_2		5945  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_TORQUE_2		5980  /**/
 #define i3ds_asn1_Base_Wrench_REQUIRED_BYTES_FOR_ENCODING       79 
 #define i3ds_asn1_Base_Wrench_REQUIRED_BITS_FOR_ENCODING        628
 
 flag Base_Wrench_Encode(const Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH		5228  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_FORCE_2		5192  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_TORQUE_2		5223  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH		5988  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_FORCE_2		5946  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_TORQUE_2		5981  /**/
 flag Base_Wrench_Decode(Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Waypoint --------------------------------------------*/
 typedef struct {
@@ -380,28 +380,28 @@ typedef struct {
 
 void Base_Waypoint_Initialize(Base_Waypoint* pVal);
 
-#define i3ds_asn1_ERR_BASE_WAYPOINT		5641  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_POSITION_2		5600  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_HEADING_2		5612  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_TOL_POSITION_2		5624  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_TOL_HEADING_2		5636  /**/
+#define i3ds_asn1_ERR_BASE_WAYPOINT		6455  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_POSITION_2		6406  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_HEADING_2		6420  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_TOL_POSITION_2		6434  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_TOL_HEADING_2		6448  /**/
 flag Base_Waypoint_IsConstraintValid(const Base_Waypoint* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT		5642  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_POSITION_2		5601  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_HEADING_2		5613  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_POSITION_2		5625  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_HEADING_2		5637  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT		6456  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_POSITION_2		6407  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_HEADING_2		6421  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_POSITION_2		6435  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_HEADING_2		6449  /**/
 #define i3ds_asn1_Base_Waypoint_REQUIRED_BYTES_FOR_ENCODING       79 
 #define i3ds_asn1_Base_Waypoint_REQUIRED_BITS_FOR_ENCODING        626
 
 flag Base_Waypoint_Encode(const Base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT		5643  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_POSITION_2		5602  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_HEADING_2		5614  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_TOL_POSITION_2		5626  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_TOL_HEADING_2		5638  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT		6457  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_POSITION_2		6408  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_HEADING_2		6422  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_TOL_POSITION_2		6436  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_TOL_HEADING_2		6450  /**/
 flag Base_Waypoint_Decode(Base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Waypoint_m --------------------------------------------*/
 typedef struct {
@@ -414,28 +414,28 @@ typedef struct {
 
 void Base_Waypoint_m_Initialize(Base_Waypoint_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M		11215  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_POSITION_2		11174  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_HEADING_2		11186  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_TOL_POSITION_2		11198  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_TOL_HEADING_2		11210  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M		12783  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_POSITION_2		12734  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_HEADING_2		12748  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_TOL_POSITION_2		12762  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WAYPOINT_M_TOL_HEADING_2		12776  /**/
 flag Base_Waypoint_m_IsConstraintValid(const Base_Waypoint_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M		11216  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_POSITION_2		11175  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_HEADING_2		11187  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_POSITION_2		11199  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_HEADING_2		11211  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M		12784  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_POSITION_2		12735  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_HEADING_2		12749  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_POSITION_2		12763  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_HEADING_2		12777  /**/
 #define i3ds_asn1_Base_Waypoint_m_REQUIRED_BYTES_FOR_ENCODING       79 
 #define i3ds_asn1_Base_Waypoint_m_REQUIRED_BITS_FOR_ENCODING        626
 
 flag Base_Waypoint_m_Encode(const Base_Waypoint_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M		11217  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_POSITION_2		11176  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_HEADING_2		11188  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_POSITION_2		11200  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_HEADING_2		11212  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M		12785  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_POSITION_2		12736  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_HEADING_2		12750  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_POSITION_2		12764  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_HEADING_2		12778  /**/
 flag Base_Waypoint_m_Decode(Base_Waypoint_m* pVal, BitStream* pBitStrm, int* pErrCode);
 
 
@@ -447,19 +447,19 @@ typedef struct {
 
 void Std_orogen_typekits_mtype_std_vector_base_Waypoint_Initialize(Std_orogen_typekits_mtype_std_vector_base_Waypoint* pVal);
 
-#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		4616  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		4611  /**/
+#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		5300  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		5293  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_Waypoint_IsConstraintValid(const Std_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		4617  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		4612  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		5301  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		5294  /**/
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_Waypoint_REQUIRED_BYTES_FOR_ENCODING       15651 
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_Waypoint_REQUIRED_BITS_FOR_ENCODING        125208
 
 flag Std_orogen_typekits_mtype_std_vector_base_Waypoint_Encode(const Std_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		4618  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		4613  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		5302  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		5295  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_Waypoint_Decode(Std_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Wrench_m --------------------------------------------*/
 typedef struct {
@@ -470,22 +470,22 @@ typedef struct {
 
 void Base_Wrench_m_Initialize(Base_Wrench_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_M		11284  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_M_FORCE_2		11248  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_M_TORQUE_2		11279  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_M		12860  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_M_FORCE_2		12818  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_WRENCH_M_TORQUE_2		12853  /**/
 flag Base_Wrench_m_IsConstraintValid(const Base_Wrench_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_M		11285  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_M_FORCE_2		11249  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_M_TORQUE_2		11280  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_M		12861  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_M_FORCE_2		12819  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_WRENCH_M_TORQUE_2		12854  /**/
 #define i3ds_asn1_Base_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       79 
 #define i3ds_asn1_Base_Wrench_m_REQUIRED_BITS_FOR_ENCODING        628
 
 flag Base_Wrench_m_Encode(const Base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_M		11286  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_M_FORCE_2		11250  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_M_TORQUE_2		11281  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_M		12862  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_M_FORCE_2		12820  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_WRENCH_M_TORQUE_2		12855  /**/
 flag Base_Wrench_m_Decode(Base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
 
 
@@ -497,19 +497,19 @@ typedef struct {
 
 void Std_orogen_typekits_mtype_std_vector_base_Wrench_Initialize(Std_orogen_typekits_mtype_std_vector_base_Wrench* pVal);
 
-#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		4697  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		4692  /**/
+#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		5391  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		5384  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_Wrench_IsConstraintValid(const Std_orogen_typekits_mtype_std_vector_base_Wrench* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		4698  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		4693  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		5392  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		5385  /**/
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_Wrench_REQUIRED_BYTES_FOR_ENCODING       15701 
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_Wrench_REQUIRED_BITS_FOR_ENCODING        125608
 
 flag Std_orogen_typekits_mtype_std_vector_base_Wrench_Encode(const Std_orogen_typekits_mtype_std_vector_base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		4699  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		4694  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		5393  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		5386  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_Wrench_Decode(Std_orogen_typekits_mtype_std_vector_base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Matrix3d --------------------------------------------*/
 
@@ -527,22 +527,22 @@ typedef struct {
 void Wrappers_Matrix3d_data_Initialize(Wrappers_Matrix3d_data* pVal);
 void Wrappers_Matrix3d_Initialize(Wrappers_Matrix3d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_MATRIX3D		10518  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX3D_DATA		10511  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX3D_DATA_ELM_2		10506  /**/
+#define i3ds_asn1_ERR_WRAPPERS_MATRIX3D		12006  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX3D_DATA		11999  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX3D_DATA_ELM_2		11992  /**/
 flag Wrappers_Matrix3d_IsConstraintValid(const Wrappers_Matrix3d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX3D		10519  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA		10512  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA_ELM_2		10507  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX3D		12007  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA		12000  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA_ELM_2		11993  /**/
 #define i3ds_asn1_Wrappers_Matrix3d_REQUIRED_BYTES_FOR_ENCODING       118 
 #define i3ds_asn1_Wrappers_Matrix3d_REQUIRED_BITS_FOR_ENCODING        940
 
 flag Wrappers_Matrix3d_Encode(const Wrappers_Matrix3d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX3D		10520  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA		10513  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA_ELM_2		10508  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX3D		12008  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA		12001  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA_ELM_2		11994  /**/
 flag Wrappers_Matrix3d_Decode(Wrappers_Matrix3d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Vector4d --------------------------------------------*/
 
@@ -560,22 +560,22 @@ typedef struct {
 void Wrappers_Vector4d_data_Initialize(Wrappers_Vector4d_data* pVal);
 void Wrappers_Vector4d_Initialize(Wrappers_Vector4d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_VECTOR4D		10544  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR4D_DATA		10537  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR4D_DATA_ELM_2		10532  /**/
+#define i3ds_asn1_ERR_WRAPPERS_VECTOR4D		12034  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR4D_DATA		12027  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR4D_DATA_ELM_2		12020  /**/
 flag Wrappers_Vector4d_IsConstraintValid(const Wrappers_Vector4d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR4D		10545  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA		10538  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA_ELM_2		10533  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR4D		12035  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA		12028  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA_ELM_2		12021  /**/
 #define i3ds_asn1_Wrappers_Vector4d_REQUIRED_BYTES_FOR_ENCODING       53 
 #define i3ds_asn1_Wrappers_Vector4d_REQUIRED_BITS_FOR_ENCODING        418
 
 flag Wrappers_Vector4d_Encode(const Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR4D		10546  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA		10539  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA_ELM_2		10534  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR4D		12036  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA		12029  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA_ELM_2		12022  /**/
 flag Wrappers_Vector4d_Decode(Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode);
 
 
@@ -587,19 +587,19 @@ typedef struct {
 
 void Std_vector_Wrappers_Vector4d_Initialize(Std_vector_Wrappers_Vector4d* pVal);
 
-#define i3ds_asn1_ERR_STD_VECTOR_WRAPPERS_VECTOR4D		4735  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		4730  /**/
+#define i3ds_asn1_ERR_STD_VECTOR_WRAPPERS_VECTOR4D		5433  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		5426  /**/
 flag Std_vector_Wrappers_Vector4d_IsConstraintValid(const Std_vector_Wrappers_Vector4d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D		4736  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		4731  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D		5434  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		5427  /**/
 #define Std_vector_i3ds_asn1_Wrappers_Vector4d_REQUIRED_BYTES_FOR_ENCODING       10451 
 #define Std_vector_i3ds_asn1_Wrappers_Vector4d_REQUIRED_BITS_FOR_ENCODING        83608
 
 flag Std_vector_Wrappers_Vector4d_Encode(const Std_vector_Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D		4737  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		4732  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D		5435  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		5428  /**/
 flag Std_vector_Wrappers_Vector4d_Decode(Std_vector_Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Matrix4d --------------------------------------------*/
 
@@ -617,22 +617,22 @@ typedef struct {
 void Wrappers_Matrix4d_data_Initialize(Wrappers_Matrix4d_data* pVal);
 void Wrappers_Matrix4d_Initialize(Wrappers_Matrix4d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_MATRIX4D		10570  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX4D_DATA		10563  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX4D_DATA_ELM_2		10558  /**/
+#define i3ds_asn1_ERR_WRAPPERS_MATRIX4D		12062  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX4D_DATA		12055  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX4D_DATA_ELM_2		12048  /**/
 flag Wrappers_Matrix4d_IsConstraintValid(const Wrappers_Matrix4d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX4D		10571  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA		10564  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA_ELM_2		10559  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX4D		12063  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA		12056  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA_ELM_2		12049  /**/
 #define i3ds_asn1_Wrappers_Matrix4d_REQUIRED_BYTES_FOR_ENCODING       209 
 #define i3ds_asn1_Wrappers_Matrix4d_REQUIRED_BITS_FOR_ENCODING        1668
 
 flag Wrappers_Matrix4d_Encode(const Wrappers_Matrix4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX4D		10572  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA		10565  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA_ELM_2		10560  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX4D		12064  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA		12057  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA_ELM_2		12050  /**/
 flag Wrappers_Matrix4d_Decode(Wrappers_Matrix4d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Vector6d --------------------------------------------*/
 
@@ -650,22 +650,22 @@ typedef struct {
 void Wrappers_Vector6d_data_Initialize(Wrappers_Vector6d_data* pVal);
 void Wrappers_Vector6d_Initialize(Wrappers_Vector6d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_VECTOR6D		10596  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR6D_DATA		10589  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR6D_DATA_ELM_2		10584  /**/
+#define i3ds_asn1_ERR_WRAPPERS_VECTOR6D		12090  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR6D_DATA		12083  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTOR6D_DATA_ELM_2		12076  /**/
 flag Wrappers_Vector6d_IsConstraintValid(const Wrappers_Vector6d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR6D		10597  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA		10590  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA_ELM_2		10585  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR6D		12091  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA		12084  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA_ELM_2		12077  /**/
 #define i3ds_asn1_Wrappers_Vector6d_REQUIRED_BYTES_FOR_ENCODING       79 
 #define i3ds_asn1_Wrappers_Vector6d_REQUIRED_BITS_FOR_ENCODING        627
 
 flag Wrappers_Vector6d_Encode(const Wrappers_Vector6d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR6D		10598  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA		10591  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA_ELM_2		10586  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR6D		12092  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA		12085  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA_ELM_2		12078  /**/
 flag Wrappers_Vector6d_Decode(Wrappers_Vector6d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Matrix6d --------------------------------------------*/
 
@@ -683,22 +683,22 @@ typedef struct {
 void Wrappers_Matrix6d_data_Initialize(Wrappers_Matrix6d_data* pVal);
 void Wrappers_Matrix6d_Initialize(Wrappers_Matrix6d* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_MATRIX6D		10622  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX6D_DATA		10615  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX6D_DATA_ELM_2		10610  /**/
+#define i3ds_asn1_ERR_WRAPPERS_MATRIX6D		12118  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX6D_DATA		12111  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIX6D_DATA_ELM_2		12104  /**/
 flag Wrappers_Matrix6d_IsConstraintValid(const Wrappers_Matrix6d* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX6D		10623  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA		10616  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA_ELM_2		10611  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX6D		12119  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA		12112  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA_ELM_2		12105  /**/
 #define i3ds_asn1_Wrappers_Matrix6d_REQUIRED_BYTES_FOR_ENCODING       469 
 #define i3ds_asn1_Wrappers_Matrix6d_REQUIRED_BITS_FOR_ENCODING        3750
 
 flag Wrappers_Matrix6d_Encode(const Wrappers_Matrix6d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX6D		10624  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA		10617  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA_ELM_2		10612  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX6D		12120  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA		12113  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA_ELM_2		12106  /**/
 flag Wrappers_Matrix6d_Decode(Wrappers_Matrix6d* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_TwistWithCovariance --------------------------------------------*/
 typedef struct {
@@ -710,25 +710,25 @@ typedef struct {
 
 void Base_TwistWithCovariance_Initialize(Base_TwistWithCovariance* pVal);
 
-#define i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE		5157  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_VEL_2		5090  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_ROT_2		5121  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_COV_2		5152  /**/
+#define i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE		5909  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_VEL_2		5832  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_ROT_2		5867  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_COV_2		5902  /**/
 flag Base_TwistWithCovariance_IsConstraintValid(const Base_TwistWithCovariance* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE		5158  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_VEL_2		5091  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_ROT_2		5122  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_COV_2		5153  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE		5910  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_VEL_2		5833  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_ROT_2		5868  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_COV_2		5903  /**/
 #define i3ds_asn1_Base_TwistWithCovariance_REQUIRED_BYTES_FOR_ENCODING       548 
 #define i3ds_asn1_Base_TwistWithCovariance_REQUIRED_BITS_FOR_ENCODING        4378
 
 flag Base_TwistWithCovariance_Encode(const Base_TwistWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE		5159  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_VEL_2		5092  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_ROT_2		5123  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_COV_2		5154  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE		5911  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_VEL_2		5834  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_ROT_2		5869  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_COV_2		5904  /**/
 flag Base_TwistWithCovariance_Decode(Base_TwistWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_TwistWithCovariance_m --------------------------------------------*/
 typedef struct {
@@ -740,25 +740,25 @@ typedef struct {
 
 void Base_TwistWithCovariance_m_Initialize(Base_TwistWithCovariance_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M		11141  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_2		11074  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_2		11105  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M_COV_2		11136  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M		12699  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_2		12622  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_2		12657  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TWISTWITHCOVARIANCE_M_COV_2		12692  /**/
 flag Base_TwistWithCovariance_m_IsConstraintValid(const Base_TwistWithCovariance_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M		11142  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		11075  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		11106  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		11137  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M		12700  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		12623  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		12658  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		12693  /**/
 #define i3ds_asn1_Base_TwistWithCovariance_m_REQUIRED_BYTES_FOR_ENCODING       548 
 #define i3ds_asn1_Base_TwistWithCovariance_m_REQUIRED_BITS_FOR_ENCODING        4378
 
 flag Base_TwistWithCovariance_m_Encode(const Base_TwistWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M		11143  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		11076  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		11107  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		11138  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M		12701  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		12624  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		12659  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		12694  /**/
 flag Base_TwistWithCovariance_m_Decode(Base_TwistWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_Quaterniond --------------------------------------------*/
 
@@ -777,25 +777,25 @@ typedef struct {
 void Wrappers_Quaterniond_im_Initialize(Wrappers_Quaterniond_im* pVal);
 void Wrappers_Quaterniond_Initialize(Wrappers_Quaterniond* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_QUATERNIOND		10710  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_QUATERNIOND_IM		10691  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_QUATERNIOND_IM_ELM_2		10686  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_QUATERNIOND_RE_2		10705  /**/
+#define i3ds_asn1_ERR_WRAPPERS_QUATERNIOND		12216  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_QUATERNIOND_IM		12195  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_QUATERNIOND_IM_ELM_2		12188  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_QUATERNIOND_RE_2		12209  /**/
 flag Wrappers_Quaterniond_IsConstraintValid(const Wrappers_Quaterniond* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND		10711  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM		10692  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM_ELM_2		10687  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_RE_2		10706  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND		12217  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM		12196  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM_ELM_2		12189  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_RE_2		12210  /**/
 #define i3ds_asn1_Wrappers_Quaterniond_REQUIRED_BYTES_FOR_ENCODING       53 
 #define i3ds_asn1_Wrappers_Quaterniond_REQUIRED_BITS_FOR_ENCODING        418
 
 flag Wrappers_Quaterniond_Encode(const Wrappers_Quaterniond* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND		10712  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM		10693  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM_ELM_2		10688  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_RE_2		10707  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND		12218  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM		12197  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM_ELM_2		12190  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_RE_2		12211  /**/
 flag Wrappers_Quaterniond_Decode(Wrappers_Quaterniond* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Pose --------------------------------------------*/
 typedef struct {
@@ -806,22 +806,22 @@ typedef struct {
 
 void Base_Pose_Initialize(Base_Pose* pVal);
 
-#define i3ds_asn1_ERR_BASE_POSE		4945  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_POSITION_2		4897  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_ORIENTATION_2		4940  /**/
+#define i3ds_asn1_ERR_BASE_POSE		5671  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_POSITION_2		5615  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_ORIENTATION_2		5664  /**/
 flag Base_Pose_IsConstraintValid(const Base_Pose* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE		4946  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_POSITION_2		4898  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_ORIENTATION_2		4941  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE		5672  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_POSITION_2		5616  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_ORIENTATION_2		5665  /**/
 #define i3ds_asn1_Base_Pose_REQUIRED_BYTES_FOR_ENCODING       92 
 #define i3ds_asn1_Base_Pose_REQUIRED_BITS_FOR_ENCODING        732
 
 flag Base_Pose_Encode(const Base_Pose* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_POSE		4947  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_POSITION_2		4899  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_ORIENTATION_2		4942  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_POSE		5673  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_POSITION_2		5617  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_ORIENTATION_2		5666  /**/
 flag Base_Pose_Decode(Base_Pose* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_TransformWithCovariance --------------------------------------------*/
 typedef struct {
@@ -833,25 +833,25 @@ typedef struct {
 
 void Base_TransformWithCovariance_Initialize(Base_TransformWithCovariance* pVal);
 
-#define i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE		5057  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		4978  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		5021  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_COV_2		5052  /**/
+#define i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE		5797  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		5706  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		5755  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_COV_2		5790  /**/
 flag Base_TransformWithCovariance_IsConstraintValid(const Base_TransformWithCovariance* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE		5058  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		4979  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		5022  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		5053  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE		5798  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		5707  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		5756  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		5791  /**/
 #define i3ds_asn1_Base_TransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING       561 
 #define i3ds_asn1_Base_TransformWithCovariance_REQUIRED_BITS_FOR_ENCODING        4482
 
 flag Base_TransformWithCovariance_Encode(const Base_TransformWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE		5059  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		4980  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		5023  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		5054  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE		5799  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		5708  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		5757  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		5792  /**/
 flag Base_TransformWithCovariance_Decode(Base_TransformWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Pose_m --------------------------------------------*/
 typedef struct {
@@ -862,22 +862,22 @@ typedef struct {
 
 void Base_Pose_m_Initialize(Base_Pose_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_M		10929  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_M_POSITION_2		10881  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_M_ORIENTATION_2		10924  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_M		12461  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_M_POSITION_2		12405  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_POSE_M_ORIENTATION_2		12454  /**/
 flag Base_Pose_m_IsConstraintValid(const Base_Pose_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_M		10930  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_M_POSITION_2		10882  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_M_ORIENTATION_2		10925  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_M		12462  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_M_POSITION_2		12406  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_POSE_M_ORIENTATION_2		12455  /**/
 #define i3ds_asn1_Base_Pose_m_REQUIRED_BYTES_FOR_ENCODING       92 
 #define i3ds_asn1_Base_Pose_m_REQUIRED_BITS_FOR_ENCODING        732
 
 flag Base_Pose_m_Encode(const Base_Pose_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_M		10931  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_M_POSITION_2		10883  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_M_ORIENTATION_2		10926  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_M		12463  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_M_POSITION_2		12407  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_POSE_M_ORIENTATION_2		12456  /**/
 flag Base_Pose_m_Decode(Base_Pose_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_TransformWithCovariance_m --------------------------------------------*/
 typedef struct {
@@ -889,25 +889,25 @@ typedef struct {
 
 void Base_TransformWithCovariance_m_Initialize(Base_TransformWithCovariance_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M		11041  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		10962  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		11005  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		11036  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M		12587  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		12496  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		12545  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		12580  /**/
 flag Base_TransformWithCovariance_m_IsConstraintValid(const Base_TransformWithCovariance_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M		11042  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		10963  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		11006  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		11037  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M		12588  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		12497  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		12546  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		12581  /**/
 #define i3ds_asn1_Base_TransformWithCovariance_m_REQUIRED_BYTES_FOR_ENCODING       561 
 #define i3ds_asn1_Base_TransformWithCovariance_m_REQUIRED_BITS_FOR_ENCODING        4482
 
 flag Base_TransformWithCovariance_m_Encode(const Base_TransformWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M		11043  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		10964  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		11007  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		11038  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M		12589  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		12498  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		12547  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		12582  /**/
 flag Base_TransformWithCovariance_m_Decode(Base_TransformWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_VectorXd --------------------------------------------*/
 
@@ -925,22 +925,22 @@ typedef struct {
 void Wrappers_VectorXd_data_Initialize(Wrappers_VectorXd_data* pVal);
 void Wrappers_VectorXd_Initialize(Wrappers_VectorXd* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_VECTORXD		10736  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTORXD_DATA		10729  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTORXD_DATA_ELM_2		10724  /**/
+#define i3ds_asn1_ERR_WRAPPERS_VECTORXD		12244  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTORXD_DATA		12237  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_VECTORXD_DATA_ELM_2		12230  /**/
 flag Wrappers_VectorXd_IsConstraintValid(const Wrappers_VectorXd* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTORXD		10737  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA		10730  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA_ELM_2		10725  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTORXD		12245  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA		12238  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA_ELM_2		12231  /**/
 #define i3ds_asn1_Wrappers_VectorXd_REQUIRED_BYTES_FOR_ENCODING       2601 
 #define i3ds_asn1_Wrappers_VectorXd_REQUIRED_BITS_FOR_ENCODING        20808
 
 flag Wrappers_VectorXd_Encode(const Wrappers_VectorXd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTORXD		10738  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA		10731  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA_ELM_2		10726  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTORXD		12246  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA		12239  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA_ELM_2		12232  /**/
 flag Wrappers_VectorXd_Decode(Wrappers_VectorXd* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointState --------------------------------------------*/
 typedef struct {
@@ -954,31 +954,31 @@ typedef struct {
 
 void Base_JointState_Initialize(Base_JointState* pVal);
 
-#define i3ds_asn1_ERR_BASE_JOINTSTATE		5312  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_POSITION_2		5259  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_SPEED_2		5271  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_EFFORT_2		5283  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_RAW_2		5295  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_ACCELERATION_2		5307  /**/
+#define i3ds_asn1_ERR_BASE_JOINTSTATE		6084  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_POSITION_2		6021  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_SPEED_2		6035  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_EFFORT_2		6049  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_RAW_2		6063  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_ACCELERATION_2		6077  /**/
 flag Base_JointState_IsConstraintValid(const Base_JointState* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE		5313  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_POSITION_2		5260  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_SPEED_2		5272  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_EFFORT_2		5284  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_RAW_2		5296  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_ACCELERATION_2		5308  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE		6085  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_POSITION_2		6022  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_SPEED_2		6036  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_EFFORT_2		6050  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_RAW_2		6064  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_ACCELERATION_2		6078  /**/
 #define i3ds_asn1_Base_JointState_REQUIRED_BYTES_FOR_ENCODING       65 
 #define i3ds_asn1_Base_JointState_REQUIRED_BITS_FOR_ENCODING        520
 
 flag Base_JointState_Encode(const Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE		5314  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_POSITION_2		5261  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_SPEED_2		5273  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_EFFORT_2		5285  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_RAW_2		5297  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_ACCELERATION_2		5309  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE		6086  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_POSITION_2		6023  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_SPEED_2		6037  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_EFFORT_2		6051  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_RAW_2		6065  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_ACCELERATION_2		6079  /**/
 flag Base_JointState_Decode(Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode);
 
 
@@ -990,19 +990,19 @@ typedef struct {
 
 void Base_JointTrajectory_Initialize(Base_JointTrajectory* pVal);
 
-#define i3ds_asn1_ERR_BASE_JOINTTRAJECTORY		4456  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRAJECTORY_ELM_2		4451  /**/
+#define i3ds_asn1_ERR_BASE_JOINTTRAJECTORY		5118  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRAJECTORY_ELM_2		5111  /**/
 flag Base_JointTrajectory_IsConstraintValid(const Base_JointTrajectory* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY		4457  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY_ELM_2		4452  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY		5119  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY_ELM_2		5112  /**/
 #define i3ds_asn1_Base_JointTrajectory_REQUIRED_BYTES_FOR_ENCODING       13001 
 #define i3ds_asn1_Base_JointTrajectory_REQUIRED_BITS_FOR_ENCODING        104008
 
 flag Base_JointTrajectory_Encode(const Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRAJECTORY		4458  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRAJECTORY_ELM_2		4453  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRAJECTORY		5120  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRAJECTORY_ELM_2		5113  /**/
 flag Base_JointTrajectory_Decode(Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointLimitRange --------------------------------------------*/
 typedef struct {
@@ -1013,22 +1013,22 @@ typedef struct {
 
 void Base_JointLimitRange_Initialize(Base_JointLimitRange* pVal);
 
-#define i3ds_asn1_ERR_BASE_JOINTLIMITRANGE		5792  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITRANGE_MIN_2		5715  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITRANGE_MAX_2		5787  /**/
+#define i3ds_asn1_ERR_BASE_JOINTLIMITRANGE		6630  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITRANGE_MIN_2		6539  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITRANGE_MAX_2		6623  /**/
 flag Base_JointLimitRange_IsConstraintValid(const Base_JointLimitRange* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE		5793  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MIN_2		5716  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MAX_2		5788  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE		6631  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MIN_2		6540  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MAX_2		6624  /**/
 #define i3ds_asn1_Base_JointLimitRange_REQUIRED_BYTES_FOR_ENCODING       130 
 #define i3ds_asn1_Base_JointLimitRange_REQUIRED_BITS_FOR_ENCODING        1040
 
 flag Base_JointLimitRange_Encode(const Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITRANGE		5794  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MIN_2		5717  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MAX_2		5789  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITRANGE		6632  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MIN_2		6541  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MAX_2		6625  /**/
 flag Base_JointLimitRange_Decode(Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Pressure --------------------------------------------*/
 typedef struct {
@@ -1038,19 +1038,19 @@ typedef struct {
 
 void Base_Pressure_Initialize(Base_Pressure* pVal);
 
-#define i3ds_asn1_ERR_BASE_PRESSURE		5412  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_PRESSURE_PASCAL_2		5407  /**/
+#define i3ds_asn1_ERR_BASE_PRESSURE		6196  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_PRESSURE_PASCAL_2		6189  /**/
 flag Base_Pressure_IsConstraintValid(const Base_Pressure* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_PRESSURE		5413  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_PRESSURE_PASCAL_2		5408  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_PRESSURE		6197  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_PRESSURE_PASCAL_2		6190  /**/
 #define i3ds_asn1_Base_Pressure_REQUIRED_BYTES_FOR_ENCODING       13 
 #define i3ds_asn1_Base_Pressure_REQUIRED_BITS_FOR_ENCODING        104
 
 flag Base_Pressure_Encode(const Base_Pressure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_PRESSURE		5414  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_PRESSURE_PASCAL_2		5409  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_PRESSURE		6198  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_PRESSURE_PASCAL_2		6191  /**/
 flag Base_Pressure_Decode(Base_Pressure* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Time --------------------------------------------*/
 typedef struct {
@@ -1060,19 +1060,19 @@ typedef struct {
 
 void Base_Time_Initialize(Base_Time* pVal);
 
-#define i3ds_asn1_ERR_BASE_TIME		5450  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TIME_MICROSECONDS_2		5445  /**/
+#define i3ds_asn1_ERR_BASE_TIME		6238  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TIME_MICROSECONDS_2		6231  /**/
 flag Base_Time_IsConstraintValid(const Base_Time* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TIME		5451  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIME_MICROSECONDS_2		5446  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TIME		6239  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIME_MICROSECONDS_2		6232  /**/
 #define i3ds_asn1_Base_Time_REQUIRED_BYTES_FOR_ENCODING       8 
 #define i3ds_asn1_Base_Time_REQUIRED_BITS_FOR_ENCODING        64
 
 flag Base_Time_Encode(const Base_Time* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_TIME		5452  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIME_MICROSECONDS_2		5447  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_TIME		6240  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIME_MICROSECONDS_2		6233  /**/
 flag Base_Time_Decode(Base_Time* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_TimeStamped_Base_commands_Motion2D --------------------------------------------*/
 typedef struct {
@@ -1085,28 +1085,28 @@ typedef struct {
 
 void Base_TimeStamped_Base_commands_Motion2D_Initialize(Base_TimeStamped_Base_commands_Motion2D* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		5871  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		5806  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		5818  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		5842  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		5866  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		6721  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		6644  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		6658  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		6686  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		6714  /**/
 flag Base_TimeStamped_Base_commands_Motion2D_IsConstraintValid(const Base_TimeStamped_Base_commands_Motion2D* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		5872  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		5807  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		5819  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		5843  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		5867  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		6722  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		6645  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		6659  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		6687  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		6715  /**/
 #define Base_TimeStamped_i3ds_asn1_Base_commands_Motion2D_REQUIRED_BYTES_FOR_ENCODING       47 
 #define Base_TimeStamped_i3ds_asn1_Base_commands_Motion2D_REQUIRED_BITS_FOR_ENCODING        376
 
 flag Base_TimeStamped_Base_commands_Motion2D_Encode(const Base_TimeStamped_Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		5873  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		5808  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		5820  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		5844  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		5868  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		6723  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		6646  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		6660  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		6688  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		6716  /**/
 flag Base_TimeStamped_Base_commands_Motion2D_Decode(Base_TimeStamped_Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_LinearAngular6DCommand --------------------------------------------*/
 typedef struct {
@@ -1118,25 +1118,25 @@ typedef struct {
 
 void Base_LinearAngular6DCommand_Initialize(Base_LinearAngular6DCommand* pVal);
 
-#define i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND		5964  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND_TIME_2		5897  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		5928  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		5959  /**/
+#define i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND		6826  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND_TIME_2		6749  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		6784  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		6819  /**/
 flag Base_LinearAngular6DCommand_IsConstraintValid(const Base_LinearAngular6DCommand* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND		5965  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		5898  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		5929  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		5960  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND		6827  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		6750  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		6785  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		6820  /**/
 #define i3ds_asn1_Base_LinearAngular6DCommand_REQUIRED_BYTES_FOR_ENCODING       87 
 #define i3ds_asn1_Base_LinearAngular6DCommand_REQUIRED_BITS_FOR_ENCODING        692
 
 flag Base_LinearAngular6DCommand_Encode(const Base_LinearAngular6DCommand* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND		5966  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		5899  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		5930  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		5961  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND		6828  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		6751  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		6786  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		6821  /**/
 flag Base_LinearAngular6DCommand_Decode(Base_LinearAngular6DCommand* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_BodyState --------------------------------------------*/
 typedef struct {
@@ -1148,25 +1148,25 @@ typedef struct {
 
 void Base_samples_BodyState_Initialize(Base_samples_BodyState* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE		6351  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_TIME_2		6124  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_POSE_2		6241  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_2		6346  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE		7267  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_TIME_2		7008  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_POSE_2		7141  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_2		7260  /**/
 flag Base_samples_BodyState_IsConstraintValid(const Base_samples_BodyState* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE		6352  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_TIME_2		6125  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_POSE_2		6242  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		6347  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE		7268  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_TIME_2		7009  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_POSE_2		7142  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		7261  /**/
 #define i3ds_asn1_Base_samples_BodyState_REQUIRED_BYTES_FOR_ENCODING       1116 
 #define i3ds_asn1_Base_samples_BodyState_REQUIRED_BITS_FOR_ENCODING        8924
 
 flag Base_samples_BodyState_Encode(const Base_samples_BodyState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE		6353  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_TIME_2		6126  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_POSE_2		6243  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		6348  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE		7269  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_TIME_2		7010  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_POSE_2		7143  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		7262  /**/
 flag Base_samples_BodyState_Decode(Base_samples_BodyState* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_IMUSensors --------------------------------------------*/
 typedef struct {
@@ -1179,28 +1179,28 @@ typedef struct {
 
 void Base_samples_IMUSensors_Initialize(Base_samples_IMUSensors* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS		6475  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_TIME_2		6377  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_ACC_2		6408  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_GYRO_2		6439  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_MAG_2		6470  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS		7407  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_TIME_2		7295  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_ACC_2		7330  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_GYRO_2		7365  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_MAG_2		7400  /**/
 flag Base_samples_IMUSensors_IsConstraintValid(const Base_samples_IMUSensors* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS		6476  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_TIME_2		6378  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_ACC_2		6409  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		6440  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_MAG_2		6471  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS		7408  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_TIME_2		7296  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_ACC_2		7331  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		7366  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_MAG_2		7401  /**/
 #define i3ds_asn1_Base_samples_IMUSensors_REQUIRED_BYTES_FOR_ENCODING       126 
 #define i3ds_asn1_Base_samples_IMUSensors_REQUIRED_BITS_FOR_ENCODING        1006
 
 flag Base_samples_IMUSensors_Encode(const Base_samples_IMUSensors* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS		6477  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_TIME_2		6379  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_ACC_2		6410  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		6441  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_MAG_2		6472  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS		7409  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_TIME_2		7297  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_ACC_2		7332  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		7367  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_MAG_2		7402  /**/
 flag Base_samples_IMUSensors_Decode(Base_samples_IMUSensors* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Motion2D --------------------------------------------*/
 typedef struct {
@@ -1213,28 +1213,28 @@ typedef struct {
 
 void Base_samples_Motion2D_Initialize(Base_samples_Motion2D* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D		6554  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_TRANSLATION_2		6489  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_ROTATION_2		6501  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_HEADING_2		6525  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_TIME_2		6549  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D		7498  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_TRANSLATION_2		7421  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_ROTATION_2		7435  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_HEADING_2		7463  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_MOTION2D_TIME_2		7491  /**/
 flag Base_samples_Motion2D_IsConstraintValid(const Base_samples_Motion2D* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D		6555  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		6490  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_ROTATION_2		6502  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_HEADING_2		6526  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TIME_2		6550  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D		7499  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		7422  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_ROTATION_2		7436  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_HEADING_2		7464  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TIME_2		7492  /**/
 #define i3ds_asn1_Base_samples_Motion2D_REQUIRED_BYTES_FOR_ENCODING       47 
 #define i3ds_asn1_Base_samples_Motion2D_REQUIRED_BITS_FOR_ENCODING        376
 
 flag Base_samples_Motion2D_Encode(const Base_samples_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D		6556  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		6491  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_ROTATION_2		6503  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_HEADING_2		6527  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TIME_2		6551  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D		7500  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		7423  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_ROTATION_2		7437  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_HEADING_2		7465  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TIME_2		7493  /**/
 flag Base_samples_Motion2D_Decode(Base_samples_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Pressure --------------------------------------------*/
 typedef struct {
@@ -1245,22 +1245,22 @@ typedef struct {
 
 void Base_samples_Pressure_Initialize(Base_samples_Pressure* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_PRESSURE		6597  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_PRESSURE_PASCAL_2		6568  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_PRESSURE_TIME_2		6592  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_PRESSURE		7547  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_PRESSURE_PASCAL_2		7512  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_PRESSURE_TIME_2		7540  /**/
 flag Base_samples_Pressure_IsConstraintValid(const Base_samples_Pressure* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE		6598  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_PASCAL_2		6569  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_TIME_2		6593  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE		7548  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_PASCAL_2		7513  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_TIME_2		7541  /**/
 #define i3ds_asn1_Base_samples_Pressure_REQUIRED_BYTES_FOR_ENCODING       21 
 #define i3ds_asn1_Base_samples_Pressure_REQUIRED_BITS_FOR_ENCODING        168
 
 flag Base_samples_Pressure_Encode(const Base_samples_Pressure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE		6599  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_PASCAL_2		6570  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_TIME_2		6594  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE		7549  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_PASCAL_2		7514  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_TIME_2		7542  /**/
 flag Base_samples_Pressure_Decode(Base_samples_Pressure* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_RigidBodyAcceleration --------------------------------------------*/
 typedef struct {
@@ -1274,31 +1274,31 @@ typedef struct {
 
 void Base_samples_RigidBodyAcceleration_Initialize(Base_samples_RigidBodyAcceleration* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION		6752  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		6623  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		6654  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		6685  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		6716  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		6747  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION		7722  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		7575  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		7610  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		7645  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		7680  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		7715  /**/
 flag Base_samples_RigidBodyAcceleration_IsConstraintValid(const Base_samples_RigidBodyAcceleration* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION		6753  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		6624  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		6655  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		6686  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		6717  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		6748  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION		7723  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		7576  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		7611  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		7646  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		7681  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		7716  /**/
 #define i3ds_asn1_Base_samples_RigidBodyAcceleration_REQUIRED_BYTES_FOR_ENCODING       322 
 #define i3ds_asn1_Base_samples_RigidBodyAcceleration_REQUIRED_BITS_FOR_ENCODING        2572
 
 flag Base_samples_RigidBodyAcceleration_Encode(const Base_samples_RigidBodyAcceleration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION		6754  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		6625  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		6656  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		6687  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		6718  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		6749  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION		7724  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		7577  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		7612  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		7647  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		7682  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		7717  /**/
 flag Base_samples_RigidBodyAcceleration_Decode(Base_samples_RigidBodyAcceleration* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Wrench --------------------------------------------*/
 typedef struct {
@@ -1310,25 +1310,25 @@ typedef struct {
 
 void Base_samples_Wrench_Initialize(Base_samples_Wrench* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_WRENCH		6845  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_FORCE_2		6785  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_TORQUE_2		6816  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_TIME_2		6840  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_WRENCH		7827  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_FORCE_2		7757  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_TORQUE_2		7792  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_TIME_2		7820  /**/
 flag Base_samples_Wrench_IsConstraintValid(const Base_samples_Wrench* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH		6846  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_FORCE_2		6786  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TORQUE_2		6817  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TIME_2		6841  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH		7828  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_FORCE_2		7758  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TORQUE_2		7793  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TIME_2		7821  /**/
 #define i3ds_asn1_Base_samples_Wrench_REQUIRED_BYTES_FOR_ENCODING       87 
 #define i3ds_asn1_Base_samples_Wrench_REQUIRED_BITS_FOR_ENCODING        692
 
 flag Base_samples_Wrench_Encode(const Base_samples_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH		6847  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_FORCE_2		6787  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TORQUE_2		6818  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TIME_2		6842  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH		7829  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_FORCE_2		7759  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TORQUE_2		7794  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TIME_2		7822  /**/
 flag Base_samples_Wrench_Decode(Base_samples_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Pointcloud --------------------------------------------*/
 
@@ -1356,31 +1356,31 @@ void Base_samples_Pointcloud_points_Initialize(Base_samples_Pointcloud_points* p
 void Base_samples_Pointcloud_colors_Initialize(Base_samples_Pointcloud_colors* pVal);
 void Base_samples_Pointcloud_Initialize(Base_samples_Pointcloud* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD		8476  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_TIME_2		8395  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_POINTS		8431  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		8426  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_COLORS		8469  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		8464  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD		9682  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_TIME_2		9591  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_POINTS		9633  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		9626  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_COLORS		9675  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		9668  /**/
 flag Base_samples_Pointcloud_IsConstraintValid(const Base_samples_Pointcloud* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD		8477  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_TIME_2		8396  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS		8432  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		8427  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS		8470  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		8465  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD		9683  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_TIME_2		9592  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS		9634  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		9627  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS		9676  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		9669  /**/
 #define i3ds_asn1_Base_samples_Pointcloud_REQUIRED_BYTES_FOR_ENCODING       18310 
 #define i3ds_asn1_Base_samples_Pointcloud_REQUIRED_BITS_FOR_ENCODING        146480
 
 flag Base_samples_Pointcloud_Encode(const Base_samples_Pointcloud* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD		8478  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_TIME_2		8397  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS		8433  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		8428  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS		8471  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		8466  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD		9684  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_TIME_2		9593  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS		9635  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		9628  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS		9677  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		9670  /**/
 flag Base_samples_Pointcloud_Decode(Base_samples_Pointcloud* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_SonarBeam --------------------------------------------*/
 typedef struct {
@@ -1403,37 +1403,37 @@ typedef struct {
 void Base_samples_SonarBeam_beam_Initialize(Base_samples_SonarBeam_beam* pVal);
 void Base_samples_SonarBeam_Initialize(Base_samples_SonarBeam* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM		9121  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_TIME_2		9037  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEARING_2		9061  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		9073  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		9085  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		9097  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		9109  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEAM		9114  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM		10417  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_TIME_2		10319  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEARING_2		10347  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		10361  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		10375  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		10389  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		10403  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARBEAM_BEAM		10410  /**/
 flag Base_samples_SonarBeam_IsConstraintValid(const Base_samples_SonarBeam* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM		9122  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_TIME_2		9038  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEARING_2		9062  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		9074  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		9086  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		9098  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		9110  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAM		9115  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM		10418  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_TIME_2		10320  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEARING_2		10348  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		10362  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		10376  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		10390  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		10404  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAM		10411  /**/
 #define i3ds_asn1_Base_samples_SonarBeam_REQUIRED_BYTES_FOR_ENCODING       274 
 #define i3ds_asn1_Base_samples_SonarBeam_REQUIRED_BITS_FOR_ENCODING        2192
 
 flag Base_samples_SonarBeam_Encode(const Base_samples_SonarBeam* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM		9123  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_TIME_2		9039  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEARING_2		9063  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		9075  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		9087  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		9099  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		9111  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAM		9116  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM		10419  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_TIME_2		10321  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEARING_2		10349  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		10363  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		10377  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		10391  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		10405  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAM		10412  /**/
 flag Base_samples_SonarBeam_Decode(Base_samples_SonarBeam* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_commands_LinearAngular6DCommand_m --------------------------------------------*/
 typedef struct {
@@ -1445,25 +1445,25 @@ typedef struct {
 
 void Base_commands_LinearAngular6DCommand_m_Initialize(Base_commands_LinearAngular6DCommand_m* pVal);
 
-#define i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		11377  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		11310  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		11341  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		11372  /**/
+#define i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		12965  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		12888  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		12923  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		12958  /**/
 flag Base_commands_LinearAngular6DCommand_m_IsConstraintValid(const Base_commands_LinearAngular6DCommand_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		11378  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		11311  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		11342  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		11373  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		12966  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		12889  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		12924  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		12959  /**/
 #define i3ds_asn1_Base_commands_LinearAngular6DCommand_m_REQUIRED_BYTES_FOR_ENCODING       87 
 #define i3ds_asn1_Base_commands_LinearAngular6DCommand_m_REQUIRED_BITS_FOR_ENCODING        692
 
 flag Base_commands_LinearAngular6DCommand_m_Encode(const Base_commands_LinearAngular6DCommand_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		11379  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		11312  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		11343  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		11374  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		12967  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		12890  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		12925  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		12960  /**/
 flag Base_commands_LinearAngular6DCommand_m_Decode(Base_commands_LinearAngular6DCommand_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_BodyState_m --------------------------------------------*/
 typedef struct {
@@ -1475,25 +1475,25 @@ typedef struct {
 
 void Base_samples_BodyState_m_Initialize(Base_samples_BodyState_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M		11630  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M_TIME_2		11403  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M_POSE_2		11520  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		11625  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M		13252  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M_TIME_2		12993  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M_POSE_2		13126  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		13245  /**/
 flag Base_samples_BodyState_m_IsConstraintValid(const Base_samples_BodyState_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M		11631  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		11404  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		11521  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		11626  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M		13253  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		12994  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		13127  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		13246  /**/
 #define i3ds_asn1_Base_samples_BodyState_m_REQUIRED_BYTES_FOR_ENCODING       1116 
 #define i3ds_asn1_Base_samples_BodyState_m_REQUIRED_BITS_FOR_ENCODING        8924
 
 flag Base_samples_BodyState_m_Encode(const Base_samples_BodyState_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M		11632  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		11405  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		11522  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		11627  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M		13254  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		12995  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		13128  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		13247  /**/
 flag Base_samples_BodyState_m_Decode(Base_samples_BodyState_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_IMUSensors_m --------------------------------------------*/
 typedef struct {
@@ -1506,28 +1506,28 @@ typedef struct {
 
 void Base_samples_IMUSensors_m_Initialize(Base_samples_IMUSensors_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M		11754  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_TIME_2		11656  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_2		11687  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		11718  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_2		11749  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M		13392  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_TIME_2		13280  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_2		13315  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		13350  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_2		13385  /**/
 flag Base_samples_IMUSensors_m_IsConstraintValid(const Base_samples_IMUSensors_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M		11755  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		11657  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		11688  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		11719  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		11750  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M		13393  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		13281  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		13316  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		13351  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		13386  /**/
 #define i3ds_asn1_Base_samples_IMUSensors_m_REQUIRED_BYTES_FOR_ENCODING       126 
 #define i3ds_asn1_Base_samples_IMUSensors_m_REQUIRED_BITS_FOR_ENCODING        1006
 
 flag Base_samples_IMUSensors_m_Encode(const Base_samples_IMUSensors_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M		11756  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		11658  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		11689  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		11720  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		11751  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M		13394  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		13282  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		13317  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		13352  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		13387  /**/
 flag Base_samples_IMUSensors_m_Decode(Base_samples_IMUSensors_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_RigidBodyAcceleration_m --------------------------------------------*/
 typedef struct {
@@ -1541,31 +1541,31 @@ typedef struct {
 
 void Base_samples_RigidBodyAcceleration_m_Initialize(Base_samples_RigidBodyAcceleration_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M		11909  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		11780  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		11811  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		11842  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		11873  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		11904  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M		13567  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		13420  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		13455  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		13490  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		13525  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		13560  /**/
 flag Base_samples_RigidBodyAcceleration_m_IsConstraintValid(const Base_samples_RigidBodyAcceleration_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		11910  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		11781  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		11812  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		11843  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		11874  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		11905  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		13568  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		13421  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		13456  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		13491  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		13526  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		13561  /**/
 #define i3ds_asn1_Base_samples_RigidBodyAcceleration_m_REQUIRED_BYTES_FOR_ENCODING       322 
 #define i3ds_asn1_Base_samples_RigidBodyAcceleration_m_REQUIRED_BITS_FOR_ENCODING        2572
 
 flag Base_samples_RigidBodyAcceleration_m_Encode(const Base_samples_RigidBodyAcceleration_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		11911  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		11782  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		11813  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		11844  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		11875  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		11906  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		13569  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		13422  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		13457  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		13492  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		13527  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		13562  /**/
 flag Base_samples_RigidBodyAcceleration_m_Decode(Base_samples_RigidBodyAcceleration_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Wrench_m --------------------------------------------*/
 typedef struct {
@@ -1577,25 +1577,25 @@ typedef struct {
 
 void Base_samples_Wrench_m_Initialize(Base_samples_Wrench_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M		12317  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M_FORCE_2		12257  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M_TORQUE_2		12288  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M_TIME_2		12312  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M		14029  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M_FORCE_2		13959  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M_TORQUE_2		13994  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCH_M_TIME_2		14022  /**/
 flag Base_samples_Wrench_m_IsConstraintValid(const Base_samples_Wrench_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M		12318  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_FORCE_2		12258  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		12289  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TIME_2		12313  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M		14030  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_FORCE_2		13960  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		13995  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TIME_2		14023  /**/
 #define i3ds_asn1_Base_samples_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       87 
 #define i3ds_asn1_Base_samples_Wrench_m_REQUIRED_BITS_FOR_ENCODING        692
 
 flag Base_samples_Wrench_m_Encode(const Base_samples_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M		12319  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_FORCE_2		12259  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		12290  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TIME_2		12314  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M		14031  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_FORCE_2		13961  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		13996  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TIME_2		14024  /**/
 flag Base_samples_Wrench_m_Decode(Base_samples_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Pointcloud_m --------------------------------------------*/
 
@@ -1623,31 +1623,31 @@ void Base_samples_Pointcloud_m_points_Initialize(Base_samples_Pointcloud_m_point
 void Base_samples_Pointcloud_m_colors_Initialize(Base_samples_Pointcloud_m_colors* pVal);
 void Base_samples_Pointcloud_m_Initialize(Base_samples_Pointcloud_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M		12746  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_TIME_2		12665  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS		12701  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		12696  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS		12739  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		12734  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M		14512  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_TIME_2		14421  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS		14463  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		14456  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS		14505  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		14498  /**/
 flag Base_samples_Pointcloud_m_IsConstraintValid(const Base_samples_Pointcloud_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M		12747  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		12666  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		12702  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		12697  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		12740  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		12735  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M		14513  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		14422  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		14464  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		14457  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		14506  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		14499  /**/
 #define i3ds_asn1_Base_samples_Pointcloud_m_REQUIRED_BYTES_FOR_ENCODING       18310 
 #define i3ds_asn1_Base_samples_Pointcloud_m_REQUIRED_BITS_FOR_ENCODING        146480
 
 flag Base_samples_Pointcloud_m_Encode(const Base_samples_Pointcloud_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M		12748  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		12667  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		12703  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		12698  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		12741  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		12736  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M		14514  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		14423  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		14465  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		14458  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		14507  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		14500  /**/
 flag Base_samples_Pointcloud_m_Decode(Base_samples_Pointcloud_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_frame_frame_size_t --------------------------------------------*/
 typedef struct {
@@ -1658,22 +1658,22 @@ typedef struct {
 
 void Base_samples_frame_frame_size_t_Initialize(Base_samples_frame_frame_size_t* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T		6876  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		6859  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		6871  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T		7862  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		7841  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		7855  /**/
 flag Base_samples_frame_frame_size_t_IsConstraintValid(const Base_samples_frame_frame_size_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		6877  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		6860  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		6872  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		7863  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		7842  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		7856  /**/
 #define i3ds_asn1_Base_samples_frame_frame_size_t_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_Base_samples_frame_frame_size_t_REQUIRED_BITS_FOR_ENCODING        32
 
 flag Base_samples_frame_frame_size_t_Encode(const Base_samples_frame_frame_size_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		6878  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		6861  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		6873  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		7864  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		7843  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		7857  /**/
 flag Base_samples_frame_frame_size_t_Decode(Base_samples_frame_frame_size_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_DistanceImage --------------------------------------------*/
 
@@ -1698,43 +1698,43 @@ typedef struct {
 void Base_samples_DistanceImage_data_Initialize(Base_samples_DistanceImage_data* pVal);
 void Base_samples_DistanceImage_Initialize(Base_samples_DistanceImage* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE		8106  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		8010  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		8022  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		8034  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		8046  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		8058  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		8070  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		8082  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA		8099  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		8094  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE		9262  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		9150  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		9164  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		9178  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		9192  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		9206  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		9220  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		9234  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA		9255  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		9248  /**/
 flag Base_samples_DistanceImage_IsConstraintValid(const Base_samples_DistanceImage* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE		8107  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		8011  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		8023  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		8035  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		8047  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		8059  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		8071  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		8083  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		8100  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		8095  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE		9263  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		9151  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		9165  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		9179  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		9193  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		9207  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		9221  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		9235  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		9256  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		9249  /**/
 #define i3ds_asn1_Base_samples_DistanceImage_REQUIRED_BYTES_FOR_ENCODING       2665 
 #define i3ds_asn1_Base_samples_DistanceImage_REQUIRED_BITS_FOR_ENCODING        21320
 
 flag Base_samples_DistanceImage_Encode(const Base_samples_DistanceImage* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE		8108  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		8012  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		8024  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		8036  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		8048  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		8060  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		8072  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		8084  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		8101  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		8096  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE		9264  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		9152  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		9166  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		9180  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		9194  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		9208  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		9222  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		9236  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		9257  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		9250  /**/
 flag Base_samples_DistanceImage_Decode(Base_samples_DistanceImage* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointLimits --------------------------------------------*/
 
@@ -1761,28 +1761,28 @@ void Base_JointLimits_names_Initialize(Base_JointLimits_names* pVal);
 void Base_JointLimits_elements_Initialize(Base_JointLimits_elements* pVal);
 void Base_JointLimits_Initialize(Base_JointLimits* pVal);
 
-#define i3ds_asn1_ERR_BASE_JOINTLIMITS		7065  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_NAMES		6895  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_NAMES_ELM_2		6890  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_ELEMENTS		7058  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_2		7053  /**/
+#define i3ds_asn1_ERR_BASE_JOINTLIMITS		8079  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_NAMES		7883  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_NAMES_ELM_2		7876  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_ELEMENTS		8072  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_2		8065  /**/
 flag Base_JointLimits_IsConstraintValid(const Base_JointLimits* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS		7066  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES		6896  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES_ELM_2		6891  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS		7059  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		7054  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS		8080  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES		7884  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES_ELM_2		7877  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS		8073  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		8066  /**/
 #define i3ds_asn1_Base_JointLimits_REQUIRED_BYTES_FOR_ENCODING       34152 
 #define i3ds_asn1_Base_JointLimits_REQUIRED_BITS_FOR_ENCODING        273216
 
 flag Base_JointLimits_Encode(const Base_JointLimits* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS		7067  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES		6897  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES_ELM_2		6892  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS		7060  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		7055  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS		8081  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES		7885  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES_ELM_2		7878  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS		8074  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		8067  /**/
 flag Base_JointLimits_Decode(Base_JointLimits* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointTransform --------------------------------------------*/
 typedef struct {
@@ -1794,25 +1794,25 @@ typedef struct {
 
 void Base_JointTransform_Initialize(Base_JointTransform* pVal);
 
-#define i3ds_asn1_ERR_BASE_JOINTTRANSFORM		7127  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_SOURCEFRAME_2		7079  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_TARGETFRAME_2		7091  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		7122  /**/
+#define i3ds_asn1_ERR_BASE_JOINTTRANSFORM		8149  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_SOURCEFRAME_2		8093  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_TARGETFRAME_2		8107  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		8142  /**/
 flag Base_JointTransform_IsConstraintValid(const Base_JointTransform* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM		7128  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		7080  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		7092  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		7123  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM		8150  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		8094  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		8108  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		8143  /**/
 #define i3ds_asn1_Base_JointTransform_REQUIRED_BYTES_FOR_ENCODING       121 
 #define i3ds_asn1_Base_JointTransform_REQUIRED_BITS_FOR_ENCODING        966
 
 flag Base_JointTransform_Encode(const Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM		7129  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		7081  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		7093  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		7124  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM		8151  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		8095  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		8109  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		8144  /**/
 flag Base_JointTransform_Decode(Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointTransformVector --------------------------------------------*/
 
@@ -1839,28 +1839,28 @@ void Base_JointTransformVector_names_Initialize(Base_JointTransformVector_names*
 void Base_JointTransformVector_elements_Initialize(Base_JointTransformVector_elements* pVal);
 void Base_JointTransformVector_Initialize(Base_JointTransformVector* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR		9620  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_NAMES		9539  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		9534  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		9613  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		9608  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR		10984  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_NAMES		10893  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		10886  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		10977  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		10970  /**/
 flag Base_JointTransformVector_IsConstraintValid(const Base_JointTransformVector* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR		9621  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES		9540  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		9535  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		9614  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		9609  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR		10985  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES		10894  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		10887  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		10978  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		10971  /**/
 #define i3ds_asn1_Base_JointTransformVector_REQUIRED_BYTES_FOR_ENCODING       32302 
 #define i3ds_asn1_Base_JointTransformVector_REQUIRED_BITS_FOR_ENCODING        258416
 
 flag Base_JointTransformVector_Encode(const Base_JointTransformVector* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR		9622  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES		9541  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		9536  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		9615  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		9610  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR		10986  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES		10895  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		10888  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		10979  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		10972  /**/
 flag Base_JointTransformVector_Decode(Base_JointTransformVector* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_NamedVector_Base_JointTransform --------------------------------------------*/
 
@@ -1887,28 +1887,28 @@ void Base_NamedVector_Base_JointTransform_names_Initialize(Base_NamedVector_Base
 void Base_NamedVector_Base_JointTransform_elements_Initialize(Base_NamedVector_Base_JointTransform_elements* pVal);
 void Base_NamedVector_Base_JointTransform_Initialize(Base_NamedVector_Base_JointTransform* pVal);
 
-#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		9720  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		9639  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		9634  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		9713  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		9708  /**/
+#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		11096  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		11005  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		10998  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		11089  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		11082  /**/
 flag Base_NamedVector_Base_JointTransform_IsConstraintValid(const Base_NamedVector_Base_JointTransform* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		9721  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		9640  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		9635  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		9714  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		9709  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		11097  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		11006  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		10999  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		11090  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		11083  /**/
 #define Base_NamedVector_i3ds_asn1_Base_JointTransform_REQUIRED_BYTES_FOR_ENCODING       32302 
 #define Base_NamedVector_i3ds_asn1_Base_JointTransform_REQUIRED_BITS_FOR_ENCODING        258416
 
 flag Base_NamedVector_Base_JointTransform_Encode(const Base_NamedVector_Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		9722  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		9641  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		9636  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		9715  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		9710  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		11098  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		11007  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		11000  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		11091  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		11084  /**/
 flag Base_NamedVector_Base_JointTransform_Decode(Base_NamedVector_Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointsTrajectory --------------------------------------------*/
 
@@ -1944,34 +1944,34 @@ void Base_JointsTrajectory_elements_Initialize(Base_JointsTrajectory_elements* p
 void Base_JointsTrajectory_times_val_Initialize(Base_JointsTrajectory_times_val* pVal);
 void Base_JointsTrajectory_Initialize(Base_JointsTrajectory* pVal);
 
-#define i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY		7275  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_NAMES		7146  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		7141  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_ELEMENTS		7237  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		7232  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL		7268  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		7263  /**/
+#define i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY		8317  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_NAMES		8170  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		8163  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_ELEMENTS		8275  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		8268  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL		8310  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		8303  /**/
 flag Base_JointsTrajectory_IsConstraintValid(const Base_JointsTrajectory* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY		7276  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES		7147  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		7142  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS		7238  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		7233  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		7269  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		7264  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY		8318  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES		8171  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		8164  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS		8276  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		8269  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		8311  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		8304  /**/
 #define i3ds_asn1_Base_JointsTrajectory_REQUIRED_BYTES_FOR_ENCODING       2609953 
 #define i3ds_asn1_Base_JointsTrajectory_REQUIRED_BITS_FOR_ENCODING        20879624
 
 flag Base_JointsTrajectory_Encode(const Base_JointsTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY		7277  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES		7148  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		7143  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS		7239  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		7234  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		7270  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		7265  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY		8319  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES		8172  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		8165  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS		8277  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		8270  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		8312  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		8305  /**/
 flag Base_JointsTrajectory_Decode(Base_JointsTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_NamedVector_Base_JointLimitRange --------------------------------------------*/
 
@@ -1998,28 +1998,28 @@ void Base_NamedVector_Base_JointLimitRange_names_Initialize(Base_NamedVector_Bas
 void Base_NamedVector_Base_JointLimitRange_elements_Initialize(Base_NamedVector_Base_JointLimitRange_elements* pVal);
 void Base_NamedVector_Base_JointLimitRange_Initialize(Base_NamedVector_Base_JointLimitRange* pVal);
 
-#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		7464  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		7294  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		7289  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		7457  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		7452  /**/
+#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		8534  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		8338  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		8331  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		8527  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		8520  /**/
 flag Base_NamedVector_Base_JointLimitRange_IsConstraintValid(const Base_NamedVector_Base_JointLimitRange* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		7465  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		7295  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		7290  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		7458  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		7453  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		8535  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		8339  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		8332  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		8528  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		8521  /**/
 #define Base_NamedVector_i3ds_asn1_Base_JointLimitRange_REQUIRED_BYTES_FOR_ENCODING       34152 
 #define Base_NamedVector_i3ds_asn1_Base_JointLimitRange_REQUIRED_BITS_FOR_ENCODING        273216
 
 flag Base_NamedVector_Base_JointLimitRange_Encode(const Base_NamedVector_Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		7466  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		7296  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		7291  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		7459  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		7454  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		8536  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		8340  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		8333  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		8529  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		8522  /**/
 flag Base_NamedVector_Base_JointLimitRange_Decode(Base_NamedVector_Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_NamedVector_Base_JointState --------------------------------------------*/
 
@@ -2038,25 +2038,25 @@ typedef struct {
 void Base_NamedVector_Base_JointState_names_Initialize(Base_NamedVector_Base_JointState_names* pVal);
 void Base_NamedVector_Base_JointState_Initialize(Base_NamedVector_Base_JointState* pVal);
 
-#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE		7574  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		7483  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		7478  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		7569  /**/
+#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE		8660  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		8555  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		8548  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		8653  /**/
 flag Base_NamedVector_Base_JointState_IsConstraintValid(const Base_NamedVector_Base_JointState* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		7575  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		7484  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		7479  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		7570  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		8661  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		8556  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		8549  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		8654  /**/
 #define Base_NamedVector_i3ds_asn1_Base_JointState_REQUIRED_BYTES_FOR_ENCODING       21152 
 #define Base_NamedVector_i3ds_asn1_Base_JointState_REQUIRED_BITS_FOR_ENCODING        169216
 
 flag Base_NamedVector_Base_JointState_Encode(const Base_NamedVector_Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		7576  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		7485  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		7480  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		7571  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		8662  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		8557  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		8550  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		8655  /**/
 flag Base_NamedVector_Base_JointState_Decode(Base_NamedVector_Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_NamedVector_Base_Wrench --------------------------------------------*/
 
@@ -2083,28 +2083,28 @@ void Base_NamedVector_Base_Wrench_names_Initialize(Base_NamedVector_Base_Wrench_
 void Base_NamedVector_Base_Wrench_elements_Initialize(Base_NamedVector_Base_Wrench_elements* pVal);
 void Base_NamedVector_Base_Wrench_Initialize(Base_NamedVector_Base_Wrench* pVal);
 
-#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH		7681  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		7593  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		7588  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		7674  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		7669  /**/
+#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH		8779  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		8681  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		8674  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		8772  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		8765  /**/
 flag Base_NamedVector_Base_Wrench_IsConstraintValid(const Base_NamedVector_Base_Wrench* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH		7682  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		7594  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		7589  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		7675  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		7670  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH		8780  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		8682  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		8675  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		8773  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		8766  /**/
 #define Base_NamedVector_i3ds_asn1_Base_Wrench_REQUIRED_BYTES_FOR_ENCODING       23852 
 #define Base_NamedVector_i3ds_asn1_Base_Wrench_REQUIRED_BITS_FOR_ENCODING        190816
 
 flag Base_NamedVector_Base_Wrench_Encode(const Base_NamedVector_Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH		7683  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		7595  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		7590  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		7676  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		7671  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH		8781  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		8683  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		8676  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		8774  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		8767  /**/
 flag Base_NamedVector_Base_Wrench_Decode(Base_NamedVector_Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_NamedVector_Base_JointTrajectory --------------------------------------------*/
 
@@ -2131,28 +2131,28 @@ void Base_NamedVector_Base_JointTrajectory_names_Initialize(Base_NamedVector_Bas
 void Base_NamedVector_Base_JointTrajectory_elements_Initialize(Base_NamedVector_Base_JointTrajectory_elements* pVal);
 void Base_NamedVector_Base_JointTrajectory_Initialize(Base_NamedVector_Base_JointTrajectory* pVal);
 
-#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		7798  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		7700  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		7695  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		7791  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		7786  /**/
+#define i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		8912  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		8800  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		8793  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		8905  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		8898  /**/
 flag Base_NamedVector_Base_JointTrajectory_IsConstraintValid(const Base_NamedVector_Base_JointTrajectory* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		7799  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		7701  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		7696  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		7792  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		7787  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		8913  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		8801  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		8794  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		8906  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		8899  /**/
 #define Base_NamedVector_i3ds_asn1_Base_JointTrajectory_REQUIRED_BYTES_FOR_ENCODING       2608352 
 #define Base_NamedVector_i3ds_asn1_Base_JointTrajectory_REQUIRED_BITS_FOR_ENCODING        20866816
 
 flag Base_NamedVector_Base_JointTrajectory_Encode(const Base_NamedVector_Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		7800  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		7702  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		7697  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		7793  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		7788  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		8914  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		8802  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		8795  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		8907  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		8900  /**/
 flag Base_NamedVector_Base_JointTrajectory_Decode(Base_NamedVector_Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_commands_Joints --------------------------------------------*/
 
@@ -2172,28 +2172,28 @@ typedef struct {
 void Base_commands_Joints_names_Initialize(Base_commands_Joints_names* pVal);
 void Base_commands_Joints_Initialize(Base_commands_Joints* pVal);
 
-#define i3ds_asn1_ERR_BASE_COMMANDS_JOINTS		8240  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_NAMES		8125  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_NAMES_ELM_2		8120  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_ELEMENTS_2		8211  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_TIME_2		8235  /**/
+#define i3ds_asn1_ERR_BASE_COMMANDS_JOINTS		9416  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_NAMES		9283  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_NAMES_ELM_2		9276  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_ELEMENTS_2		9381  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_COMMANDS_JOINTS_TIME_2		9409  /**/
 flag Base_commands_Joints_IsConstraintValid(const Base_commands_Joints* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS		8241  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES		8126  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		8121  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		8212  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_TIME_2		8236  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS		9417  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES		9284  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		9277  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		9382  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_TIME_2		9410  /**/
 #define i3ds_asn1_Base_commands_Joints_REQUIRED_BYTES_FOR_ENCODING       21160 
 #define i3ds_asn1_Base_commands_Joints_REQUIRED_BITS_FOR_ENCODING        169280
 
 flag Base_commands_Joints_Encode(const Base_commands_Joints* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS		8242  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES		8127  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		8122  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		8213  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_TIME_2		8237  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS		9418  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES		9285  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		9278  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		9383  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_TIME_2		9411  /**/
 flag Base_commands_Joints_Decode(Base_commands_Joints* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_RigidBodyState --------------------------------------------*/
 typedef struct {
@@ -2213,49 +2213,49 @@ typedef struct {
 
 void Base_samples_RigidBodyState_Initialize(Base_samples_RigidBodyState* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE		8791  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		8502  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		8514  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		8526  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		8557  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		8588  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		8631  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		8662  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		8693  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		8724  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		8755  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		8786  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE		10039  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		9710  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		9724  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		9738  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		9773  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		9808  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		9857  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		9892  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		9927  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		9962  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		9997  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		10032  /**/
 flag Base_samples_RigidBodyState_IsConstraintValid(const Base_samples_RigidBodyState* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE		8792  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		8503  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		8515  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		8527  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		8558  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		8589  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		8632  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		8663  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		8694  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		8725  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		8756  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		8787  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE		10040  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		9711  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		9725  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		9739  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		9774  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		9809  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		9858  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		9893  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		9928  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		9963  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		9998  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		10033  /**/
 #define i3ds_asn1_Base_samples_RigidBodyState_REQUIRED_BYTES_FOR_ENCODING       730 
 #define i3ds_asn1_Base_samples_RigidBodyState_REQUIRED_BITS_FOR_ENCODING        5836
 
 flag Base_samples_RigidBodyState_Encode(const Base_samples_RigidBodyState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE		8793  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		8504  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		8516  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		8528  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		8559  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		8590  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		8633  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		8664  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		8695  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		8726  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		8757  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		8788  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE		10041  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		9712  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		9726  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		9740  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		9775  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		9810  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		9859  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		9894  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		9929  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		9964  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		9999  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		10034  /**/
 flag Base_samples_RigidBodyState_Decode(Base_samples_RigidBodyState* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Wrenches --------------------------------------------*/
 
@@ -2283,31 +2283,31 @@ void Base_samples_Wrenches_names_Initialize(Base_samples_Wrenches_names* pVal);
 void Base_samples_Wrenches_elements_Initialize(Base_samples_Wrenches_elements* pVal);
 void Base_samples_Wrenches_Initialize(Base_samples_Wrenches* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES		9489  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_NAMES		9377  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		9372  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_ELEMENTS		9458  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		9453  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_TIME_2		9484  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES		10837  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_NAMES		10711  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		10704  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_ELEMENTS		10802  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		10795  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_TIME_2		10830  /**/
 flag Base_samples_Wrenches_IsConstraintValid(const Base_samples_Wrenches* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES		9490  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES		9378  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		9373  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS		9459  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		9454  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_TIME_2		9485  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES		10838  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES		10712  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		10705  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS		10803  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		10796  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_TIME_2		10831  /**/
 #define i3ds_asn1_Base_samples_Wrenches_REQUIRED_BYTES_FOR_ENCODING       23860 
 #define i3ds_asn1_Base_samples_Wrenches_REQUIRED_BITS_FOR_ENCODING        190880
 
 flag Base_samples_Wrenches_Encode(const Base_samples_Wrenches* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES		9491  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES		9379  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		9374  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS		9460  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		9455  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_TIME_2		9486  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES		10839  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES		10713  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		10706  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS		10804  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		10797  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_TIME_2		10832  /**/
 flag Base_samples_Wrenches_Decode(Base_samples_Wrenches* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_frame_frame_attrib_t --------------------------------------------*/
 typedef struct {
@@ -2318,22 +2318,22 @@ typedef struct {
 
 void Base_samples_frame_frame_attrib_t_Initialize(Base_samples_frame_frame_attrib_t* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		9520  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		9503  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		9515  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		10872  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		10851  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		10865  /**/
 flag Base_samples_frame_frame_attrib_t_IsConstraintValid(const Base_samples_frame_frame_attrib_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		9521  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		9504  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		9516  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		10873  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		10852  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		10866  /**/
 #define i3ds_asn1_Base_samples_frame_frame_attrib_t_REQUIRED_BYTES_FOR_ENCODING       82 
 #define i3ds_asn1_Base_samples_frame_frame_attrib_t_REQUIRED_BITS_FOR_ENCODING        652
 
 flag Base_samples_frame_frame_attrib_t_Encode(const Base_samples_frame_frame_attrib_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		9522  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		9505  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		9517  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		10874  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		10853  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		10867  /**/
 flag Base_samples_frame_frame_attrib_t_Decode(Base_samples_frame_frame_attrib_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointTransform_m --------------------------------------------*/
 typedef struct {
@@ -2345,25 +2345,25 @@ typedef struct {
 
 void Base_JointTransform_m_Initialize(Base_JointTransform_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M		10798  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		10750  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		10762  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		10793  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M		12314  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		12258  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		12272  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		12307  /**/
 flag Base_JointTransform_m_IsConstraintValid(const Base_JointTransform_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M		10799  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		10751  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		10763  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		10794  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M		12315  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		12259  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		12273  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		12308  /**/
 #define i3ds_asn1_Base_JointTransform_m_REQUIRED_BYTES_FOR_ENCODING       121 
 #define i3ds_asn1_Base_JointTransform_m_REQUIRED_BITS_FOR_ENCODING        966
 
 flag Base_JointTransform_m_Encode(const Base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M		10800  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		10752  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		10764  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		10795  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M		12316  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		12260  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		12274  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		12309  /**/
 flag Base_JointTransform_m_Decode(Base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode);
 
 
@@ -2375,19 +2375,19 @@ typedef struct {
 
 void Std_orogen_typekits_mtype_std_vector_base_JointTransform_Initialize(Std_orogen_typekits_mtype_std_vector_base_JointTransform* pVal);
 
-#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		4530  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		4525  /**/
+#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		5202  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		5195  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_JointTransform_IsConstraintValid(const Std_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		4531  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		4526  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		5203  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		5196  /**/
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_JointTransform_REQUIRED_BYTES_FOR_ENCODING       24151 
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_JointTransform_REQUIRED_BITS_FOR_ENCODING        193208
 
 flag Std_orogen_typekits_mtype_std_vector_base_JointTransform_Encode(const Std_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		4532  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		4527  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		5204  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		5197  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_JointTransform_Decode(Std_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_JointTransformVector_m --------------------------------------------*/
 
@@ -2406,25 +2406,25 @@ typedef struct {
 void Base_JointTransformVector_m_names_Initialize(Base_JointTransformVector_m_names* pVal);
 void Base_JointTransformVector_m_Initialize(Base_JointTransformVector_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M		12422  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES		12336  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		12331  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		12417  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M		14148  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES		14050  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		14043  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		14141  /**/
 flag Base_JointTransformVector_m_IsConstraintValid(const Base_JointTransformVector_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M		12423  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		12337  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		12332  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		12418  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M		14149  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		14051  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		14044  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		14142  /**/
 #define i3ds_asn1_Base_JointTransformVector_m_REQUIRED_BYTES_FOR_ENCODING       32302 
 #define i3ds_asn1_Base_JointTransformVector_m_REQUIRED_BITS_FOR_ENCODING        258416
 
 flag Base_JointTransformVector_m_Encode(const Base_JointTransformVector_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M		12424  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		12338  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		12333  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		12419  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M		14150  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		14052  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		14045  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		14143  /**/
 flag Base_JointTransformVector_m_Decode(Base_JointTransformVector_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_NamedVector_base_JointTransform_m --------------------------------------------*/
 
@@ -2443,25 +2443,25 @@ typedef struct {
 void Base_NamedVector_base_JointTransform_m_names_Initialize(Base_NamedVector_base_JointTransform_m_names* pVal);
 void Base_NamedVector_base_JointTransform_m_Initialize(Base_NamedVector_base_JointTransform_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		12527  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		12441  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		12436  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		12522  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		14267  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		14169  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		14162  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		14260  /**/
 flag Base_NamedVector_base_JointTransform_m_IsConstraintValid(const Base_NamedVector_base_JointTransform_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		12528  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		12442  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		12437  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		12523  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		14268  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		14170  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		14163  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		14261  /**/
 #define i3ds_asn1_Base_NamedVector_base_JointTransform_m_REQUIRED_BYTES_FOR_ENCODING       32302 
 #define i3ds_asn1_Base_NamedVector_base_JointTransform_m_REQUIRED_BITS_FOR_ENCODING        258416
 
 flag Base_NamedVector_base_JointTransform_m_Encode(const Base_NamedVector_base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		12529  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		12443  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		12438  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		12524  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		14269  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		14171  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		14164  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		14262  /**/
 flag Base_NamedVector_base_JointTransform_m_Decode(Base_NamedVector_base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_RigidBodyState_m --------------------------------------------*/
 typedef struct {
@@ -2481,49 +2481,49 @@ typedef struct {
 
 void Base_samples_RigidBodyState_m_Initialize(Base_samples_RigidBodyState_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M		12224  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		11935  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		11947  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		11959  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		11990  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		12021  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		12064  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		12095  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		12126  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		12157  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		12188  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		12219  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M		13924  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		13595  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		13609  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		13623  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		13658  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		13693  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		13742  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		13777  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		13812  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		13847  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		13882  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		13917  /**/
 flag Base_samples_RigidBodyState_m_IsConstraintValid(const Base_samples_RigidBodyState_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M		12225  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		11936  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		11948  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		11960  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		11991  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		12022  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		12065  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		12096  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		12127  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		12158  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		12189  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		12220  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M		13925  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		13596  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		13610  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		13624  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		13659  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		13694  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		13743  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		13778  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		13813  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		13848  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		13883  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		13918  /**/
 #define i3ds_asn1_Base_samples_RigidBodyState_m_REQUIRED_BYTES_FOR_ENCODING       730 
 #define i3ds_asn1_Base_samples_RigidBodyState_m_REQUIRED_BITS_FOR_ENCODING        5836
 
 flag Base_samples_RigidBodyState_m_Encode(const Base_samples_RigidBodyState_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M		12226  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		11937  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		11949  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		11961  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		11992  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		12023  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		12066  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		12097  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		12128  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		12159  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		12190  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		12221  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M		13926  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		13597  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		13611  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		13625  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		13660  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		13695  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		13744  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		13779  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		13814  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		13849  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		13884  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		13919  /**/
 flag Base_samples_RigidBodyState_m_Decode(Base_samples_RigidBodyState_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_NamedVector_base_Wrench_m --------------------------------------------*/
 
@@ -2542,25 +2542,25 @@ typedef struct {
 void Base_NamedVector_base_Wrench_m_names_Initialize(Base_NamedVector_base_Wrench_m_names* pVal);
 void Base_NamedVector_base_Wrench_m_Initialize(Base_NamedVector_base_Wrench_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M		12639  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		12546  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		12541  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		12634  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M		14393  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		14288  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		14281  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		14386  /**/
 flag Base_NamedVector_base_Wrench_m_IsConstraintValid(const Base_NamedVector_base_Wrench_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		12640  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		12547  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		12542  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		12635  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		14394  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		14289  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		14282  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		14387  /**/
 #define i3ds_asn1_Base_NamedVector_base_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       23852 
 #define i3ds_asn1_Base_NamedVector_base_Wrench_m_REQUIRED_BITS_FOR_ENCODING        190816
 
 flag Base_NamedVector_base_Wrench_m_Encode(const Base_NamedVector_base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		12641  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		12548  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		12543  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		12636  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		14395  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		14290  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		14283  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		14388  /**/
 flag Base_NamedVector_base_Wrench_m_Decode(Base_NamedVector_base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Wrenches_m --------------------------------------------*/
 
@@ -2580,28 +2580,28 @@ typedef struct {
 void Base_samples_Wrenches_m_names_Initialize(Base_samples_Wrenches_m_names* pVal);
 void Base_samples_Wrenches_m_Initialize(Base_samples_Wrenches_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M		12882  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_NAMES		12765  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		12760  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		12853  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_TIME_2		12877  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M		14666  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_NAMES		14533  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		14526  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		14631  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_WRENCHES_M_TIME_2		14659  /**/
 flag Base_samples_Wrenches_m_IsConstraintValid(const Base_samples_Wrenches_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M		12883  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES		12766  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		12761  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		12854  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_TIME_2		12878  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M		14667  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES		14534  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		14527  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		14632  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_TIME_2		14660  /**/
 #define i3ds_asn1_Base_samples_Wrenches_m_REQUIRED_BYTES_FOR_ENCODING       23860 
 #define i3ds_asn1_Base_samples_Wrenches_m_REQUIRED_BITS_FOR_ENCODING        190880
 
 flag Base_samples_Wrenches_m_Encode(const Base_samples_Wrenches_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M		12884  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES		12767  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		12762  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		12855  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_TIME_2		12879  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M		14668  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES		14535  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		14528  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		14633  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_TIME_2		14661  /**/
 flag Base_samples_Wrenches_m_Decode(Base_samples_Wrenches_m* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_LaserScan --------------------------------------------*/
 
@@ -2634,46 +2634,46 @@ void Base_samples_LaserScan_ranges_Initialize(Base_samples_LaserScan_ranges* pVa
 void Base_samples_LaserScan_remission_Initialize(Base_samples_LaserScan_remission* pVal);
 void Base_samples_LaserScan_Initialize(Base_samples_LaserScan* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN		8369  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_TIME_2		8266  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		8278  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		8290  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_SPEED_2		8302  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_RANGES		8319  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		8314  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_MINRANGE_2		8333  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		8345  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_REMISSION		8362  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		8357  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN		9563  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_TIME_2		9444  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		9458  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		9472  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_SPEED_2		9486  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_RANGES		9507  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		9500  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_MINRANGE_2		9521  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		9535  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_REMISSION		9556  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		9549  /**/
 flag Base_samples_LaserScan_IsConstraintValid(const Base_samples_LaserScan* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN		8370  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_TIME_2		8267  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		8279  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		8291  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_SPEED_2		8303  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES		8320  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		8315  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		8334  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		8346  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION		8363  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		8358  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN		9564  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_TIME_2		9445  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		9459  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		9473  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_SPEED_2		9487  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES		9508  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		9501  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		9522  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		9536  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION		9557  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		9550  /**/
 #define i3ds_asn1_Base_samples_LaserScan_REQUIRED_BYTES_FOR_ENCODING       3457 
 #define i3ds_asn1_Base_samples_LaserScan_REQUIRED_BITS_FOR_ENCODING        27656
 
 flag Base_samples_LaserScan_Encode(const Base_samples_LaserScan* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN		8371  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_TIME_2		8268  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		8280  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		8292  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_SPEED_2		8304  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES		8321  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		8316  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		8335  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		8347  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION		8364  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		8359  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN		9565  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_TIME_2		9446  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		9460  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		9474  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_SPEED_2		9488  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES		9509  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		9502  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		9523  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		9537  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION		9558  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		9551  /**/
 flag Base_samples_LaserScan_Decode(Base_samples_LaserScan* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_Sonar --------------------------------------------*/
 
@@ -2716,55 +2716,55 @@ void Base_samples_Sonar_bearings_Initialize(Base_samples_Sonar_bearings* pVal);
 void Base_samples_Sonar_bins_Initialize(Base_samples_Sonar_bins* pVal);
 void Base_samples_Sonar_Initialize(Base_samples_Sonar* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_SONAR		9011  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_TIME_2		8817  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_TIMESTAMPS		8846  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		8841  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BIN_DURATION_2		8872  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		8896  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		8920  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEARINGS		8949  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		8944  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		8963  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BIN_COUNT_2		8975  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEAM_COUNT_2		8987  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BINS		9004  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BINS_ELM_2		8999  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_SONAR		10291  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_TIME_2		10067  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_TIMESTAMPS		10102  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		10095  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BIN_DURATION_2		10130  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		10158  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		10186  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEARINGS		10221  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		10214  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		10235  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BIN_COUNT_2		10249  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BEAM_COUNT_2		10263  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BINS		10284  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONAR_BINS_ELM_2		10277  /**/
 flag Base_samples_Sonar_IsConstraintValid(const Base_samples_Sonar* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR		9012  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIME_2		8818  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS		8847  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		8842  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		8873  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		8897  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		8921  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS		8950  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		8945  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		8964  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		8976  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		8988  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS		9005  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS_ELM_2		9000  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR		10292  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIME_2		10068  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS		10103  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		10096  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		10131  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		10159  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		10187  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS		10222  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		10215  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		10236  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		10250  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		10264  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS		10285  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS_ELM_2		10278  /**/
 #define i3ds_asn1_Base_samples_Sonar_REQUIRED_BYTES_FOR_ENCODING       6866 
 #define i3ds_asn1_Base_samples_Sonar_REQUIRED_BITS_FOR_ENCODING        54928
 
 flag Base_samples_Sonar_Encode(const Base_samples_Sonar* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR		9013  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIME_2		8819  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS		8848  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		8843  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		8874  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		8898  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		8922  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS		8951  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		8946  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		8965  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		8977  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		8989  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS		9006  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS_ELM_2		9001  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR		10293  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIME_2		10069  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS		10104  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		10097  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		10132  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		10160  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		10188  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS		10223  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		10216  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		10237  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		10251  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		10265  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS		10286  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS_ELM_2		10279  /**/
 flag Base_samples_Sonar_Decode(Base_samples_Sonar* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_SonarScan --------------------------------------------*/
 typedef struct {
@@ -2801,58 +2801,58 @@ void Base_samples_SonarScan_data_Initialize(Base_samples_SonarScan_data* pVal);
 void Base_samples_SonarScan_time_beams_Initialize(Base_samples_SonarScan_time_beams* pVal);
 void Base_samples_SonarScan_Initialize(Base_samples_SonarScan* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN		9358  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_TIME_2		9147  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_DATA		9152  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		9183  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		9178  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		9197  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		9209  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_START_BEARING_2		9233  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		9257  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		9269  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		9281  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		9305  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		9329  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		9341  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		9353  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN		10690  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_TIME_2		10445  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_DATA		10452  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		10487  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		10480  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		10501  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		10515  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_START_BEARING_2		10543  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		10571  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		10585  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		10599  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		10627  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		10655  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		10669  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		10683  /**/
 flag Base_samples_SonarScan_IsConstraintValid(const Base_samples_SonarScan* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN		9359  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_2		9148  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_DATA		9153  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		9184  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		9179  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		9198  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		9210  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		9234  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		9258  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		9270  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		9282  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		9306  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		9330  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		9342  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		9354  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN		10691  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_2		10446  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_DATA		10453  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		10488  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		10481  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		10502  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		10516  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		10544  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		10572  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		10586  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		10600  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		10628  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		10656  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		10670  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		10684  /**/
 #define i3ds_asn1_Base_samples_SonarScan_REQUIRED_BYTES_FOR_ENCODING       1893 
 #define i3ds_asn1_Base_samples_SonarScan_REQUIRED_BITS_FOR_ENCODING        15138
 
 flag Base_samples_SonarScan_Encode(const Base_samples_SonarScan* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN		9360  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_2		9149  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_DATA		9154  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		9185  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		9180  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		9199  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		9211  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		9235  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		9259  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		9271  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		9283  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		9307  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		9331  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		9343  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		9355  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN		10692  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_2		10447  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_DATA		10454  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		10489  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		10482  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		10503  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		10517  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		10545  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		10573  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		10587  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		10601  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		10629  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		10657  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		10671  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		10685  /**/
 flag Base_samples_SonarScan_Decode(Base_samples_SonarScan* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_MatrixXd --------------------------------------------*/
 
@@ -2872,44 +2872,44 @@ typedef struct {
 void Wrappers_MatrixXd_data_Initialize(Wrappers_MatrixXd_data* pVal);
 void Wrappers_MatrixXd_Initialize(Wrappers_MatrixXd* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_MATRIXXD		10672  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_ROWS_2		10636  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_COLS_2		10648  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_DATA		10665  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_DATA_ELM_2		10660  /**/
+#define i3ds_asn1_ERR_WRAPPERS_MATRIXXD		12174  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_ROWS_2		12132  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_COLS_2		12146  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_DATA		12167  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_MATRIXXD_DATA_ELM_2		12160  /**/
 flag Wrappers_MatrixXd_IsConstraintValid(const Wrappers_MatrixXd* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD		10673  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_ROWS_2		10637  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_COLS_2		10649  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA		10666  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA_ELM_2		10661  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD		12175  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_ROWS_2		12133  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_COLS_2		12147  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA		12168  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA_ELM_2		12161  /**/
 #define i3ds_asn1_Wrappers_MatrixXd_REQUIRED_BYTES_FOR_ENCODING       2609 
 #define i3ds_asn1_Wrappers_MatrixXd_REQUIRED_BITS_FOR_ENCODING        20872
 
 flag Wrappers_MatrixXd_Encode(const Wrappers_MatrixXd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD		10674  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_ROWS_2		10638  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_COLS_2		10650  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA		10667  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA_ELM_2		10662  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD		12176  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_ROWS_2		12134  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_COLS_2		12148  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA		12169  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA_ELM_2		12162  /**/
 flag Wrappers_MatrixXd_Decode(Wrappers_MatrixXd* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef DummyBase_T Dummy2Base_T;
 
 
 void Dummy2Base_T_Initialize(Dummy2Base_T* pVal);
 
-#define i3ds_asn1_ERR_DUMMY2BASE_T_2_2		4309  /**/
+#define i3ds_asn1_ERR_DUMMY2BASE_T_2_2		4957  /**/
 flag Dummy2Base_T_IsConstraintValid(const Dummy2Base_T* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_DUMMY2BASE_T_2_2		4310  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_DUMMY2BASE_T_2_2		4958  /**/
 #define i3ds_asn1_Dummy2Base_T_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_Dummy2Base_T_REQUIRED_BITS_FOR_ENCODING        32
 
 flag Dummy2Base_T_Encode(const Dummy2Base_T* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_DUMMY2BASE_T_2_2		4311  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_DUMMY2BASE_T_2_2		4959  /**/
 flag Dummy2Base_T_Decode(Dummy2Base_T* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_JointState_MODE_base_jointstate_mode_acceleration = 0,
@@ -2930,16 +2930,16 @@ typedef enum {
 
 void Base_JointState_MODE_Initialize(Base_JointState_MODE* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_MODE		4314  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_JOINTSTATE_MODE		4964  /**/
 flag Base_JointState_MODE_IsConstraintValid(const Base_JointState_MODE* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_MODE		4315  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_JOINTSTATE_MODE		4965  /**/
 #define i3ds_asn1_Base_JointState_MODE_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_JointState_MODE_REQUIRED_BITS_FOR_ENCODING        3
 
 flag Base_JointState_MODE_Encode(const Base_JointState_MODE* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_MODE		4316  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_JOINTSTATE_MODE		4966  /**/
 flag Base_JointState_MODE_Decode(Base_JointState_MODE* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_Time_Resolution_base_time_resolution_microseconds = 0,
@@ -2954,16 +2954,16 @@ typedef enum {
 
 void Base_Time_Resolution_Initialize(Base_Time_Resolution* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TIME_RESOLUTION		4321  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TIME_RESOLUTION		4971  /**/
 flag Base_Time_Resolution_IsConstraintValid(const Base_Time_Resolution* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIME_RESOLUTION		4322  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TIME_RESOLUTION		4972  /**/
 #define i3ds_asn1_Base_Time_Resolution_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_Time_Resolution_REQUIRED_BITS_FOR_ENCODING        2
 
 flag Base_Time_Resolution_Encode(const Base_Time_Resolution* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIME_RESOLUTION		4323  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TIME_RESOLUTION		4973  /**/
 flag Base_Time_Resolution_Decode(Base_Time_Resolution* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_geometry_SplineBase_CoordinateType_base_geometry_splinebase_coordinatetype_derivative_to_next = 0,
@@ -2988,16 +2988,16 @@ typedef enum {
 
 void Base_geometry_SplineBase_CoordinateType_Initialize(Base_geometry_SplineBase_CoordinateType* pVal);
 
-#define i3ds_asn1_ERR_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		4328  /**/
+#define i3ds_asn1_ERR_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		4978  /**/
 flag Base_geometry_SplineBase_CoordinateType_IsConstraintValid(const Base_geometry_SplineBase_CoordinateType* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		4329  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		4979  /**/
 #define i3ds_asn1_Base_geometry_SplineBase_CoordinateType_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_geometry_SplineBase_CoordinateType_REQUIRED_BITS_FOR_ENCODING        3
 
 flag Base_geometry_SplineBase_CoordinateType_Encode(const Base_geometry_SplineBase_CoordinateType* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		4330  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		4980  /**/
 flag Base_geometry_SplineBase_CoordinateType_Decode(Base_geometry_SplineBase_CoordinateType* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE_base_samples_depthmap_depth_measurement_state_measurement_error = 0,
@@ -3014,16 +3014,16 @@ typedef enum {
 
 void Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Initialize(Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		4335  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		4985  /**/
 flag Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE_IsConstraintValid(const Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		4336  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		4986  /**/
 #define i3ds_asn1_Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE_REQUIRED_BITS_FOR_ENCODING        2
 
 flag Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Encode(const Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		4337  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		4987  /**/
 flag Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Decode(Base_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_samples_DepthMap_PROJECTION_TYPE_base_samples_depthmap_projection_type_planar = 0,
@@ -3036,16 +3036,16 @@ typedef enum {
 
 void Base_samples_DepthMap_PROJECTION_TYPE_Initialize(Base_samples_DepthMap_PROJECTION_TYPE* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		4342  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		4992  /**/
 flag Base_samples_DepthMap_PROJECTION_TYPE_IsConstraintValid(const Base_samples_DepthMap_PROJECTION_TYPE* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		4343  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		4993  /**/
 #define i3ds_asn1_Base_samples_DepthMap_PROJECTION_TYPE_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_samples_DepthMap_PROJECTION_TYPE_REQUIRED_BITS_FOR_ENCODING        1
 
 flag Base_samples_DepthMap_PROJECTION_TYPE_Encode(const Base_samples_DepthMap_PROJECTION_TYPE* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		4344  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		4994  /**/
 flag Base_samples_DepthMap_PROJECTION_TYPE_Decode(Base_samples_DepthMap_PROJECTION_TYPE* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_DepthMap --------------------------------------------*/
 
@@ -3104,61 +3104,61 @@ void Base_samples_DepthMap_distances_Initialize(Base_samples_DepthMap_distances*
 void Base_samples_DepthMap_remissions_Initialize(Base_samples_DepthMap_remissions* pVal);
 void Base_samples_DepthMap_Initialize(Base_samples_DepthMap* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP		7984  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_TIME_2		7824  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		7853  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		7848  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		7867  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		7879  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		7896  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		7891  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		7915  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		7910  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		7929  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		7941  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES		7958  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		7953  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS		7977  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		7972  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP		9122  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_TIME_2		8940  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		8975  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		8968  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		8989  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		9003  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		9024  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		9017  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		9045  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		9038  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		9059  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		9073  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES		9094  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		9087  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS		9115  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		9108  /**/
 flag Base_samples_DepthMap_IsConstraintValid(const Base_samples_DepthMap* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP		7985  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIME_2		7825  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		7854  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		7849  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		7868  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		7880  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		7897  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		7892  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		7916  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		7911  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		7930  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		7942  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		7959  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		7954  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		7978  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		7973  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP		9123  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIME_2		8941  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		8976  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		8969  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		8990  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		9004  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		9025  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		9018  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		9046  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		9039  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		9060  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		9074  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		9095  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		9088  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		9116  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		9109  /**/
 #define i3ds_asn1_Base_samples_DepthMap_REQUIRED_BYTES_FOR_ENCODING       12022 
 #define i3ds_asn1_Base_samples_DepthMap_REQUIRED_BITS_FOR_ENCODING        96170
 
 flag Base_samples_DepthMap_Encode(const Base_samples_DepthMap* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP		7986  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIME_2		7826  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		7855  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		7850  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		7869  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		7881  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		7898  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		7893  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		7917  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		7912  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		7931  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		7943  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		7960  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		7955  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		7979  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		7974  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP		9124  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIME_2		8942  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		8977  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		8970  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		8991  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		9005  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		9026  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		9019  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		9047  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		9040  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		9061  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		9075  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		9096  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		9089  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		9117  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		9110  /**/
 flag Base_samples_DepthMap_Decode(Base_samples_DepthMap* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_samples_DepthMap_UNIT_AXIS_base_samples_depthmap_unit_axis_unit_x = 0,
@@ -3173,16 +3173,16 @@ typedef enum {
 
 void Base_samples_DepthMap_UNIT_AXIS_Initialize(Base_samples_DepthMap_UNIT_AXIS* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		4349  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		4999  /**/
 flag Base_samples_DepthMap_UNIT_AXIS_IsConstraintValid(const Base_samples_DepthMap_UNIT_AXIS* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		4350  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		5000  /**/
 #define i3ds_asn1_Base_samples_DepthMap_UNIT_AXIS_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_samples_DepthMap_UNIT_AXIS_REQUIRED_BITS_FOR_ENCODING        2
 
 flag Base_samples_DepthMap_UNIT_AXIS_Encode(const Base_samples_DepthMap_UNIT_AXIS* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		4351  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		5001  /**/
 flag Base_samples_DepthMap_UNIT_AXIS_Decode(Base_samples_DepthMap_UNIT_AXIS* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_samples_LASER_RANGE_ERRORS_base_samples_laser_range_errors_end_laser_range_errors = 0,
@@ -3203,16 +3203,16 @@ typedef enum {
 
 void Base_samples_LASER_RANGE_ERRORS_Initialize(Base_samples_LASER_RANGE_ERRORS* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_LASER_RANGE_ERRORS		4356  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_LASER_RANGE_ERRORS		5006  /**/
 flag Base_samples_LASER_RANGE_ERRORS_IsConstraintValid(const Base_samples_LASER_RANGE_ERRORS* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASER_RANGE_ERRORS		4357  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_LASER_RANGE_ERRORS		5007  /**/
 #define i3ds_asn1_Base_samples_LASER_RANGE_ERRORS_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_samples_LASER_RANGE_ERRORS_REQUIRED_BITS_FOR_ENCODING        3
 
 flag Base_samples_LASER_RANGE_ERRORS_Encode(const Base_samples_LASER_RANGE_ERRORS* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASER_RANGE_ERRORS		4358  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_LASER_RANGE_ERRORS		5008  /**/
 flag Base_samples_LASER_RANGE_ERRORS_Decode(Base_samples_LASER_RANGE_ERRORS* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_samples_frame_frame_mode_t_base_samples_frame_frame_mode_t_compressed_modes = 0,
@@ -3253,16 +3253,16 @@ typedef enum {
 
 void Base_samples_frame_frame_mode_t_Initialize(Base_samples_frame_frame_mode_t* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_MODE_T		4363  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_MODE_T		5013  /**/
 flag Base_samples_frame_frame_mode_t_IsConstraintValid(const Base_samples_frame_frame_mode_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		4364  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		5014  /**/
 #define i3ds_asn1_Base_samples_frame_frame_mode_t_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_samples_frame_frame_mode_t_REQUIRED_BITS_FOR_ENCODING        4
 
 flag Base_samples_frame_frame_mode_t_Encode(const Base_samples_frame_frame_mode_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		4365  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		5015  /**/
 flag Base_samples_frame_frame_mode_t_Decode(Base_samples_frame_frame_mode_t* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Base_samples_frame_frame_status_t_base_samples_frame_frame_status_t_status_empty = 0,
@@ -3277,16 +3277,16 @@ typedef enum {
 
 void Base_samples_frame_frame_status_t_Initialize(Base_samples_frame_frame_status_t* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_STATUS_T		4370  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_STATUS_T		5020  /**/
 flag Base_samples_frame_frame_status_t_IsConstraintValid(const Base_samples_frame_frame_status_t* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		4371  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		5021  /**/
 #define i3ds_asn1_Base_samples_frame_frame_status_t_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Base_samples_frame_frame_status_t_REQUIRED_BITS_FOR_ENCODING        2
 
 flag Base_samples_frame_frame_status_t_Encode(const Base_samples_frame_frame_status_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		4372  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		5022  /**/
 flag Base_samples_frame_frame_status_t_Decode(Base_samples_frame_frame_status_t* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_frame_Frame --------------------------------------------*/
 typedef struct {
@@ -3320,49 +3320,49 @@ void Base_samples_frame_Frame_image_Initialize(Base_samples_frame_Frame_image* p
 void Base_samples_frame_Frame_attributes_Initialize(Base_samples_frame_Frame_attributes* pVal);
 void Base_samples_frame_Frame_Initialize(Base_samples_frame_Frame* pVal);
 
-#define i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME		9921  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_TIME_2		9746  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		9770  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE		9775  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		9818  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		9813  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		9856  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		9868  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		9880  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		9892  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		9904  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		9916  /**/
+#define i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME		11327  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_TIME_2		11124  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		11152  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE		11159  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		11208  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		11201  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		11250  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		11264  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		11278  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		11292  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		11306  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		11320  /**/
 flag Base_samples_frame_Frame_IsConstraintValid(const Base_samples_frame_Frame* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME		9922  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		9747  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		9771  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		9776  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		9819  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		9814  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		9857  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		9869  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		9881  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		9893  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		9905  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		9917  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME		11328  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		11125  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		11153  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		11160  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		11209  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		11202  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		11251  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		11265  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		11279  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		11293  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		11307  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		11321  /**/
 #define i3ds_asn1_Base_samples_frame_Frame_REQUIRED_BYTES_FOR_ENCODING       16535 
 #define i3ds_asn1_Base_samples_frame_Frame_REQUIRED_BITS_FOR_ENCODING        132278
 
 flag Base_samples_frame_Frame_Encode(const Base_samples_frame_Frame* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME		9923  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		9748  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		9772  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		9777  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		9820  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		9815  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		9858  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		9870  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		9882  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		9894  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		9906  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		9918  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME		11329  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		11126  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		11154  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		11161  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		11210  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		11203  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		11252  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		11266  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		11280  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		11294  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		11308  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		11322  /**/
 flag Base_samples_frame_Frame_Decode(Base_samples_frame_Frame* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_samples_frame_FramePair --------------------------------------------*/
 typedef struct {
@@ -3375,28 +3375,28 @@ typedef struct {
 
 void Base_samples_frame_FramePair_Initialize(Base_samples_frame_FramePair* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR		10376  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		9947  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		10153  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		10359  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		10371  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR		11852  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		11355  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		11593  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		11831  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		11845  /**/
 flag Base_samples_frame_FramePair_IsConstraintValid(const Base_samples_frame_FramePair* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR		10377  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		9948  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		10154  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		10360  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		10372  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR		11853  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		11356  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		11594  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		11832  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		11846  /**/
 #define i3ds_asn1_Base_samples_frame_FramePair_REQUIRED_BYTES_FOR_ENCODING       33082 
 #define i3ds_asn1_Base_samples_frame_FramePair_REQUIRED_BITS_FOR_ENCODING        264652
 
 flag Base_samples_frame_FramePair_Encode(const Base_samples_frame_FramePair* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR		10378  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		9949  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		10155  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		10361  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		10373  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR		11854  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		11357  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		11595  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		11833  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		11847  /**/
 flag Base_samples_frame_FramePair_Decode(Base_samples_frame_FramePair* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     Wrappers_geometry_SplineType_wrappers_geometry_splinetype_degenerate = 0,
@@ -3415,16 +3415,16 @@ typedef enum {
 
 void Wrappers_geometry_SplineType_Initialize(Wrappers_geometry_SplineType* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINETYPE		4377  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINETYPE		5027  /**/
 flag Wrappers_geometry_SplineType_IsConstraintValid(const Wrappers_geometry_SplineType* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINETYPE		4378  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINETYPE		5028  /**/
 #define i3ds_asn1_Wrappers_geometry_SplineType_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_Wrappers_geometry_SplineType_REQUIRED_BITS_FOR_ENCODING        3
 
 flag Wrappers_geometry_SplineType_Encode(const Wrappers_geometry_SplineType* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINETYPE		4379  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINETYPE		5029  /**/
 flag Wrappers_geometry_SplineType_Decode(Wrappers_geometry_SplineType* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Wrappers_geometry_Spline --------------------------------------------*/
 
@@ -3455,40 +3455,40 @@ void Wrappers_geometry_Spline_knots_Initialize(Wrappers_geometry_Spline_knots* p
 void Wrappers_geometry_Spline_vertices_Initialize(Wrappers_geometry_Spline_vertices* pVal);
 void Wrappers_geometry_Spline_Initialize(Wrappers_geometry_Spline* pVal);
 
-#define i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE		12975  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		12896  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		12908  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		12920  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_KIND_2		12932  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS		12949  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		12944  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES		12968  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		12963  /**/
+#define i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE		14771  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		14680  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		14694  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		14708  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_KIND_2		14722  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS		14743  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		14736  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES		14764  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		14757  /**/
 flag Wrappers_geometry_Spline_IsConstraintValid(const Wrappers_geometry_Spline* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE		12976  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		12897  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		12909  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		12921  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		12933  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		12950  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		12945  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		12969  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		12964  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE		14772  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		14681  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		14695  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		14709  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		14723  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		14744  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		14737  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		14765  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		14758  /**/
 #define i3ds_asn1_Wrappers_geometry_Spline_REQUIRED_BYTES_FOR_ENCODING       5224 
 #define i3ds_asn1_Wrappers_geometry_Spline_REQUIRED_BITS_FOR_ENCODING        41787
 
 flag Wrappers_geometry_Spline_Encode(const Wrappers_geometry_Spline* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE		12977  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		12898  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		12910  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		12922  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		12934  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		12951  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		12946  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		12970  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		12965  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE		14773  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		14682  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		14696  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		14710  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		14724  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		14745  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		14738  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		14766  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		14759  /**/
 flag Wrappers_geometry_Spline_Decode(Wrappers_geometry_Spline* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Trajectory --------------------------------------------*/
 typedef struct {
@@ -3499,22 +3499,22 @@ typedef struct {
 
 void Base_Trajectory_Initialize(Base_Trajectory* pVal);
 
-#define i3ds_asn1_ERR_BASE_TRAJECTORY		5567  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_SPEED_2		5464  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_SPLINE_2		5562  /**/
+#define i3ds_asn1_ERR_BASE_TRAJECTORY		6371  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_SPEED_2		6252  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_SPLINE_2		6364  /**/
 flag Base_Trajectory_IsConstraintValid(const Base_Trajectory* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY		5568  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_SPEED_2		5465  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_SPLINE_2		5563  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY		6372  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_SPEED_2		6253  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_SPLINE_2		6365  /**/
 #define i3ds_asn1_Base_Trajectory_REQUIRED_BYTES_FOR_ENCODING       5237 
 #define i3ds_asn1_Base_Trajectory_REQUIRED_BITS_FOR_ENCODING        41891
 
 flag Base_Trajectory_Encode(const Base_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY		5569  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_SPEED_2		5466  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_SPLINE_2		5564  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY		6373  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_SPEED_2		6254  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_SPLINE_2		6366  /**/
 flag Base_Trajectory_Decode(Base_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- Base_Trajectory_m --------------------------------------------*/
 typedef struct {
@@ -3525,22 +3525,22 @@ typedef struct {
 
 void Base_Trajectory_m_Initialize(Base_Trajectory_m* pVal);
 
-#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_M		13092  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_M_SPEED_2		12989  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_M_SPLINE_2		13087  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_M		14904  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_M_SPEED_2		14785  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_BASE_TRAJECTORY_M_SPLINE_2		14897  /**/
 flag Base_Trajectory_m_IsConstraintValid(const Base_Trajectory_m* pVal, int* pErrCode);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_M		13093  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPEED_2		12990  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPLINE_2		13088  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_M		14905  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPEED_2		14786  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPLINE_2		14898  /**/
 #define i3ds_asn1_Base_Trajectory_m_REQUIRED_BYTES_FOR_ENCODING       5237 
 #define i3ds_asn1_Base_Trajectory_m_REQUIRED_BITS_FOR_ENCODING        41891
 
 flag Base_Trajectory_m_Encode(const Base_Trajectory_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_M		13094  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPEED_2		12991  /**/
-#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPLINE_2		13089  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_M		14906  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPEED_2		14787  /**/
+#define i3ds_asn1_i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPLINE_2		14899  /**/
 flag Base_Trajectory_m_Decode(Base_Trajectory_m* pVal, BitStream* pBitStrm, int* pErrCode);
 
 
@@ -3552,19 +3552,19 @@ typedef struct {
 
 void Std_orogen_typekits_mtype_std_vector_base_Trajectory_Initialize(Std_orogen_typekits_mtype_std_vector_base_Trajectory* pVal);
 
-#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		4864  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		4859  /**/
+#define i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		5580  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		5573  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_Trajectory_IsConstraintValid(const Std_orogen_typekits_mtype_std_vector_base_Trajectory* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		4865  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		4860  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		5581  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		5574  /**/
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_Trajectory_REQUIRED_BYTES_FOR_ENCODING       1047276 
 #define i3ds_asn1_Std_orogen_typekits_mtype_std_vector_base_Trajectory_REQUIRED_BITS_FOR_ENCODING        8378208
 
 flag Std_orogen_typekits_mtype_std_vector_base_Trajectory_Encode(const Std_orogen_typekits_mtype_std_vector_base_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		4866  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		4861  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		5582  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		5575  /**/
 flag Std_orogen_typekits_mtype_std_vector_base_Trajectory_Decode(Std_orogen_typekits_mtype_std_vector_base_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

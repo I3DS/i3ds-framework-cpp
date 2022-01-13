@@ -18,16 +18,16 @@ typedef T_UInt8 SeriesCount;
 
 void SeriesCount_Initialize(SeriesCount* pVal);
 
-#define i3ds_asn1_ERR_SERIESCOUNT_2		8  /**/
+#define i3ds_asn1_ERR_SERIESCOUNT_2		512  /**/
 flag SeriesCount_IsConstraintValid(const SeriesCount* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_SERIESCOUNT_2		9  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_SERIESCOUNT_2		513  /**/
 #define i3ds_asn1_SeriesCount_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_SeriesCount_REQUIRED_BITS_FOR_ENCODING        8
 
 flag SeriesCount_Encode(const SeriesCount* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_SERIESCOUNT_2		10  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_SERIESCOUNT_2		514  /**/
 flag SeriesCount_Decode(SeriesCount* pVal, BitStream* pBitStrm, int* pErrCode);
 /*-- AnalogSeriesDescriptor --------------------------------------------*/
 typedef struct {
@@ -39,25 +39,25 @@ typedef struct {
 
 void AnalogSeriesDescriptor_Initialize(AnalogSeriesDescriptor* pVal);
 
-#define i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR		179  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR_ATTRIBUTES_2		140  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR_SERIES_COUNT_2_2		157  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR_BATCH_SIZE_2_2		174  /**/
+#define i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR		715  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR_ATTRIBUTES_2		666  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR_SERIES_COUNT_2_2		687  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_ANALOGSERIESDESCRIPTOR_BATCH_SIZE_2_2		708  /**/
 flag AnalogSeriesDescriptor_IsConstraintValid(const AnalogSeriesDescriptor* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR		180  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR_ATTRIBUTES_2		141  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR_SERIES_COUNT_2_2		158  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR_BATCH_SIZE_2_2		175  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR		716  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR_ATTRIBUTES_2		667  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR_SERIES_COUNT_2_2		688  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_ANALOGSERIESDESCRIPTOR_BATCH_SIZE_2_2		709  /**/
 #define i3ds_asn1_AnalogSeriesDescriptor_REQUIRED_BYTES_FOR_ENCODING       71 
 #define i3ds_asn1_AnalogSeriesDescriptor_REQUIRED_BITS_FOR_ENCODING        565
 
 flag AnalogSeriesDescriptor_Encode(const AnalogSeriesDescriptor* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR		181  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR_ATTRIBUTES_2		142  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR_SERIES_COUNT_2_2		159  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR_BATCH_SIZE_2_2		176  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR		717  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR_ATTRIBUTES_2		668  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR_SERIES_COUNT_2_2		689  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_ANALOGSERIESDESCRIPTOR_BATCH_SIZE_2_2		710  /**/
 flag AnalogSeriesDescriptor_Decode(AnalogSeriesDescriptor* pVal, BitStream* pBitStrm, int* pErrCode);
 
  

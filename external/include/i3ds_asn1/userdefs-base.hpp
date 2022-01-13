@@ -16,16 +16,16 @@ typedef T_UInt32 DummyBase_T;
 
 void DummyBase_T_Initialize(DummyBase_T* pVal);
 
-#define i3ds_asn1_ERR_DUMMYBASE_T_2		13221  /**/
+#define i3ds_asn1_ERR_DUMMYBASE_T_2		15037  /**/
 flag DummyBase_T_IsConstraintValid(const DummyBase_T* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_DUMMYBASE_T_2		13222  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_DUMMYBASE_T_2		15038  /**/
 #define i3ds_asn1_DummyBase_T_REQUIRED_BYTES_FOR_ENCODING       4 
 #define i3ds_asn1_DummyBase_T_REQUIRED_BITS_FOR_ENCODING        32
 
 flag DummyBase_T_Encode(const DummyBase_T* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_DUMMYBASE_T_2		13223  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_DUMMYBASE_T_2		15039  /**/
 flag DummyBase_T_Decode(DummyBase_T* pVal, BitStream* pBitStrm, int* pErrCode);
 
 extern const T_UInt32 numBase_JointTrajectory;

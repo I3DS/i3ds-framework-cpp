@@ -20,35 +20,35 @@ typedef struct {
 
 void PowerMask_Initialize(PowerMask* pVal);
 
-#define i3ds_asn1_ERR_POWERMASK		3759  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_POWERMASK_ELM_2		3754  /**/
+#define i3ds_asn1_ERR_POWERMASK		4845  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_POWERMASK_ELM_2		4838  /**/
 flag PowerMask_IsConstraintValid(const PowerMask* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POWERMASK		3760  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POWERMASK_ELM_2		3755  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POWERMASK		4846  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_ENCODE_POWERMASK_ELM_2		4839  /**/
 #define i3ds_asn1_PowerMask_REQUIRED_BYTES_FOR_ENCODING       2 
 #define i3ds_asn1_PowerMask_REQUIRED_BITS_FOR_ENCODING        16
 
 flag PowerMask_Encode(const PowerMask* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POWERMASK		3761  /**/
-#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POWERMASK_ELM_2		3756  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POWERMASK		4847  /**/
+#define i3ds_asn1_i3ds_asn1_ERR_UPER_DECODE_POWERMASK_ELM_2		4840  /**/
 flag PowerMask_Decode(PowerMask* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint PowerOutput;
 
 
 void PowerOutput_Initialize(PowerOutput* pVal);
 
-#define i3ds_asn1_ERR_POWEROUTPUT		3740  /**/
+#define i3ds_asn1_ERR_POWEROUTPUT		4824  /**/
 flag PowerOutput_IsConstraintValid(const PowerOutput* pVal, int* pErrCode);
 
-#define i3ds_asn1_ERR_UPER_ENCODE_POWEROUTPUT		3741  /**/
+#define i3ds_asn1_ERR_UPER_ENCODE_POWEROUTPUT		4825  /**/
 #define i3ds_asn1_PowerOutput_REQUIRED_BYTES_FOR_ENCODING       1 
 #define i3ds_asn1_PowerOutput_REQUIRED_BITS_FOR_ENCODING        4
 
 flag PowerOutput_Encode(const PowerOutput* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define i3ds_asn1_ERR_UPER_DECODE_POWEROUTPUT		3742  /**/
+#define i3ds_asn1_ERR_UPER_DECODE_POWEROUTPUT		4826  /**/
 flag PowerOutput_Decode(PowerOutput* pVal, BitStream* pBitStrm, int* pErrCode);
 
  
