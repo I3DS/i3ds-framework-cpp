@@ -29,6 +29,9 @@ i3ds::EmulatedToFCamera::EmulatedToFCamera(Context::Ptr context, i3ds_asn1::Node
 {
   BOOST_LOG_TRIVIAL(info) << "Create emulated ToF camera with NodeID: " << node;
 
+  min_depth_ = 10;
+  max_depth_ = 1e4;
+
   region_.size_x = 640;
   region_.size_y = 480;
   region_.offset_x = 0;
