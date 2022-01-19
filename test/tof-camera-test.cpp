@@ -79,6 +79,19 @@ BOOST_AUTO_TEST_CASE(tof_camera_region)
 
 ////////////////////////////////////////////////////////////////////////////////
 
+BOOST_AUTO_TEST_CASE(tof_camera_range, * boost::unit_test::tolerance(0.00001))
+{
+  client->set_state(i3ds_asn1::StateCommand_activate);
+
+  client->load_config();
+  client->set_range(100, 3000);
+
+  BOOST_CHECK_EQUAL(camera->range_min_depth(), 100);
+  BOOST_CHECK_EQUAL(camera->range_max_depth(), 3000);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
 int received;
 
 void
