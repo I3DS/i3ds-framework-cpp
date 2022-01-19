@@ -29,6 +29,7 @@ i3ds::EmulatedToFCamera::EmulatedToFCamera(Context::Ptr context, i3ds_asn1::Node
 {
   BOOST_LOG_TRIVIAL(info) << "Create emulated ToF camera with NodeID: " << node;
 
+  // If not set, min and max depths default to -nan which is an invalid for our ASN.1 decoding
   min_depth_ = 10;
   max_depth_ = 1e4;
 
