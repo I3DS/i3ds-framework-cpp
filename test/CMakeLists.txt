@@ -9,6 +9,7 @@ set(TESTS
   star-tracker-test
   analog-test
   measurement-proxy-test
+  measurement-trigger-test
   depthmap-test
   pose-estimator-test
   )
