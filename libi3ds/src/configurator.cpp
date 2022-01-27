@@ -91,34 +91,41 @@ i3ds::SensorConfigurator::add_common_options(po::options_description& desc)
 void
 i3ds::SensorConfigurator::handle_sensor_commands(po::variables_map& vm, i3ds::SensorClient& client)
 {
-  if (vm.count("activate"))
+  try
     {
-      BOOST_LOG_TRIVIAL(info) << "Command ACTIVATE";
-      client.set_state(i3ds_asn1::StateCommand_activate);
+      if (vm.count("activate"))
+        {
+          BOOST_LOG_TRIVIAL(info) << "Command ACTIVATE";
+          client.set_state(i3ds_asn1::StateCommand_activate);
+        }
+      else if (vm.count("stop"))
+        {
+          BOOST_LOG_TRIVIAL(info) << "Command STOP";
+          client.set_state(i3ds_asn1::StateCommand_stop);
+          BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
+        }
+      else if (vm.count("deactivate"))
+        {
+          BOOST_LOG_TRIVIAL(info) << "Command DEACTIVATE";
+          client.set_state(i3ds_asn1::StateCommand_deactivate);
+          BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
+        }
+      else if (vm.count("period"))
+        {
+          BOOST_LOG_TRIVIAL(info) << "Set period: " << period << " [us]";
+          client.set_sampling(period);
+          BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
+        }
+      else if (vm.count("start"))
+        {
+          BOOST_LOG_TRIVIAL(info) << "Command START";
+          client.set_state(i3ds_asn1::StateCommand_start);
+          BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
+        }
     }
-  else if (vm.count("stop"))
+  catch (i3ds::CommandError &e)
     {
-      BOOST_LOG_TRIVIAL(info) << "Command STOP";
-      client.set_state(i3ds_asn1::StateCommand_stop);
-      BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
-    }
-  else if (vm.count("deactivate"))
-    {
-      BOOST_LOG_TRIVIAL(info) << "Command DEACTIVATE";
-      client.set_state(i3ds_asn1::StateCommand_deactivate);
-      BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
-    }
-  else if (vm.count("period"))
-    {
-      BOOST_LOG_TRIVIAL(info) << "Set period: " << period << " [us]";
-      client.set_sampling(period);
-      BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
-    }
-  else if (vm.count("start"))
-    {
-      BOOST_LOG_TRIVIAL(info) << "Command START";
-      client.set_state(i3ds_asn1::StateCommand_start);
-      BOOST_LOG_TRIVIAL(trace) << "---> [OK]";
+      BOOST_LOG_TRIVIAL(error) << e.what();
     }
 }
 
