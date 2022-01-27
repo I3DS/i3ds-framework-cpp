@@ -9,6 +9,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <cassert>
+#include <mutex>
 
 #include <i3ds/sensor.hpp>
 
@@ -108,6 +109,8 @@ i3ds::Sensor::set_failure()
 void
 i3ds::Sensor::handle_state(StateService::Data& command)
 {
+  std::lock_guard<std::mutex> guard(state_change_mutex);
+
   i3ds_asn1::ResultCode result = i3ds_asn1::ResultCode_error_state;
 
   try
@@ -258,4 +261,11 @@ i3ds::Sensor::set_device_name(std::string device_name)
 {
   strncpy((char*)device_name_.arr, device_name.c_str(), 40);
   device_name_.nCount = strlen((const char*)device_name_.arr);
+}
+
+void
+i3ds::Sensor::set_state(i3ds_asn1::SensorState new_state)
+{
+  std::lock_guard<std::mutex> guard(state_change_mutex);
+  state_ = new_state;
 }

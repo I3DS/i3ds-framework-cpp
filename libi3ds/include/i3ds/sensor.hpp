@@ -12,6 +12,8 @@
 #define __I3DS_SENSOR_HPP
 
 #include <memory>
+#include <mutex>
+#include <atomic>
 
 #include <i3ds_asn1/Common.hpp>
 #include <i3ds_asn1/Sensor.hpp>
@@ -130,6 +132,10 @@ protected:
   // Set the name of the sensor implementation
   void set_device_name(std::string device_name);
 
+  // Set the state of the sensor
+  // Only use this if the default state handling needs to be overridden
+  void set_state(i3ds_asn1::SensorState new_state);
+
 private:
 
   // Handler for state command.
@@ -144,11 +150,13 @@ private:
   // Handler for sensor configuration query.
   void handle_configuration(ConfigurationService::Data& config);
 
-  i3ds_asn1::SensorState state_;
+  std::atomic<i3ds_asn1::SensorState> state_;
   i3ds_asn1::SamplePeriod period_;
   i3ds_asn1::BatchSize batch_size_;
   i3ds_asn1::BatchCount batch_count_;
   i3ds_asn1::T_String device_name_;
+
+  std::mutex state_change_mutex;
 };
 
 } // namespace i3ds
