@@ -32,7 +32,7 @@ if (SWIG_FOUND)
                               WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})")
 
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/i3ds_binding.py
-      ${CMAKE_CURRENT_BINARY_DIR}/__pycache__/i3ds_binding.cpython-36.pyc
+      ${CMAKE_CURRENT_BINARY_DIR}/__pycache__/i3ds_binding.cpython-38.pyc
       DESTINATION ${Python3_SITELIB}
       )
 
