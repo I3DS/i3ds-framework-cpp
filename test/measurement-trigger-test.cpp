@@ -40,11 +40,6 @@ struct F
     imu->Attach(imu_command_server);
     imu_command_server.Start();
     client.set_timeout(1000);
-
-    // Before we close, let other workers run, ::yield does not actually
-    // yield the cpu if the thread has more budget, so do a sleep that
-    // will force a sched_out
-    //std::this_thread::sleep_for(std::chrono::microseconds(10000));
   }
 
   ~F()

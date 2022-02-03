@@ -83,6 +83,12 @@ public:
         }
       return measurement_;
     }
+
+  bool valid_measurement()
+    {
+      std::lock_guard<std::mutex> guard(mutex);
+      return valid_measurement_;
+    }
   
 private:
 
