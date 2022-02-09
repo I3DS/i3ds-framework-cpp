@@ -35,7 +35,6 @@ set (LIBS
   zmq
   pthread
   ${Boost_LIBRARIES}
-  ${OpenCV_LIBS}
   i3ds_asn1
   )
 

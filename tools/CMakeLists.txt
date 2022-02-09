@@ -33,7 +33,9 @@ set (APPS
   )
 
 if (OpenCV_FOUND)
-    set (APPS ${APPS} i3ds_camera_capture)
+  set (APPS ${APPS} i3ds_camera_capture)
+else()
+  MESSAGE(STATUS "OpenCV not found: skipping i3ds_camera_capture")
 endif()
 
 foreach(a ${APPS})

@@ -22,6 +22,8 @@ if (OpenCV_FOUND)
     camera-merger-test
     pointcloud-test
     )
+else()
+  MESSAGE(WARNING "OpenCV not found: skipping camera and tof tests")
 endif (OpenCV_FOUND)
 
 configure_file(files/test_addresses.csv ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
