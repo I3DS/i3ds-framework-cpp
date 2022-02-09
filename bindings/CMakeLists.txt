@@ -1,4 +1,9 @@
 include(FindSWIG)
+
+cmake_policy(SET CMP0040 NEW)
+cmake_policy(SET CMP0078 OLD)
+cmake_policy(SET CMP0086 OLD)
+
 include(UseSWIG)
 
 find_package (Python3 COMPONENTS Interpreter Development)
