@@ -145,25 +145,19 @@ The framework has the following build dependencies:
 * SWIG and Python development files for optional Python binding
 * OpenCV development files for some of the tools
 
-On Ubuntu 16.04, the packages you should need are:
-* build-essential
-* cmake
-* libzmq3-dev
-* libboost-dev
-* libboost-test-dev
-* libboost-log-dev
-* libboost-program-options-dev
-* swig
-* python-dev
-* opencv
-* libopencv-dev
+On Ubuntu 20.04, the packages you should need are installed by:
+```
+sudo apt update
+sudo apt install build-essential cmake libboost-dev libboost-program-options-dev libboost-test-dev libboost-log-dev swig python3-dev swig libzmq3-dev
+sudo apt install libopencv-dev # Only required if tools, emulator and tests for camera or tof are needed
+```
 
 To build and install the framework with CMake do the following:
 
 ```
 mkdir build/
 cd build/
-cmake ..
+cmake -DI3DS_ASN1_ALT=external ..
 make
 make test
 sudo make install
