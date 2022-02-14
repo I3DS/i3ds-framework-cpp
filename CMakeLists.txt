@@ -203,6 +203,22 @@ endif (BUILD_BINDINGS)
 ##############################################################################
 # Unit testing
 ##############################################################################
+
 if (BUILD_TESTS)
   add_subdirectory (test)
 endif (BUILD_TESTS)
+
+##############################################################################
+# Install external dependencies if specified
+##############################################################################
+
+if (I3DS_ASN1_ALT)
+  # The same libraries should be linked for the framework and the applications.
+  install (FILES
+    "${I3DS_ASN1_DIR}/lib/libi3ds_asn1.so"
+    "${I3DS_ASN1_DIR}/lib/libi3ds_asn1.so.1"
+    "${I3DS_ASN1_DIR}/lib/libi3ds_asn1.so.1.0"
+    DESTINATION lib)
+  install (DIRECTORY "${I3DS_ASN1_DIR}/include/" DESTINATION include FILES_MATCHING PATTERN "*.hpp")
+endif (I3DS_ASN1_ALT)
+
