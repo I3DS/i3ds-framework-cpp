@@ -99,7 +99,7 @@ i3ds::Sensor::Attach(Server& server)
 void
 i3ds::Sensor::set_failure()
 {
-  std::lock_guard<std::mutex> guard(state_change_mutex);
+  const std::lock_guard<std::mutex> guard(state_change_mutex);
   if (state_ != i3ds_asn1::SensorState_failure)
     {
       do_failure();
@@ -114,7 +114,7 @@ i3ds::Sensor::handle_state(StateService::Data& command)
 
   try
     {
-      std::lock_guard<std::mutex> guard(state_change_mutex);
+      const std::lock_guard<std::mutex> guard(state_change_mutex);
       switch(state_)
         {
         case i3ds_asn1::SensorState_inactive:
@@ -208,7 +208,7 @@ i3ds::Sensor::handle_sample(SampleService::Data& sample)
 
   try
     {
-      std::lock_guard<std::mutex> guard(state_change_mutex);
+      const std::lock_guard<std::mutex> guard(state_change_mutex);
       check_standby();
       check_sampling_supported(sample.request);
 
@@ -228,7 +228,7 @@ i3ds::Sensor::handle_status(StatusService::Data& status)
 {
   try
     {
-      std::lock_guard<std::mutex> guard(state_change_mutex);
+      const std::lock_guard<std::mutex> guard(state_change_mutex);
       status.response.current_state = state();
       status.response.device_temperature.kelvin = temperature();
     }
@@ -244,7 +244,7 @@ i3ds::Sensor::handle_configuration(ConfigurationService::Data& config)
 {
   try
     {
-      std::lock_guard<std::mutex> guard(state_change_mutex);
+      const std::lock_guard<std::mutex> guard(state_change_mutex);
       check_active();
       config.response.device_name = device_name();
       config.response.period = period();
@@ -268,6 +268,6 @@ i3ds::Sensor::set_device_name(std::string device_name)
 void
 i3ds::Sensor::set_state(i3ds_asn1::SensorState new_state)
 {
-  std::lock_guard<std::mutex> guard(state_change_mutex);
+  const std::lock_guard<std::mutex> guard(state_change_mutex);
   state_ = new_state;
 }
