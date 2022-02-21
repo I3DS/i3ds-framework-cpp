@@ -134,6 +134,7 @@ protected:
 
   // Set the state of the sensor
   // Only use this if the default state handling needs to be overridden
+  // and never inside the other state change methods: do_*
   void set_state(i3ds_asn1::SensorState new_state);
 
 private:
