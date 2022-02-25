@@ -262,6 +262,7 @@ void
 i3ds::Sensor::set_device_name(std::string device_name)
 {
   strncpy((char*)device_name_.arr, device_name.c_str(), 40);
+  device_name_.arr[39] = '\0';
   device_name_.nCount = strlen((const char*)device_name_.arr);
 }
 
