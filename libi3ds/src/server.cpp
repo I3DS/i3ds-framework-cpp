@@ -50,6 +50,7 @@ i3ds::Server::Handle(Message& message, Socket& socket)
 {
   Message response;
   CommandResponseCodec::Data error;
+  CommandResponseCodec::Initialize(error);
 
   if (handlers_.count(message.address()) == 0)
     {

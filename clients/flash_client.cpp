@@ -19,6 +19,7 @@ void
 i3ds::FlashClient::set_flash(i3ds_asn1::ShutterTime duration, i3ds_asn1::FlashStrength strength)
 {
   Flash::FlashService::Data command;
+  Flash::FlashService::Initialize(command);
 
   command.request.duration = duration;
   command.request.strength = strength;

@@ -43,6 +43,7 @@ void
 i3ds::SensorClient::set_state(i3ds_asn1::StateCommand state)
 {
   Sensor::StateService::Data command;
+  Sensor::StateService::Initialize(command);
 
   command.request = state;
 
@@ -53,6 +54,7 @@ void
 i3ds::SensorClient::set_sampling(i3ds_asn1::SamplePeriod period, i3ds_asn1::BatchSize batch_size, i3ds_asn1::BatchCount batch_count)
 {
   Sensor::SampleService::Data command;
+  Sensor::SampleService::Initialize(command);
 
   command.request.period = period;
   command.request.batch_size = batch_size;

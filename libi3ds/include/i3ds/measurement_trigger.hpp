@@ -45,6 +45,7 @@ public:
       waiting_(false),
       started_by_trigger_(false)
     {
+      Topic::Initialize(measurement_);
       subscriber_.Attach<Topic>(node, [this](typename Topic::Data& msg){handle_measurement(msg);});
       subscriber_.Start();
     };

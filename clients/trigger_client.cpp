@@ -19,6 +19,7 @@ void
 i3ds::TriggerClient::set_generator(i3ds_asn1::TriggerGenerator generator, i3ds_asn1::TriggerPeriod period)
 {
   Trigger::GeneratorService::Data command;
+  Trigger::GeneratorService::Initialize(command);
 
   command.request.source = generator;
   command.request.period = period;

@@ -27,6 +27,7 @@ void
 i3ds::RadarClient::set_region(bool enable, i3ds_asn1::PlanarRegion region)
 {
   Radar::RegionService::Data command;
+  Radar::RegionService::Initialize(command);
 
   command.request.enable = enable;
   command.request.region = region;

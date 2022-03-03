@@ -27,6 +27,7 @@ void
 i3ds::CameraClient::set_exposure(i3ds_asn1::ShutterTime shutter, i3ds_asn1::SensorGain gain)
 {
   Camera::ExposureService::Data command;
+  Camera::ExposureService::Initialize(command);
 
   command.request.shutter = shutter;
   command.request.gain = gain;
@@ -38,6 +39,7 @@ void
 i3ds::CameraClient::set_auto_exposure(bool enable, i3ds_asn1::ShutterTime max_shutter, i3ds_asn1::SensorGain max_gain)
 {
   Camera::AutoExposureService::Data command;
+  Camera::AutoExposureService::Initialize(command);
 
   command.request.enable = enable;
   command.request.max_shutter = max_shutter;
@@ -50,6 +52,7 @@ void
 i3ds::CameraClient::set_region(bool enable, i3ds_asn1::PlanarRegion region)
 {
   Camera::RegionService::Data command;
+  Camera::RegionService::Initialize(command);
 
   command.request.enable = enable;
   command.request.region = region;
@@ -61,6 +64,7 @@ void
 i3ds::CameraClient::set_flash(bool enable, i3ds_asn1::FlashStrength strength)
 {
   Camera::FlashService::Data command;
+  Camera::FlashService::Initialize(command);
 
   command.request.enable = enable;
   command.request.strength = strength;
@@ -72,6 +76,7 @@ void
 i3ds::CameraClient::set_pattern(bool enable, i3ds_asn1::PatternSequence sequence)
 {
   Camera::PatternService::Data command;
+  Camera::PatternService::Initialize(command);
 
   command.request.enable = enable;
   command.request.pattern_sequence = sequence;
@@ -83,6 +88,7 @@ void
 i3ds::CameraClient::set_series(bool enable, i3ds_asn1::ImageSequence imgseq)
 {
   Camera::SequenceService::Data command;
+  Camera::SequenceService::Initialize(command);
   command.request.enable = enable;
   command.request.image_sequence = imgseq;
   Call<Camera::SequenceService>(command);

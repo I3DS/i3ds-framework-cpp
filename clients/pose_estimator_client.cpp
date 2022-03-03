@@ -27,6 +27,7 @@ void
 i3ds::PoseEstimatorClient::set_imaging_mode(bool imaging_mode)
 {
   PoseEstimator::ImagingModeService::Data command;
+  PoseEstimator::ImagingModeService::Initialize(command);
   command.request.imaging_mode = imaging_mode;
   Call<PoseEstimator::ImagingModeService>(command);
 }
@@ -35,6 +36,7 @@ void
 i3ds::PoseEstimatorClient::set_selected_camera(uint8_t camera)
 {
   PoseEstimator::CameraSelectService::Data command;
+  PoseEstimator::CameraSelectService::Initialize(command);
   command.request.camera_select = camera;
   Call<PoseEstimator::CameraSelectService>(command);
 }

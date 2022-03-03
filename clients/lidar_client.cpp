@@ -27,6 +27,7 @@ void
 i3ds::LIDARClient::set_region(bool enable, i3ds_asn1::PolarRegion region)
 {
   LIDAR::RegionService::Data command;
+  LIDAR::RegionService::Initialize(command);
 
   command.request.enable = enable;
   command.request.region = region;

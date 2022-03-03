@@ -62,7 +62,10 @@ public:
       return Handler::Ptr(new Wrapper<T>(operation));
     }
 
-    Wrapper(Operation operation) : operation_(operation) {};
+    Wrapper(Operation operation) : operation_(operation)
+    {
+      T::Codec::Initialize(data_);  
+    };
 
     virtual ~Wrapper() {};
 

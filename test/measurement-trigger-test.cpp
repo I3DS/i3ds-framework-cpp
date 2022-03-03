@@ -160,6 +160,7 @@ BOOST_AUTO_TEST_CASE(fetch_exception)
   subscriber.Start();
 
   IMU::MeasurementTopic::Data data;
+  IMU::MeasurementTopic::Initialize(data);
   BOOST_CHECK_THROW(data = trigger.fetch(), std::logic_error);
 
   trigger.trigger();
