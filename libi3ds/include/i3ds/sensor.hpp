@@ -24,6 +24,7 @@
 #include <i3ds/server.hpp>
 #include <i3ds/codec.hpp>
 #include <i3ds/exception.hpp>
+#include <i3ds/client.hpp>
 
 namespace i3ds
 {
@@ -137,13 +138,15 @@ protected:
   // and never inside the other state change methods: do_*
   void set_state(i3ds_asn1::SensorState new_state);
 
+  // Handler for sample configuration.
+  virtual void handle_sample(SampleService::Data& sample);
+
+  virtual void update_and_check_batch_count();
+
 private:
 
   // Handler for state command.
   void handle_state(StateService::Data& command);
-
-  // Handler for sample configuration.
-  virtual void handle_sample(SampleService::Data& sample);
 
   // Handler for sensor status query.
   void handle_status(StatusService::Data& status);
@@ -158,6 +161,11 @@ private:
   i3ds_asn1::T_String device_name_;
 
   std::mutex state_change_mutex;
+
+  std::atomic<unsigned int> sent_measurements_;
+
+  // Client used to send stop commands to the sensor when batchcount is used up
+  Client self_client_;
 };
 
 } // namespace i3ds

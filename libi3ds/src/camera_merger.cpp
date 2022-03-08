@@ -122,7 +122,7 @@ void
 i3ds::CameraMerger::handle_sample(SampleService::Data& sample)
 {
   BOOST_LOG_TRIVIAL(trace) << "CameraMerger handle sample";
-  check_standby();
+  Sensor::handle_sample(sample);
 
   cam_1_client_.set_sampling(sample.request.period, sample.request.batch_size, sample.request.batch_count);
   cam_2_client_.set_sampling(sample.request.period, sample.request.batch_size, sample.request.batch_count);
@@ -165,6 +165,7 @@ i3ds::CameraMerger::merge_and_send(Buffer cam_1_data, Buffer cam_2_data)
   BOOST_LOG_TRIVIAL(info) << "CameraMerger sending merged frame with timestamp: " <<
                              merged_frame.descriptor.attributes.timestamp;
   publisher_.Send<FrameTopic>(merged_frame);
+  update_and_check_batch_count();
 
 }
 

@@ -212,7 +212,7 @@ BOOST_AUTO_TEST_CASE(camera_internal_sampling)
 
   SamplePeriod period = 100000;
   BatchSize batch_size = 1;
-  BatchCount batch_count = 1;
+  BatchCount batch_count = 0;
 
   client->set_state(StateCommand_activate);
   client->set_sampling(period, batch_size, batch_count);
@@ -231,7 +231,7 @@ BOOST_AUTO_TEST_CASE(camera_external_sampling)
 
   SamplePeriod period = 100000;
   BatchSize batch_size = 1;
-  BatchCount batch_count = 1;
+  BatchCount batch_count = 0;
 
   client->set_state(StateCommand_activate);
   client->set_sampling(period, batch_size, batch_count);
@@ -418,7 +418,7 @@ BOOST_AUTO_TEST_CASE(camera_pattern_settings)
 
   SamplePeriod period = 100000;
   BatchSize batch_size = 1;
-  BatchCount batch_count = 1;
+  BatchCount batch_count = 0;
   PatternSequence pattern = 1;
 
   client->set_state(StateCommand_activate);
@@ -473,7 +473,7 @@ BOOST_AUTO_TEST_CASE(camera_flash_settings)
 
   SamplePeriod period = 100000;
   BatchSize batch_size = 1;
-  BatchCount batch_count = 1;
+  BatchCount batch_count = 0;
   FlashStrength strength = 50;
   ShutterTime shutter = 10000;
 

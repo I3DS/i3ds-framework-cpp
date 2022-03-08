@@ -14,7 +14,8 @@
 #include <i3ds/sensor.hpp>
 
 i3ds::Sensor::Sensor(i3ds_asn1::NodeID node)
-  : Node(node)
+  : Node(node),
+    self_client_(Context::Create(), node)
 {
   // Sensors are initially inactive.
   state_ = i3ds_asn1::SensorState_inactive;
@@ -24,7 +25,11 @@ i3ds::Sensor::Sensor(i3ds_asn1::NodeID node)
   batch_size_ = 1;
   batch_count_ = 0;
 
+  sent_measurements_ = 0;
+
   T_String_Initialize(&device_name_);
+
+  self_client_.set_timeout(0);
 }
 
 i3ds::Sensor::~Sensor()
@@ -144,6 +149,7 @@ i3ds::Sensor::handle_state(StateService::Data& command)
             }
           else if (command.request == i3ds_asn1::StateCommand_start)
             {
+              sent_measurements_ = 0;
               do_start();
               state_ = i3ds_asn1::SensorState_operational;
               result = i3ds_asn1::ResultCode_success;
@@ -271,4 +277,24 @@ i3ds::Sensor::set_state(i3ds_asn1::SensorState new_state)
 {
   const std::lock_guard<std::mutex> guard(state_change_mutex);
   state_ = new_state;
+}
+
+void
+i3ds::Sensor::update_and_check_batch_count()
+{
+  sent_measurements_++;
+  if (batch_count() != 0 && sent_measurements_ >= batch_count())
+    {
+      StateService::Data stop_command;
+      StateService::Initialize(stop_command);
+      stop_command.request = i3ds_asn1::StateCommand_stop;
+      try
+        {
+          self_client_.Call<StateService>(stop_command);
+        }
+      catch (Timeout& e)
+        {
+          // Ignore
+        }
+    }
 }

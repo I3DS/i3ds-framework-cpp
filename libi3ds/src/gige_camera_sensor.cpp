@@ -718,6 +718,7 @@ i3ds::GigECamera::send_sample(const i3ds_asn1::byte* image, int width, int heigh
         }
 
       publisher_.Send<Camera::FrameTopic>(frame);
+      update_and_check_batch_count();
 
       BOOST_LOG_TRIVIAL(trace) << "Send frame OK";
     }
