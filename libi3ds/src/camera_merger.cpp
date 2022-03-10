@@ -124,8 +124,9 @@ i3ds::CameraMerger::handle_sample(SampleService::Data& sample)
   BOOST_LOG_TRIVIAL(trace) << "CameraMerger handle sample";
   Sensor::handle_sample(sample);
 
-  cam_1_client_.set_sampling(sample.request.period, sample.request.batch_size, sample.request.batch_count);
-  cam_2_client_.set_sampling(sample.request.period, sample.request.batch_size, sample.request.batch_count);
+  // Set the cameras to free running to avoid problems with missing frames
+  cam_1_client_.set_sampling(sample.request.period);
+  cam_2_client_.set_sampling(sample.request.period);
 }
 
 void
