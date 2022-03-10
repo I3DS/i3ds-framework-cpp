@@ -307,6 +307,59 @@ BOOST_AUTO_TEST_CASE(single_measurement)
 
 ////////////////////////////////////////////////////////////////////////////////
 
+BOOST_AUTO_TEST_CASE(three_measurements)
+{
+  received = 0;
+  Subscriber subscriber(context);
+
+  subscriber.Attach<Camera::FrameTopic>(cam_1_node,
+                                        [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_1_node);});
+  subscriber.Attach<Camera::FrameTopic>(cam_2_node,
+                                        [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_2_node);});
+  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node,
+                                              [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_merger_node);});
+
+  SamplePeriod period = 200000;
+  BatchSize batch_size = 1;
+  BatchCount batch_count = 3;
+
+  client.set_state(StateCommand_activate);
+  client.set_sampling(period, batch_size, batch_count);
+  client.set_state(StateCommand_start);
+
+  subscriber.Start();
+
+  // Warmup
+  std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
+
+  try {
+    client.set_state(StateCommand_stop);
+  } catch (CommandError& e) {
+    // Ignore if already stopped
+  }
+  std::this_thread::sleep_for(std::chrono::microseconds(period));
+
+  received = 0;
+
+  client.set_state(StateCommand_start);
+
+  // Wait for measurements
+  std::this_thread::sleep_for(std::chrono::microseconds(period * 5));
+
+  try {
+    client.set_state(StateCommand_stop);
+  } catch (CommandError& e) {
+    // Ignore if already stopped
+  }
+
+  subscriber.Stop();
+
+  BOOST_CHECK_EQUAL(received, batch_count);
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
 BOOST_AUTO_TEST_CASE(synchronizing_measurements)
 {
   Subscriber subscriber(context);
