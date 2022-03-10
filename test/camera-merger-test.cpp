@@ -36,7 +36,7 @@ using namespace i3ds_asn1;
 struct F
 {
   F()
-   : 
+   :
 
      context(Context::Create()),
      cam_1_server(context),
@@ -172,8 +172,8 @@ F::handle_measurement(Camera::FrameTopic::Data& data, NodeID id)
           BOOST_CHECK_EQUAL(cam_1_buffer[i], cam_1_merged_buffer[i]);
           BOOST_CHECK_EQUAL(cam_2_buffer[i], cam_2_merged_buffer[i]);
         }
-      cam_1_buffer_valid = false; 
-      cam_2_buffer_valid = false; 
+      cam_1_buffer_valid = false;
+      cam_2_buffer_valid = false;
       cam_merger_buffer_valid = false;
     }
 }
@@ -228,11 +228,11 @@ BOOST_AUTO_TEST_CASE(measurements)
 {
   Subscriber subscriber(context);
 
-  subscriber.Attach<Camera::FrameTopic>(cam_1_node, 
+  subscriber.Attach<Camera::FrameTopic>(cam_1_node,
                                         [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_1_node);});
-  subscriber.Attach<Camera::FrameTopic>(cam_2_node, 
+  subscriber.Attach<Camera::FrameTopic>(cam_2_node,
                                         [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_2_node);});
-  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node, 
+  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node,
                                               [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_merger_node);});
 
   SamplePeriod period = 200000;
@@ -260,11 +260,11 @@ BOOST_AUTO_TEST_CASE(single_measurement)
   received = 0;
   Subscriber subscriber(context);
 
-  subscriber.Attach<Camera::FrameTopic>(cam_1_node, 
+  subscriber.Attach<Camera::FrameTopic>(cam_1_node,
                                         [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_1_node);});
-  subscriber.Attach<Camera::FrameTopic>(cam_2_node, 
+  subscriber.Attach<Camera::FrameTopic>(cam_2_node,
                                         [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_2_node);});
-  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node, 
+  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node,
                                               [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_merger_node);});
 
   SamplePeriod period = 200000;
@@ -311,11 +311,11 @@ BOOST_AUTO_TEST_CASE(synchronizing_measurements)
 {
   Subscriber subscriber(context);
 
-  subscriber.Attach<Camera::FrameTopic>(cam_1_node, 
+  subscriber.Attach<Camera::FrameTopic>(cam_1_node,
                                         [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_1_node);});
-  subscriber.Attach<Camera::FrameTopic>(cam_2_node, 
+  subscriber.Attach<Camera::FrameTopic>(cam_2_node,
                                         [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_2_node);});
-  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node, 
+  subscriber.Attach<CameraMerger::FrameTopic>(cam_merger_node,
                                               [this](Camera::FrameTopic::Data& data){handle_measurement(data, cam_merger_node);});
 
   SamplePeriod period = 200000;
