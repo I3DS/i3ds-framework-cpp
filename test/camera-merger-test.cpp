@@ -216,11 +216,7 @@ BOOST_AUTO_TEST_CASE(configure_period)
   client.set_sampling(period, batch_size, batch_count);
 
   BOOST_CHECK_EQUAL(cam_1->period(), period);
-  BOOST_CHECK_EQUAL(cam_1->batch_size(), batch_size);
-  BOOST_CHECK_EQUAL(cam_1->batch_count(), batch_count);
   BOOST_CHECK_EQUAL(cam_2->period(), period);
-  BOOST_CHECK_EQUAL(cam_2->batch_size(), batch_size);
-  BOOST_CHECK_EQUAL(cam_2->batch_count(), batch_count);
   BOOST_CHECK_EQUAL(cam_merger.period(), period);
   BOOST_CHECK_EQUAL(cam_merger.batch_size(), batch_size);
   BOOST_CHECK_EQUAL(cam_merger.batch_count(), batch_count);

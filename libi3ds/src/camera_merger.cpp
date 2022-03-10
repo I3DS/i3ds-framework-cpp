@@ -177,7 +177,9 @@ i3ds::CameraMerger::publisher_thread_func()
   while (run_publiser_thread_)
     {
       Buffer cam_1_data = camera_buffers_[0].get_data();
+      if (!run_publiser_thread_) break;
       Buffer cam_2_data = camera_buffers_[1].get_data();
+      if (!run_publiser_thread_) break;
 
       BOOST_LOG_TRIVIAL(trace) << "CameraMerger received frames with timestamps " << cam_1_data.timestamp_ << " and " <<
                                cam_2_data.timestamp_;
