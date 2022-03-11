@@ -1,8 +1,14 @@
 include(FindSWIG)
 
-cmake_policy(SET CMP0040 NEW)
-cmake_policy(SET CMP0078 OLD)
-cmake_policy(SET CMP0086 OLD)
+if (POLICY CMP0040)
+  cmake_policy(SET CMP0040 NEW)
+endif()
+if (POLICY CMP0078)
+  cmake_policy(SET CMP0078 OLD)
+endif()
+if(POLICY CMP0086)
+  cmake_policy(SET CMP0086 OLD)
+endif()
 
 include(UseSWIG)
 
