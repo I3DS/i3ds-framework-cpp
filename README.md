@@ -112,9 +112,9 @@ complete docker-image must be created. Once this is done, subsequent
 calls should only be delayed by the time it takes to compile the
 projcet.
 
-On a debian/ubuntu host:
+On a debian/ubuntu host, install docker as per the official documentation
+and then build with
 ``` shell
-sudo aptitude install docker.io
 ./do_docker.s -c -t all
 ```
 
@@ -133,6 +133,8 @@ archives. This can then be extracted like any normal archive:
 tar xvf i3ds-2019-10-98a0d601488b.tar -C /
 ```
 
+Note that some of the apt packages mentioned below are needed as runtime
+dependencies.
 
 ### Building natively on host
 
