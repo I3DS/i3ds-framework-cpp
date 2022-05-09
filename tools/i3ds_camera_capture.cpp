@@ -135,13 +135,13 @@ int image_count(i3ds::Frame& data) {
 
 template <typename T>
 void
-handle_frame(T& data)
+handle_frame(T& data, int node)
 {
   auto time_now = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> diff = time_now - previous_time;
 
   std::stringstream buffer;
-  buffer <<  "(fps: "  << std::setprecision(1) << std::fixed << 1000. / (std::chrono::duration <double, std::milli> (diff).count()) << ")" << std::endl;;
+  buffer <<  "(node: " << node << " fps: "  << std::setprecision(1) << std::fixed << 1000. / (std::chrono::duration <double, std::milli> (diff).count()) << ")" << std::endl;;
   std::cout << "fps: "<< buffer.str();
 
   previous_time = time_now;
@@ -219,9 +219,9 @@ int main(int argc, char *argv[])
 
   if (tof_version) {
     cv::namedWindow("ToF Camera feed", cv::WINDOW_AUTOSIZE);
-    subscriber.Attach<i3ds::ToFCamera::MeasurementTopic>(node, &handle_frame<i3ds::ToFCamera::MeasurementTopic::Data>);
+    subscriber.Attach<i3ds::ToFCamera::MeasurementTopic>(node, [node](i3ds::ToFCamera::MeasurementTopic::Data d){handle_frame(d, node);});
   } else {
-    subscriber.Attach<i3ds::Camera::FrameTopic>(node, &handle_frame<i3ds::Camera::FrameTopic::Data>);
+    subscriber.Attach<i3ds::Camera::FrameTopic>(node, [node](i3ds::Camera::FrameTopic::Data d){handle_frame(d, node);});
   }
   subscriber.Start();
 
