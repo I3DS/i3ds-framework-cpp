@@ -55,6 +55,24 @@ signal_handler(int)
   running = false;
 }
 
+void
+draw_center_value(cv::Mat image, i3ds::DepthMap dm)
+{
+  int line_length = dm.descriptor.height/10;
+  int x_mid = dm.descriptor.width / 2;
+  int y_mid = (dm.descriptor.height / 2) + (image.size().height-dm.descriptor.height); // Account for header
+  cv::line(image, cv::Point(x_mid-line_length, y_mid), cv::Point(x_mid+line_length, y_mid), cv::Scalar(100000));
+  cv::line(image, cv::Point(x_mid, y_mid-line_length), cv::Point(x_mid, y_mid+line_length), cv::Scalar(100000));
+  float center_value = dm.depths[(dm.descriptor.width/2)*(dm.descriptor.height+1)];
+  cv::putText(image, std::to_string(center_value), cv::Point(x_mid+5, y_mid-5), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(100000), 1, cv::LINE_AA);
+}
+
+void
+draw_center_value(cv::Mat, i3ds::Frame f)
+{
+  // Do nothing for normal images
+}
+
 template <typename T>
 void
 handle_image(std::string window_name, const T& frame, int image_number, std::string fps_text)
@@ -113,6 +131,8 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
   display << "Delay: " << delay * 1.0e-3 << " ms, Period: " << period * 1.0e-6 << " s";
 
   cv::putText(mat3, display.str(), cv::Point(20, 30), cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(100000), 1, cv::LINE_AA);
+
+  draw_center_value(mat3, frame);
 
   cv::imshow(window_name, mat3);
 }
