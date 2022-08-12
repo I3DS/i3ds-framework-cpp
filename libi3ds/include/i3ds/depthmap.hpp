@@ -15,6 +15,7 @@
 #include <i3ds_asn1/taste-types.hpp>
 
 #include <i3ds/codec.hpp>
+#include <i3ds/frame.hpp>
 #include <vector>
 
 namespace i3ds
@@ -26,6 +27,7 @@ struct DepthMap
 {
   i3ds_asn1::DepthMapDescriptor descriptor;
   std::vector<float> depths;
+  Frame frame;
 };
 
 struct DepthMapCodec
@@ -38,6 +40,7 @@ struct DepthMapCodec
     val.descriptor.depth_format = i3ds_asn1::Depth_format_t_depth_f;
     val.descriptor.depth_size = sizeof(float);
     val.depths.clear();
+    FrameCodec::Initialize(val.frame);
   };
 
   static inline i3ds_asn1::flag Encode(const Data* val, i3ds_asn1::BitStream* pBitStrm, int* pErrCode,
@@ -66,6 +69,8 @@ inline void Encode<DepthMapCodec>(Message& message, const DepthMapCodec::Data& d
   const size_t s = data.depths.size() * sizeof(float);
 
   message.append_payload(d, s);
+
+  Encode<FrameCodec>(message, data.frame);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

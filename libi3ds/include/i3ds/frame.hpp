@@ -101,7 +101,7 @@ inline void Decode<FrameCodec>(const Message& message, FrameCodec::Data& data)
 
   data.clear_images();
 
-  for (int i = 1; i < message.payloads(); i++)
+  for (int i = 1; i < data.descriptor.image_count+1; i++)
     {
       data.append_image(message.data(i), message.size(i));
     }
