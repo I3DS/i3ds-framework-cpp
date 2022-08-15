@@ -28,6 +28,7 @@ struct DepthMap
   i3ds_asn1::DepthMapDescriptor descriptor;
   std::vector<float> depths;
   Frame frame;
+  bool has_frame = false;
 };
 
 struct DepthMapCodec
@@ -70,7 +71,10 @@ inline void Encode<DepthMapCodec>(Message& message, const DepthMapCodec::Data& d
 
   message.append_payload(d, s);
 
-  Encode<FrameCodec>(message, data.frame);
+  if (data.has_frame)
+    {
+      Encode<FrameCodec>(message, data.frame);
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -86,8 +90,31 @@ inline void Decode<DepthMapCodec>(const Message& message, DepthMapCodec::Data& d
   const size_t s = message.size(1) / sizeof(float);
 
   data.depths.assign(d, d + s);
+  
+  if (message.payloads() > 2)
+    {
+      // Decode message.data(2) as FrameDescriptor frame.descriptor
+      i3ds_asn1::BitStream bs;
+      i3ds_asn1::BitStream_AttachBuffer(&bs, (unsigned char*) message.data(2), message.size(2));
+ 
+      int errcode = 0;
+
+      if (!FrameDescriptorCodec::Decode(&data.frame.descriptor, &bs, &errcode))
+        {
+          throw CodecError("Cannot decode: Bad data " + std::to_string(errcode));
+        }
+
+      // Decode message.data(3) as Frame::Image.
+      data.frame.clear_images();
+      data.frame.append_image(message.data(3), message.size(3));
+      data.has_frame = true;
+    }
+  else
+    {
+      data.has_frame = false;
+    }
 }
 
 } // namespace i3ds
 
-#endif // __I3DS_POINTCLOUD_HPP
+#endif // __I3DS_DEPTHMAP_HPP
