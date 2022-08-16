@@ -23,6 +23,16 @@ namespace i3ds
 
 CODEC(DepthMapDescriptor);
 
+////////////////////////////////////////////////////////////////////////////////
+/// Main measurement type of ToF cameras.
+/// The depth information is stored in the `depths` vector. The first value is
+/// in the upper left corner and continues right, row by row. The descriptor
+/// contains information about the size.
+///
+/// If the ToF Camera also outputs an image, `has_frame` is set to `true` and
+/// the image data is stored in the `frame` as a normal i3ds::Frame.
+////////////////////////////////////////////////////////////////////////////////
+
 struct DepthMap
 {
   i3ds_asn1::DepthMapDescriptor descriptor;
