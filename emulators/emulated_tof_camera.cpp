@@ -10,6 +10,7 @@
 
 #ifndef BOOST_LOG_DYN_LINK
 #define BOOST_LOG_DYN_LINK
+#include <cstdlib>
 #endif
 
 #include <boost/log/trivial.hpp>
@@ -43,12 +44,23 @@ i3ds::EmulatedToFCamera::EmulatedToFCamera(Context::Ptr context, i3ds_asn1::Node
   frame_.descriptor.width = region_.size_x;
   frame_.descriptor.height = region_.size_y;
 
+  frame_.frame.descriptor.image_count = 1;
+  frame_.frame.descriptor.frame_mode  = i3ds_asn1::Frame_mode_t_mode_mono;
+  frame_.frame.descriptor.data_depth  = 16;
+  frame_.frame.descriptor.pixel_size  = 2;
+  frame_.frame.descriptor.region.size_x = frame_.descriptor.width;
+  frame_.frame.descriptor.region.size_y = frame_.descriptor.height;
+
+  image_data_size_ = frame_.descriptor.width * frame_.descriptor.height * frame_.frame.descriptor.pixel_size;
+  image_data_ = static_cast<i3ds_asn1::byte *>(malloc(image_data_size_));
+
   set_device_name("Emulated ToF camera");
 }
 
 i3ds::EmulatedToFCamera::~EmulatedToFCamera()
 {
   BOOST_LOG_TRIVIAL(info) << "Destroy emulated ToF camera with NodeID: " << node();
+  free(image_data_);
 }
 
 void
@@ -125,9 +137,22 @@ i3ds::EmulatedToFCamera::send_sample(unsigned long timestamp_us)
 	}
     }
 
+  std::uniform_int_distribution<> dis_int(0, 255);
+
+  for (size_t i = 0; i < image_data_size_; i++)
+    {
+      image_data_[i] = dis_int(generator_);
+    }
+
+  frame_.frame.append_image(image_data_, image_data_size_);
+  frame_.has_frame = true;
+  frame_.frame.descriptor.attributes.timestamp = timestamp_us;
+  frame_.frame.descriptor.attributes.validity = i3ds_asn1::SampleValidity_sample_valid;
+
   publisher_.Send<MeasurementTopic>(frame_);
 
   frame_.depths.clear();
+  frame_.frame.clear_images();
 
   return true;
 }

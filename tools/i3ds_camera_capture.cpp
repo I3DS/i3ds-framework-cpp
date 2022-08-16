@@ -153,6 +153,16 @@ int image_count(i3ds::Frame& data) {
   return data.descriptor.image_count;
 }
 
+void handle_extra_tof_frame(i3ds::DepthMap& dm, std::string fps_text) {
+  if (dm.has_frame) {
+    handle_image("ToF Image", dm.frame, 0, fps_text);
+  }
+}
+
+void handle_extra_tof_frame(i3ds::Frame& dm, std::string fps_text) {
+  // Do nothing for normal Frames
+}
+
 template <typename T>
 void
 handle_frame(T& data, int node)
@@ -169,7 +179,8 @@ handle_frame(T& data, int node)
 
   if ( is_tof_camera(data) )
     {
-      handle_image("ToF Camera feed", data, 0, buffer.str());
+      handle_image("ToF Depthmap", data, 0, buffer.str());
+      handle_extra_tof_frame(data, buffer.str());
     }
   else // Normal camera
     {

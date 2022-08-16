@@ -69,6 +69,9 @@ private:
   Publisher publisher_;
   MeasurementTopic::Data frame_;
 
+  i3ds_asn1::byte *image_data_;
+  size_t image_data_size_;
+
   std::default_random_engine generator_;
 };
 
