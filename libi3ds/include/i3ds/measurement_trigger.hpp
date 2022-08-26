@@ -59,6 +59,7 @@ public:
     {
       std::lock_guard<std::mutex> guard(mutex);
       BOOST_LOG_TRIVIAL(trace) << "[MeasurementTrigger] trigger()";
+      valid_measurement_ = false;
       client_.load_status();
       if (client_.is_standby())
         {

@@ -1,3 +1,4 @@
+#include <boost/log/trivial.hpp>
 #include <boost/test/tools/old/interface.hpp>
 #include <cstdlib>
 #define BOOST_TEST_MODULE depthmap_test
@@ -122,6 +123,7 @@ BOOST_AUTO_TEST_CASE(depthmap_with_frame_encdec)
   BOOST_CHECK_EQUAL(map.frame.descriptor.region.size_y, map2.frame.descriptor.region.size_y);
   
   BOOST_CHECK_EQUAL(map.frame.image_size(0), map2.frame.image_size(0));
+  BOOST_CHECK_NE(map.frame.image_data(0), map2.frame.image_data(0));
 
   for (size_t i = 0; i < image_data_size; i++)
     {

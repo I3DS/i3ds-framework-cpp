@@ -11,8 +11,11 @@
 #ifndef __I3DS_FRAME_HPP
 #define __I3DS_FRAME_HPP
 
+#include <cstdlib>
+#include <cstring>
 #include <i3ds_asn1/Frame.hpp>
 #include <i3ds/codec.hpp>
+#include <i3ds_asn1/asn1crt.hpp>
 #include <vector>
 
 namespace i3ds
@@ -30,6 +33,58 @@ inline size_t image_size(const i3ds_asn1::FrameDescriptor& desc)
 class Frame
 {
 public:
+
+  Frame() : copied_(false) {};
+  
+  ~Frame()
+  {
+    if (copied_)
+      {
+        for (Image image : image_)
+          {
+            free((void*)(image.data));
+          }
+      }
+  }
+
+  Frame(const Frame& other)
+  {
+    descriptor = other.descriptor;
+    for (Image image : other.image_)
+      {
+        i3ds_asn1::byte* data_copy = static_cast<i3ds_asn1::byte*>(malloc(image.size));
+        memcpy(data_copy, image.data, image.size);
+        image_.push_back({data_copy, image.size});
+      }
+    copied_ = true;
+  }
+
+  Frame& operator=(const Frame& other)
+  {
+    this->descriptor = other.descriptor;
+    if (this->image_.size() == other.image_.size() &&
+        this->image_.size() > 0 &&
+        this->image_size(0) == other.image_size(0))
+      {
+        for (int i = 0; i < other.images(); ++i)
+          {
+            i3ds_asn1::byte* non_const_ptr = const_cast<i3ds_asn1::byte*>(this->image_data(i));
+            memcpy(non_const_ptr, other.image_data(i), this->image_size(i));
+          }
+      }
+    else
+      {
+        this->image_.clear();
+        for (Image image : other.image_)
+          {
+            i3ds_asn1::byte* data_copy = static_cast<i3ds_asn1::byte*>(malloc(image.size));
+            memcpy(data_copy, image.data, image.size);
+            image_.push_back({data_copy, image.size});
+          }
+      }
+    copied_ = true;
+    return *this;
+  }
 
   i3ds_asn1::FrameDescriptor descriptor;
 
@@ -50,6 +105,7 @@ private:
   };
 
   std::vector<Image> image_;
+  bool copied_;
 };
 
 struct FrameCodec
