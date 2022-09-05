@@ -216,7 +216,7 @@ int main(int argc, char *argv[])
   ("width,w", po::value(&width), "Maximal image width [px]")
   ("output,o", po::value(&output), "Output path template")
   ("format,f", po::value(&format)->default_value("tiff"), "Output format")
-  ("tof", po::value(&tof_version)->default_value(false), "TOF version")
+  ("tof", po::bool_switch(&tof_version), "TOF version")
   ("nogui,g", po::bool_switch(&headless_mode), "Headless mode")
   ;
 
@@ -249,7 +249,6 @@ int main(int argc, char *argv[])
   signal(SIGINT, signal_handler);
 
   if (tof_version) {
-    cv::namedWindow("ToF Camera feed", cv::WINDOW_AUTOSIZE);
     subscriber.Attach<i3ds::ToFCamera::MeasurementTopic>(node, [node](i3ds::ToFCamera::MeasurementTopic::Data d){handle_frame(d, node);});
   } else {
     subscriber.Attach<i3ds::Camera::FrameTopic>(node, [node](i3ds::Camera::FrameTopic::Data d){handle_frame(d, node);});
