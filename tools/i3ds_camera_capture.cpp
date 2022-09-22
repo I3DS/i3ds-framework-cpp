@@ -155,7 +155,7 @@ int image_count(i3ds::Frame& data) {
 
 void handle_extra_tof_frame(i3ds::DepthMap& dm, std::string fps_text) {
   if (dm.has_frame) {
-    handle_image("ToF Image", dm.frame, 0, fps_text);
+    handle_image("ToF Image", dm.frame, 1, fps_text);
   }
 }
 
