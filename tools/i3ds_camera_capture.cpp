@@ -75,7 +75,7 @@ draw_center_value(cv::Mat, i3ds::Frame f)
 
 template <typename T>
 void
-handle_image(std::string window_name, const T& frame, int image_number, std::string fps_text)
+handle_image(std::string window_name, const T& frame, int image_number, std::string fps_text, std::string filename_suffix="")
 {
   cv::Mat mat = i3ds::frame_to_cv_mat(frame, image_number);
 
@@ -91,7 +91,7 @@ handle_image(std::string window_name, const T& frame, int image_number, std::str
     std::ostringstream path;
     path <<  output << "_";
     path << std::setw(5) << std::setfill('0') << img_index;
-    path << "_" << image_number << "." << format;
+    path << "_" << image_number << filename_suffix << "." << format;
 
     logfile << path.str() << ","
 	    << current_time << ","
@@ -155,7 +155,7 @@ int image_count(i3ds::Frame& data) {
 
 void handle_extra_tof_frame(i3ds::DepthMap& dm, std::string fps_text) {
   if (dm.has_frame) {
-    handle_image("ToF Image", dm.frame, 1, fps_text);
+    handle_image("ToF Image", dm.frame, 0, fps_text, "_img");
   }
 }
 
@@ -179,7 +179,7 @@ handle_frame(T& data, int node)
 
   if ( is_tof_camera(data) )
     {
-      handle_image("ToF Depthmap", data, 0, buffer.str());
+      handle_image("ToF Depthmap", data, 0, buffer.str(), "_tof");
       handle_extra_tof_frame(data, buffer.str());
     }
   else // Normal camera
